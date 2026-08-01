@@ -6,6 +6,7 @@ import type { Hazard } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 
 const severityStyle: Record<Hazard["severity"], string> = {
@@ -28,34 +29,69 @@ export function HazardModule({
   onToggle,
   onConfirmAll,
 }: HazardModuleProps) {
-  const allDone =
-    hazards.length > 0 && hazards.every((h) => confirmedIds.includes(h.id));
+  const confirmedCount = hazards.filter((h) =>
+    confirmedIds.includes(h.id)
+  ).length;
+  const total = hazards.length;
+  const percent = total === 0 ? 0 : Math.round((confirmedCount / total) * 100);
+  const allDone = total > 0 && confirmedCount === total;
 
   return (
     <div className="space-y-4">
-      <div className="flex items-start justify-between gap-3">
-        <p className="text-sm text-muted-foreground">
-          Loaded from your tasks. Review each control, then confirm.
-        </p>
-        <Button
-          type="button"
-          variant="secondary"
-          size="sm"
-          className="h-10 shrink-0 rounded-xl"
-          onClick={onConfirmAll}
-          disabled={allDone || hazards.length === 0}
-        >
-          Confirm all
-        </Button>
-      </div>
+      {total > 0 && (
+        <div className="helix-card sticky top-[4.5rem] z-30 space-y-2.5 border border-border/60 bg-card/95 p-4 backdrop-blur-sm">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <p className="text-sm font-bold">
+                {allDone ? "All hazards reviewed" : "Review progress"}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {confirmedCount} of {total} confirmed
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span
+                className={cn(
+                  "text-lg font-bold tabular-nums",
+                  allDone
+                    ? "text-emerald-600 dark:text-emerald-400"
+                    : "text-primary"
+                )}
+              >
+                {percent}%
+              </span>
+              <Button
+                type="button"
+                variant="secondary"
+                size="sm"
+                className="h-10 shrink-0 rounded-xl"
+                onClick={onConfirmAll}
+                disabled={allDone}
+              >
+                Confirm all
+              </Button>
+            </div>
+          </div>
+          <Progress
+            value={percent}
+            className={cn("h-2.5", allDone && "[&_[data-slot=progress-indicator]]:bg-emerald-500")}
+          />
+        </div>
+      )}
 
-      {hazards.length === 0 && (
+      {total === 0 && (
         <Card>
           <CardContent className="flex flex-col items-center gap-2 p-8 text-center text-muted-foreground">
             <ShieldAlert className="size-8 opacity-50" />
             <p>Select tasks first to load hazards.</p>
           </CardContent>
         </Card>
+      )}
+
+      {total > 0 && (
+        <p className="text-sm text-muted-foreground">
+          Tap each checkbox after reviewing the controls. Progress updates as you go.
+        </p>
       )}
 
       {hazards.map((hazard, i) => {
@@ -117,7 +153,9 @@ export function HazardModule({
                 <p
                   className={cn(
                     "pt-1 text-sm font-medium",
-                    confirmed ? "text-emerald-600 dark:text-emerald-400" : "text-muted-foreground"
+                    confirmed
+                      ? "text-emerald-600 dark:text-emerald-400"
+                      : "text-muted-foreground"
                   )}
                 >
                   {confirmed ? "Reviewed ✓" : "Tap checkbox to confirm"}
