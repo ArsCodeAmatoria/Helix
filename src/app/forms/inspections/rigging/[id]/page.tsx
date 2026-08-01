@@ -1,10 +1,5 @@
-import { RiggingLogbookScreen } from "@/components/inspections/rigging-logbook-screen";
+import { redirect } from "next/navigation";
 
-export default async function RiggingLogbookPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
-  return <RiggingLogbookScreen gearId={id} />;
+export default async function RiggingGearRedirectPage() {
+  redirect("/forms/inspections/rigging");
 }

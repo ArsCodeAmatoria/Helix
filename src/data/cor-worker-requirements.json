@@ -118,14 +118,44 @@
       "category": "Specialty",
       "description": "Traffic control person training",
       "aliases": ["traffic control"]
+    },
+    {
+      "id": "req-silica-fit",
+      "name": "Silica Fit Test",
+      "category": "Respiratory",
+      "description": "Respirator fit test for crystalline silica exposure",
+      "aliases": [
+        "silica fit test",
+        "respirator fit test",
+        "fit test silica",
+        "n95 fit test",
+        "silica respirator"
+      ]
+    },
+    {
+      "id": "req-respirator",
+      "name": "Respirator Fit Test",
+      "category": "Respiratory",
+      "description": "Quantitative or qualitative respirator fit test on file",
+      "aliases": [
+        "respirator fit test",
+        "fit test",
+        "silica fit test",
+        "n95 fit test"
+      ]
     }
   ],
   "roleRequirements": {
     "Worker": ["req-orient", "req-whmis", "req-fall"],
     "Crew Member": ["req-orient", "req-whmis", "req-fall"],
-    "Labourer": ["req-orient", "req-whmis", "req-fall"],
+    "Labourer": ["req-orient", "req-whmis", "req-fall", "req-silica-fit"],
     "Apprentice": ["req-orient", "req-whmis", "req-fall"],
-    "Formwork Carpenter": ["req-orient", "req-whmis", "req-fall"],
+    "Formwork Carpenter": [
+      "req-orient",
+      "req-whmis",
+      "req-fall",
+      "req-silica-fit"
+    ],
     "Rigger": ["req-orient", "req-whmis", "req-fall", "req-rigging", "req-signal"],
     "Crane Operator": [
       "req-orient",
@@ -157,6 +187,15 @@
     },
     "Yard Operations": {
       "add": ["req-forklift"]
+    },
+    "Concrete Finishing": {
+      "add": ["req-silica-fit"]
+    },
+    "Formwork": {
+      "add": ["req-silica-fit"]
+    },
+    "General Labour": {
+      "add": ["req-silica-fit"]
     }
   }
 }

@@ -1,9 +1,44 @@
 {
+  "categories": [
+    "Garbage Bin",
+    "Slings",
+    "Bridle",
+    "Crane Hook & Block",
+    "Shackles",
+    "Wire Rope",
+    "Chain",
+    "Below-the-hook",
+    "Blocks & Sheaves",
+    "Tag Lines & Softeners"
+  ],
   "gear": [
+    {
+      "id": "rig-bin-debris",
+      "name": "Debris / Garbage Bin — Site",
+      "category": "Garbage Bin",
+      "type": "Lifting bin",
+      "assetTag": "BIN-DEB-01",
+      "capacity": "2,000 kg",
+      "manufacturer": "Helix Yard",
+      "status": "in-service",
+      "lastInspection": "2026-08-01"
+    },
+    {
+      "id": "rig-bin-concrete",
+      "name": "Concrete Rubbish Bin",
+      "category": "Garbage Bin",
+      "type": "Lifting bin",
+      "assetTag": "BIN-CON-02",
+      "capacity": "1,500 kg",
+      "manufacturer": "Helix Yard",
+      "status": "in-service",
+      "lastInspection": "2026-07-31"
+    },
     {
       "id": "rig-sling-2t-a",
       "name": "Web Sling 2T — Orange",
-      "type": "Synthetic sling",
+      "category": "Slings",
+      "type": "Synthetic web sling",
       "assetTag": "SL-2T-014",
       "capacity": "2,000 kg",
       "manufacturer": "Lift-All",
@@ -13,7 +48,8 @@
     {
       "id": "rig-sling-5t-a",
       "name": "Web Sling 5T — Yellow",
-      "type": "Synthetic sling",
+      "category": "Slings",
+      "type": "Synthetic web sling",
       "assetTag": "SL-5T-008",
       "capacity": "5,000 kg",
       "manufacturer": "Lift-All",
@@ -21,8 +57,20 @@
       "lastInspection": "2026-07-31"
     },
     {
+      "id": "rig-round-3t",
+      "name": "Round Sling 3T — Purple",
+      "category": "Slings",
+      "type": "Endless round sling",
+      "assetTag": "RS-3T-019",
+      "capacity": "3,000 kg",
+      "manufacturer": "SpanSet",
+      "status": "in-service",
+      "lastInspection": "2026-07-30"
+    },
+    {
       "id": "rig-wire-10t",
       "name": "Wire Rope Sling 10T",
+      "category": "Slings",
       "type": "Wire rope sling",
       "assetTag": "WR-10T-003",
       "capacity": "10,000 kg",
@@ -31,9 +79,65 @@
       "lastInspection": "2026-07-30"
     },
     {
+      "id": "rig-bridle-2leg",
+      "name": "2-Leg Bridle — 5T",
+      "category": "Bridle",
+      "type": "Bridle assembly",
+      "assetTag": "BR-2L-5T-01",
+      "capacity": "5,000 kg",
+      "manufacturer": "Crosby / Helix",
+      "status": "in-service",
+      "lastInspection": "2026-08-01"
+    },
+    {
+      "id": "rig-bridle-4leg",
+      "name": "4-Leg Bridle — 10T",
+      "category": "Bridle",
+      "type": "Bridle assembly",
+      "assetTag": "BR-4L-10T-02",
+      "capacity": "10,000 kg",
+      "manufacturer": "Crosby / Helix",
+      "status": "in-service",
+      "lastInspection": "2026-07-29"
+    },
+    {
+      "id": "rig-hook-block-tc1",
+      "name": "TC-1 Crane Hook & Block",
+      "category": "Crane Hook & Block",
+      "type": "Hook block assembly",
+      "assetTag": "HB-TC1",
+      "capacity": "16,000 kg",
+      "manufacturer": "Potain",
+      "status": "in-service",
+      "lastInspection": "2026-08-01"
+    },
+    {
+      "id": "rig-hook-block-tc2",
+      "name": "TC-2 Crane Hook & Block",
+      "category": "Crane Hook & Block",
+      "type": "Hook block assembly",
+      "assetTag": "HB-TC2",
+      "capacity": "20,000 kg",
+      "manufacturer": "Potain",
+      "status": "in-service",
+      "lastInspection": "2026-07-31"
+    },
+    {
+      "id": "rig-hook-swivel",
+      "name": "Swivel Hook 15T",
+      "category": "Crane Hook & Block",
+      "type": "Swivel hook",
+      "assetTag": "HK-15-002",
+      "capacity": "15,000 kg",
+      "manufacturer": "Crosby",
+      "status": "in-service",
+      "lastInspection": "2026-07-29"
+    },
+    {
       "id": "rig-shackle-8.5",
       "name": "Screw Pin Anchor Shackle 8.5T",
-      "type": "Shackle",
+      "category": "Shackles",
+      "type": "Screw pin shackle",
       "assetTag": "SH-8.5-021",
       "capacity": "8,500 kg",
       "manufacturer": "Crosby",
@@ -43,7 +147,8 @@
     {
       "id": "rig-shackle-12",
       "name": "Bolt Type Shackle 12T",
-      "type": "Shackle",
+      "category": "Shackles",
+      "type": "Bolt type shackle",
       "assetTag": "SH-12-006",
       "capacity": "12,000 kg",
       "manufacturer": "Crosby",
@@ -51,19 +156,43 @@
       "lastInspection": "2026-07-28"
     },
     {
-      "id": "rig-hook-swivel",
-      "name": "Swivel Hook 15T",
-      "type": "Hook",
-      "assetTag": "HK-15-002",
-      "capacity": "15,000 kg",
+      "id": "rig-shackle-25",
+      "name": "Bolt Type Shackle 25T",
+      "category": "Shackles",
+      "type": "Bolt type shackle",
+      "assetTag": "SH-25-003",
+      "capacity": "25,000 kg",
       "manufacturer": "Crosby",
       "status": "in-service",
-      "lastInspection": "2026-07-29"
+      "lastInspection": "2026-07-28"
+    },
+    {
+      "id": "rig-wire-main",
+      "name": "Hoist Wire Rope — TC-1 spare drum end",
+      "category": "Wire Rope",
+      "type": "Hoist wire rope",
+      "assetTag": "WR-HOIST-TC1",
+      "capacity": "Per OEM chart",
+      "manufacturer": "WireCo",
+      "status": "in-service",
+      "lastInspection": "2026-07-30"
+    },
+    {
+      "id": "rig-wire-pendant",
+      "name": "Pendant / Stay Wire Set",
+      "category": "Wire Rope",
+      "type": "Pendant wire",
+      "assetTag": "WR-PEND-04",
+      "capacity": "Per OEM",
+      "manufacturer": "WireCo",
+      "status": "in-service",
+      "lastInspection": "2026-07-26"
     },
     {
       "id": "rig-chain-3t",
       "name": "Chain Sling 3T — 2-leg",
-      "type": "Chain sling",
+      "category": "Chain",
+      "type": "Alloy chain sling",
       "assetTag": "CH-3T-011",
       "capacity": "3,000 kg",
       "manufacturer": "Pewag",
@@ -71,8 +200,20 @@
       "lastInspection": "2026-07-27"
     },
     {
+      "id": "rig-chainfall",
+      "name": "Chain Fall / Come-along 3T",
+      "category": "Chain",
+      "type": "Manual hoist",
+      "assetTag": "CF-3T-007",
+      "capacity": "3,000 kg",
+      "manufacturer": "CM",
+      "status": "in-service",
+      "lastInspection": "2026-07-28"
+    },
+    {
       "id": "rig-spreader",
       "name": "Spreader Bar 4m",
+      "category": "Below-the-hook",
       "type": "Spreader / beam",
       "assetTag": "SB-4M-001",
       "capacity": "20,000 kg",
@@ -81,8 +222,53 @@
       "lastInspection": "2026-07-25"
     },
     {
+      "id": "rig-equalizer",
+      "name": "Equalizer Plate",
+      "category": "Below-the-hook",
+      "type": "Equalizer",
+      "assetTag": "EQ-PLT-02",
+      "capacity": "15,000 kg",
+      "manufacturer": "Helix Fabrication",
+      "status": "in-service",
+      "lastInspection": "2026-07-24"
+    },
+    {
+      "id": "rig-clamp-plate",
+      "name": "Plate Clamp Pair 2T",
+      "category": "Below-the-hook",
+      "type": "Plate clamp",
+      "assetTag": "PC-2T-05",
+      "capacity": "2,000 kg",
+      "manufacturer": "Crosby",
+      "status": "in-service",
+      "lastInspection": "2026-07-29"
+    },
+    {
+      "id": "rig-snatch",
+      "name": "Snatch Block 8T",
+      "category": "Blocks & Sheaves",
+      "type": "Snatch block",
+      "assetTag": "SN-8T-003",
+      "capacity": "8,000 kg",
+      "manufacturer": "McKissick",
+      "status": "in-service",
+      "lastInspection": "2026-07-30"
+    },
+    {
+      "id": "rig-sheave-guide",
+      "name": "Guide Sheave Assembly",
+      "category": "Blocks & Sheaves",
+      "type": "Sheave",
+      "assetTag": "SHV-GD-01",
+      "capacity": "Per OEM",
+      "manufacturer": "Potain",
+      "status": "in-service",
+      "lastInspection": "2026-07-27"
+    },
+    {
       "id": "rig-tagline-set",
       "name": "Tag Line Set",
+      "category": "Tag Lines & Softeners",
       "type": "Tag line",
       "assetTag": "TL-SET-B",
       "capacity": "N/A",
@@ -93,38 +279,100 @@
     {
       "id": "rig-softener",
       "name": "Corner Softeners (pair)",
-      "type": "Softener",
+      "category": "Tag Lines & Softeners",
+      "type": "Softener / edge protector",
       "assetTag": "CS-PAIR-04",
       "capacity": "N/A",
       "manufacturer": "Helix Yard",
       "status": "out-of-service",
       "lastInspection": "2026-07-20"
+    },
+    {
+      "id": "rig-choker",
+      "name": "Choker Hooks / Sliding Chokers",
+      "category": "Tag Lines & Softeners",
+      "type": "Choker hardware",
+      "assetTag": "CHK-SET-03",
+      "capacity": "5,000 kg",
+      "manufacturer": "Crosby",
+      "status": "in-service",
+      "lastInspection": "2026-07-28"
     }
   ],
   "craneChecklist": [
-    { "id": "c-structure", "label": "Tower / structure — visible damage, bolts, pins" },
-    { "id": "c-jib", "label": "Jib / boom — pins, pendant lines, connections" },
-    { "id": "c-rope", "label": "Hoist / trolley rope — wear, birdcaging, lubrication" },
-    { "id": "c-hook", "label": "Hook, swivel & safety latch" },
-    { "id": "c-brakes", "label": "Hoist, trolley & slew brakes" },
-    { "id": "c-limits", "label": "Limit switches / anti-two-block / cutouts" },
-    { "id": "c-controls", "label": "Cabin / remote controls, E-stop, indicators" },
-    { "id": "c-wind", "label": "Anemometer / wind reading within limits" },
-    { "id": "c-chart", "label": "Load chart posted & matches configuration" },
-    { "id": "c-radio", "label": "Radio / signal protocol confirmed" },
-    { "id": "c-swing", "label": "Swing radius clear / barricades in place" },
-    { "id": "c-tags", "label": "No unresolved out-of-service tags on crane" }
+    { "id": "c-structure", "section": "Structure", "label": "Tower / structure — visible damage, bolts, pins" },
+    { "id": "c-jib", "section": "Structure", "label": "Jib / boom — pins, pendant lines, connections" },
+    { "id": "c-rope", "section": "Rope & hook", "label": "Hoist / trolley rope — wear, birdcaging, lubrication" },
+    { "id": "c-hook", "section": "Rope & hook", "label": "Hook, swivel & safety latch" },
+    { "id": "c-brakes", "section": "Drives", "label": "Hoist, trolley & slew brakes" },
+    { "id": "c-limit-hoist", "section": "Limits", "label": "Hoist upper / lower limits tested and working" },
+    { "id": "c-limit-trolley", "section": "Limits", "label": "Trolley / travel limits tested and working" },
+    { "id": "c-limit-a2b", "section": "Limits", "label": "Anti-two-block (A2B) / overload cutout tested" },
+    { "id": "c-limit-lmi", "section": "Limits", "label": "LMI / load moment indicator within calibration" },
+    { "id": "c-estop-cabin", "section": "Emergency stop", "label": "Cabin emergency stop — tested, resets correctly" },
+    { "id": "c-estop-remote", "section": "Emergency stop", "label": "Remote / pendant emergency stop — tested" },
+    { "id": "c-estop-procedure", "section": "Emergency stop", "label": "Ground / radio emergency stop procedure confirmed with signal person" },
+    { "id": "c-controls", "section": "Controls", "label": "Cabin / remote controls & indicators functioning" },
+    { "id": "c-wind", "section": "Controls", "label": "Anemometer / wind reading within operating limits" },
+    { "id": "c-grease-slew", "section": "Greasing", "label": "Slewing ring / bearing greased per schedule" },
+    { "id": "c-grease-sheave", "section": "Greasing", "label": "Sheaves, trolley, and hook swivel greased / lubricated" },
+    { "id": "c-grease-rope", "section": "Greasing", "label": "Wire rope lubricated as required" },
+    { "id": "c-grease-log", "section": "Greasing", "label": "Greasing / maintenance log updated" },
+    { "id": "c-chart", "section": "Site & docs", "label": "Load chart posted & matches configuration" },
+    { "id": "c-radio", "section": "Site & docs", "label": "Radio / signal protocol confirmed" },
+    { "id": "c-swing", "section": "Site & docs", "label": "Swing radius clear / barricades in place" },
+    { "id": "c-tags", "section": "Site & docs", "label": "No unresolved out-of-service tags on crane" }
+  ],
+  "craneMaintenance": [
+    {
+      "equipmentId": "eq-tc1",
+      "notes": "Potain MD 365 — follow OEM greasing chart. Weekly walkaround + monthly full grease.",
+      "greasePoints": [
+        { "id": "g-slew", "label": "Slewing ring / bearing", "intervalDays": 7 },
+        { "id": "g-trolley", "label": "Trolley wheels & sheaves", "intervalDays": 7 },
+        { "id": "g-hook", "label": "Hook block swivel", "intervalDays": 7 },
+        { "id": "g-rope", "label": "Hoist wire rope lubrication", "intervalDays": 14 },
+        { "id": "g-pinion", "label": "Slew pinion / gear mesh", "intervalDays": 30 },
+        { "id": "g-mast", "label": "Mast section pins / climbing frame points", "intervalDays": 30 }
+      ]
+    },
+    {
+      "equipmentId": "eq-tc2",
+      "notes": "Potain MR 615 luffing — grease luffing pins and hoist as OEM.",
+      "greasePoints": [
+        { "id": "g-slew", "label": "Slewing ring / bearing", "intervalDays": 7 },
+        { "id": "g-luff", "label": "Luffing pins & sheaves", "intervalDays": 7 },
+        { "id": "g-hook", "label": "Hook block swivel", "intervalDays": 7 },
+        { "id": "g-rope", "label": "Hoist / luff wire rope lubrication", "intervalDays": 14 },
+        { "id": "g-winch", "label": "Winch bearings / open gears", "intervalDays": 30 }
+      ]
+    },
+    {
+      "equipmentId": "eq-mobile",
+      "notes": "MC-4 mobile — grease outriggers, slew, and boom pins per OEM shift/weekly chart.",
+      "greasePoints": [
+        { "id": "g-outrigger", "label": "Outrigger beams & jacks", "intervalDays": 1 },
+        { "id": "g-slew", "label": "Slew bearing", "intervalDays": 7 },
+        { "id": "g-boom", "label": "Boom pins & sheaves", "intervalDays": 7 },
+        { "id": "g-hook", "label": "Hook block", "intervalDays": 7 },
+        { "id": "g-rope", "label": "Hoist rope lubrication", "intervalDays": 14 }
+      ]
+    }
   ],
   "riggingChecklist": [
-    { "id": "r-tag", "label": "ID / capacity tag present and legible" },
-    { "id": "r-rating", "label": "Rated capacity suitable for planned lift" },
-    { "id": "r-wear", "label": "No cuts, abrasion, crushed strands, or heat damage" },
-    { "id": "r-deform", "label": "No bent, stretched, or cracked hardware" },
-    { "id": "r-hardware", "label": "Pins, nuts, latches secure and free to operate" },
-    { "id": "r-throat", "label": "Hook / shackle throat opening within tolerance" },
-    { "id": "r-stitch", "label": "Stitching / splices intact (slings)" },
-    { "id": "r-clean", "label": "Free of chemicals, weld spatter, excessive corrosion" },
-    { "id": "r-storage", "label": "Stored correctly when not in use" },
-    { "id": "r-match", "label": "Matched to lift plan / FLHA gear list" }
+    { "id": "r-tag", "label": "ID / capacity / WLL tag present and legible" },
+    { "id": "r-rating", "label": "Rated capacity suitable for planned lift / hitch" },
+    { "id": "r-wear", "label": "No cuts, abrasion, crushed strands, heat, or chemical damage" },
+    { "id": "r-deform", "label": "No bent, stretched, cracked, or opened hardware" },
+    { "id": "r-hardware", "label": "Pins, nuts, cotters, latches secure and free to operate" },
+    { "id": "r-throat", "label": "Hook / shackle throat opening within tolerance; latch seats" },
+    { "id": "r-block", "label": "Hook block / sheaves — rope seated, guards on, swivel free" },
+    { "id": "r-bridle", "label": "Bridle legs equal / angles OK; master link undamaged" },
+    { "id": "r-bin", "label": "Garbage / lifting bin — lid, latches, lift points, no cracks" },
+    { "id": "r-stitch", "label": "Sling stitching / splices / eyes intact" },
+    { "id": "r-wire", "label": "Wire rope — lubrication OK, no birdcaging or broken wires beyond reject" },
+    { "id": "r-clean", "label": "Free of weld spatter, concrete buildup, excessive corrosion" },
+    { "id": "r-storage", "label": "Stored / staged correctly; not in mud or under traffic" },
+    { "id": "r-match", "label": "Matched to lift plan / FLHA / signal person brief" }
   ]
 }

@@ -5,12 +5,21 @@ import {
   Check,
   Eraser,
   Search,
+  ShieldAlert,
   Users,
   UserCheck,
   UserMinus,
   UsersRound,
 } from "lucide-react";
 import { useTeam } from "@/components/providers/team-provider";
+import {
+  isHighlightCert,
+  memberHasTaskCert,
+  orderedCertsForDisplay,
+  shortCertLabel,
+  TASK_CERT_FILTERS,
+  type TaskCertFilterId,
+} from "@/lib/certifications";
 import {
   crews,
   getCrewMembers,
@@ -30,6 +39,65 @@ import { cn } from "@/lib/utils";
 
 type Tab = "choose" | "fill" | "sign";
 type Scope = "crew" | "directory";
+
+function CertChips({
+  member,
+  compact,
+}: {
+  member: TeamMember;
+  compact?: boolean;
+}) {
+  const certs = orderedCertsForDisplay(member.certifications);
+  const visible = compact ? certs.slice(0, 4) : certs;
+  const extra = compact ? Math.max(0, certs.length - visible.length) : 0;
+  const hasFall = memberHasTaskCert(member, "fall");
+  const hasSilica = memberHasTaskCert(member, "silica");
+  const silicaRelevant = /formwork|concrete|labour|labor|finish|deck|strip/i.test(
+    `${member.trade} ${member.role}`
+  );
+  const missing: string[] = [];
+  if (!hasFall) missing.push("Fall Pro");
+  if (silicaRelevant && !hasSilica) missing.push("Silica Fit");
+
+  if (certs.length === 0) {
+    return (
+      <p className="mt-1.5 text-xs font-semibold text-amber-700 dark:text-amber-400">
+        No certifications on file
+      </p>
+    );
+  }
+
+  return (
+    <div className="mt-2 space-y-1.5">
+      <div className="flex flex-wrap gap-1.5">
+        {visible.map((cert) => (
+          <Badge
+            key={cert}
+            className={cn(
+              "border-0 text-[11px] font-semibold",
+              isHighlightCert(cert)
+                ? "bg-emerald-500/15 text-emerald-800 dark:text-emerald-300"
+                : "bg-muted text-muted-foreground"
+            )}
+          >
+            {shortCertLabel(cert)}
+          </Badge>
+        ))}
+        {extra > 0 && (
+          <Badge variant="outline" className="text-[11px]">
+            +{extra}
+          </Badge>
+        )}
+      </div>
+      {missing.length > 0 && (
+        <p className="flex flex-wrap items-center gap-1 text-[11px] font-medium text-amber-700 dark:text-amber-400">
+          <ShieldAlert className="size-3 shrink-0" />
+          Missing: {missing.join(" · ")}
+        </p>
+      )}
+    </div>
+  );
+}
 
 function MiniPad({
   value,
@@ -131,12 +199,14 @@ function MemberRow({
   onToggle,
   trailing,
   showCrews,
+  showCerts = true,
 }: {
   member: TeamMember;
   selected?: boolean;
   onToggle?: () => void;
   trailing?: React.ReactNode;
   showCrews?: boolean;
+  showCerts?: boolean;
 }) {
   const memberCrews = showCrews ? getMemberCrews(member.id) : [];
 
@@ -146,14 +216,14 @@ function MemberRow({
       onClick={onToggle}
       disabled={!onToggle}
       className={cn(
-        "flex w-full items-center gap-3 rounded-2xl border p-3.5 text-left transition-colors",
+        "flex w-full items-start gap-3 rounded-2xl border p-3.5 text-left transition-colors",
         selected
           ? "border-primary bg-primary/5 ring-2 ring-primary/20"
           : "border-border bg-card",
         onToggle && "active:scale-[0.99]"
       )}
     >
-      <Avatar className="size-11">
+      <Avatar className="mt-0.5 size-11">
         <AvatarFallback className="bg-primary/15 font-bold text-primary">
           {initials(member.name)}
         </AvatarFallback>
@@ -171,12 +241,13 @@ function MemberRow({
               : "Not assigned to a crew"}
           </p>
         )}
+        {showCerts && <CertChips member={member} compact />}
       </div>
       {trailing ??
         (selected !== undefined && (
           <span
             className={cn(
-              "flex size-10 shrink-0 items-center justify-center rounded-xl border-2",
+              "mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-xl border-2",
               selected
                 ? "border-primary bg-primary text-primary-foreground"
                 : "border-border"
@@ -194,20 +265,21 @@ export function TeamScreen() {
   const [tab, setTab] = useState<Tab>("choose");
   const [query, setQuery] = useState("");
   const [scope, setScope] = useState<Scope>("directory");
+  const [certFilter, setCertFilter] = useState<TaskCertFilterId | null>(null);
 
   const crewMembers = useMemo(
     () => getCrewMembers(team.selectedCrewId),
     [team.selectedCrewId]
   );
 
-  const searchResults = useMemo(
-    () =>
-      searchMembers(query, {
-        crewId: scope === "crew" ? team.selectedCrewId : undefined,
-        directory: scope === "directory",
-      }),
-    [query, scope, team.selectedCrewId]
-  );
+  const searchResults = useMemo(() => {
+    const base = searchMembers(query, {
+      crewId: scope === "crew" ? team.selectedCrewId : undefined,
+      directory: scope === "directory",
+    });
+    if (!certFilter) return base;
+    return base.filter((m) => memberHasTaskCert(m, certFilter));
+  }, [query, scope, team.selectedCrewId, certFilter]);
 
   const signProgress =
     team.todaysMembers.length === 0
@@ -228,7 +300,6 @@ export function TeamScreen() {
       />
 
       <main className="space-y-5 px-4 py-5">
-        {/* Summary */}
         <div className="helix-card space-y-3 p-4">
           <div className="flex items-center justify-between gap-3">
             <div>
@@ -249,9 +320,35 @@ export function TeamScreen() {
             </div>
           </div>
           <Progress value={signProgress} className="h-2.5" />
+          {team.todaysMembers.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-1 text-xs text-muted-foreground">
+              <span>
+                Fall Pro:{" "}
+                <span className="font-semibold text-foreground">
+                  {
+                    team.todaysMembers.filter((m) =>
+                      memberHasTaskCert(m, "fall")
+                    ).length
+                  }
+                  /{team.todaysMembers.length}
+                </span>
+              </span>
+              <span>·</span>
+              <span>
+                Silica Fit:{" "}
+                <span className="font-semibold text-foreground">
+                  {
+                    team.todaysMembers.filter((m) =>
+                      memberHasTaskCert(m, "silica")
+                    ).length
+                  }
+                  /{team.todaysMembers.length}
+                </span>
+              </span>
+            </div>
+          )}
         </div>
 
-        {/* Tabs */}
         <div className="grid grid-cols-3 gap-2">
           {tabs.map((t) => {
             const Icon = t.icon;
@@ -279,10 +376,18 @@ export function TeamScreen() {
           <section className="space-y-3">
             <p className="text-sm text-muted-foreground">
               Pick the crew you&apos;re working with today, then fill the roster.
+              Certifications show when you choose members.
             </p>
             {crews.map((crew) => {
               const selected = team.selectedCrewId === crew.id;
               const count = crew.memberIds.length;
+              const crewPeople = getCrewMembers(crew.id);
+              const fallCount = crewPeople.filter((m) =>
+                memberHasTaskCert(m, "fall")
+              ).length;
+              const silicaCount = crewPeople.filter((m) =>
+                memberHasTaskCert(m, "silica")
+              ).length;
               return (
                 <button
                   key={crew.id}
@@ -306,7 +411,8 @@ export function TeamScreen() {
                         Supervisor: {crew.supervisor}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        {count} members
+                        {count} members · Fall Pro {fallCount}/{count} · Silica{" "}
+                        {silicaCount}/{count}
                       </p>
                     </div>
                     {selected && (
@@ -353,8 +459,8 @@ export function TeamScreen() {
 
             <div className="helix-card space-y-3 p-4">
               <p className="text-sm font-semibold">
-                Search the company directory to add anyone — not just today&apos;s
-                crew roster.
+                Check tickets before assigning — Fall Pro, Silica Fit Test, and
+                other certs show on each worker.
               </p>
               <div className="relative">
                 <Search className="absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />
@@ -368,7 +474,7 @@ export function TeamScreen() {
                   onFocus={() => {
                     if (query.trim()) setScope("directory");
                   }}
-                  placeholder="Search directory: name, #, role, trade, crew…"
+                  placeholder="Search name, #, role, or cert…"
                   className="h-14 rounded-2xl pl-11 text-base"
                   autoComplete="off"
                   inputMode="search"
@@ -397,6 +503,43 @@ export function TeamScreen() {
                   </button>
                 ))}
               </div>
+
+              <div>
+                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  Filter by task ticket
+                </p>
+                <div className="flex gap-2 overflow-x-auto pb-1">
+                  <button
+                    type="button"
+                    onClick={() => setCertFilter(null)}
+                    className={cn(
+                      "shrink-0 rounded-full px-3.5 py-2 text-sm font-semibold",
+                      certFilter === null
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground"
+                    )}
+                  >
+                    All
+                  </button>
+                  {TASK_CERT_FILTERS.map((f) => (
+                    <button
+                      key={f.id}
+                      type="button"
+                      onClick={() =>
+                        setCertFilter((prev) => (prev === f.id ? null : f.id))
+                      }
+                      className={cn(
+                        "shrink-0 rounded-full px-3.5 py-2 text-sm font-semibold",
+                        certFilter === f.id
+                          ? "bg-emerald-600 text-white"
+                          : "bg-muted text-muted-foreground"
+                      )}
+                    >
+                      {f.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {team.todaysMembers.length > 0 && (
@@ -405,32 +548,58 @@ export function TeamScreen() {
                   Selected ({team.todaysMembers.length})
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {team.todaysMembers.map((m) => (
-                    <button
-                      key={m.id}
-                      type="button"
-                      onClick={() => team.removeMember(m.id)}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-2 text-sm font-semibold text-primary"
-                    >
-                      {m.name.split(" ")[0]}
-                      <span className="text-primary/60">×</span>
-                    </button>
-                  ))}
+                  {team.todaysMembers.map((m) => {
+                    const missingFall = !memberHasTaskCert(m, "fall");
+                    const missingSilica = !memberHasTaskCert(m, "silica");
+                    return (
+                      <button
+                        key={m.id}
+                        type="button"
+                        onClick={() => team.removeMember(m.id)}
+                        className={cn(
+                          "inline-flex flex-col items-start gap-0.5 rounded-2xl px-3 py-2 text-left",
+                          missingFall || missingSilica
+                            ? "bg-amber-500/15 text-amber-900 dark:text-amber-200"
+                            : "bg-primary/10 text-primary"
+                        )}
+                      >
+                        <span className="text-sm font-semibold">
+                          {m.name.split(" ")[0]}{" "}
+                          <span className="opacity-60">×</span>
+                        </span>
+                        <span className="text-[10px] font-medium opacity-80">
+                          {[
+                            memberHasTaskCert(m, "fall") ? "Fall Pro" : null,
+                            memberHasTaskCert(m, "silica") ? "Silica" : null,
+                          ]
+                            .filter(Boolean)
+                            .join(" · ") || "Check tickets"}
+                        </span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             )}
 
             <div className="space-y-2">
               <p className="text-sm font-bold">
-                {query
+                {query || certFilter
                   ? `Results (${searchResults.length})`
                   : scope === "crew"
                     ? "Crew roster"
                     : "Company directory"}
+                {certFilter
+                  ? ` · has ${TASK_CERT_FILTERS.find((f) => f.id === certFilter)?.label}`
+                  : ""}
               </p>
               {searchResults.length === 0 && (
                 <div className="helix-card space-y-3 p-6 text-center text-sm text-muted-foreground">
-                  <p>No workers match “{query}”.</p>
+                  <p>
+                    {certFilter
+                      ? `No workers with that ticket match${query ? ` “${query}”` : ""}.`
+                      : `No workers match “${query}”.`}
+                  </p>
                   {scope === "crew" && (
                     <Button
                       variant="outline"
@@ -469,8 +638,8 @@ export function TeamScreen() {
             <div className="helix-card space-y-2 p-4">
               <p className="font-bold">Team acknowledgements</p>
               <p className="text-sm text-muted-foreground">
-                Each selected worker signs below. Use these signatures for
-                today&apos;s FLHA and toolbox talks.
+                Each selected worker signs below. Review tickets before they
+                sign onto today&apos;s FLHA.
               </p>
               <Progress value={signProgress} className="h-2.5" />
               <p className="text-xs font-semibold text-muted-foreground">
@@ -502,7 +671,7 @@ export function TeamScreen() {
                     done && "ring-2 ring-emerald-500/25"
                   )}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-start gap-3">
                     <Avatar className="size-11">
                       <AvatarFallback className="bg-primary/15 font-bold text-primary">
                         {initials(member.name)}
@@ -517,6 +686,7 @@ export function TeamScreen() {
                       <p className="text-xs text-muted-foreground">
                         #{member.employeeNumber} · {member.role}
                       </p>
+                      <CertChips member={member} />
                     </div>
                     <Button
                       type="button"

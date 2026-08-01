@@ -5,11 +5,16 @@ import Link from "next/link";
 import { Eraser, MapPin, Plus, Trash2, UserPlus, Users } from "lucide-react";
 import type { SignatureData, SignerEntry, SignerRole } from "@/lib/types";
 import { useTeamOptional } from "@/components/providers/team-provider";
+import {
+  memberHasTaskCert,
+  shortCertLabel,
+} from "@/lib/certifications";
 import { memberToSignerRole } from "@/lib/team";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 const SIGNER_ROLES: SignerRole[] = [
   "Worker",
@@ -248,6 +253,7 @@ export function SignatureModule({
     team?.todaysMembers
       .filter((m) => !usedNames.has(m.name.toLowerCase()))
       .map((m) => ({
+        member: m,
         name: m.name,
         role: memberToSignerRole(m.role),
         signature:
@@ -314,27 +320,62 @@ export function SignatureModule({
           <p className="mb-2 text-sm font-semibold text-muted-foreground">
             Quick add from today&apos;s team
           </p>
-          <div className="flex flex-wrap gap-2">
-            {teamSuggestions.map((person) => (
-              <button
-                key={person.name}
-                type="button"
-                onClick={() =>
-                  onAdd({
-                    name: person.name,
-                    role: person.role,
-                    signature: person.signature,
-                    signedAt: person.signature
-                      ? new Date().toISOString()
-                      : null,
-                  })
-                }
-                className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-3.5 text-sm font-semibold shadow-sm active:scale-[0.98]"
-              >
-                <UserPlus className="size-4 text-primary" />
-                {person.name}
-              </button>
-            ))}
+          <div className="space-y-2">
+            {teamSuggestions.map((person) => {
+              const certs = person.member.certifications;
+              return (
+                <button
+                  key={person.name}
+                  type="button"
+                  onClick={() =>
+                    onAdd({
+                      name: person.name,
+                      role: person.role,
+                      signature: person.signature,
+                      signedAt: person.signature
+                        ? new Date().toISOString()
+                        : null,
+                    })
+                  }
+                  className="flex w-full items-start gap-3 rounded-2xl border border-border bg-card p-3.5 text-left shadow-sm active:scale-[0.99]"
+                >
+                  <UserPlus className="mt-0.5 size-5 shrink-0 text-primary" />
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-sm font-semibold">
+                      {person.name}
+                    </span>
+                    <span className="block text-xs text-muted-foreground">
+                      {person.role}
+                    </span>
+                    <span className="mt-1.5 flex flex-wrap gap-1">
+                      {certs.slice(0, 4).map((c) => (
+                        <Badge
+                          key={c}
+                          className={cn(
+                            "border-0 text-[10px] font-semibold",
+                            memberHasTaskCert(person.member, "fall") &&
+                              c.toLowerCase().includes("fall")
+                              ? "bg-emerald-500/15 text-emerald-800 dark:text-emerald-300"
+                              : memberHasTaskCert(person.member, "silica") &&
+                                  (c.toLowerCase().includes("silica") ||
+                                    c.toLowerCase().includes("fit"))
+                                ? "bg-emerald-500/15 text-emerald-800 dark:text-emerald-300"
+                                : "bg-muted text-muted-foreground"
+                          )}
+                        >
+                          {shortCertLabel(c)}
+                        </Badge>
+                      ))}
+                      {certs.length > 4 && (
+                        <Badge variant="outline" className="text-[10px]">
+                          +{certs.length - 4}
+                        </Badge>
+                      )}
+                    </span>
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       )}

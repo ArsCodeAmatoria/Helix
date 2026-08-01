@@ -2,38 +2,69 @@
   "crews": [
     {
       "id": "crew-a",
-      "name": "Crew A — Columns",
+      "name": "Crew A \u2014 Columns",
       "supervisor": "Elena Vasquez",
       "color": "#2f6bff",
-      "memberIds": ["m-chen", "m-okonkwo", "m-lee", "m-patel", "m-brooks"]
+      "memberIds": [
+        "m-chen",
+        "m-okonkwo",
+        "m-lee",
+        "m-patel",
+        "m-brooks"
+      ]
     },
     {
       "id": "crew-b",
-      "name": "Crew B — Tower & Deck",
+      "name": "Crew B \u2014 Tower & Deck",
       "supervisor": "Dave Okonkwo",
       "color": "#12b76a",
-      "memberIds": ["m-chen", "m-okonkwo", "m-nair", "m-lee", "m-rivera", "m-nguyen", "m-kim"]
+      "memberIds": [
+        "m-chen",
+        "m-okonkwo",
+        "m-nair",
+        "m-lee",
+        "m-rivera",
+        "m-nguyen",
+        "m-kim"
+      ]
     },
     {
       "id": "crew-c",
-      "name": "Crew C — Stripping",
+      "name": "Crew C \u2014 Stripping",
       "supervisor": "Tony Rivera",
       "color": "#f79009",
-      "memberIds": ["m-doyle", "m-brooks", "m-santos", "m-kim", "m-foster"]
+      "memberIds": [
+        "m-doyle",
+        "m-brooks",
+        "m-santos",
+        "m-kim",
+        "m-foster"
+      ]
     },
     {
       "id": "crew-d",
-      "name": "Crew D — Walls",
+      "name": "Crew D \u2014 Walls",
       "supervisor": "Chris Doyle",
       "color": "#7a5af8",
-      "memberIds": ["m-doyle", "m-hassan", "m-patel", "m-santos", "m-foster"]
+      "memberIds": [
+        "m-doyle",
+        "m-hassan",
+        "m-patel",
+        "m-santos",
+        "m-foster"
+      ]
     },
     {
       "id": "crew-yard",
       "name": "Yard Crew",
       "supervisor": "Mike Tanaka",
       "color": "#06aed4",
-      "memberIds": ["m-tanaka", "m-brooks", "m-foster", "m-chen"]
+      "memberIds": [
+        "m-tanaka",
+        "m-brooks",
+        "m-foster",
+        "m-chen"
+      ]
     }
   ],
   "members": [
@@ -46,10 +77,11 @@
       "phone": "778-555-0142",
       "certifications": [
         "Site Orientation",
-        "Rigging Ticket — Level 2",
+        "Rigging Ticket \u2014 Level 2",
         "Fall Protection",
         "WHMIS 2015",
-        "Signal Person"
+        "Signal Person",
+        "Silica Fit Test"
       ]
     },
     {
@@ -64,7 +96,8 @@
         "Supervisor Training",
         "Fall Protection",
         "First Aid Level 2",
-        "WHMIS 2015"
+        "WHMIS 2015",
+        "Silica Fit Test"
       ]
     },
     {
@@ -80,7 +113,8 @@
         "WHMIS 2015",
         "Incident Investigation",
         "Fall Protection",
-        "First Aid Level 2"
+        "First Aid Level 2",
+        "Silica Fit Test"
       ]
     },
     {
@@ -90,7 +124,10 @@
       "role": "Rigger",
       "trade": "Rigging",
       "phone": "778-555-0199",
-      "certifications": ["Rigging Ticket — Level 1", "Fall Protection"]
+      "certifications": [
+        "Rigging Ticket \u2014 Level 1",
+        "Fall Protection"
+      ]
     },
     {
       "id": "m-rivera",
@@ -99,7 +136,12 @@
       "role": "Formwork Carpenter",
       "trade": "Formwork",
       "phone": "778-555-0133",
-      "certifications": ["Site Orientation", "Fall Protection", "WHMIS 2015"]
+      "certifications": [
+        "Site Orientation",
+        "Fall Protection",
+        "WHMIS 2015",
+        "Silica Fit Test"
+      ]
     },
     {
       "id": "m-nguyen",
@@ -123,7 +165,11 @@
       "role": "Apprentice",
       "trade": "Formwork",
       "phone": "778-555-0110",
-      "certifications": ["WHMIS 2015", "Fall Protection"]
+      "certifications": [
+        "WHMIS 2015",
+        "Fall Protection",
+        "Silica Fit Test"
+      ]
     },
     {
       "id": "m-doyle",
@@ -132,7 +178,12 @@
       "role": "Supervisor",
       "trade": "Formwork Supervision",
       "phone": "604-555-0144",
-      "certifications": ["Supervisor Training", "Fall Protection", "WHMIS 2015"]
+      "certifications": [
+        "Supervisor Training",
+        "Fall Protection",
+        "WHMIS 2015",
+        "Silica Fit Test"
+      ]
     },
     {
       "id": "m-brooks",
@@ -141,7 +192,10 @@
       "role": "Labourer",
       "trade": "General Labour",
       "phone": "778-555-0177",
-      "certifications": ["WHMIS 2015", "First Aid Level 1"]
+      "certifications": [
+        "WHMIS 2015",
+        "First Aid Level 1"
+      ]
     },
     {
       "id": "m-patel",
@@ -150,7 +204,12 @@
       "role": "Formwork Carpenter",
       "trade": "Formwork",
       "phone": "604-555-0193",
-      "certifications": ["Site Orientation", "Fall Protection", "WHMIS 2015"]
+      "certifications": [
+        "Site Orientation",
+        "Fall Protection",
+        "WHMIS 2015",
+        "Silica Fit Test"
+      ]
     },
     {
       "id": "m-santos",
@@ -161,10 +220,11 @@
       "phone": "778-555-0121",
       "certifications": [
         "Site Orientation",
-        "Rigging Ticket — Level 2",
+        "Rigging Ticket \u2014 Level 2",
         "Signal Person",
         "Fall Protection",
-        "WHMIS 2015"
+        "WHMIS 2015",
+        "Silica Fit Test"
       ]
     },
     {
@@ -174,7 +234,9 @@
       "role": "Labourer",
       "trade": "General Labour",
       "phone": "604-555-0155",
-      "certifications": ["WHMIS 2015"]
+      "certifications": [
+        "WHMIS 2015"
+      ]
     },
     {
       "id": "m-hassan",
@@ -183,7 +245,12 @@
       "role": "Safety Coordinator",
       "trade": "Safety",
       "phone": "604-555-0128",
-      "certifications": ["NCSO", "First Aid Level 2", "WHMIS 2015"]
+      "certifications": [
+        "NCSO",
+        "First Aid Level 2",
+        "WHMIS 2015",
+        "Silica Fit Test"
+      ]
     },
     {
       "id": "m-tanaka",
@@ -198,7 +265,8 @@
         "Supervisor Training",
         "Fall Protection",
         "WHMIS 2015",
-        "First Aid Level 1"
+        "First Aid Level 1",
+        "Silica Fit Test"
       ]
     },
     {
@@ -208,7 +276,11 @@
       "role": "Crane Operator",
       "trade": "Mobile Crane",
       "phone": "778-555-0180",
-      "certifications": ["Mobile Crane Ticket", "Fall Protection", "WHMIS 2015"]
+      "certifications": [
+        "Mobile Crane Ticket",
+        "Fall Protection",
+        "WHMIS 2015"
+      ]
     },
     {
       "id": "m-oreilly",
@@ -221,7 +293,8 @@
         "Site Orientation",
         "Fall Protection",
         "WHMIS 2015",
-        "Confined Space"
+        "Confined Space",
+        "Silica Fit Test"
       ]
     },
     {
@@ -231,7 +304,10 @@
       "role": "Labourer",
       "trade": "General Labour",
       "phone": "778-555-0148",
-      "certifications": ["WHMIS 2015", "Traffic Control"]
+      "certifications": [
+        "WHMIS 2015",
+        "Traffic Control"
+      ]
     },
     {
       "id": "m-ikeda",
@@ -240,7 +316,10 @@
       "role": "Rigger",
       "trade": "Rigging",
       "phone": "604-555-0166",
-      "certifications": ["Rigging Ticket — Level 1", "Signal Person"]
+      "certifications": [
+        "Rigging Ticket \u2014 Level 1",
+        "Signal Person"
+      ]
     },
     {
       "id": "m-morris",
@@ -249,7 +328,12 @@
       "role": "Worker",
       "trade": "Concrete Finishing",
       "phone": "778-555-0152",
-      "certifications": ["Site Orientation", "WHMIS 2015", "Fall Protection"]
+      "certifications": [
+        "Site Orientation",
+        "WHMIS 2015",
+        "Fall Protection",
+        "Silica Fit Test"
+      ]
     }
   ]
 }

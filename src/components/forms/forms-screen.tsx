@@ -104,8 +104,8 @@ const recentForms = [
   },
   {
     id: "f3",
-    title: "Rigging pre-use — SL-2T-014",
-    href: "/forms/inspections/rigging/rig-sling-2t-a",
+    title: "Rigging pre-use walkaround",
+    href: "/forms/inspections/rigging",
     status: "Passed",
     time: "Today 06:25",
     statusColor:
@@ -186,7 +186,7 @@ export function FormsScreen() {
             </div>
             <p className="font-bold leading-snug">Rigging inspections</p>
             <p className="text-xs text-muted-foreground">
-              Pre-use log books per gear item
+              Bins, slings, bridles, hook &amp; block + more
             </p>
           </Link>
         </div>

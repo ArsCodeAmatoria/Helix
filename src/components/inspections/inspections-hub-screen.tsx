@@ -8,12 +8,21 @@ import {
   ChevronRight,
   ClipboardCheck,
   Link2,
+  Plus,
   TowerControl,
 } from "lucide-react";
 import { useInspectionLog } from "@/components/providers/inspection-log-provider";
-import { getCraneEquipment, riggingGear } from "@/lib/inspections";
+import {
+  entryGearIds,
+  gearResultFor,
+  getCraneEquipment,
+  getRiggingGear,
+  normalizeRiggingEntry,
+  riggingGear,
+} from "@/lib/inspections";
 import { PageHeader } from "@/components/layout/page-header";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type Tab = "crane" | "rigging";
@@ -32,6 +41,7 @@ export function InspectionsHubScreen() {
   const log = useInspectionLog();
   const [tab, setTab] = useState<Tab>("crane");
   const cranes = useMemo(() => getCraneEquipment(), []);
+  const riggingSessions = log.allRiggingLogs();
 
   const cranePassToday = cranes.filter((c) => {
     const latest = log.latestCrane(c.id);
@@ -39,16 +49,15 @@ export function InspectionsHubScreen() {
     const d = new Date(latest.inspectedAt);
     const now = new Date();
     return (
-      latest.overall === "pass" &&
-      d.toDateString() === now.toDateString()
+      latest.overall === "pass" && d.toDateString() === now.toDateString()
     );
   }).length;
 
-  const riggingIssues = riggingGear.filter((g) => {
+  const riggingFails = riggingGear.filter((g) => {
     const latest = log.latestRigging(g.id);
+    if (!latest) return g.status !== "in-service";
     return (
-      g.status !== "in-service" ||
-      latest?.overall === "fail"
+      g.status !== "in-service" || gearResultFor(latest, g.id) === "fail"
     );
   }).length;
 
@@ -56,7 +65,7 @@ export function InspectionsHubScreen() {
     <div>
       <PageHeader
         title="Inspection log books"
-        subtitle="Crane & rigging daily / pre-use logs"
+        subtitle="Crane & full rigger gear checks"
         backHref="/forms"
       />
 
@@ -77,7 +86,7 @@ export function InspectionsHubScreen() {
             <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-violet-500/15 text-violet-700 dark:text-violet-400">
               <Link2 className="size-5" />
             </div>
-            <p className="text-2xl font-bold tabular-nums">{riggingIssues}</p>
+            <p className="text-2xl font-bold tabular-nums">{riggingFails}</p>
             <p className="text-xs font-medium text-muted-foreground">
               Rigging items needing attention
             </p>
@@ -129,10 +138,7 @@ export function InspectionsHubScreen() {
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <p className="font-bold leading-snug">{crane.name}</p>
-                      <Badge
-                        variant="outline"
-                        className="capitalize"
-                      >
+                      <Badge variant="outline" className="capitalize">
                         {crane.status.replace("-", " ")}
                       </Badge>
                     </div>
@@ -143,7 +149,9 @@ export function InspectionsHubScreen() {
                     </p>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       {latest ? (
-                        <Badge className={cn("border-0", overallStyle(latest.overall))}>
+                        <Badge
+                          className={cn("border-0", overallStyle(latest.overall))}
+                        >
                           Last: {latest.overall}
                         </Badge>
                       ) : (
@@ -168,65 +176,78 @@ export function InspectionsHubScreen() {
         )}
 
         {tab === "rigging" && (
-          <section className="space-y-2 pb-4">
+          <section className="space-y-3 pb-4">
             <p className="text-sm text-muted-foreground">
-              Pre-use and periodic inspections for each piece of gear.
+              One inspection for the whole walkaround — check only the gear
+              you&apos;re using.
             </p>
-            {riggingGear.map((gear) => {
-              const latest = log.latestRigging(gear.id);
-              const entries = log.riggingLogFor(gear.id);
-              const attention =
-                gear.status !== "in-service" || latest?.overall === "fail";
+
+            <Button
+              asChild
+              size="lg"
+              className="h-14 w-full rounded-2xl text-base font-bold"
+            >
+              <Link href="/forms/inspections/rigging">
+                <Plus className="size-5" />
+                Open rigging inspection
+              </Link>
+            </Button>
+
+            <p className="pt-1 text-sm font-bold">Recent sessions</p>
+            {riggingSessions.length === 0 && (
+              <div className="helix-card p-5 text-center text-sm text-muted-foreground">
+                No rigging inspections logged yet.
+              </div>
+            )}
+            {riggingSessions.slice(0, 8).map((raw) => {
+              const entry = normalizeRiggingEntry(raw);
+              const ids = entryGearIds(entry);
               return (
                 <Link
-                  key={gear.id}
-                  href={`/forms/inspections/rigging/${gear.id}`}
-                  className={cn(
-                    "helix-card flex items-start gap-3 p-4 active:scale-[0.99]",
-                    attention && "ring-1 ring-rose-500/20"
-                  )}
+                  key={entry.id}
+                  href="/forms/inspections/rigging"
+                  className="helix-card flex items-start gap-3 p-4 active:scale-[0.99]"
                 >
                   <div
                     className={cn(
                       "flex size-12 shrink-0 items-center justify-center rounded-2xl",
-                      attention
+                      entry.overall === "fail"
                         ? "bg-rose-500/15 text-rose-700 dark:text-rose-400"
                         : "bg-violet-500/15 text-violet-700 dark:text-violet-400"
                     )}
                   >
-                    {attention ? (
+                    {entry.overall === "fail" ? (
                       <AlertTriangle className="size-5" />
                     ) : (
                       <Link2 className="size-5" />
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <p className="font-bold leading-snug">{gear.name}</p>
-                      <Badge variant="outline" className="capitalize">
-                        {gear.status.replace("-", " ")}
+                    <div className="flex flex-wrap gap-2">
+                      <Badge
+                        className={cn(
+                          "border-0 capitalize",
+                          overallStyle(entry.overall)
+                        )}
+                      >
+                        {entry.overall}
+                      </Badge>
+                      <Badge variant="secondary" className="capitalize">
+                        {entry.inspectionType.replace("-", " ")}
                       </Badge>
                     </div>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      {gear.assetTag} · {gear.capacity} · {gear.type}
+                    <p className="mt-2 font-semibold">
+                      {new Date(entry.inspectedAt).toLocaleString()}
                     </p>
-                    <div className="mt-2 flex flex-wrap items-center gap-2">
-                      {latest ? (
-                        <Badge
-                          className={cn("border-0", overallStyle(latest.overall))}
-                        >
-                          Last: {latest.overall}
-                        </Badge>
-                      ) : (
-                        <Badge className="border-0 bg-muted text-muted-foreground">
-                          No entries
-                        </Badge>
-                      )}
-                      <span className="text-xs text-muted-foreground">
-                        {entries.length} log
-                        {entries.length === 1 ? "" : "s"}
-                      </span>
-                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      {entry.inspector} · {ids.length} item
+                      {ids.length === 1 ? "" : "s"}
+                    </p>
+                    <p className="mt-1 truncate text-xs text-muted-foreground">
+                      {ids
+                        .map((id) => getRiggingGear(id)?.assetTag ?? id)
+                        .join(" · ")}
+                    </p>
                   </div>
                   <ChevronRight className="mt-1 size-5 shrink-0 text-muted-foreground" />
                 </Link>

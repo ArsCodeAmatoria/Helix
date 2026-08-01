@@ -360,17 +360,41 @@ export type RiggingInspectionType = "pre-use" | "periodic" | "after-incident";
 export interface InspectionCheckTemplate {
   id: string;
   label: string;
+  section?: string;
 }
 
 export interface InspectionCheckItem {
   id: string;
   label: string;
   result: InspectionCheckResult;
+  section?: string;
+}
+
+export interface CraneGreasePoint {
+  id: string;
+  label: string;
+  intervalDays: number;
+}
+
+export interface CraneMaintenanceSchedule {
+  equipmentId: string;
+  notes: string;
+  greasePoints: CraneGreasePoint[];
+}
+
+export interface CraneGreasingEntry {
+  id: string;
+  equipmentId: string;
+  greasedAt: string;
+  technician: string;
+  pointIds: string[];
+  notes: string;
 }
 
 export interface RiggingGearItem {
   id: string;
   name: string;
+  category: string;
   type: string;
   assetTag: string;
   capacity: string;
@@ -394,14 +418,25 @@ export interface CraneInspectionEntry {
   comments: string;
 }
 
+export interface RiggingGearResult {
+  gearId: string;
+  result: InspectionCheckResult;
+}
+
 export interface RiggingInspectionEntry {
   id: string;
   kind: "rigging";
-  gearId: string;
+  /** @deprecated Prefer gearIds — kept for older localStorage entries */
+  gearId?: string;
+  /** Gear selected / in use for this inspection */
+  gearIds: string[];
+  /** Pass/fail per selected gear (null = not rated yet while drafting) */
+  gearResults: RiggingGearResult[];
   inspectionType: RiggingInspectionType;
   inspectedAt: string;
   inspector: string;
   projectId: string | null;
+  /** Optional detail checks — unmarked items do not block save */
   checks: InspectionCheckItem[];
   overall: InspectionOverall;
   comments: string;
@@ -412,4 +447,5 @@ export type InspectionLogEntry = CraneInspectionEntry | RiggingInspectionEntry;
 export interface InspectionLogState {
   craneEntries: CraneInspectionEntry[];
   riggingEntries: RiggingInspectionEntry[];
+  greasingEntries: CraneGreasingEntry[];
 }

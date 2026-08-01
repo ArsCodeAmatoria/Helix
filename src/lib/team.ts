@@ -45,6 +45,7 @@ export function searchMembers(
       m.employeeNumber.includes(q) ||
       m.role.toLowerCase().includes(q) ||
       m.trade.toLowerCase().includes(q) ||
+      m.certifications.some((c) => c.toLowerCase().includes(q)) ||
       getMemberCrews(m.id).some((c) => c.name.toLowerCase().includes(q))
   );
 }
