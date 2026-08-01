@@ -1,0 +1,162 @@
+{
+  "source": "Helix worker competency matrix (Element 8 — Training & Communication)",
+  "requirements": [
+    {
+      "id": "req-orient",
+      "name": "Site Orientation",
+      "category": "Orientation",
+      "description": "Company / site orientation completed before work",
+      "aliases": ["site orientation", "orientation", "new hire orientation"]
+    },
+    {
+      "id": "req-whmis",
+      "name": "WHMIS 2015",
+      "category": "Core",
+      "description": "Workplace Hazardous Materials Information System",
+      "aliases": ["whmis 2015", "whmis"]
+    },
+    {
+      "id": "req-fall",
+      "name": "Fall Protection",
+      "category": "Core",
+      "description": "Fall protection training for elevated work",
+      "aliases": ["fall protection", "fall arrest"]
+    },
+    {
+      "id": "req-first-aid-1",
+      "name": "First Aid Level 1",
+      "category": "Emergency",
+      "description": "Occupational first aid level 1 or higher",
+      "aliases": ["first aid level 1", "first aid level 2", "ofa 1", "ofa 2", "first aid"]
+    },
+    {
+      "id": "req-first-aid-2",
+      "name": "First Aid Level 2",
+      "category": "Emergency",
+      "description": "Occupational first aid level 2",
+      "aliases": ["first aid level 2", "ofa 2"]
+    },
+    {
+      "id": "req-supervisor",
+      "name": "Supervisor Training",
+      "category": "Leadership",
+      "description": "Supervisor due diligence / leadership training",
+      "aliases": ["supervisor training", "supervisor due diligence"]
+    },
+    {
+      "id": "req-ncso",
+      "name": "NCSO",
+      "category": "Safety",
+      "description": "National Construction Safety Officer",
+      "aliases": ["ncso"]
+    },
+    {
+      "id": "req-incident",
+      "name": "Incident Investigation",
+      "category": "Safety",
+      "description": "Incident investigation competency",
+      "aliases": ["incident investigation"]
+    },
+    {
+      "id": "req-rigging",
+      "name": "Rigging Ticket",
+      "category": "Trade",
+      "description": "Rigging ticket level 1 or higher",
+      "aliases": [
+        "rigging ticket",
+        "rigging ticket level 1",
+        "rigging ticket level 2",
+        "rigging ticket — level 1",
+        "rigging ticket — level 2"
+      ]
+    },
+    {
+      "id": "req-signal",
+      "name": "Signal Person",
+      "category": "Trade",
+      "description": "Crane signal person competency",
+      "aliases": ["signal person", "signaller"]
+    },
+    {
+      "id": "req-tower-crane",
+      "name": "Tower Crane Ticket",
+      "category": "Trade",
+      "description": "Tower crane operator certification",
+      "aliases": ["tower crane ticket", "tower crane"]
+    },
+    {
+      "id": "req-mobile-crane",
+      "name": "Mobile Crane Ticket",
+      "category": "Trade",
+      "description": "Mobile crane operator certification",
+      "aliases": ["mobile crane ticket", "mobile crane"]
+    },
+    {
+      "id": "req-radio",
+      "name": "Radio Protocol",
+      "category": "Trade",
+      "description": "Crane / lift radio communication protocol",
+      "aliases": ["radio protocol"]
+    },
+    {
+      "id": "req-forklift",
+      "name": "Forklift",
+      "category": "Equipment",
+      "description": "Forklift / industrial lift truck operator",
+      "aliases": ["forklift", "lift truck"]
+    },
+    {
+      "id": "req-confined",
+      "name": "Confined Space",
+      "category": "Specialty",
+      "description": "Confined space entry awareness / training",
+      "aliases": ["confined space"]
+    },
+    {
+      "id": "req-traffic",
+      "name": "Traffic Control",
+      "category": "Specialty",
+      "description": "Traffic control person training",
+      "aliases": ["traffic control"]
+    }
+  ],
+  "roleRequirements": {
+    "Worker": ["req-orient", "req-whmis", "req-fall"],
+    "Crew Member": ["req-orient", "req-whmis", "req-fall"],
+    "Labourer": ["req-orient", "req-whmis", "req-fall"],
+    "Apprentice": ["req-orient", "req-whmis", "req-fall"],
+    "Formwork Carpenter": ["req-orient", "req-whmis", "req-fall"],
+    "Rigger": ["req-orient", "req-whmis", "req-fall", "req-rigging", "req-signal"],
+    "Crane Operator": [
+      "req-orient",
+      "req-whmis",
+      "req-fall",
+      "req-tower-crane",
+      "req-radio"
+    ],
+    "Supervisor": [
+      "req-orient",
+      "req-whmis",
+      "req-fall",
+      "req-supervisor",
+      "req-first-aid-1"
+    ],
+    "Safety Coordinator": [
+      "req-orient",
+      "req-whmis",
+      "req-fall",
+      "req-ncso",
+      "req-first-aid-2",
+      "req-incident"
+    ]
+  },
+  "tradeOverrides": {
+    "Mobile Crane": {
+      "replace": ["req-tower-crane"],
+      "with": ["req-mobile-crane"]
+    },
+    "Yard Operations": {
+      "add": ["req-forklift"]
+    }
+  }
+}

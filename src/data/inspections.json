@@ -1,0 +1,130 @@
+{
+  "gear": [
+    {
+      "id": "rig-sling-2t-a",
+      "name": "Web Sling 2T — Orange",
+      "type": "Synthetic sling",
+      "assetTag": "SL-2T-014",
+      "capacity": "2,000 kg",
+      "manufacturer": "Lift-All",
+      "status": "in-service",
+      "lastInspection": "2026-08-01"
+    },
+    {
+      "id": "rig-sling-5t-a",
+      "name": "Web Sling 5T — Yellow",
+      "type": "Synthetic sling",
+      "assetTag": "SL-5T-008",
+      "capacity": "5,000 kg",
+      "manufacturer": "Lift-All",
+      "status": "in-service",
+      "lastInspection": "2026-07-31"
+    },
+    {
+      "id": "rig-wire-10t",
+      "name": "Wire Rope Sling 10T",
+      "type": "Wire rope sling",
+      "assetTag": "WR-10T-003",
+      "capacity": "10,000 kg",
+      "manufacturer": "WireCo",
+      "status": "in-service",
+      "lastInspection": "2026-07-30"
+    },
+    {
+      "id": "rig-shackle-8.5",
+      "name": "Screw Pin Anchor Shackle 8.5T",
+      "type": "Shackle",
+      "assetTag": "SH-8.5-021",
+      "capacity": "8,500 kg",
+      "manufacturer": "Crosby",
+      "status": "in-service",
+      "lastInspection": "2026-08-01"
+    },
+    {
+      "id": "rig-shackle-12",
+      "name": "Bolt Type Shackle 12T",
+      "type": "Shackle",
+      "assetTag": "SH-12-006",
+      "capacity": "12,000 kg",
+      "manufacturer": "Crosby",
+      "status": "maintenance",
+      "lastInspection": "2026-07-28"
+    },
+    {
+      "id": "rig-hook-swivel",
+      "name": "Swivel Hook 15T",
+      "type": "Hook",
+      "assetTag": "HK-15-002",
+      "capacity": "15,000 kg",
+      "manufacturer": "Crosby",
+      "status": "in-service",
+      "lastInspection": "2026-07-29"
+    },
+    {
+      "id": "rig-chain-3t",
+      "name": "Chain Sling 3T — 2-leg",
+      "type": "Chain sling",
+      "assetTag": "CH-3T-011",
+      "capacity": "3,000 kg",
+      "manufacturer": "Pewag",
+      "status": "in-service",
+      "lastInspection": "2026-07-27"
+    },
+    {
+      "id": "rig-spreader",
+      "name": "Spreader Bar 4m",
+      "type": "Spreader / beam",
+      "assetTag": "SB-4M-001",
+      "capacity": "20,000 kg",
+      "manufacturer": "Modulift",
+      "status": "in-service",
+      "lastInspection": "2026-07-25"
+    },
+    {
+      "id": "rig-tagline-set",
+      "name": "Tag Line Set",
+      "type": "Tag line",
+      "assetTag": "TL-SET-B",
+      "capacity": "N/A",
+      "manufacturer": "Helix Yard",
+      "status": "in-service",
+      "lastInspection": "2026-08-01"
+    },
+    {
+      "id": "rig-softener",
+      "name": "Corner Softeners (pair)",
+      "type": "Softener",
+      "assetTag": "CS-PAIR-04",
+      "capacity": "N/A",
+      "manufacturer": "Helix Yard",
+      "status": "out-of-service",
+      "lastInspection": "2026-07-20"
+    }
+  ],
+  "craneChecklist": [
+    { "id": "c-structure", "label": "Tower / structure — visible damage, bolts, pins" },
+    { "id": "c-jib", "label": "Jib / boom — pins, pendant lines, connections" },
+    { "id": "c-rope", "label": "Hoist / trolley rope — wear, birdcaging, lubrication" },
+    { "id": "c-hook", "label": "Hook, swivel & safety latch" },
+    { "id": "c-brakes", "label": "Hoist, trolley & slew brakes" },
+    { "id": "c-limits", "label": "Limit switches / anti-two-block / cutouts" },
+    { "id": "c-controls", "label": "Cabin / remote controls, E-stop, indicators" },
+    { "id": "c-wind", "label": "Anemometer / wind reading within limits" },
+    { "id": "c-chart", "label": "Load chart posted & matches configuration" },
+    { "id": "c-radio", "label": "Radio / signal protocol confirmed" },
+    { "id": "c-swing", "label": "Swing radius clear / barricades in place" },
+    { "id": "c-tags", "label": "No unresolved out-of-service tags on crane" }
+  ],
+  "riggingChecklist": [
+    { "id": "r-tag", "label": "ID / capacity tag present and legible" },
+    { "id": "r-rating", "label": "Rated capacity suitable for planned lift" },
+    { "id": "r-wear", "label": "No cuts, abrasion, crushed strands, or heat damage" },
+    { "id": "r-deform", "label": "No bent, stretched, or cracked hardware" },
+    { "id": "r-hardware", "label": "Pins, nuts, latches secure and free to operate" },
+    { "id": "r-throat", "label": "Hook / shackle throat opening within tolerance" },
+    { "id": "r-stitch", "label": "Stitching / splices intact (slings)" },
+    { "id": "r-clean", "label": "Free of chemicals, weld spatter, excessive corrosion" },
+    { "id": "r-storage", "label": "Stored correctly when not in use" },
+    { "id": "r-match", "label": "Matched to lift plan / FLHA gear list" }
+  ]
+}

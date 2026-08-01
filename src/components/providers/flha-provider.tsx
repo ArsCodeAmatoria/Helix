@@ -69,6 +69,13 @@ interface FlhaContextValue {
   addSigner: (partial?: Partial<Omit<SignerEntry, "id">>) => void;
   updateSigner: (id: string, patch: Partial<SignerEntry>) => void;
   removeSigner: (id: string) => void;
+  loadTeamSigners: (
+    signers: Array<{
+      name: string;
+      role: SignerEntry["role"];
+      signature?: string | null;
+    }>
+  ) => void;
   captureGps: () => void;
   next: () => { ok: boolean; message?: string };
   back: () => void;
@@ -433,6 +440,35 @@ export function FlhaProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
+  const loadTeamSigners = useCallback(
+    (
+      signers: Array<{
+        name: string;
+        role: SignerEntry["role"];
+        signature?: string | null;
+      }>
+    ) => {
+      if (signers.length === 0) return;
+      const now = new Date().toISOString();
+      setState((s) => ({
+        ...s,
+        signatures: {
+          ...s.signatures,
+          signers: signers.map((person) =>
+            createEmptySigner({
+              name: person.name,
+              role: person.role,
+              signature: person.signature ?? null,
+              signedAt: person.signature ? now : null,
+            })
+          ),
+          timestamp: now,
+        },
+      }));
+    },
+    []
+  );
+
   const captureGps = useCallback(() => {
     if (!navigator.geolocation) {
       setState((s) => ({
@@ -526,6 +562,7 @@ export function FlhaProvider({ children }: { children: React.ReactNode }) {
     addSigner,
     updateSigner,
     removeSigner,
+    loadTeamSigners,
     captureGps,
     next,
     back,

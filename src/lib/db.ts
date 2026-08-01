@@ -18,7 +18,20 @@ import type {
   Company,
   TaskCategory,
   NotificationItem,
+  Deficiency,
+  CorrectiveAction,
+  WeatherAlert,
+  UpcomingInspection,
+  DashboardStats,
 } from "@/lib/types";
+
+export interface DashboardData {
+  stats: DashboardStats;
+  deficiencies: Deficiency[];
+  correctiveActions: CorrectiveAction[];
+  weatherAlerts: WeatherAlert[];
+  upcomingInspections: UpcomingInspection[];
+}
 
 export const db = {
   projects: projects as Project[],
@@ -28,10 +41,36 @@ export const db = {
   documents: documents as SafeWorkDocument[],
   worker: worker as Worker,
   company: company as Company,
-  dashboard,
+  dashboard: dashboard as DashboardData,
   notifications: notifications as NotificationItem[],
   config,
 };
+
+export function getNotification(id: string): NotificationItem | undefined {
+  return db.notifications.find((n) => n.id === id);
+}
+
+export function getUnreadNotifications(): NotificationItem[] {
+  return db.notifications.filter((n) => !n.read);
+}
+
+export function getDeficiency(id: string): Deficiency | undefined {
+  return db.dashboard.deficiencies.find((d) => d.id === id);
+}
+
+export function getCorrectiveAction(id: string): CorrectiveAction | undefined {
+  return db.dashboard.correctiveActions.find((a) => a.id === id);
+}
+
+export function getWeatherAlert(id: string): WeatherAlert | undefined {
+  return db.dashboard.weatherAlerts.find((w) => w.id === id);
+}
+
+export function getUpcomingInspection(
+  id: string
+): UpcomingInspection | undefined {
+  return db.dashboard.upcomingInspections.find((i) => i.id === id);
+}
 
 export function getProject(id: string): Project | undefined {
   return db.projects.find((p) => p.id === id);
@@ -63,6 +102,33 @@ export function getEquipment(id: string): EquipmentItem | undefined {
 
 export function getDocument(id: string): SafeWorkDocument | undefined {
   return db.documents.find((d) => d.id === id);
+}
+
+export function getDocumentsByCategory(
+  category: SafeWorkDocument["category"]
+): SafeWorkDocument[] {
+  return db.documents.filter((d) => d.category === category);
+}
+
+export function getSwpDocuments(): SafeWorkDocument[] {
+  return getDocumentsByCategory("SWP");
+}
+
+export function getSjpDocuments(): SafeWorkDocument[] {
+  return getDocumentsByCategory("SJP");
+}
+
+export function searchDocuments(query: string): SafeWorkDocument[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return db.documents;
+  return db.documents.filter(
+    (d) =>
+      d.title.toLowerCase().includes(q) ||
+      d.shortTitle.toLowerCase().includes(q) ||
+      d.type.toLowerCase().includes(q) ||
+      d.summary.toLowerCase().includes(q) ||
+      d.category.toLowerCase().includes(q)
+  );
 }
 
 /** Resolve unique hazards from selected task IDs — core of the dynamic form engine */

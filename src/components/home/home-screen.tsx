@@ -80,7 +80,7 @@ const modules = [
     color: "bg-[#ee46bc]",
   },
   {
-    href: "/profile",
+    href: "/team",
     label: "My Crew",
     icon: HardHat,
     color: "bg-[#06aed4]",
@@ -218,27 +218,48 @@ export function HomeScreen() {
           </div>
         </section>
 
-        {/* Company update card */}
+        {/* Company updates */}
         <section className="pb-2">
-          <h2 className="mb-3 text-base font-bold">Company updates</h2>
-          <div className="helix-card space-y-3 p-4">
-            <div className="flex items-start gap-3">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary text-sm font-bold text-primary-foreground">
-                {company.logoText}
-              </div>
-              <div>
-                <p className="font-semibold leading-snug">
-                  Toolbox talk — Blind lift radio protocol
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Review before your shift. Posted by Safety.
-                </p>
-                <p className="mt-2 text-xs text-muted-foreground">2 hr ago</p>
-              </div>
-            </div>
-            <Button asChild className="h-11 w-full rounded-2xl font-semibold">
-              <Link href="/forms">Open forms</Link>
-            </Button>
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-base font-bold">Company updates</h2>
+            <Link
+              href="/notifications"
+              className="text-sm font-semibold text-primary"
+            >
+              See all
+            </Link>
+          </div>
+          <div className="space-y-3">
+            {db.notifications.slice(0, 3).map((n) => (
+              <Link
+                key={n.id}
+                href={`/notifications/${n.id}`}
+                className="helix-card block space-y-3 p-4 transition-shadow active:scale-[0.99]"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary text-sm font-bold text-primary-foreground">
+                    {company.logoText}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-start justify-between gap-2">
+                      <p className="font-semibold leading-snug">{n.title}</p>
+                      {!n.read && (
+                        <span className="mt-1 size-2.5 shrink-0 rounded-full bg-primary" />
+                      )}
+                    </div>
+                    <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+                      {n.body}
+                    </p>
+                    <p className="mt-2 text-xs text-muted-foreground">
+                      {n.time} · {n.postedBy}
+                    </p>
+                  </div>
+                </div>
+                <span className="inline-flex h-11 w-full items-center justify-center rounded-2xl bg-primary text-sm font-semibold text-primary-foreground">
+                  {n.cta}
+                </span>
+              </Link>
+            ))}
           </div>
         </section>
       </main>

@@ -1,0 +1,255 @@
+{
+  "crews": [
+    {
+      "id": "crew-a",
+      "name": "Crew A — Columns",
+      "supervisor": "Elena Vasquez",
+      "color": "#2f6bff",
+      "memberIds": ["m-chen", "m-okonkwo", "m-lee", "m-patel", "m-brooks"]
+    },
+    {
+      "id": "crew-b",
+      "name": "Crew B — Tower & Deck",
+      "supervisor": "Dave Okonkwo",
+      "color": "#12b76a",
+      "memberIds": ["m-chen", "m-okonkwo", "m-nair", "m-lee", "m-rivera", "m-nguyen", "m-kim"]
+    },
+    {
+      "id": "crew-c",
+      "name": "Crew C — Stripping",
+      "supervisor": "Tony Rivera",
+      "color": "#f79009",
+      "memberIds": ["m-doyle", "m-brooks", "m-santos", "m-kim", "m-foster"]
+    },
+    {
+      "id": "crew-d",
+      "name": "Crew D — Walls",
+      "supervisor": "Chris Doyle",
+      "color": "#7a5af8",
+      "memberIds": ["m-doyle", "m-hassan", "m-patel", "m-santos", "m-foster"]
+    },
+    {
+      "id": "crew-yard",
+      "name": "Yard Crew",
+      "supervisor": "Mike Tanaka",
+      "color": "#06aed4",
+      "memberIds": ["m-tanaka", "m-brooks", "m-foster", "m-chen"]
+    }
+  ],
+  "members": [
+    {
+      "id": "m-chen",
+      "name": "Marcus Chen",
+      "employeeNumber": "10042",
+      "role": "Rigger",
+      "trade": "Formwork / Crane Support",
+      "phone": "778-555-0142",
+      "certifications": [
+        "Site Orientation",
+        "Rigging Ticket — Level 2",
+        "Fall Protection",
+        "WHMIS 2015",
+        "Signal Person"
+      ]
+    },
+    {
+      "id": "m-okonkwo",
+      "name": "Dave Okonkwo",
+      "employeeNumber": "10008",
+      "role": "Supervisor",
+      "trade": "Supervision",
+      "phone": "604-555-0188",
+      "certifications": [
+        "Site Orientation",
+        "Supervisor Training",
+        "Fall Protection",
+        "First Aid Level 2",
+        "WHMIS 2015"
+      ]
+    },
+    {
+      "id": "m-nair",
+      "name": "Priya Nair",
+      "employeeNumber": "10015",
+      "role": "Safety Coordinator",
+      "trade": "Safety",
+      "phone": "604-555-0171",
+      "certifications": [
+        "Site Orientation",
+        "NCSO",
+        "WHMIS 2015",
+        "Incident Investigation",
+        "Fall Protection",
+        "First Aid Level 2"
+      ]
+    },
+    {
+      "id": "m-lee",
+      "name": "Jordan Lee",
+      "employeeNumber": "10102",
+      "role": "Rigger",
+      "trade": "Rigging",
+      "phone": "778-555-0199",
+      "certifications": ["Rigging Ticket — Level 1", "Fall Protection"]
+    },
+    {
+      "id": "m-rivera",
+      "name": "Sam Rivera",
+      "employeeNumber": "10118",
+      "role": "Formwork Carpenter",
+      "trade": "Formwork",
+      "phone": "778-555-0133",
+      "certifications": ["Site Orientation", "Fall Protection", "WHMIS 2015"]
+    },
+    {
+      "id": "m-nguyen",
+      "name": "Alex Nguyen",
+      "employeeNumber": "10055",
+      "role": "Crane Operator",
+      "trade": "Tower Crane",
+      "phone": "604-555-0162",
+      "certifications": [
+        "Site Orientation",
+        "Tower Crane Ticket",
+        "Fall Protection",
+        "Radio Protocol",
+        "WHMIS 2015"
+      ]
+    },
+    {
+      "id": "m-kim",
+      "name": "Taylor Kim",
+      "employeeNumber": "10144",
+      "role": "Apprentice",
+      "trade": "Formwork",
+      "phone": "778-555-0110",
+      "certifications": ["WHMIS 2015", "Fall Protection"]
+    },
+    {
+      "id": "m-doyle",
+      "name": "Chris Doyle",
+      "employeeNumber": "10022",
+      "role": "Supervisor",
+      "trade": "Formwork Supervision",
+      "phone": "604-555-0144",
+      "certifications": ["Supervisor Training", "Fall Protection", "WHMIS 2015"]
+    },
+    {
+      "id": "m-brooks",
+      "name": "Jamie Brooks",
+      "employeeNumber": "10155",
+      "role": "Labourer",
+      "trade": "General Labour",
+      "phone": "778-555-0177",
+      "certifications": ["WHMIS 2015", "First Aid Level 1"]
+    },
+    {
+      "id": "m-patel",
+      "name": "Riya Patel",
+      "employeeNumber": "10161",
+      "role": "Formwork Carpenter",
+      "trade": "Formwork",
+      "phone": "604-555-0193",
+      "certifications": ["Site Orientation", "Fall Protection", "WHMIS 2015"]
+    },
+    {
+      "id": "m-santos",
+      "name": "Luis Santos",
+      "employeeNumber": "10170",
+      "role": "Rigger",
+      "trade": "Rigging",
+      "phone": "778-555-0121",
+      "certifications": [
+        "Site Orientation",
+        "Rigging Ticket — Level 2",
+        "Signal Person",
+        "Fall Protection",
+        "WHMIS 2015"
+      ]
+    },
+    {
+      "id": "m-foster",
+      "name": "Casey Foster",
+      "employeeNumber": "10188",
+      "role": "Labourer",
+      "trade": "General Labour",
+      "phone": "604-555-0155",
+      "certifications": ["WHMIS 2015"]
+    },
+    {
+      "id": "m-hassan",
+      "name": "Amina Hassan",
+      "employeeNumber": "10031",
+      "role": "Safety Coordinator",
+      "trade": "Safety",
+      "phone": "604-555-0128",
+      "certifications": ["NCSO", "First Aid Level 2", "WHMIS 2015"]
+    },
+    {
+      "id": "m-tanaka",
+      "name": "Mike Tanaka",
+      "employeeNumber": "10019",
+      "role": "Supervisor",
+      "trade": "Yard Operations",
+      "phone": "604-555-0190",
+      "certifications": [
+        "Site Orientation",
+        "Forklift",
+        "Supervisor Training",
+        "Fall Protection",
+        "WHMIS 2015",
+        "First Aid Level 1"
+      ]
+    },
+    {
+      "id": "m-wallace",
+      "name": "Nina Wallace",
+      "employeeNumber": "10201",
+      "role": "Crane Operator",
+      "trade": "Mobile Crane",
+      "phone": "778-555-0180",
+      "certifications": ["Mobile Crane Ticket", "Fall Protection", "WHMIS 2015"]
+    },
+    {
+      "id": "m-oreilly",
+      "name": "Sean O'Reilly",
+      "employeeNumber": "10214",
+      "role": "Formwork Carpenter",
+      "trade": "Formwork",
+      "phone": "604-555-0139",
+      "certifications": [
+        "Site Orientation",
+        "Fall Protection",
+        "WHMIS 2015",
+        "Confined Space"
+      ]
+    },
+    {
+      "id": "m-berg",
+      "name": "Sofia Berg",
+      "employeeNumber": "10222",
+      "role": "Labourer",
+      "trade": "General Labour",
+      "phone": "778-555-0148",
+      "certifications": ["WHMIS 2015", "Traffic Control"]
+    },
+    {
+      "id": "m-ikeda",
+      "name": "Kenji Ikeda",
+      "employeeNumber": "10230",
+      "role": "Rigger",
+      "trade": "Rigging",
+      "phone": "604-555-0166",
+      "certifications": ["Rigging Ticket — Level 1", "Signal Person"]
+    },
+    {
+      "id": "m-morris",
+      "name": "Dana Morris",
+      "employeeNumber": "10241",
+      "role": "Worker",
+      "trade": "Concrete Finishing",
+      "phone": "778-555-0152",
+      "certifications": ["Site Orientation", "WHMIS 2015", "Fall Protection"]
+    }
+  ]
+}

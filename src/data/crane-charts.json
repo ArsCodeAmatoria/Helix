@@ -1,0 +1,93 @@
+{
+  "disclaimer": "These manufacturer datasheets and product guides are for operator reference and training in Helix. Always use the serial-specific load chart and operating instructions posted on the crane before any lift.",
+  "charts": [
+    {
+      "id": "chart-liebherr-34k",
+      "manufacturer": "Liebherr",
+      "model": "34 K",
+      "title": "Liebherr 34 K — Datasheet & load chart",
+      "type": "Fast-erecting / tower",
+      "file": "/crane-pdfs/liebherr-34k-datasheet.pdf",
+      "pagesNote": "Includes radius & capacity tables",
+      "equipmentIds": [],
+      "source": "Liebherr official datasheet"
+    },
+    {
+      "id": "chart-liebherr-overview",
+      "manufacturer": "Liebherr",
+      "model": "Tower Crane Range",
+      "title": "Liebherr Tower Cranes — Product overview",
+      "type": "Brochure",
+      "file": "/crane-pdfs/liebherr-tower-cranes-overview.pdf",
+      "pagesNote": "Series overview for operator familiarization",
+      "equipmentIds": [],
+      "source": "Liebherr brochure"
+    },
+    {
+      "id": "chart-potain-hdt80",
+      "manufacturer": "Potain",
+      "model": "HDT 80",
+      "title": "Potain HDT 80 — Product guide & load charts",
+      "type": "Self-erecting",
+      "file": "/crane-pdfs/potain-hdt80-product-guide.pdf",
+      "pagesNote": "Imperial + metric load charts",
+      "equipmentIds": [],
+      "source": "Manitowoc / Potain"
+    },
+    {
+      "id": "chart-potain-md365",
+      "manufacturer": "Potain",
+      "model": "MD 365 B L16",
+      "title": "Potain MD 365 B L16 — Data sheet & load charts",
+      "type": "Top-slewing tower",
+      "file": "/crane-pdfs/potain-md365-data-sheet.pdf",
+      "pagesNote": "Climbing crane capacity tables",
+      "equipmentIds": ["eq-tc1"],
+      "source": "Manitowoc / Potain"
+    },
+    {
+      "id": "chart-potain-mr615",
+      "manufacturer": "Potain",
+      "model": "MR 615",
+      "title": "Potain MR 615 — Product guide & load charts",
+      "type": "Luffing jib",
+      "file": "/crane-pdfs/potain-mr615-product-guide.pdf",
+      "pagesNote": "Luffing jib charts and mast configs",
+      "equipmentIds": ["eq-tc2"],
+      "source": "Manitowoc / Potain"
+    },
+    {
+      "id": "chart-terex-ctt191",
+      "manufacturer": "Terex",
+      "model": "CTT 191-10",
+      "title": "Terex CTT 191-10 — Flat top datasheet",
+      "type": "Flat top",
+      "file": "/crane-pdfs/terex-ctt191-10-datasheet.pdf",
+      "pagesNote": "Metric load diagrams",
+      "equipmentIds": [],
+      "source": "Terex product literature"
+    },
+    {
+      "id": "chart-terex-ctt392",
+      "manufacturer": "Terex",
+      "model": "CTT 392-16",
+      "title": "Terex CTT 392-16 — Flat top datasheet",
+      "type": "Flat top",
+      "file": "/crane-pdfs/terex-ctt392-16-datasheet.pdf",
+      "pagesNote": "Imperial load diagrams",
+      "equipmentIds": [],
+      "source": "Terex product literature"
+    },
+    {
+      "id": "chart-terex-ctt472",
+      "manufacturer": "Terex",
+      "model": "CTT 472-20",
+      "title": "Terex CTT 472-20 — Flat top datasheet",
+      "type": "Flat top",
+      "file": "/crane-pdfs/terex-ctt472-20-datasheet.pdf",
+      "pagesNote": "Imperial load diagrams",
+      "equipmentIds": [],
+      "source": "Terex product literature"
+    }
+  ]
+}

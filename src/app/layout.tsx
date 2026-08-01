@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { FlhaProvider } from "@/components/providers/flha-provider";
 import { TimeClockProvider } from "@/components/providers/timeclock-provider";
+import { TeamProvider } from "@/components/providers/team-provider";
+import { InspectionLogProvider } from "@/components/providers/inspection-log-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -52,7 +54,11 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <FlhaProvider>
             <TimeClockProvider>
-              <AppShell>{children}</AppShell>
+              <TeamProvider>
+                <InspectionLogProvider>
+                  <AppShell>{children}</AppShell>
+                </InspectionLogProvider>
+              </TeamProvider>
             </TimeClockProvider>
           </FlhaProvider>
         </ThemeProvider>

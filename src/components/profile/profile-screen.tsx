@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Award, Phone, Users } from "lucide-react";
 import { db } from "@/lib/db";
 import { PageHeader } from "@/components/layout/page-header";
@@ -7,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 
 export function ProfileScreen() {
   const worker = db.worker;
@@ -58,6 +60,9 @@ export function ProfileScreen() {
               <span className="text-muted-foreground">Default role</span>
               <span className="font-medium text-right">{worker.defaultRole}</span>
             </div>
+            <Button asChild className="mt-2 h-12 w-full rounded-2xl font-semibold">
+              <Link href="/team">Manage My Team</Link>
+            </Button>
           </CardContent>
         </Card>
 

@@ -93,14 +93,41 @@ export interface EquipmentItem {
   assetTag: string;
   status: "in-service" | "out-of-service" | "maintenance";
   lastInspection: string;
+  manufacturer?: string;
+  model?: string;
+  chartIds?: string[];
+}
+
+export interface CraneLoadChart {
+  id: string;
+  manufacturer: "Liebherr" | "Potain" | "Terex" | string;
+  model: string;
+  title: string;
+  type: string;
+  file: string;
+  pagesNote: string;
+  equipmentIds: string[];
+  source: string;
 }
 
 export interface SafeWorkDocument {
   id: string;
   title: string;
   type: string;
+  category: "SWP" | "SJP" | "Other";
+  shortTitle: string;
   version: string;
   lastUpdated: string;
+  owner: string;
+  summary: string;
+  purpose: string;
+  scope: string;
+  roles: string[];
+  ppe: string[];
+  hazards: string[];
+  steps: string[];
+  emergency: string[];
+  references: string[];
 }
 
 export interface DashboardStats {
@@ -120,6 +147,55 @@ export interface Deficiency {
   severity: "low" | "medium" | "high";
   dueDate: string;
   status: "open" | "in-progress" | "closed";
+  description: string;
+  location: string;
+  reportedBy: string;
+  assignee: string;
+  href: string;
+  cta: string;
+  bullets: string[];
+}
+
+export interface CorrectiveAction {
+  id: string;
+  title: string;
+  assignee: string;
+  dueDate: string;
+  projectId: string;
+  status: "open" | "in-progress" | "closed";
+  priority: "low" | "medium" | "high";
+  description: string;
+  href: string;
+  cta: string;
+  bullets: string[];
+}
+
+export interface WeatherAlert {
+  id: string;
+  title: string;
+  body: string;
+  severity: "low" | "medium" | "high";
+  projectId: string;
+  issuedAt: string;
+  expiresAt: string;
+  description: string;
+  href: string;
+  cta: string;
+  bullets: string[];
+}
+
+export interface UpcomingInspection {
+  id: string;
+  title: string;
+  date: string;
+  projectId: string;
+  equipmentId?: string;
+  inspector: string;
+  type: string;
+  description: string;
+  href: string;
+  cta: string;
+  bullets: string[];
 }
 
 export interface NotificationItem {
@@ -129,6 +205,12 @@ export interface NotificationItem {
   time: string;
   type: "alert" | "info" | "action" | "weather";
   read: boolean;
+  href: string;
+  cta: string;
+  postedBy: string;
+  projectId?: string;
+  detail: string;
+  bullets?: string[];
 }
 
 export interface AdditionalHazard {
@@ -185,6 +267,47 @@ export interface SignatureData {
   timestamp: string | null;
 }
 
+export type TeamMemberRole =
+  | "Rigger"
+  | "Supervisor"
+  | "Safety Coordinator"
+  | "Formwork Carpenter"
+  | "Crane Operator"
+  | "Labourer"
+  | "Apprentice"
+  | "Worker"
+  | "Crew Member";
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  employeeNumber: string;
+  role: TeamMemberRole;
+  trade: string;
+  phone: string;
+  certifications: string[];
+}
+
+export interface CrewTeam {
+  id: string;
+  name: string;
+  supervisor: string;
+  color: string;
+  memberIds: string[];
+}
+
+export interface TeamMemberSignature {
+  memberId: string;
+  signature: string | null;
+  signedAt: string | null;
+}
+
+export interface TeamState {
+  selectedCrewId: string;
+  todaysMemberIds: string[];
+  signatures: TeamMemberSignature[];
+}
+
 export interface FlhaFormState {
   projectId: string | null;
   role: Role | null;
@@ -227,4 +350,66 @@ export interface SiteVisit {
   note: string;
   gpsIn: { lat: number; lng: number } | null;
   gpsOut: { lat: number; lng: number } | null;
+}
+
+export type InspectionCheckResult = "pass" | "fail" | "na" | null;
+export type InspectionOverall = "pass" | "fail" | "conditional";
+export type CraneInspectionType = "daily" | "shift" | "weekly" | "monthly";
+export type RiggingInspectionType = "pre-use" | "periodic" | "after-incident";
+
+export interface InspectionCheckTemplate {
+  id: string;
+  label: string;
+}
+
+export interface InspectionCheckItem {
+  id: string;
+  label: string;
+  result: InspectionCheckResult;
+}
+
+export interface RiggingGearItem {
+  id: string;
+  name: string;
+  type: string;
+  assetTag: string;
+  capacity: string;
+  manufacturer: string;
+  status: "in-service" | "out-of-service" | "maintenance";
+  lastInspection: string;
+}
+
+export interface CraneInspectionEntry {
+  id: string;
+  kind: "crane";
+  equipmentId: string;
+  inspectionType: CraneInspectionType;
+  inspectedAt: string;
+  inspector: string;
+  projectId: string | null;
+  windKmh: number | null;
+  hours: number | null;
+  checks: InspectionCheckItem[];
+  overall: InspectionOverall;
+  comments: string;
+}
+
+export interface RiggingInspectionEntry {
+  id: string;
+  kind: "rigging";
+  gearId: string;
+  inspectionType: RiggingInspectionType;
+  inspectedAt: string;
+  inspector: string;
+  projectId: string | null;
+  checks: InspectionCheckItem[];
+  overall: InspectionOverall;
+  comments: string;
+}
+
+export type InspectionLogEntry = CraneInspectionEntry | RiggingInspectionEntry;
+
+export interface InspectionLogState {
+  craneEntries: CraneInspectionEntry[];
+  riggingEntries: RiggingInspectionEntry[];
 }

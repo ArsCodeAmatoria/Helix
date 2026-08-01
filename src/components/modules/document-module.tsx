@@ -1,6 +1,7 @@
 "use client";
 
-import { FileText, Check } from "lucide-react";
+import Link from "next/link";
+import { FileText, Check, ExternalLink } from "lucide-react";
 import type { SafeWorkDocument } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -26,7 +27,8 @@ export function DocumentModule({
     <div className="space-y-4">
       <div className="flex items-start justify-between gap-3">
         <p className="text-sm text-muted-foreground">
-          Project documents loaded automatically. Confirm you&apos;ve reviewed each.
+          Project documents loaded automatically. Open each SWP/SJP, then confirm
+          you&apos;ve reviewed it.
         </p>
         <Button
           type="button"
@@ -44,32 +46,48 @@ export function DocumentModule({
         {documents.map((doc) => {
           const done = reviewedIds.includes(doc.id);
           return (
-            <button
+            <div
               key={doc.id}
-              type="button"
-              onClick={() => onToggle(doc.id)}
               className={cn(
-                "flex w-full items-center gap-3 rounded-2xl border p-4 text-left transition-colors",
+                "rounded-2xl border p-4 transition-colors",
                 done
                   ? "border-emerald-500/40 bg-emerald-500/5"
-                  : "border-border bg-card hover:border-primary/30"
+                  : "border-border bg-card"
               )}
             >
-              <div
-                className={cn(
-                  "flex size-12 shrink-0 items-center justify-center rounded-xl",
-                  done ? "bg-emerald-600 text-white" : "bg-muted text-muted-foreground"
-                )}
-              >
-                {done ? <Check className="size-5" /> : <FileText className="size-5" />}
+              <div className="flex items-start gap-3">
+                <button
+                  type="button"
+                  onClick={() => onToggle(doc.id)}
+                  className={cn(
+                    "flex size-12 shrink-0 items-center justify-center rounded-xl",
+                    done
+                      ? "bg-emerald-600 text-white"
+                      : "bg-muted text-muted-foreground"
+                  )}
+                  aria-label={done ? "Mark unread" : "Mark reviewed"}
+                >
+                  {done ? (
+                    <Check className="size-5" />
+                  ) : (
+                    <FileText className="size-5" />
+                  )}
+                </button>
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold leading-snug">{doc.title}</p>
+                  <p className="mt-0.5 text-xs text-muted-foreground">
+                    {doc.category} · v{doc.version} · Updated {doc.lastUpdated}
+                  </p>
+                  <Link
+                    href={`/forms/documents/${doc.id}`}
+                    className="mt-2 inline-flex min-h-10 items-center gap-1.5 text-sm font-semibold text-primary"
+                  >
+                    Open procedure
+                    <ExternalLink className="size-3.5" />
+                  </Link>
+                </div>
               </div>
-              <div className="min-w-0 flex-1">
-                <p className="font-semibold leading-snug">{doc.title}</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">
-                  {doc.type} · v{doc.version} · Updated {doc.lastUpdated}
-                </p>
-              </div>
-            </button>
+            </div>
           );
         })}
       </div>

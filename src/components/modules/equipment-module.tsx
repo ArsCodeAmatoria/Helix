@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Wrench, AlertTriangle } from "lucide-react";
+import { ExternalLink, FileText, Wrench, AlertTriangle } from "lucide-react";
 import type { EquipmentInspection, EquipmentItem } from "@/lib/types";
+import { getChartsForEquipment } from "@/lib/crane-charts";
 import { YesNo } from "@/components/modules/yes-no";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -30,6 +32,7 @@ export function EquipmentModule({
   const [activeId, setActiveId] = useState<string | null>(null);
   const active = equipment.find((e) => e.id === activeId);
   const inspection = inspections.find((i) => i.equipmentId === activeId);
+  const charts = activeId ? getChartsForEquipment(activeId) : [];
 
   return (
     <div className="space-y-3">
@@ -58,7 +61,9 @@ export function EquipmentModule({
             <div className="min-w-0 flex-1">
               <p className="font-semibold">{eq.name}</p>
               <p className="text-xs text-muted-foreground">
-                {eq.assetTag} · Last insp. {eq.lastInspection}
+                {eq.assetTag}
+                {eq.manufacturer ? ` · ${eq.manufacturer}` : ""}
+                {eq.model ? ` ${eq.model}` : ""} · Last insp. {eq.lastInspection}
               </p>
             </div>
             <Badge
@@ -92,22 +97,45 @@ export function EquipmentModule({
                   </CardContent>
                 </Card>
               )}
+
+              {charts.length > 0 && (
+                <div className="space-y-2">
+                  <Label className="text-base">Load charts</Label>
+                  {charts.map((chart) => (
+                    <Button
+                      key={chart.id}
+                      asChild
+                      variant="outline"
+                      className="h-12 w-full justify-start rounded-xl font-semibold"
+                    >
+                      <a
+                        href={chart.file}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FileText className="size-4" />
+                        {chart.manufacturer} {chart.model}
+                        <ExternalLink className="ml-auto size-4" />
+                      </a>
+                    </Button>
+                  ))}
+                </div>
+              )}
+
               <div>
-                <Label className="mb-2 block text-base">Inspection completed?</Label>
+                <Label className="mb-2 block text-base">
+                  Inspection completed?
+                </Label>
                 <YesNo
                   value={inspection.inspected}
-                  onChange={(v) =>
-                    onUpdate(active.id, { inspected: v })
-                  }
+                  onChange={(v) => onUpdate(active.id, { inspected: v })}
                 />
               </div>
               <div>
                 <Label className="mb-2 block text-base">Deficiencies?</Label>
                 <YesNo
                   value={inspection.deficiencies}
-                  onChange={(v) =>
-                    onUpdate(active.id, { deficiencies: v })
-                  }
+                  onChange={(v) => onUpdate(active.id, { deficiencies: v })}
                 />
               </div>
               <div className="space-y-1.5">

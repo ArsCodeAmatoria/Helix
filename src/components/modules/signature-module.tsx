@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Eraser, MapPin, Plus, Trash2, UserPlus } from "lucide-react";
+import Link from "next/link";
+import { Eraser, MapPin, Plus, Trash2, UserPlus, Users } from "lucide-react";
 import type { SignatureData, SignerEntry, SignerRole } from "@/lib/types";
-import { db } from "@/lib/db";
+import { useTeamOptional } from "@/components/providers/team-provider";
+import { memberToSignerRole } from "@/lib/team";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,16 +19,6 @@ const SIGNER_ROLES: SignerRole[] = [
   "Crane Operator",
   "Crew Member",
   "Other",
-];
-
-const SUGGESTED_CREW = [
-  { name: "Marcus Chen", role: "Worker" as SignerRole },
-  { name: "Dave Okonkwo", role: "Supervisor" as SignerRole },
-  { name: "Priya Nair", role: "Safety Coordinator" as SignerRole },
-  { name: "Jordan Lee", role: "Rigger" as SignerRole },
-  { name: "Sam Rivera", role: "Crew Member" as SignerRole },
-  { name: "Alex Nguyen", role: "Crane Operator" as SignerRole },
-  { name: "Chris Doyle", role: "Crew Member" as SignerRole },
 ];
 
 interface SignaturePadProps {
@@ -205,9 +197,7 @@ function SignerCard({
 
       <SignaturePad
         value={signer.signature}
-        onChange={(dataUrl) =>
-          onUpdate({ signature: dataUrl || null })
-        }
+        onChange={(dataUrl) => onUpdate({ signature: dataUrl || null })}
       />
 
       {signer.signedAt && (
@@ -226,6 +216,9 @@ interface SignatureModuleProps {
   onUpdate: (id: string, patch: Partial<SignerEntry>) => void;
   onRemove: (id: string) => void;
   onCaptureGps: () => void;
+  onLoadTeam?: (
+    signers: Array<{ name: string; role: SignerRole; signature?: string | null }>
+  ) => void;
 }
 
 export function SignatureModule({
@@ -235,7 +228,9 @@ export function SignatureModule({
   onUpdate,
   onRemove,
   onCaptureGps,
+  onLoadTeam,
 }: SignatureModuleProps) {
+  const team = useTeamOptional();
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -248,46 +243,91 @@ export function SignatureModule({
   const usedNames = new Set(
     signatures.signers.map((s) => s.name.trim().toLowerCase()).filter(Boolean)
   );
-  const suggestions = SUGGESTED_CREW.filter(
-    (c) => !usedNames.has(c.name.toLowerCase())
-  );
-  // Prefer live worker/supervisor from profile if not already added
-  const profileSuggestions = [
-    { name: db.worker.name, role: "Worker" as SignerRole },
-    { name: db.worker.supervisor, role: "Supervisor" as SignerRole },
-  ].filter((c) => !usedNames.has(c.name.toLowerCase()));
 
-  const quickAdd = [...profileSuggestions, ...suggestions].filter(
-    (c, i, arr) =>
-      arr.findIndex((x) => x.name.toLowerCase() === c.name.toLowerCase()) === i
-  );
+  const teamSuggestions =
+    team?.todaysMembers
+      .filter((m) => !usedNames.has(m.name.toLowerCase()))
+      .map((m) => ({
+        name: m.name,
+        role: memberToSignerRole(m.role),
+        signature:
+          team.signatures.find((s) => s.memberId === m.id)?.signature ?? null,
+      })) ?? [];
 
   const signedCount = signatures.signers.filter(
     (s) => s.name.trim() && s.signature
   ).length;
 
+  const loadTodaysTeam = () => {
+    if (!team || !onLoadTeam) return;
+    onLoadTeam(
+      team.todaysMembers.map((m) => {
+        const existing = team.signatures.find((s) => s.memberId === m.id);
+        return {
+          name: m.name,
+          role: memberToSignerRole(m.role),
+          signature: existing?.signature ?? null,
+        };
+      })
+    );
+  };
+
   return (
     <div className="space-y-5">
-      <div className="helix-card space-y-1 p-4">
+      <div className="helix-card space-y-3 p-4">
         <p className="font-bold">Crew acknowledgements</p>
         <p className="text-sm text-muted-foreground">
           Everyone on today&apos;s crew should print their name and sign.{" "}
           {signedCount} of {signatures.signers.length || 0} complete.
         </p>
+        {team && (
+          <div className="flex flex-col gap-2">
+            <p className="text-xs text-muted-foreground">
+              Active crew: {team.selectedCrew?.name} · {team.todaysMembers.length}{" "}
+              selected
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              <Button
+                type="button"
+                className="h-12 rounded-xl font-semibold"
+                disabled={team.todaysMembers.length === 0}
+                onClick={loadTodaysTeam}
+              >
+                <Users className="size-4" />
+                Load team
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="h-12 rounded-xl font-semibold"
+                asChild
+              >
+                <Link href="/team">Manage team</Link>
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
 
-      {quickAdd.length > 0 && (
+      {teamSuggestions.length > 0 && (
         <div>
           <p className="mb-2 text-sm font-semibold text-muted-foreground">
-            Quick add from crew
+            Quick add from today&apos;s team
           </p>
           <div className="flex flex-wrap gap-2">
-            {quickAdd.slice(0, 6).map((person) => (
+            {teamSuggestions.map((person) => (
               <button
                 key={person.name}
                 type="button"
                 onClick={() =>
-                  onAdd({ name: person.name, role: person.role })
+                  onAdd({
+                    name: person.name,
+                    role: person.role,
+                    signature: person.signature,
+                    signedAt: person.signature
+                      ? new Date().toISOString()
+                      : null,
+                  })
                 }
                 className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-3.5 text-sm font-semibold shadow-sm active:scale-[0.98]"
               >
@@ -334,8 +374,7 @@ export function SignatureModule({
         </Button>
         {signatures.gps && (
           <p className="text-sm text-muted-foreground">
-            GPS: {signatures.gps.lat.toFixed(5)},{" "}
-            {signatures.gps.lng.toFixed(5)}
+            GPS: {signatures.gps.lat.toFixed(5)}, {signatures.gps.lng.toFixed(5)}
           </p>
         )}
         {signatures.timestamp && (

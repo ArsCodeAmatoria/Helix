@@ -5,7 +5,10 @@
     "type": "Tower Crane",
     "assetTag": "TC-1",
     "status": "in-service",
-    "lastInspection": "2026-08-01"
+    "lastInspection": "2026-08-01",
+    "manufacturer": "Potain",
+    "model": "MD 365 B L16",
+    "chartIds": ["chart-potain-md365"]
   },
   {
     "id": "eq-tc2",
@@ -13,7 +16,10 @@
     "type": "Tower Crane",
     "assetTag": "TC-2",
     "status": "in-service",
-    "lastInspection": "2026-07-31"
+    "lastInspection": "2026-07-31",
+    "manufacturer": "Potain",
+    "model": "MR 615",
+    "chartIds": ["chart-potain-mr615"]
   },
   {
     "id": "eq-mobile",
@@ -21,7 +27,10 @@
     "type": "Mobile Crane",
     "assetTag": "MC-4",
     "status": "in-service",
-    "lastInspection": "2026-07-30"
+    "lastInspection": "2026-07-30",
+    "manufacturer": "Terex",
+    "model": "RT series (site unit)",
+    "chartIds": []
   },
   {
     "id": "eq-vib1",

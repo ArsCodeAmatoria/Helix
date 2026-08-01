@@ -15,7 +15,18 @@
       "projectId": "proj-oceanview",
       "severity": "high",
       "dueDate": "2026-08-01",
-      "status": "open"
+      "status": "open",
+      "description": "A section of guardrail is missing on Level 28 east edge after yesterday’s deck pour. Temporary edge protection is required before stripping or other trade access in that bay.",
+      "location": "Oceanview Tower · Level 28 east",
+      "reportedBy": "Priya Nair · Safety",
+      "assignee": "Tony Rivera",
+      "href": "/projects/proj-oceanview",
+      "cta": "Open Oceanview project",
+      "bullets": [
+        "Barricade the bay until rails are restored",
+        "Install temporary edge protection before 10:00",
+        "Photograph completed rails and close the deficiency"
+      ]
     },
     {
       "id": "def-2",
@@ -23,7 +34,18 @@
       "projectId": "proj-fraser",
       "severity": "medium",
       "dueDate": "2026-08-02",
-      "status": "in-progress"
+      "status": "in-progress",
+      "description": "Concrete Vibrator V-08 was tagged out after cord sheathing damage found during pre-use inspection. Unit must not return to service until the cord is replaced and re-inspected.",
+      "location": "Fraser Crossing · equipment cage",
+      "reportedBy": "Sam Rivera",
+      "assignee": "Yard Maintenance",
+      "href": "/notifications/n3",
+      "cta": "View equipment alert",
+      "bullets": [
+        "Keep V-08 tagged out of service",
+        "Use V-04 or V-12 as replacements",
+        "Log re-inspection before returning to site"
+      ]
     },
     {
       "id": "def-3",
@@ -31,7 +53,18 @@
       "projectId": "proj-burnaby",
       "severity": "low",
       "dueDate": "2026-08-03",
-      "status": "open"
+      "status": "open",
+      "description": "A Peri panel stack in the Burnaby laydown is missing its load/status tag. Untagged stacks create confusion for hops and may hide damaged panels.",
+      "location": "Burnaby Central · south laydown",
+      "reportedBy": "Jamie Brooks",
+      "assignee": "Chris Doyle",
+      "href": "/projects/proj-burnaby",
+      "cta": "Open Burnaby project",
+      "bullets": [
+        "Inspect stack for damaged panels",
+        "Apply status tag before next hop",
+        "Notify yard if panels need return"
+      ]
     },
     {
       "id": "def-4",
@@ -39,7 +72,18 @@
       "projectId": "proj-yard",
       "severity": "high",
       "dueDate": "2026-08-01",
-      "status": "open"
+      "status": "open",
+      "description": "Mobile Crane MC-4 outrigger pads are set on soft ground near the yard gate. Pads must be relocated to compacted / timbered bearing before any further lifts.",
+      "location": "Helix Yard · main gate pad",
+      "reportedBy": "Mike Tanaka",
+      "assignee": "Nina Wallace",
+      "href": "/projects/proj-yard",
+      "cta": "Open yard project",
+      "bullets": [
+        "Stop lifts until pads are reset",
+        "Place timber mats / compacted base",
+        "Re-check level before next pick"
+      ]
     }
   ],
   "correctiveActions": [
@@ -47,19 +91,120 @@
       "id": "ca-1",
       "title": "Install temporary edge protection Level 28",
       "assignee": "Tony Rivera",
-      "dueDate": "2026-08-01"
+      "dueDate": "2026-08-01",
+      "projectId": "proj-oceanview",
+      "status": "in-progress",
+      "priority": "high",
+      "description": "Corrective action linked to the Level 28 east edge guardrail gap. Temporary rails or covers must be installed and verified before crew re-entry.",
+      "href": "/dashboard/deficiency/def-1",
+      "cta": "View related deficiency",
+      "bullets": [
+        "Install temp rails / covers",
+        "Verify fall protection controls on FLHA",
+        "Close CA after photo evidence"
+      ]
     },
     {
       "id": "ca-2",
       "title": "Replace V-08 power cord and re-inspect",
       "assignee": "Yard Maintenance",
-      "dueDate": "2026-08-02"
+      "dueDate": "2026-08-02",
+      "projectId": "proj-fraser",
+      "status": "open",
+      "priority": "medium",
+      "description": "Replace the damaged power cord on Concrete Vibrator V-08, complete electrical / pre-use inspection, and clear the out-of-service tag.",
+      "href": "/dashboard/deficiency/def-2",
+      "cta": "View related deficiency",
+      "bullets": [
+        "Replace cord with rated spare",
+        "Complete inspection checklist",
+        "Update equipment status to in-service"
+      ]
     },
     {
       "id": "ca-3",
       "title": "Toolbox talk — blind lift radio protocol",
       "assignee": "Priya Nair",
-      "dueDate": "2026-08-01"
+      "dueDate": "2026-08-01",
+      "projectId": "proj-oceanview",
+      "status": "open",
+      "priority": "medium",
+      "description": "Deliver today’s toolbox talk on blind lift radio protocol and collect crew acknowledgements before first lift.",
+      "href": "/forms/documents/doc-sjp-blind",
+      "cta": "Open blind lift SJP",
+      "bullets": [
+        "Review SJP with Crew B / C",
+        "Confirm radio channel Ch 3",
+        "Collect signatures in My Team"
+      ]
+    },
+    {
+      "id": "ca-4",
+      "title": "Reset MC-4 outrigger pads on timber mats",
+      "assignee": "Nina Wallace",
+      "dueDate": "2026-08-01",
+      "projectId": "proj-yard",
+      "status": "open",
+      "priority": "high",
+      "description": "Relocate Mobile Crane MC-4 outriggers onto adequate bearing and re-verify level before resuming yard lifts.",
+      "href": "/dashboard/deficiency/def-4",
+      "cta": "View related deficiency",
+      "bullets": [
+        "Place timber mats under pads",
+        "Re-check crane level indicators",
+        "Notify yard supervisor when clear"
+      ]
+    },
+    {
+      "id": "ca-5",
+      "title": "Tag Peri panel stack — Burnaby laydown",
+      "assignee": "Chris Doyle",
+      "dueDate": "2026-08-03",
+      "projectId": "proj-burnaby",
+      "status": "open",
+      "priority": "low",
+      "description": "Inspect and tag the untagged Peri panel stack so hop crews know status and condition.",
+      "href": "/dashboard/deficiency/def-3",
+      "cta": "View related deficiency",
+      "bullets": [
+        "Inspect for damaged panels",
+        "Apply status / load tag",
+        "Photo for close-out"
+      ]
+    },
+    {
+      "id": "ca-6",
+      "title": "Complete pending FLHA supervisor reviews",
+      "assignee": "Dave Okonkwo",
+      "dueDate": "2026-08-01",
+      "projectId": "proj-oceanview",
+      "status": "open",
+      "priority": "high",
+      "description": "Three FLHAs from yesterday remain without supervisor acknowledgement. Review and sign before morning starts.",
+      "href": "/forms/flha?project=proj-oceanview",
+      "cta": "Open FLHA",
+      "bullets": [
+        "Review Oceanview FLHA first",
+        "Confirm signatures and hazards",
+        "Clear pending review queue"
+      ]
+    },
+    {
+      "id": "ca-7",
+      "title": "Schedule Site Orientation for non-compliant labourers",
+      "assignee": "Priya Nair",
+      "dueDate": "2026-08-02",
+      "projectId": "proj-oceanview",
+      "status": "open",
+      "priority": "medium",
+      "description": "COR worker compliance shows labourers missing Site Orientation. Schedule orientation before assigning elevated work.",
+      "href": "/statistics",
+      "cta": "Open COR workers",
+      "bullets": [
+        "Filter Workers → Missing",
+        "Book orientation slots",
+        "Update certs after completion"
+      ]
     }
   ],
   "weatherAlerts": [
@@ -67,7 +212,18 @@
       "id": "wa-1",
       "title": "Wind advisory — Burnaby Central",
       "body": "Gusts forecast 45–55 km/h after 14:00. Review panel flying limits.",
-      "severity": "high"
+      "severity": "high",
+      "projectId": "proj-burnaby",
+      "issuedAt": "Today 06:18",
+      "expiresAt": "Today 20:00",
+      "description": "Environment Canada forecasts southwest gusts of 45–55 km/h at Burnaby Central after 14:00. Suspend non-essential crane and panel lifts if wind exceeds site / OEM limits.",
+      "href": "/projects/proj-burnaby",
+      "cta": "Open Burnaby site",
+      "bullets": [
+        "Check crane wind chart before lifts",
+        "Secure loose deck materials",
+        "Hold stop-work toolbox if limits hit"
+      ]
     }
   ],
   "upcomingInspections": [
@@ -75,19 +231,84 @@
       "id": "insp-1",
       "title": "TC-1 monthly structural",
       "date": "2026-08-03",
-      "projectId": "proj-oceanview"
+      "projectId": "proj-oceanview",
+      "equipmentId": "eq-tc1",
+      "inspector": "Third-party crane inspector",
+      "type": "Structural",
+      "description": "Monthly structural inspection for Tower Crane TC-1 at Oceanview Tower. Operator daily logs must be available for the inspector.",
+      "href": "/projects/proj-oceanview",
+      "cta": "Open Oceanview project",
+      "bullets": [
+        "Have daily inspection logs ready",
+        "Clear swing radius for inspector access",
+        "Hold non-essential lifts during inspection window"
+      ]
     },
     {
       "id": "insp-2",
       "title": "MEWP-32-01 annual",
       "date": "2026-08-05",
-      "projectId": "proj-burnaby"
+      "projectId": "proj-burnaby",
+      "equipmentId": "eq-mewp1",
+      "inspector": "Yard Maintenance",
+      "type": "Annual certification",
+      "description": "Annual certification inspection for MEWP Scissor 32ft (MEWP-32-01). Unit will be out of service during the inspection window.",
+      "href": "/forms/documents/doc-sjp-mewp",
+      "cta": "Review MEWP SJP",
+      "bullets": [
+        "Stage MEWP at Burnaby laydown",
+        "Do not assign MEWP-32-01 on Aug 5",
+        "Return tagged unit only after pass"
+      ]
     },
     {
       "id": "insp-3",
       "title": "Fall protection gear audit",
       "date": "2026-08-07",
-      "projectId": "proj-oceanview"
+      "projectId": "proj-oceanview",
+      "inspector": "Priya Nair",
+      "type": "PPE audit",
+      "description": "Site audit of harnesses, lanyards, and SRLs assigned to Oceanview crews. Damaged gear will be tagged out immediately.",
+      "href": "/forms/documents/doc-swp-heights",
+      "cta": "Open Working at Heights SWP",
+      "bullets": [
+        "Bring all personal fall gear to muster",
+        "Remove defective gear from service",
+        "Log replacements in COR training notes"
+      ]
+    },
+    {
+      "id": "insp-4",
+      "title": "Generator G-12 weekly",
+      "date": "2026-08-02",
+      "projectId": "proj-oceanview",
+      "equipmentId": "eq-gen1",
+      "inspector": "Alex Nguyen",
+      "type": "Weekly",
+      "description": "Weekly running inspection for site generator G-12 including cords, grounding, and fuel storage.",
+      "href": "/projects/proj-oceanview",
+      "cta": "Open Oceanview project",
+      "bullets": [
+        "Check cords and GFCI",
+        "Verify grounding and fuel containment",
+        "Log inspection on equipment card"
+      ]
+    },
+    {
+      "id": "insp-5",
+      "title": "Forklift pre-shift series",
+      "date": "2026-08-01",
+      "projectId": "proj-yard",
+      "inspector": "Mike Tanaka",
+      "type": "Pre-shift",
+      "description": "Pre-shift inspection series for yard forklift before material staging for Oceanview and Burnaby deliveries.",
+      "href": "/projects/proj-yard",
+      "cta": "Open yard project",
+      "bullets": [
+        "Complete checklist before first move",
+        "Report deficiencies to yard office",
+        "Keep pedestrian walkways clear"
+      ]
     }
   ]
 }

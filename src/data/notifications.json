@@ -5,7 +5,17 @@
     "body": "Supervisor review required for yesterday's Oceanview Tower FLHA.",
     "time": "8 min ago",
     "type": "action",
-    "read": false
+    "read": false,
+    "href": "/forms/flha?project=proj-oceanview",
+    "cta": "Open FLHA",
+    "postedBy": "Priya Nair · Safety",
+    "projectId": "proj-oceanview",
+    "detail": "Yesterday’s FLHA for Oceanview Tower Level 28 was submitted but still needs supervisor acknowledgement. Confirm hazards, signatures, and edge-protection notes before the morning pour.",
+    "bullets": [
+      "Confirm all crew signatures are complete",
+      "Verify Level 28 edge protection controls",
+      "Acknowledge as supervisor before 07:30"
+    ]
   },
   {
     "id": "n2",
@@ -13,7 +23,17 @@
     "body": "Gusts 45–55 km/h expected at Burnaby Central after 14:00.",
     "time": "22 min ago",
     "type": "weather",
-    "read": false
+    "read": false,
+    "href": "/projects/proj-burnaby",
+    "cta": "View Burnaby site",
+    "postedBy": "Helix Weather Desk",
+    "projectId": "proj-burnaby",
+    "detail": "Environment Canada forecasts southwest gusts of 45–55 km/h at Burnaby Central after 14:00. Suspend non-essential crane and panel lifts if wind exceeds site limits. Keep Peri wall braces secured.",
+    "bullets": [
+      "Check crane manufacturer wind chart before lifts",
+      "Secure loose materials on decks and scaffolds",
+      "Hold toolbox talk on stop-work criteria"
+    ]
   },
   {
     "id": "n3",
@@ -21,7 +41,17 @@
     "body": "Concrete Vibrator V-08 tagged out — cord damage.",
     "time": "1 hr ago",
     "type": "alert",
-    "read": false
+    "read": false,
+    "href": "/dashboard/deficiency/def-2",
+    "cta": "View deficiency",
+    "postedBy": "Tony Rivera · Superintendent",
+    "projectId": "proj-oceanview",
+    "detail": "Concrete Vibrator V-08 (asset tag V-08) has been tagged out of service after cord sheathing damage was found during pre-use inspection. Do not use until cord is replaced and re-inspected.",
+    "bullets": [
+      "Use V-04 or V-12 as temporary replacements",
+      "Log deficiency on the safety dashboard",
+      "Return tagged unit to the yard cage"
+    ]
   },
   {
     "id": "n4",
@@ -29,7 +59,17 @@
     "body": "Today's topic: Blind lift radio protocol — review before shift.",
     "time": "2 hr ago",
     "type": "info",
-    "read": true
+    "read": true,
+    "href": "/forms/documents/doc-sjp-blind",
+    "cta": "Open blind lift SJP",
+    "postedBy": "Priya Nair · Safety",
+    "projectId": "proj-oceanview",
+    "detail": "Today’s toolbox talk covers blind lift radio protocol for tower operations. All Crew B and Crew C members must review before first lift. Sign acknowledgement on the crew roster.",
+    "bullets": [
+      "Confirm radio channel Ch 3 — Tower Ops",
+      "Use standard call signs for blind corners",
+      "Stop the lift if radio contact is lost"
+    ]
   },
   {
     "id": "n5",
@@ -37,6 +77,69 @@
     "body": "Install temporary edge protection Level 28 — due today.",
     "time": "3 hr ago",
     "type": "action",
-    "read": true
+    "read": true,
+    "href": "/dashboard/action/ca-1",
+    "cta": "View corrective action",
+    "postedBy": "Sarah Mitchell · PM",
+    "projectId": "proj-oceanview",
+    "detail": "A guardrail gap remains on Level 28 east edge after yesterday’s deck pour. Temporary edge protection must be installed before crews resume formwork stripping in that bay.",
+    "bullets": [
+      "Install temp rails / covers before 10:00",
+      "Photograph completed protection",
+      "Close the corrective action on the safety board"
+    ]
+  },
+  {
+    "id": "n6",
+    "title": "COR training gaps",
+    "body": "4 workers are missing required certifications for today's roles.",
+    "time": "4 hr ago",
+    "type": "alert",
+    "read": false,
+    "href": "/statistics",
+    "cta": "Open COR workers",
+    "postedBy": "Helix COR",
+    "detail": "Worker compliance checks against Element 8 (Training & Communication) show missing orientation, WHMIS, or trade tickets for several people on today’s roster. Resolve gaps before assigning high-risk tasks.",
+    "bullets": [
+      "Filter COR → Workers → Missing",
+      "Schedule Site Orientation for new labourers",
+      "Hold riggers without Signal Person tickets"
+    ]
+  },
+  {
+    "id": "n7",
+    "title": "Crew B roster ready",
+    "body": "Confirm today's team and collect signatures before first lift.",
+    "time": "5 hr ago",
+    "type": "info",
+    "read": true,
+    "href": "/team",
+    "cta": "Manage My Team",
+    "postedBy": "Dave Okonkwo · Supervisor",
+    "projectId": "proj-oceanview",
+    "detail": "Crew B — Tower & Deck is pre-loaded for today. Confirm attendance, add anyone from the directory, and collect team acknowledgements before FLHA sign-off.",
+    "bullets": [
+      "Fill team from Crew B roster",
+      "Search directory for extras",
+      "Complete Sign tab before 07:00"
+    ]
+  },
+  {
+    "id": "n8",
+    "title": "Time clock reminder",
+    "body": "Sign in at Oceanview Tower when you arrive on site.",
+    "time": "Yesterday",
+    "type": "action",
+    "read": true,
+    "href": "/timeclock",
+    "cta": "Open Time Clock",
+    "postedBy": "Helix Time Clock",
+    "projectId": "proj-oceanview",
+    "detail": "Remember to sign in with GPS when you arrive. If you move between Oceanview and Burnaby Central, switch sites in the time clock so hours land on the correct visit.",
+    "bullets": [
+      "Allow location when signing in",
+      "Switch site if you leave Oceanview",
+      "Sign out at end of shift"
+    ]
   }
 ]

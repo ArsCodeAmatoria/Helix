@@ -193,6 +193,7 @@ export function FlhaWizard() {
                 onAdd={flha.addSigner}
                 onUpdate={flha.updateSigner}
                 onRemove={flha.removeSigner}
+                onLoadTeam={flha.loadTeamSigners}
                 onCaptureGps={flha.captureGps}
               />
             )}
@@ -215,7 +216,7 @@ export function FlhaWizard() {
       </div>
 
       {flha.currentStepId !== "preview" && (
-        <div className="sticky bottom-0 border-t border-border/60 bg-background/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur-md">
+        <div className="sticky bottom-20 z-30 border-t border-border/60 bg-background/95 px-4 py-3 backdrop-blur-md">
           {error && (
             <p className="mb-2 text-center text-sm font-medium text-destructive">
               {error}

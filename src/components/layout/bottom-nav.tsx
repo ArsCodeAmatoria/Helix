@@ -15,17 +15,13 @@ import { cn } from "@/lib/utils";
 const items = [
   { href: "/", label: "Home", icon: Home },
   { href: "/timeclock", label: "Clock", icon: Clock },
-  { href: "/forms", label: "Assets", icon: Grid2x2 },
+  { href: "/forms", label: "Forms", icon: Grid2x2 },
   { href: "/statistics", label: "COR", icon: ClipboardList },
   { href: "/profile", label: "Me", icon: User },
 ];
 
 export function BottomNav() {
   const pathname = usePathname();
-  const hide =
-    pathname.startsWith("/forms/flha") && !pathname.endsWith("/forms");
-
-  if (hide) return null;
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-border/70 bg-card/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_24px_rgba(16,24,40,0.06)] backdrop-blur-md">

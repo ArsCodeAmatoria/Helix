@@ -2,78 +2,537 @@
   {
     "id": "doc-swp-pour",
     "title": "Safe Work Procedure — Concrete Pour",
+    "shortTitle": "Concrete Pour",
     "type": "Safe Work Procedure",
+    "category": "SWP",
     "version": "3.2",
-    "lastUpdated": "2026-06-15"
+    "lastUpdated": "2026-06-15",
+    "owner": "Priya Nair · Safety",
+    "summary": "Controls for deck and column concrete placement with tower crane buckets and vibrators.",
+    "purpose": "Prevent struck-by, fall, and pour-related incidents during concrete placement.",
+    "scope": "Applies to all Helix crews placing concrete on elevated decks, columns, and walls using tower crane or pump.",
+    "roles": ["Supervisor", "Rigger", "Formwork Carpenter", "Labourer", "Tower Crane Operator"],
+    "ppe": [
+      "Hard hat, safety glasses, hi-vis vest",
+      "Steel-toe boots with defined heel",
+      "Fall protection when within 2 m of an open edge",
+      "Hearing protection near vibrators",
+      "Gloves suitable for concrete handling"
+    ],
+    "hazards": [
+      "Open edges and incomplete guardrails",
+      "Swing radius / blind lifts",
+      "Wet / slippery decks",
+      "Concrete splash and chemical burn",
+      "Vibrator electrical / cord damage"
+    ],
+    "steps": [
+      "Hold pre-pour briefing — review FLHA, lift path, radio channel, and stop-work criteria.",
+      "Confirm formwork is inspected, braced, and signed off before placement starts.",
+      "Verify edge protection, covers, and exclusion zones under the lift path.",
+      "Confirm crane, bucket, and vibrators are in service; tag out damaged cords.",
+      "Use designated signal person; maintain continuous radio contact on blind pours.",
+      "Place concrete in controlled lifts; do not overload forms or decks.",
+      "Keep vibrator operators rotated; keep cords clear of traffic and edges.",
+      "Clean splash from skin immediately; wash PPE and tools after pour.",
+      "Re-inspect rails and covers before stripping or next trade access."
+    ],
+    "emergency": [
+      "Stop pour and lower load if radio contact is lost",
+      "Muster at posted site muster point for medical / rescue",
+      "Flush concrete from eyes/skin with clean water for 15 minutes"
+    ],
+    "references": ["FLHA", "Lift Plan", "ERP", "Site Orientation"]
   },
   {
     "id": "doc-swp-form",
     "title": "Safe Work Procedure — Formwork & Stripping",
+    "shortTitle": "Formwork & Stripping",
     "type": "Safe Work Procedure",
+    "category": "SWP",
     "version": "2.8",
-    "lastUpdated": "2026-05-20"
+    "lastUpdated": "2026-05-20",
+    "owner": "Tony Rivera · Superintendent",
+    "summary": "Erecting, bracing, and stripping Peri/Doka formwork on elevated levels.",
+    "purpose": "Control collapse, struck-by, and fall hazards during formwork erection and stripping.",
+    "scope": "All formwork carpenters, apprentices, and labourers erecting or stripping wall, column, and deck forms.",
+    "roles": ["Formwork Carpenter", "Apprentice", "Labourer", "Supervisor", "Rigger"],
+    "ppe": [
+      "Hard hat, glasses, hi-vis, gloves",
+      "Fall protection for leading-edge work",
+      "Steel-toe boots",
+      "Hearing protection when using impact tools"
+    ],
+    "hazards": [
+      "Formwork collapse / inadequate bracing",
+      "Falling materials during stripping",
+      "Pinch points on clamps and wedges",
+      "Open edges after stripping",
+      "Awkward lifts and manual handling"
+    ],
+    "steps": [
+      "Review manufacturer instructions and project SJP before starting.",
+      "Inspect panels, walers, ties, and braces — remove damaged components.",
+      "Establish exclusion zones below stripping areas; post a spotter.",
+      "Install temporary edge protection before removing permanent rails where required.",
+      "Brace sequentially; never leave free-standing panels unsecured.",
+      "Use rated lifting gear for panel hops; no free-hand guiding under suspended loads.",
+      "Strip only after concrete strength and supervisor release.",
+      "Lower materials by controlled means — no dropping or free-falling forms.",
+      "Housekeep nails, wedges, and ties immediately; restore rails before leaving bay."
+    ],
+    "emergency": [
+      "Evacuate bay and notify supervisor if bracing movement is observed",
+      "Do not enter under partially stripped forms",
+      "Call site emergency contact for entrapment or crush injuries"
+    ],
+    "references": ["Manufacturer Instructions — Peri / Doka", "FLHA", "ERP"]
   },
   {
     "id": "doc-swp-yard",
     "title": "Safe Work Procedure — Yard Operations",
+    "shortTitle": "Yard Operations",
     "type": "Safe Work Procedure",
+    "category": "SWP",
     "version": "1.4",
-    "lastUpdated": "2026-04-10"
+    "lastUpdated": "2026-04-10",
+    "owner": "Mike Tanaka · Yard",
+    "summary": "Material handling, forklift, and laydown controls at the Helix yard.",
+    "purpose": "Prevent vehicle/pedestrian conflicts and material-handling injuries in the yard.",
+    "scope": "Yard crew, deliveries, and any field worker picking up or returning materials/equipment.",
+    "roles": ["Yard Worker", "Labourer", "Supervisor", "Crane Operator"],
+    "ppe": [
+      "Hard hat, hi-vis, steel-toe boots",
+      "Safety glasses",
+      "Gloves for material handling"
+    ],
+    "hazards": [
+      "Forklift / truck traffic",
+      "Unstable stacks and falling materials",
+      "Pinch points during loading",
+      "Uneven ground and trip hazards"
+    ],
+    "steps": [
+      "Sign in at yard office; confirm task and travel path with yard supervisor.",
+      "Stay in marked pedestrian walkways; make eye contact with equipment operators.",
+      "Inspect forklift / telehandler before use; report deficiencies.",
+      "Stack materials within rated heights; band or chock as required.",
+      "Use tag lines on suspended loads; never walk under a load.",
+      "Secure loads before leaving the yard; close gates and tag incomplete stacks."
+    ],
+    "emergency": [
+      "Stop equipment and clear zone for any tip / spill",
+      "Use yard muster point by the main gate",
+      "Report all near misses to yard supervisor the same day"
+    ],
+    "references": ["Site Orientation", "ERP", "Forklift training"]
+  },
+  {
+    "id": "doc-swp-crane",
+    "title": "Safe Work Procedure — Tower Crane Operations",
+    "shortTitle": "Tower Crane Ops",
+    "type": "Safe Work Procedure",
+    "category": "SWP",
+    "version": "2.1",
+    "lastUpdated": "2026-07-08",
+    "owner": "Alex Nguyen · Crane Ops",
+    "summary": "Daily setup, communication, and shut-down for tower crane work.",
+    "purpose": "Maintain controlled lifts and clear communication between operator, rigger, and signal person.",
+    "scope": "Tower crane operators, riggers, and signal persons on Helix high-rise sites.",
+    "roles": ["Tower Crane Operator", "Rigger", "Supervisor", "Safety Coordinator"],
+    "ppe": [
+      "Hard hat, glasses, hi-vis",
+      "Fall protection in cabin access / climb",
+      "Radio on assigned channel"
+    ],
+    "hazards": [
+      "Overload / out-of-radius lifts",
+      "Blind lifts and lost radio contact",
+      "Wind exceeding manufacturer limits",
+      "Powerline encroachment",
+      "Public interface at street level"
+    ],
+    "steps": [
+      "Complete daily crane inspection and log before first lift.",
+      "Confirm radio channel, call signs, and emergency stop protocol.",
+      "Review lift plan / critical lift plan for the day’s work.",
+      "Check wind speed against OEM chart; suspend lifts if limits exceeded.",
+      "Maintain exclusion zones; use dedicated signal person for blind picks.",
+      "Never leave a suspended load unattended.",
+      "Weathervane and secure crane per OEM at end of shift or high wind."
+    ],
+    "emergency": [
+      "If radio fails — stop, sound horn pattern, wait for visual signal",
+      "Lower load if safe; otherwise hold and call supervisor",
+      "Evacuate swing radius for mechanical failure"
+    ],
+    "references": ["Lift Plan", "Critical Lift Plan", "SJP — Rigging & Signalling"]
+  },
+  {
+    "id": "doc-swp-heights",
+    "title": "Safe Work Procedure — Working at Heights",
+    "shortTitle": "Working at Heights",
+    "type": "Safe Work Procedure",
+    "category": "SWP",
+    "version": "3.0",
+    "lastUpdated": "2026-06-01",
+    "owner": "Priya Nair · Safety",
+    "summary": "Fall protection selection, tie-off, and rescue readiness above 3 m or open edges.",
+    "purpose": "Eliminate unprotected falls and ensure rescue capability on elevated work.",
+    "scope": "Any Helix worker exposed to a fall hazard of 3 m or more, or working near an open edge.",
+    "roles": ["All field roles", "Supervisor", "Safety Coordinator"],
+    "ppe": [
+      "Full-body harness (inspected)",
+      "Shock-absorbing lanyard or SRL as required",
+      "Anchor rated and identified",
+      "Hard hat with chin strap where required"
+    ],
+    "hazards": [
+      "Unprotected edges and floor openings",
+      "Improper anchor selection",
+      "Damaged harness / lanyard",
+      "Swing fall",
+      "Delayed rescue after fall arrest"
+    ],
+    "steps": [
+      "Inspect harness, lanyard/SRL, and connectors before each use.",
+      "Prefer collective protection (rails/covers) over personal fall arrest.",
+      "Select rated anchors; maintain 100% tie-off when exposed.",
+      "Control swing fall; keep free-fall distance within equipment rating.",
+      "Cover or guard floor openings immediately when created.",
+      "Confirm rescue plan and equipment are available before starting work.",
+      "Tag and remove defective fall gear from service."
+    ],
+    "emergency": [
+      "Activate site rescue plan immediately after fall arrest",
+      "Do not leave a suspended worker unattended",
+      "Call emergency services if rescue cannot be completed promptly"
+    ],
+    "references": ["FLHA", "ERP", "Fall Protection training"]
   },
   {
     "id": "doc-sjp-rig",
     "title": "Safe Job Procedure — Rigging & Signalling",
+    "shortTitle": "Rigging & Signalling",
     "type": "Safe Job Procedure",
+    "category": "SJP",
     "version": "4.1",
-    "lastUpdated": "2026-07-01"
+    "lastUpdated": "2026-07-01",
+    "owner": "Marcus Chen · Lead Rigger",
+    "summary": "Step-by-step job procedure for preparing, signalling, and landing suspended loads.",
+    "purpose": "Standardize how Helix crews rig and signal lifts so every pick follows the same safe sequence.",
+    "scope": "Riggers and signal persons supporting tower or mobile crane lifts on Helix projects.",
+    "roles": ["Rigger", "Signal Person", "Tower Crane Operator", "Supervisor"],
+    "ppe": [
+      "Hard hat, glasses, hi-vis, gloves",
+      "Steel-toe boots",
+      "Radio + backup hand signals"
+    ],
+    "hazards": [
+      "Load shift / unbalanced pick",
+      "Damaged slings or hardware",
+      "Caught-between during landing",
+      "Blind corner / lost communication"
+    ],
+    "steps": [
+      "Review lift plan, load weight, and radius with operator before the pick.",
+      "Inspect slings, shackles, hooks, and tag lines; reject damaged gear.",
+      "Confirm centre of gravity; choke or basket hitch as specified.",
+      "Clear the travel path and landing zone; post barricades if needed.",
+      "Establish who has radio control; confirm test call with operator.",
+      "Take slack slowly; stop if load shifts or gear binds.",
+      "Use tag lines — never guide a load with hands under or against it.",
+      "Land on stable blocking; wait for slack before disconnecting.",
+      "Store gear neatly; report any shock-loaded or damaged equipment."
+    ],
+    "emergency": [
+      "Emergency stop: continuous radio call “STOP STOP STOP” + horn",
+      "If load becomes unstable — clear zone, do not approach",
+      "Notify supervisor and log near miss before next pick"
+    ],
+    "references": ["Lift Plan", "SWP — Tower Crane Ops", "Rigging Ticket"]
+  },
+  {
+    "id": "doc-sjp-blind",
+    "title": "Safe Job Procedure — Blind Lift Radio Protocol",
+    "shortTitle": "Blind Lift Radio",
+    "type": "Safe Job Procedure",
+    "category": "SJP",
+    "version": "1.6",
+    "lastUpdated": "2026-08-01",
+    "owner": "Priya Nair · Safety",
+    "summary": "Radio call sequence and stop criteria for lifts without continuous visual contact.",
+    "purpose": "Keep blind lifts controlled through disciplined radio protocol and clear stop-work triggers.",
+    "scope": "Any lift where the operator cannot see the load, landing zone, or signal person continuously.",
+    "roles": ["Tower Crane Operator", "Rigger", "Signal Person", "Supervisor"],
+    "ppe": [
+      "Assigned radio on Ch 3 — Tower Ops",
+      "Hi-vis for all personnel in the lift zone",
+      "Backup air horn at landing zone"
+    ],
+    "hazards": [
+      "Lost radio contact",
+      "Misidentified landing zone",
+      "Workers entering swing path unseen",
+      "Wind-driven load drift"
+    ],
+    "steps": [
+      "Confirm this is a blind lift in the pre-lift briefing; name primary and backup signal person.",
+      "Radio check: operator ↔ signal person ↔ supervisor before first movement.",
+      "Use standard call signs (e.g., “TC-1”, “Deck Signal”).",
+      "Call every movement: “Up on load”, “Swing left”, “Down slow”, “Hold”.",
+      "Operator repeats critical commands before moving.",
+      "If radio is garbled or silent for one attempt — STOP and sound horn.",
+      "Do not resume until two-way contact and visual spotter are restored.",
+      "Log blind lift completion and any holds in the daily crane notes."
+    ],
+    "emergency": [
+      "Lost contact = immediate hold; do not guess the next move",
+      "Clear swing radius if load position is unknown",
+      "Escalate to superintendent after any uncontrolled drift"
+    ],
+    "references": ["Toolbox Talk — Blind lift radio protocol", "SWP — Tower Crane Ops", "Lift Plan"]
+  },
+  {
+    "id": "doc-sjp-strip",
+    "title": "Safe Job Procedure — Wall Form Stripping",
+    "shortTitle": "Wall Form Stripping",
+    "type": "Safe Job Procedure",
+    "category": "SJP",
+    "version": "2.0",
+    "lastUpdated": "2026-05-28",
+    "owner": "Chris Doyle · Supervisor",
+    "summary": "Ordered sequence for stripping Peri wall forms without collapse or falling materials.",
+    "purpose": "Provide a job-specific sequence so stripping crews remove forms in a controlled order.",
+    "scope": "Crews stripping vertical Peri wall forms on Helix projects after pour release.",
+    "roles": ["Formwork Carpenter", "Labourer", "Rigger", "Supervisor"],
+    "ppe": [
+      "Hard hat, glasses, gloves, hi-vis",
+      "Fall protection at open edges",
+      "Hearing protection for impact tools"
+    ],
+    "hazards": [
+      "Sudden panel release",
+      "Falling walers / ties",
+      "Workers below the strip zone",
+      "Leading edge after panel removal"
+    ],
+    "steps": [
+      "Confirm concrete release and supervisor authorization to strip.",
+      "Barricade below; assign a spotter — no entry under the wall.",
+      "Install / verify temporary edge protection on the working side.",
+      "Loosen ties in the planned sequence; support panel before final release.",
+      "Attach crane / forklift gear before free-standing the panel.",
+      "Walk the panel clear; land on designated blocking.",
+      "Restore rails and covers before opening the bay to other trades.",
+      "Stage stripped materials for return to yard; housekeep continuously."
+    ],
+    "emergency": [
+      "If panel kicks — clear zone, do not attempt to catch",
+      "Stop work and reassess bracing after any unexpected movement",
+      "Treat crush injuries as site emergency — call posted contact"
+    ],
+    "references": ["SWP — Formwork & Stripping", "Manufacturer Instructions", "FLHA"]
+  },
+  {
+    "id": "doc-sjp-mewp",
+    "title": "Safe Job Procedure — MEWP / Scissor Lift Use",
+    "shortTitle": "MEWP Use",
+    "type": "Safe Job Procedure",
+    "category": "SJP",
+    "version": "1.3",
+    "lastUpdated": "2026-06-18",
+    "owner": "Jamie Brooks · Equipment",
+    "summary": "Pre-use checks and operating steps for scissor lifts and boom lifts on site.",
+    "purpose": "Ensure only trained operators use MEWPs and that ground conditions and fall controls are verified.",
+    "scope": "Workers operating Helix MEWPs for install, inspection, or access tasks.",
+    "roles": ["Trained MEWP operator", "Supervisor", "Spotter"],
+    "ppe": [
+      "Harness / lanyard as required by MEWP type",
+      "Hard hat, glasses, hi-vis",
+      "Non-slip footwear"
+    ],
+    "hazards": [
+      "Tip-over on soft or sloping ground",
+      "Contact with overhead energy / structure",
+      "Ejection from platform",
+      "Pedestrians in travel path"
+    ],
+    "steps": [
+      "Confirm operator training and machine suitability for the task.",
+      "Inspect MEWP, controls, gates, and emergency lowering — log defects.",
+      "Check ground bearing, holes, and overhead clearance.",
+      "Barricade travel / work zone; use a spotter in congested areas.",
+      "Wear required fall protection; keep feet on the platform floor.",
+      "Do not exceed rated capacity or use as a crane.",
+      "Lower, isolate, and secure machine at end of use."
+    ],
+    "emergency": [
+      "Use ground-level emergency lowering if operator is incapacitated",
+      "Do not climb out of an elevated platform except in extreme rescue",
+      "Tag out defective MEWPs immediately"
+    ],
+    "references": ["SWP — Working at Heights", "Equipment inspection", "ERP"]
   },
   {
     "id": "doc-swa",
     "title": "Safe Work Assessment — High-Rise Deck",
+    "shortTitle": "High-Rise Deck SWA",
     "type": "Safe Work Assessment",
+    "category": "Other",
     "version": "1.9",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-07-12",
+    "owner": "Priya Nair · Safety",
+    "summary": "Assessment of residual risk for high-rise deck pours and formwork.",
+    "purpose": "Document residual risks and required controls for elevated deck work.",
+    "scope": "Oceanview Tower and similar high-rise deck operations.",
+    "roles": ["Safety Coordinator", "Supervisor", "All deck crews"],
+    "ppe": ["As per FLHA and Working at Heights SWP"],
+    "hazards": ["Falls", "Struck-by crane loads", "Public interface"],
+    "steps": [
+      "Review assessment with crew at start of deck cycle.",
+      "Confirm controls from linked SWPs/SJPs are in place.",
+      "Update assessment when means/methods change."
+    ],
+    "emergency": ["Follow site ERP"],
+    "references": ["FLHA", "SWP — Concrete Pour", "ERP"]
   },
   {
     "id": "doc-lift",
     "title": "Lift Plan — Tower Crane Standard Lifts",
+    "shortTitle": "Standard Lift Plan",
     "type": "Lift Plan",
+    "category": "Other",
     "version": "2.5",
-    "lastUpdated": "2026-06-28"
+    "lastUpdated": "2026-06-28",
+    "owner": "Alex Nguyen · Crane Ops",
+    "summary": "Standard lift parameters, radii, and communication for routine tower crane picks.",
+    "purpose": "Define approved methods for non-critical tower crane lifts.",
+    "scope": "Routine material and formwork hops within charted capacity.",
+    "roles": ["Tower Crane Operator", "Rigger", "Signal Person"],
+    "ppe": ["As per Crane Ops SWP"],
+    "hazards": ["Overload", "Blind lift", "Wind"],
+    "steps": [
+      "Confirm load weight and radius within chart.",
+      "Use SJP — Rigging & Signalling for the pick sequence.",
+      "Escalate to Critical Lift Plan when criteria are met."
+    ],
+    "emergency": ["Follow Crane Ops SWP emergency steps"],
+    "references": ["SWP — Tower Crane Ops", "SJP — Rigging & Signalling"]
   },
   {
     "id": "doc-crit",
     "title": "Critical Lift Plan — Blind Column Pours",
+    "shortTitle": "Critical Blind Pours",
     "type": "Critical Lift Plan",
+    "category": "Other",
     "version": "1.2",
-    "lastUpdated": "2026-07-22"
+    "lastUpdated": "2026-07-22",
+    "owner": "Sarah Mitchell · PM",
+    "summary": "Enhanced controls for blind column pours exceeding standard lift criteria.",
+    "purpose": "Mandate extra planning, supervision, and radio protocol for critical blind pours.",
+    "scope": "Column pours where operator vision is obstructed or load exceeds 75% chart.",
+    "roles": ["Superintendent", "Crane Operator", "Lead Rigger", "Safety"],
+    "ppe": ["As per Blind Lift SJP"],
+    "hazards": ["Lost communication", "Load drift", "Form overload"],
+    "steps": [
+      "Hold critical lift meeting with named roles.",
+      "Follow Blind Lift Radio Protocol SJP without deviation.",
+      "Superintendent must be on channel for the pour."
+    ],
+    "emergency": ["Hold lift and muster if any stop criteria are met"],
+    "references": ["SJP — Blind Lift Radio Protocol", "Lift Plan", "ERP"]
   },
   {
     "id": "doc-erp",
     "title": "Emergency Response Plan",
+    "shortTitle": "ERP",
     "type": "ERP",
+    "category": "Other",
     "version": "5.0",
-    "lastUpdated": "2026-03-01"
+    "lastUpdated": "2026-03-01",
+    "owner": "Priya Nair · Safety",
+    "summary": "Site emergency contacts, muster points, and response roles.",
+    "purpose": "Provide a single emergency response reference for all Helix sites.",
+    "scope": "All Helix workers and visitors on active projects.",
+    "roles": ["All workers", "First aid attendants", "Supervisors"],
+    "ppe": ["As situationally required"],
+    "hazards": ["Medical emergency", "Fire", "Rescue from height", "Crane incident"],
+    "steps": [
+      "Know your muster point and emergency contact before starting work.",
+      "Call site emergency number, then 911 if needed.",
+      "Account for crew at muster; do not re-enter until cleared."
+    ],
+    "emergency": ["Follow posted project emergency contact and muster point"],
+    "references": ["Site Orientation", "Project information sheet"]
   },
   {
     "id": "doc-orient",
     "title": "Site Orientation Package",
+    "shortTitle": "Site Orientation",
     "type": "Site Orientation",
+    "category": "Other",
     "version": "2026.2",
-    "lastUpdated": "2026-07-01"
+    "lastUpdated": "2026-07-01",
+    "owner": "Priya Nair · Safety",
+    "summary": "Mandatory orientation topics before a worker starts on a Helix site.",
+    "purpose": "Ensure every worker knows site rules, hazards, reporting, and emergency procedures.",
+    "scope": "All new and transferred workers before first task.",
+    "roles": ["All workers", "Supervisor conducting orientation"],
+    "ppe": ["Site-minimum PPE before entering work areas"],
+    "hazards": ["Site-specific hazards reviewed during orientation"],
+    "steps": [
+      "Complete orientation checklist with supervisor.",
+      "Tour muster point, first aid, and wash stations.",
+      "Sign acknowledgement before starting work."
+    ],
+    "emergency": ["Covered in orientation — see ERP"],
+    "references": ["ERP", "Company rules", "WHMIS"]
   },
   {
     "id": "doc-tbt",
-    "title": "Toolbox Talk — Today's Topic",
+    "title": "Toolbox Talk — Blind Lift Radio Protocol",
+    "shortTitle": "Toolbox Talk",
     "type": "Toolbox Talk",
+    "category": "Other",
     "version": "Weekly",
-    "lastUpdated": "2026-08-01"
+    "lastUpdated": "2026-08-01",
+    "owner": "Priya Nair · Safety",
+    "summary": "Today’s toolbox talk aligned with the Blind Lift Radio Protocol SJP.",
+    "purpose": "Refresh crew awareness before shifts involving blind picks.",
+    "scope": "Crew B and Crew C before first lift today.",
+    "roles": ["All crew members on shift"],
+    "ppe": ["N/A — discussion"],
+    "hazards": ["Lost radio contact", "Uncontrolled blind lifts"],
+    "steps": [
+      "Review SJP — Blind Lift Radio Protocol highlights.",
+      "Confirm channel and call signs for the day.",
+      "Collect acknowledgement signatures on the crew roster."
+    ],
+    "emergency": ["Stop work if radio protocol cannot be maintained"],
+    "references": ["SJP — Blind Lift Radio Protocol", "My Team signatures"]
   },
   {
     "id": "doc-mfr",
     "title": "Manufacturer Instructions — Peri / Doka Systems",
+    "shortTitle": "Peri / Doka OEM",
     "type": "Manufacturer Instructions",
+    "category": "Other",
     "version": "OEM",
-    "lastUpdated": "2026-01-15"
+    "lastUpdated": "2026-01-15",
+    "owner": "Tony Rivera · Superintendent",
+    "summary": "OEM erection and stripping guidance for formwork systems in use.",
+    "purpose": "Ensure formwork is assembled per manufacturer requirements.",
+    "scope": "Formwork crews using Peri or Doka systems on Helix projects.",
+    "roles": ["Formwork Carpenter", "Supervisor"],
+    "ppe": ["As per Formwork SWP"],
+    "hazards": ["Incorrect assembly", "Missing braces", "Overload"],
+    "steps": [
+      "Use only compatible components for the system.",
+      "Follow OEM brace and tie spacing.",
+      "Do not modify components without engineering approval."
+    ],
+    "emergency": ["Stop and get engineering input if system does not match drawings"],
+    "references": ["SWP — Formwork & Stripping", "SJP — Wall Form Stripping"]
   }
 ]
