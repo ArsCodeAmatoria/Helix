@@ -1,0 +1,106 @@
+[
+  {
+    "id": "eq-tc1",
+    "name": "Tower Crane TC-1",
+    "type": "Tower Crane",
+    "assetTag": "TC-1",
+    "status": "in-service",
+    "lastInspection": "2026-08-01"
+  },
+  {
+    "id": "eq-tc2",
+    "name": "Tower Crane TC-2",
+    "type": "Tower Crane",
+    "assetTag": "TC-2",
+    "status": "in-service",
+    "lastInspection": "2026-07-31"
+  },
+  {
+    "id": "eq-mobile",
+    "name": "Mobile Crane MC-4",
+    "type": "Mobile Crane",
+    "assetTag": "MC-4",
+    "status": "in-service",
+    "lastInspection": "2026-07-30"
+  },
+  {
+    "id": "eq-vib1",
+    "name": "Concrete Vibrator V-12",
+    "type": "Concrete Vibrator",
+    "assetTag": "V-12",
+    "status": "in-service",
+    "lastInspection": "2026-07-28"
+  },
+  {
+    "id": "eq-vib2",
+    "name": "Concrete Vibrator V-08",
+    "type": "Concrete Vibrator",
+    "assetTag": "V-08",
+    "status": "out-of-service",
+    "lastInspection": "2026-07-25"
+  },
+  {
+    "id": "eq-gen1",
+    "name": "Generator G-3",
+    "type": "Generator",
+    "assetTag": "G-3",
+    "status": "in-service",
+    "lastInspection": "2026-07-29"
+  },
+  {
+    "id": "eq-lad-ext",
+    "name": "Extension Ladder 28ft",
+    "type": "Extension Ladder",
+    "assetTag": "LAD-EXT-07",
+    "status": "in-service",
+    "lastInspection": "2026-07-20"
+  },
+  {
+    "id": "eq-lad-plat",
+    "name": "Platform Ladder",
+    "type": "Platform Ladder",
+    "assetTag": "LAD-PLT-03",
+    "status": "in-service",
+    "lastInspection": "2026-07-22"
+  },
+  {
+    "id": "eq-lad-fib",
+    "name": "Fiberglass Step Ladder",
+    "type": "Step Ladder",
+    "assetTag": "LAD-FIB-11",
+    "status": "in-service",
+    "lastInspection": "2026-07-18"
+  },
+  {
+    "id": "eq-lad-step",
+    "name": "Aluminum Step Ladder",
+    "type": "Step Ladder",
+    "assetTag": "LAD-ALU-02",
+    "status": "maintenance",
+    "lastInspection": "2026-07-15"
+  },
+  {
+    "id": "eq-mewp1",
+    "name": "MEWP Scissor 32ft",
+    "type": "MEWP",
+    "assetTag": "MEWP-32-01",
+    "status": "in-service",
+    "lastInspection": "2026-08-01"
+  },
+  {
+    "id": "eq-mewp2",
+    "name": "MEWP Boom 45ft",
+    "type": "MEWP",
+    "assetTag": "MEWP-45-02",
+    "status": "in-service",
+    "lastInspection": "2026-07-31"
+  },
+  {
+    "id": "eq-tools",
+    "name": "Power Tools Kit",
+    "type": "Power Tools",
+    "assetTag": "PT-KIT-B",
+    "status": "in-service",
+    "lastInspection": "2026-07-27"
+  }
+]

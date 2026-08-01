@@ -1,0 +1,42 @@
+[
+  {
+    "id": "n1",
+    "title": "FLHA review pending",
+    "body": "Supervisor review required for yesterday's Oceanview Tower FLHA.",
+    "time": "8 min ago",
+    "type": "action",
+    "read": false
+  },
+  {
+    "id": "n2",
+    "title": "Wind advisory",
+    "body": "Gusts 45–55 km/h expected at Burnaby Central after 14:00.",
+    "time": "22 min ago",
+    "type": "weather",
+    "read": false
+  },
+  {
+    "id": "n3",
+    "title": "Equipment out of service",
+    "body": "Concrete Vibrator V-08 tagged out — cord damage.",
+    "time": "1 hr ago",
+    "type": "alert",
+    "read": false
+  },
+  {
+    "id": "n4",
+    "title": "Toolbox talk posted",
+    "body": "Today's topic: Blind lift radio protocol — review before shift.",
+    "time": "2 hr ago",
+    "type": "info",
+    "read": true
+  },
+  {
+    "id": "n5",
+    "title": "Corrective action assigned",
+    "body": "Install temporary edge protection Level 28 — due today.",
+    "time": "3 hr ago",
+    "type": "action",
+    "read": true
+  }
+]

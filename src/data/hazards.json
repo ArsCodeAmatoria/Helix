@@ -1,0 +1,282 @@
+[
+  {
+    "id": "haz-suspend",
+    "title": "Suspended Loads",
+    "controls": [
+      "Never work beneath suspended loads",
+      "Use designated exclusion zone",
+      "Maintain radio communication with operator and signal person"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-fall",
+    "title": "Falls from Height",
+    "controls": [
+      "Wear and tie off 100% fall protection at 3 m or open edges",
+      "Verify anchor points rated and inspected",
+      "Maintain guardrails / leading-edge protection"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-crush",
+    "title": "Crush / Pinch Points",
+    "controls": [
+      "Keep clear of load path and landing zones",
+      "Use tag lines — never guide with hands under load",
+      "Confirm all personnel clear before landing"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-struck",
+    "title": "Struck By Object",
+    "controls": [
+      "Hard hat mandatory in work zone",
+      "Secure loose tools and materials at height",
+      "Establish drop zones and barricades"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-exclusion",
+    "title": "Exclusion Zone Breach",
+    "controls": [
+      "Mark and enforce swing / pour exclusion zones",
+      "Spotter required for public or adjacent crews",
+      "Stop work if unauthorized entry occurs"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-blind",
+    "title": "Blind Lift / Limited Visibility",
+    "controls": [
+      "Dedicated signal person with clear radio channel",
+      "Confirm line-of-sight plan before lift",
+      "Operator stops on lost communication"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-radio",
+    "title": "Radio / Communication Failure",
+    "controls": [
+      "Pre-check radios on assigned channel",
+      "Use standard hand signals as backup",
+      "Abort lift if communication lost"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-rig-fail",
+    "title": "Rigging Failure",
+    "controls": [
+      "Inspect slings, shackles, and hardware before each lift",
+      "Verify WLL and hitch configuration",
+      "Remove damaged gear from service immediately"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-swing",
+    "title": "Load Swing / Uncontrolled Movement",
+    "controls": [
+      "Use tag lines on free ends",
+      "Monitor wind and boom / jib movement",
+      "Do not side-load or snatch loads"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-wind",
+    "title": "High Wind",
+    "controls": [
+      "Check anemometer / site wind limits before lift",
+      "Suspend panel flying and fly table moves in high wind",
+      "Secure loose materials and weathervane crane as required"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-powerline",
+    "title": "Overhead Powerlines",
+    "controls": [
+      "Maintain minimum approach distances",
+      "Use spotter for all boom / load movement near lines",
+      "Confirm de-energize / insulating measures if required"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-tip",
+    "title": "Crane Tip / Outrigger Failure",
+    "controls": [
+      "Verify ground bearing and outrigger pads",
+      "Stay within load chart for radius and configuration",
+      "Level crane before lifting"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-platform",
+    "title": "Personnel Platform Hazards",
+    "controls": [
+      "Platform inspected and certified for use",
+      "Occupants wear fall protection tied to platform",
+      "No free-fall or sudden movements — trial lift required"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-spill",
+    "title": "Concrete Spill / Splash",
+    "controls": [
+      "Confirm bucket gate and seals before lift",
+      "Clear landing area and wear eye / skin protection",
+      "Wash stations available for concrete exposure"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "haz-chemical",
+    "title": "Concrete / Chemical Exposure",
+    "controls": [
+      "Wear gloves, boots, and eye protection",
+      "Rinse skin immediately on contact",
+      "Review SDS for admixtures in use"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "haz-slip",
+    "title": "Slips on Wet / Slick Surfaces",
+    "controls": [
+      "Clean pour residue promptly",
+      "Use anti-slip footwear",
+      "Barricade wet areas until safe"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "haz-electric",
+    "title": "Electrical Hazards",
+    "controls": [
+      "GFCI on all temporary power",
+      "Inspect cords and tools before use",
+      "Keep electrical clear of wet pour areas"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-vibration",
+    "title": "Hand-Arm Vibration",
+    "controls": [
+      "Rotate operators on vibrator duty",
+      "Use anti-vibration gloves where practical",
+      "Report numbness or tingling immediately"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "haz-noise",
+    "title": "High Noise",
+    "controls": [
+      "Hearing protection required near vibrators and generators",
+      "Limit exposure duration",
+      "Use hand signals in high-noise zones"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "haz-pinch",
+    "title": "Pinch Points — Forms & Hardware",
+    "controls": [
+      "Keep hands clear of closing forms and clamps",
+      "Use proper tools for wedge and pin removal",
+      "Coordinate stripping sequence with crew"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "haz-musculo",
+    "title": "Musculoskeletal Strain",
+    "controls": [
+      "Team lift heavy panels and materials",
+      "Use mechanical aids where available",
+      "Stretch and rotate tasks"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "haz-trip",
+    "title": "Trips / Poor Housekeeping",
+    "controls": [
+      "Keep walkways clear of debris and rebar",
+      "Stage materials in designated areas only",
+      "Address hazards immediately — don't walk by"
+    ],
+    "severity": "medium"
+  },
+  {
+    "id": "haz-sharp",
+    "title": "Sharp Edges / Cuts",
+    "controls": [
+      "Wear cut-resistant gloves when handling form hardware",
+      "Cap protruding rebar and pins",
+      "Dispose of scrap in designated bins"
+    ],
+    "severity": "low"
+  },
+  {
+    "id": "haz-ladder",
+    "title": "Ladder Use",
+    "controls": [
+      "Select correct ladder type and duty rating",
+      "Inspect before use — remove defective ladders",
+      "Secure ladder and maintain three-point contact"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-collapse",
+    "title": "Scaffold Collapse / Instability",
+    "controls": [
+      "Only use tagged and inspected scaffold",
+      "Do not overload or modify without authorization",
+      "Report damaged components immediately"
+    ],
+    "severity": "critical"
+  },
+  {
+    "id": "haz-mech",
+    "title": "Mechanical Failure",
+    "controls": [
+      "Complete daily inspection checklist before operation",
+      "Report unusual noises, leaks, or alarms",
+      "Do not operate equipment with unresolved deficiencies"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-collision",
+    "title": "Crane / Structure Collision",
+    "controls": [
+      "Know slew limits and nearby structures",
+      "Use cameras / spotters in congested zones",
+      "Slow and deliberate movements near obstacles"
+    ],
+    "severity": "high"
+  },
+  {
+    "id": "haz-loto",
+    "title": "Lockout / Tagout",
+    "controls": [
+      "Apply LOTO before maintenance",
+      "Verify zero energy state",
+      "Only authorized workers remove locks"
+    ],
+    "severity": "critical"
+  }
+]

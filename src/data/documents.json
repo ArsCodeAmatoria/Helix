@@ -1,0 +1,79 @@
+[
+  {
+    "id": "doc-swp-pour",
+    "title": "Safe Work Procedure — Concrete Pour",
+    "type": "Safe Work Procedure",
+    "version": "3.2",
+    "lastUpdated": "2026-06-15"
+  },
+  {
+    "id": "doc-swp-form",
+    "title": "Safe Work Procedure — Formwork & Stripping",
+    "type": "Safe Work Procedure",
+    "version": "2.8",
+    "lastUpdated": "2026-05-20"
+  },
+  {
+    "id": "doc-swp-yard",
+    "title": "Safe Work Procedure — Yard Operations",
+    "type": "Safe Work Procedure",
+    "version": "1.4",
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "doc-sjp-rig",
+    "title": "Safe Job Procedure — Rigging & Signalling",
+    "type": "Safe Job Procedure",
+    "version": "4.1",
+    "lastUpdated": "2026-07-01"
+  },
+  {
+    "id": "doc-swa",
+    "title": "Safe Work Assessment — High-Rise Deck",
+    "type": "Safe Work Assessment",
+    "version": "1.9",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "doc-lift",
+    "title": "Lift Plan — Tower Crane Standard Lifts",
+    "type": "Lift Plan",
+    "version": "2.5",
+    "lastUpdated": "2026-06-28"
+  },
+  {
+    "id": "doc-crit",
+    "title": "Critical Lift Plan — Blind Column Pours",
+    "type": "Critical Lift Plan",
+    "version": "1.2",
+    "lastUpdated": "2026-07-22"
+  },
+  {
+    "id": "doc-erp",
+    "title": "Emergency Response Plan",
+    "type": "ERP",
+    "version": "5.0",
+    "lastUpdated": "2026-03-01"
+  },
+  {
+    "id": "doc-orient",
+    "title": "Site Orientation Package",
+    "type": "Site Orientation",
+    "version": "2026.2",
+    "lastUpdated": "2026-07-01"
+  },
+  {
+    "id": "doc-tbt",
+    "title": "Toolbox Talk — Today's Topic",
+    "type": "Toolbox Talk",
+    "version": "Weekly",
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "doc-mfr",
+    "title": "Manufacturer Instructions — Peri / Doka Systems",
+    "type": "Manufacturer Instructions",
+    "version": "OEM",
+    "lastUpdated": "2026-01-15"
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "id": "task-decking",
+    "label": "Decking",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-trip", "haz-struck", "haz-musculo"]
+  },
+  {
+    "id": "task-walls",
+    "label": "Walls",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-crush", "haz-struck", "haz-musculo"]
+  },
+  {
+    "id": "task-columns",
+    "label": "Columns",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-crush", "haz-struck"]
+  },
+  {
+    "id": "task-gang",
+    "label": "Gang Forms",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-suspend", "haz-crush", "haz-pinch", "haz-struck"]
+  },
+  {
+    "id": "task-fly",
+    "label": "Fly Tables",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-suspend", "haz-crush", "haz-fall", "haz-wind"]
+  },
+  {
+    "id": "task-peri",
+    "label": "Peri",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-pinch", "haz-struck", "haz-musculo"]
+  },
+  {
+    "id": "task-doka",
+    "label": "Doka",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-pinch", "haz-struck", "haz-musculo"]
+  },
+  {
+    "id": "task-pour",
+    "label": "Concrete Pour",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-suspend", "haz-chemical", "haz-slip", "haz-struck", "haz-exclusion"]
+  },
+  {
+    "id": "task-vibrator",
+    "label": "Concrete Vibrator",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-electric", "haz-vibration", "haz-slip", "haz-noise"]
+  },
+  {
+    "id": "task-strip",
+    "label": "Stripping",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-struck", "haz-pinch", "haz-musculo"]
+  },
+  {
+    "id": "task-housekeep",
+    "label": "Housekeeping",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-trip", "haz-sharp", "haz-musculo"]
+  },
+  {
+    "id": "task-recv-fw",
+    "label": "Receiving Material",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-suspend", "haz-struck", "haz-crush", "haz-pinch"]
+  },
+  {
+    "id": "task-scaffold",
+    "label": "Scaffold",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-collapse", "haz-struck"]
+  },
+  {
+    "id": "task-ladder",
+    "label": "Ladder Work",
+    "category": "FORMWORK",
+    "hazardIds": ["haz-fall", "haz-ladder"],
+    "triggersLadder": true
+  },
+  {
+    "id": "task-blind",
+    "label": "Blind Lift",
+    "category": "RIGGER",
+    "hazardIds": ["haz-suspend", "haz-blind", "haz-crush", "haz-radio"]
+  },
+  {
+    "id": "task-rigging",
+    "label": "Rigging",
+    "category": "RIGGER",
+    "hazardIds": ["haz-suspend", "haz-rig-fail", "haz-pinch", "haz-crush"]
+  },
+  {
+    "id": "task-tower-rigger",
+    "label": "Tower Crane",
+    "category": "RIGGER",
+    "hazardIds": ["haz-suspend", "haz-swing", "haz-crush", "haz-exclusion"]
+  },
+  {
+    "id": "task-mobile",
+    "label": "Mobile Crane",
+    "category": "RIGGER",
+    "hazardIds": ["haz-suspend", "haz-tip", "haz-crush", "haz-powerline"]
+  },
+  {
+    "id": "task-platform-r",
+    "label": "Personnel Platform",
+    "category": "RIGGER",
+    "hazardIds": ["haz-fall", "haz-suspend", "haz-platform"]
+  },
+  {
+    "id": "task-recv-r",
+    "label": "Receiving Material",
+    "category": "RIGGER",
+    "hazardIds": ["haz-suspend", "haz-struck", "haz-crush"]
+  },
+  {
+    "id": "task-bucket",
+    "label": "Concrete Bucket",
+    "category": "RIGGER",
+    "hazardIds": ["haz-suspend", "haz-spill", "haz-crush", "haz-exclusion"]
+  },
+  {
+    "id": "task-panel",
+    "label": "Panel Flying",
+    "category": "RIGGER",
+    "hazardIds": ["haz-suspend", "haz-wind", "haz-crush", "haz-pinch"]
+  },
+  {
+    "id": "task-signal",
+    "label": "Signal Person",
+    "category": "RIGGER",
+    "hazardIds": ["haz-blind", "haz-radio", "haz-struck", "haz-exclusion"]
+  },
+  {
+    "id": "task-daily",
+    "label": "Daily Inspection",
+    "category": "TOWER CRANE",
+    "hazardIds": ["haz-mech", "haz-fall", "haz-electric"]
+  },
+  {
+    "id": "task-ops",
+    "label": "Crane Operation",
+    "category": "TOWER CRANE",
+    "hazardIds": ["haz-suspend", "haz-swing", "haz-wind", "haz-collision"]
+  },
+  {
+    "id": "task-bucket-tc",
+    "label": "Concrete Bucket",
+    "category": "TOWER CRANE",
+    "hazardIds": ["haz-suspend", "haz-spill", "haz-exclusion"]
+  },
+  {
+    "id": "task-platform-tc",
+    "label": "Personnel Platform",
+    "category": "TOWER CRANE",
+    "hazardIds": ["haz-fall", "haz-suspend", "haz-platform"]
+  },
+  {
+    "id": "task-shutdown",
+    "label": "Shutdown",
+    "category": "TOWER CRANE",
+    "hazardIds": ["haz-wind", "haz-mech", "haz-electric"]
+  },
+  {
+    "id": "task-climbing",
+    "label": "Climbing",
+    "category": "TOWER CRANE",
+    "hazardIds": ["haz-fall", "haz-crush", "haz-mech", "haz-suspend"]
+  },
+  {
+    "id": "task-maint",
+    "label": "Maintenance",
+    "category": "TOWER CRANE",
+    "hazardIds": ["haz-fall", "haz-electric", "haz-mech", "haz-loto"]
+  }
+]

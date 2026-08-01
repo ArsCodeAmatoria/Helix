@@ -1,0 +1,93 @@
+{
+  "stats": {
+    "outstandingDeficiencies": 4,
+    "openCorrectiveActions": 7,
+    "todaysFlhas": 12,
+    "pendingReviews": 3,
+    "equipmentOutOfService": 2,
+    "weatherAlerts": 1,
+    "upcomingInspections": 5
+  },
+  "deficiencies": [
+    {
+      "id": "def-1",
+      "title": "Guardrail gap — Level 28 east edge",
+      "projectId": "proj-oceanview",
+      "severity": "high",
+      "dueDate": "2026-08-01",
+      "status": "open"
+    },
+    {
+      "id": "def-2",
+      "title": "Vibrator V-08 cord damage",
+      "projectId": "proj-fraser",
+      "severity": "medium",
+      "dueDate": "2026-08-02",
+      "status": "in-progress"
+    },
+    {
+      "id": "def-3",
+      "title": "Missing tag on Peri panel stack",
+      "projectId": "proj-burnaby",
+      "severity": "low",
+      "dueDate": "2026-08-03",
+      "status": "open"
+    },
+    {
+      "id": "def-4",
+      "title": "Outrigger pad soft ground — MC-4",
+      "projectId": "proj-yard",
+      "severity": "high",
+      "dueDate": "2026-08-01",
+      "status": "open"
+    }
+  ],
+  "correctiveActions": [
+    {
+      "id": "ca-1",
+      "title": "Install temporary edge protection Level 28",
+      "assignee": "Tony Rivera",
+      "dueDate": "2026-08-01"
+    },
+    {
+      "id": "ca-2",
+      "title": "Replace V-08 power cord and re-inspect",
+      "assignee": "Yard Maintenance",
+      "dueDate": "2026-08-02"
+    },
+    {
+      "id": "ca-3",
+      "title": "Toolbox talk — blind lift radio protocol",
+      "assignee": "Priya Nair",
+      "dueDate": "2026-08-01"
+    }
+  ],
+  "weatherAlerts": [
+    {
+      "id": "wa-1",
+      "title": "Wind advisory — Burnaby Central",
+      "body": "Gusts forecast 45–55 km/h after 14:00. Review panel flying limits.",
+      "severity": "high"
+    }
+  ],
+  "upcomingInspections": [
+    {
+      "id": "insp-1",
+      "title": "TC-1 monthly structural",
+      "date": "2026-08-03",
+      "projectId": "proj-oceanview"
+    },
+    {
+      "id": "insp-2",
+      "title": "MEWP-32-01 annual",
+      "date": "2026-08-05",
+      "projectId": "proj-burnaby"
+    },
+    {
+      "id": "insp-3",
+      "title": "Fall protection gear audit",
+      "date": "2026-08-07",
+      "projectId": "proj-oceanview"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "environmentOptions": [
+    "High Wind",
+    "Rain",
+    "Snow",
+    "Heat",
+    "Cold",
+    "Smoke",
+    "Dust",
+    "Powerlines",
+    "Excavation",
+    "Traffic",
+    "Public",
+    "Poor Lighting",
+    "Confined Space",
+    "Other"
+  ],
+  "ladderTypes": [
+    "Extension",
+    "Platform",
+    "Podium",
+    "Step",
+    "Fiberglass",
+    "Aluminum"
+  ],
+  "roles": [
+    "Tower Crane Operator",
+    "Rigger",
+    "Formwork Carpenter",
+    "Carpenter",
+    "Yard Worker",
+    "Labourer",
+    "Supervisor",
+    "Apprentice"
+  ],
+  "flhaSteps": [
+    { "id": "project", "label": "Project", "short": "1" },
+    { "id": "worker", "label": "Worker", "short": "2" },
+    { "id": "tasks", "label": "Tasks", "short": "3" },
+    { "id": "hazards", "label": "Hazards", "short": "4" },
+    { "id": "site-hazards", "label": "Site", "short": "5" },
+    { "id": "documents", "label": "Docs", "short": "6" },
+    { "id": "equipment", "label": "Equip", "short": "7" },
+    { "id": "ladder", "label": "Ladder", "short": "8", "conditional": "ladder" },
+    { "id": "environment", "label": "Env", "short": "9" },
+    { "id": "photos", "label": "Photos", "short": "10" },
+    { "id": "comments", "label": "Notes", "short": "11" },
+    { "id": "signatures", "label": "Sign", "short": "12" },
+    { "id": "preview", "label": "PDF", "short": "13" }
+  ]
+}
