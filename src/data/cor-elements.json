@@ -1,0 +1,694 @@
+{
+  "source": "BCCSA COR\u00ae OHS Audit Tool V2 \u2014 R13 (Jan 1, 2026)",
+  "passOverallPercent": 80,
+  "passElementPercent": 50,
+  "elements": [
+    {
+      "id": 1,
+      "code": "E1",
+      "title": "Company Health and Safety Policy",
+      "maxPoints": 27,
+      "questions": [
+        {
+          "id": "1.1",
+          "text": "Is signed by the president, CEO or local senior management?",
+          "maxPoints": 3
+        },
+        {
+          "id": "1.2",
+          "text": "Includes management's commitment to provide a safe and healthy work environment?",
+          "maxPoints": 3
+        },
+        {
+          "id": "1.3",
+          "text": "Recognizes the right of workers to work in a safe and healthy work environment?",
+          "maxPoints": 2
+        },
+        {
+          "id": "1.4",
+          "text": "Is current and dated?",
+          "maxPoints": 2
+        },
+        {
+          "id": "1.5",
+          "text": "Is reviewed annually by management?",
+          "maxPoints": 2
+        },
+        {
+          "id": "1.6",
+          "text": "Is prominently posted or made available to the worker?",
+          "maxPoints": 3
+        },
+        {
+          "id": "1.7",
+          "text": "Addresses accountability and responsibility for health and safety for all workplace parties?",
+          "maxPoints": 6
+        },
+        {
+          "id": "1.8",
+          "text": "Expresses a commitment to work in a spirit of consultation and cooperation with the workers?",
+          "maxPoints": 3
+        },
+        {
+          "id": "1.9",
+          "text": "Is understood by personnel?",
+          "maxPoints": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "code": "E2",
+      "title": "Workplace Hazard Assessment and Control",
+      "maxPoints": 40,
+      "questions": [
+        {
+          "id": "2.1",
+          "text": "Are written hazard assessments conducted as required?",
+          "maxPoints": 5
+        },
+        {
+          "id": "2.2",
+          "text": "Does the employer use an ongoing hazard assessment process?",
+          "maxPoints": 5
+        },
+        {
+          "id": "2.3",
+          "text": "Are appropriate personnel involved in the hazard assessment process?",
+          "maxPoints": 4
+        },
+        {
+          "id": "2.4",
+          "text": "Are the hazards identified?",
+          "maxPoints": 6
+        },
+        {
+          "id": "2.5",
+          "text": "Are the hazards prioritized?",
+          "maxPoints": 5
+        },
+        {
+          "id": "2.6",
+          "text": "Is there a list of identified critical tasks?",
+          "maxPoints": 3
+        },
+        {
+          "id": "2.7",
+          "text": "Are controls developed for identified hazards?",
+          "maxPoints": 2
+        },
+        {
+          "id": "2.8",
+          "text": "Are controls implemented in a timely manner?",
+          "maxPoints": 3
+        },
+        {
+          "id": "2.9",
+          "text": "Are appropriate personnel involved in or informed of the control strategies?",
+          "maxPoints": 2
+        },
+        {
+          "id": "2.10",
+          "text": "Does the company have a process for evaluating and monitoring subcontractors?",
+          "maxPoints": 3
+        },
+        {
+          "id": "2.11",
+          "text": "Does management support the ongoing application of the hazard assessment process?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "code": "E3",
+      "title": "Safe Work Practices",
+      "maxPoints": 16,
+      "questions": [
+        {
+          "id": "3.1",
+          "text": "Do the safe work practices accurately reflect the company's activities?",
+          "maxPoints": 2
+        },
+        {
+          "id": "3.2",
+          "text": "Have applicable safe work practices been written?",
+          "maxPoints": 6
+        },
+        {
+          "id": "3.3",
+          "text": "Are they understood by workers?",
+          "maxPoints": 2
+        },
+        {
+          "id": "3.4",
+          "text": "Are they readily available?",
+          "maxPoints": 2
+        },
+        {
+          "id": "3.5",
+          "text": "Are they followed by workers on a regular basis?",
+          "maxPoints": 2
+        },
+        {
+          "id": "3.6",
+          "text": "Have both management/supervisors and workers participated in the development and/or review of safe work practices?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "code": "E4",
+      "title": "Safe Job Procedures",
+      "maxPoints": 16,
+      "questions": [
+        {
+          "id": "4.1",
+          "text": "Do the safe job procedures accurately reflect the employer's activities?",
+          "maxPoints": 2
+        },
+        {
+          "id": "4.2",
+          "text": "Have all critical safe job procedures been written?",
+          "maxPoints": 6
+        },
+        {
+          "id": "4.3",
+          "text": "Are they understood by workers?",
+          "maxPoints": 2
+        },
+        {
+          "id": "4.4",
+          "text": "Are safe job procedures followed on a regular basis?",
+          "maxPoints": 2
+        },
+        {
+          "id": "4.5",
+          "text": "Are these procedures available and easily accessible to workers?",
+          "maxPoints": 2
+        },
+        {
+          "id": "4.6",
+          "text": "Have both management/supervisors and workers participated in the development and/or review of these procedures?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "code": "E5",
+      "title": "Company Rules",
+      "maxPoints": 9,
+      "questions": [
+        {
+          "id": "5.1",
+          "text": "Are the rules clearly stated in writing?",
+          "maxPoints": 2
+        },
+        {
+          "id": "5.2",
+          "text": "Are the rules prominently posted or provided to each worker?",
+          "maxPoints": 1
+        },
+        {
+          "id": "5.3",
+          "text": "Do workers understand company and site specific rules?",
+          "maxPoints": 2
+        },
+        {
+          "id": "5.4",
+          "text": "Does the program address non-conformance and progressive disciplinary actions?",
+          "maxPoints": 2
+        },
+        {
+          "id": "5.5",
+          "text": "Are the rules applied and enforced consistently with all employees?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "code": "E6",
+      "title": "Personal Protective Equipment",
+      "maxPoints": 18,
+      "questions": [
+        {
+          "id": "6.1",
+          "text": "Is there a written policy for PPE?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.2",
+          "text": "Are workers made aware of the requirements for PPE?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.3",
+          "text": "Do all employees have access to basic PPE?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.4",
+          "text": "Is specialized PPE available to workers when required?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.5",
+          "text": "Is the correct PPE used by all employees when required?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.6",
+          "text": "Are there written procedures for the proper fitting, care and use of specialized PPE?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.7",
+          "text": "Are employees given instruction or training in the use of PPE as required?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.8",
+          "text": "Are there criteria used to select PPE?",
+          "maxPoints": 2
+        },
+        {
+          "id": "6.9",
+          "text": "Is there a system in place to regularly inspect and maintain basic and specialized PPE?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "code": "E7",
+      "title": "Preventative Maintenance",
+      "maxPoints": 12,
+      "questions": [
+        {
+          "id": "7.1",
+          "text": "An inventory of items to be maintained?",
+          "maxPoints": 1
+        },
+        {
+          "id": "7.2",
+          "text": "Maintenance meeting regulatory and manufacturers' standards?",
+          "maxPoints": 2
+        },
+        {
+          "id": "7.3",
+          "text": "The use and completion of schedules and checklists as required?",
+          "maxPoints": 1
+        },
+        {
+          "id": "7.4",
+          "text": "Records with a description of corrective actions taken?",
+          "maxPoints": 3
+        },
+        {
+          "id": "7.5",
+          "text": "Is there a system to effectively remove defective tools, equipment and vehicles from service?",
+          "maxPoints": 2
+        },
+        {
+          "id": "7.6",
+          "text": "Is this system followed?",
+          "maxPoints": 1
+        },
+        {
+          "id": "7.7",
+          "text": "Does a qualified and competent person perform the inspections and maintenance?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "code": "E8",
+      "title": "Training and Communication",
+      "maxPoints": 46,
+      "questions": [
+        {
+          "id": "8.1",
+          "text": "Does the employer have a formal orientation program?",
+          "maxPoints": 4
+        },
+        {
+          "id": "8.2",
+          "text": "Is orientation mandatory for all new employees before starting work?",
+          "maxPoints": 4
+        },
+        {
+          "id": "8.3",
+          "text": "Is there a standardized written orientation form?",
+          "maxPoints": 2
+        },
+        {
+          "id": "8.4",
+          "text": "Does the form provide for signatures of workers and the person conducting the orientation?",
+          "maxPoints": 2
+        },
+        {
+          "id": "8.5",
+          "text": "Are mandatory training requirements verified or training provided before starting work?",
+          "maxPoints": 2
+        },
+        {
+          "id": "8.6",
+          "text": "Are training records maintained?",
+          "maxPoints": 2
+        },
+        {
+          "id": "8.7",
+          "text": "Is job specific training provided and documented as required?",
+          "maxPoints": 2
+        },
+        {
+          "id": "8.8",
+          "text": "Does a competent person conduct job specific training?",
+          "maxPoints": 2
+        },
+        {
+          "id": "8.9",
+          "text": "Have supervisors received training in workplace inspections and health and safety responsibilities?",
+          "maxPoints": 6
+        },
+        {
+          "id": "8.10",
+          "text": "Is a system in place to measure knowledge and competency?",
+          "maxPoints": 6
+        },
+        {
+          "id": "8.11",
+          "text": "Does the employer hold scheduled health and safety meetings?",
+          "maxPoints": 3
+        },
+        {
+          "id": "8.12",
+          "text": "Does senior management attend and participate in health and safety meetings?",
+          "maxPoints": 1
+        },
+        {
+          "id": "8.13",
+          "text": "Is a prepared agenda followed and are minutes and attendance of the meeting kept?",
+          "maxPoints": 3
+        },
+        {
+          "id": "8.14",
+          "text": "Does two-way communication exist during these meetings?",
+          "maxPoints": 3
+        },
+        {
+          "id": "8.15",
+          "text": "Are tailgate or toolbox meetings held regularly and documented as per policy?",
+          "maxPoints": 4
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "code": "E9",
+      "title": "Inspections",
+      "maxPoints": 30,
+      "questions": [
+        {
+          "id": "9.1",
+          "text": "Is there a written policy for inspections?",
+          "maxPoints": 2
+        },
+        {
+          "id": "9.2",
+          "text": "Does the policy include frequency of inspections?",
+          "maxPoints": 3
+        },
+        {
+          "id": "9.3",
+          "text": "Is the required frequency being met?",
+          "maxPoints": 4
+        },
+        {
+          "id": "9.4",
+          "text": "Is there a form or checklist used for inspections?",
+          "maxPoints": 3
+        },
+        {
+          "id": "9.5",
+          "text": "Are supervisors performing inspections as required?",
+          "maxPoints": 3
+        },
+        {
+          "id": "9.6",
+          "text": "Are workers involved in the inspection process?",
+          "maxPoints": 3
+        },
+        {
+          "id": "9.7",
+          "text": "Are all areas inspected as required?",
+          "maxPoints": 4
+        },
+        {
+          "id": "9.8",
+          "text": "Are identified deficiencies corrected in a timely manner?",
+          "maxPoints": 3
+        },
+        {
+          "id": "9.9",
+          "text": "Does senior management review or participate in the inspection process?",
+          "maxPoints": 1
+        },
+        {
+          "id": "9.10",
+          "text": "Are inspection reports posted or communicated to appropriate employees?",
+          "maxPoints": 4
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "code": "E10",
+      "title": "Investigations and Reporting",
+      "maxPoints": 30,
+      "questions": [
+        {
+          "id": "10.1",
+          "text": "Is there a written investigation policy and reporting procedure?",
+          "maxPoints": 2
+        },
+        {
+          "id": "10.2",
+          "text": "Is the policy being followed?",
+          "maxPoints": 4
+        },
+        {
+          "id": "10.3",
+          "text": "Are standardized forms readily available and used?",
+          "maxPoints": 2
+        },
+        {
+          "id": "10.4",
+          "text": "Do workers know the reporting process?",
+          "maxPoints": 3
+        },
+        {
+          "id": "10.5",
+          "text": "Have supervisors been trained in investigation and reporting procedures?",
+          "maxPoints": 3
+        },
+        {
+          "id": "10.6",
+          "text": "Are appropriate employees involved in investigations?",
+          "maxPoints": 3
+        },
+        {
+          "id": "10.7",
+          "text": "Are no-loss incidents (close calls) being reported?",
+          "maxPoints": 4
+        },
+        {
+          "id": "10.8",
+          "text": "Are recommendations for prevention or remedial action implemented in a timely manner?",
+          "maxPoints": 4
+        },
+        {
+          "id": "10.9",
+          "text": "Are corrective actions communicated to workers?",
+          "maxPoints": 4
+        },
+        {
+          "id": "10.10",
+          "text": "Are investigation reports reviewed by management?",
+          "maxPoints": 1
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "code": "E11",
+      "title": "Emergency Preparedness",
+      "maxPoints": 28,
+      "questions": [
+        {
+          "id": "11.1",
+          "text": "Are the emergency preparedness plans appropriate to work activities?",
+          "maxPoints": 6
+        },
+        {
+          "id": "11.2",
+          "text": "Does the plan include a requirement for training in emergency procedures, roles,  and responsibilities?",
+          "maxPoints": 4
+        },
+        {
+          "id": "11.3",
+          "text": "Has the emergency response plan been tested for deficiencies and corrective action taken?",
+          "maxPoints": 3
+        },
+        {
+          "id": "11.4",
+          "text": "Does the employer have a written fire response plan?",
+          "maxPoints": 2
+        },
+        {
+          "id": "11.5",
+          "text": "Are the correct class and size of extinguishers available, marked, and visible?",
+          "maxPoints": 2
+        },
+        {
+          "id": "11.6",
+          "text": "Are extinguishers regularly inspected and maintained?",
+          "maxPoints": 2
+        },
+        {
+          "id": "11.7",
+          "text": "Is an appropriate emergency communication system available?",
+          "maxPoints": 2
+        },
+        {
+          "id": "11.8",
+          "text": "Are there adequate first aid supplies and facilities?",
+          "maxPoints": 2
+        },
+        {
+          "id": "11.9",
+          "text": "Are the required number of qualified first aid personnel on-site?",
+          "maxPoints": 3
+        },
+        {
+          "id": "11.10",
+          "text": "Is there a means to transport an injured employee to a medical facility?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "code": "E12",
+      "title": "Records and Statistics",
+      "maxPoints": 18,
+      "questions": [
+        {
+          "id": "12.1",
+          "text": "Is there a process to organize and manage program documentation?",
+          "maxPoints": 2
+        },
+        {
+          "id": "12.2",
+          "text": "Are adequate health and safety activity summaries developed and maintained?",
+          "maxPoints": 2
+        },
+        {
+          "id": "12.3",
+          "text": "Are health and safety statistical reports generated on an ongoing basis and readily available?",
+          "maxPoints": 2
+        },
+        {
+          "id": "12.4",
+          "text": "Does the company compare health and safety performance year to year?",
+          "maxPoints": 2
+        },
+        {
+          "id": "12.5",
+          "text": "Are the annual statistics analyzed and needs or trends identified?",
+          "maxPoints": 2
+        },
+        {
+          "id": "12.6",
+          "text": "Are adequate first aid treatment records kept?",
+          "maxPoints": 3
+        },
+        {
+          "id": "12.7",
+          "text": "Was an action plan developed based on the most recent audit?",
+          "maxPoints": 2
+        },
+        {
+          "id": "12.8",
+          "text": "Was an action plan communicated and implemented?",
+          "maxPoints": 3
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "code": "E13",
+      "title": "Legislation",
+      "maxPoints": 12,
+      "questions": [
+        {
+          "id": "13.1",
+          "text": "Are copies of relevant legislation posted or available at each workplace?",
+          "maxPoints": 2
+        },
+        {
+          "id": "13.2",
+          "text": "Does management/supervision regularly refer to relevant legislation during job planning?",
+          "maxPoints": 3
+        },
+        {
+          "id": "13.3",
+          "text": "Are employees aware of their rights and responsibilities and how to exercise them?",
+          "maxPoints": 5
+        },
+        {
+          "id": "13.4",
+          "text": "Does the employer's injury and incident reporting meet the legislated requirement?",
+          "maxPoints": 2
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "code": "E14",
+      "title": "Joint Health and Safety Committee or Worker Representative",
+      "maxPoints": 19,
+      "questions": [
+        {
+          "id": "14.1",
+          "text": "Is there communication between the employees and worker health and safety representative(s)?",
+          "maxPoints": 4
+        },
+        {
+          "id": "14.2",
+          "text": "Has a Terms of Reference (TOR) been established for the JOHS Committee or Worker Representative(s)?",
+          "maxPoints": 3
+        },
+        {
+          "id": "14.3",
+          "text": "Have committee members or worker representative(s) received training to carry out their duties, functions, and responsibilities?",
+          "maxPoints": 4
+        },
+        {
+          "id": "14.4",
+          "text": "Are committee members or the worker representative(s) following the duties outlined in the Terms of Reference?",
+          "maxPoints": 4
+        },
+        {
+          "id": "14.5",
+          "text": "Are members of the JOHS Committee or Worker Representative(s) involved in inspections, incident investigations, or the resolution of safety issues?",
+          "maxPoints": 4
+        }
+      ]
+    }
+  ]
+}

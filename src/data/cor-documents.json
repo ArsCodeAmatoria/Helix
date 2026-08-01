@@ -1,0 +1,200 @@
+[
+  {
+    "id": "doc-hspolicy",
+    "title": "Health & Safety Policy",
+    "category": "Policy",
+    "status": "current",
+    "lastReviewed": "2026-01-15",
+    "owner": "Senior Management",
+    "elements": [1]
+  },
+  {
+    "id": "doc-swp-pour",
+    "title": "Safe Work Procedure — Concrete Pour",
+    "category": "Safe Work Practice",
+    "status": "current",
+    "lastReviewed": "2026-06-15",
+    "owner": "Safety Coordinator",
+    "elements": [3, 2]
+  },
+  {
+    "id": "doc-swp-form",
+    "title": "Safe Work Procedure — Formwork & Stripping",
+    "category": "Safe Work Practice",
+    "status": "current",
+    "lastReviewed": "2026-05-20",
+    "owner": "Safety Coordinator",
+    "elements": [3, 2]
+  },
+  {
+    "id": "doc-sjp-rig",
+    "title": "Safe Job Procedure — Rigging & Signalling",
+    "category": "Safe Job Procedure",
+    "status": "current",
+    "lastReviewed": "2026-07-01",
+    "owner": "Crane Superintendent",
+    "elements": [4, 2]
+  },
+  {
+    "id": "doc-swa",
+    "title": "Safe Work Assessment — High-Rise Deck",
+    "category": "Hazard Assessment",
+    "status": "current",
+    "lastReviewed": "2026-07-12",
+    "owner": "Project Manager",
+    "elements": [2]
+  },
+  {
+    "id": "doc-lift",
+    "title": "Lift Plan — Tower Crane Standard Lifts",
+    "category": "Critical Task",
+    "status": "current",
+    "lastReviewed": "2026-06-28",
+    "owner": "Crane Superintendent",
+    "elements": [2, 4]
+  },
+  {
+    "id": "doc-crit",
+    "title": "Critical Lift Plan — Blind Column Pours",
+    "category": "Critical Task",
+    "status": "current",
+    "lastReviewed": "2026-07-22",
+    "owner": "Crane Superintendent",
+    "elements": [2, 4]
+  },
+  {
+    "id": "doc-erp",
+    "title": "Emergency Response Plan",
+    "category": "Emergency",
+    "status": "current",
+    "lastReviewed": "2026-03-01",
+    "owner": "Safety Coordinator",
+    "elements": [11]
+  },
+  {
+    "id": "doc-orient",
+    "title": "Site Orientation Package",
+    "category": "Training",
+    "status": "current",
+    "lastReviewed": "2026-07-01",
+    "owner": "Safety Coordinator",
+    "elements": [8, 5, 6]
+  },
+  {
+    "id": "doc-tbt",
+    "title": "Toolbox Talk — Today's Topic",
+    "category": "Training",
+    "status": "current",
+    "lastReviewed": "2026-08-01",
+    "owner": "Supervisor",
+    "elements": [8, 14]
+  },
+  {
+    "id": "doc-mfr",
+    "title": "Manufacturer Instructions — Peri / Doka",
+    "category": "Maintenance",
+    "status": "current",
+    "lastReviewed": "2026-01-15",
+    "owner": "Yard",
+    "elements": [7, 3]
+  },
+  {
+    "id": "doc-rules",
+    "title": "Company & Site Rules",
+    "category": "Rules",
+    "status": "current",
+    "lastReviewed": "2026-02-01",
+    "owner": "HR / Safety",
+    "elements": [5]
+  },
+  {
+    "id": "doc-ppe",
+    "title": "PPE Policy & Selection Criteria",
+    "category": "PPE",
+    "status": "current",
+    "lastReviewed": "2026-04-10",
+    "owner": "Safety Coordinator",
+    "elements": [6]
+  },
+  {
+    "id": "doc-inspect",
+    "title": "Inspection Policy & Schedules",
+    "category": "Inspections",
+    "status": "current",
+    "lastReviewed": "2026-05-01",
+    "owner": "Safety Coordinator",
+    "elements": [9, 7]
+  },
+  {
+    "id": "doc-invest",
+    "title": "Incident Investigation & Reporting Procedure",
+    "category": "Investigations",
+    "status": "needs-review",
+    "lastReviewed": "2025-09-12",
+    "owner": "Safety Coordinator",
+    "elements": [10]
+  },
+  {
+    "id": "doc-johsc",
+    "title": "JOHSC Terms of Reference",
+    "category": "Committee",
+    "status": "current",
+    "lastReviewed": "2026-01-20",
+    "owner": "Worker Rep",
+    "elements": [14]
+  },
+  {
+    "id": "doc-legislation",
+    "title": "OHS Regulation Reference Pack",
+    "category": "Legislation",
+    "status": "current",
+    "lastReviewed": "2026-01-01",
+    "owner": "Safety Coordinator",
+    "elements": [13]
+  },
+  {
+    "id": "feat-flha",
+    "title": "Helix FLHA Engine (tasks → hazards → controls)",
+    "category": "Digital Record",
+    "status": "current",
+    "lastReviewed": "2026-08-01",
+    "owner": "Helix Platform",
+    "elements": [2, 3, 4, 12]
+  },
+  {
+    "id": "feat-equip",
+    "title": "Equipment Inspection Module",
+    "category": "Digital Record",
+    "status": "current",
+    "lastReviewed": "2026-08-01",
+    "owner": "Helix Platform",
+    "elements": [6, 7, 9]
+  },
+  {
+    "id": "feat-timeclock",
+    "title": "Time Clock — Multi-site Visit Records",
+    "category": "Digital Record",
+    "status": "current",
+    "lastReviewed": "2026-08-01",
+    "owner": "Helix Platform",
+    "elements": [12]
+  },
+  {
+    "id": "feat-dashboard",
+    "title": "Safety Dashboard — Deficiencies & Stats",
+    "category": "Digital Record",
+    "status": "current",
+    "lastReviewed": "2026-08-01",
+    "owner": "Helix Platform",
+    "elements": [12, 9, 10]
+  },
+  {
+    "id": "feat-signatures",
+    "title": "Multi-crew Signatures + GPS + Timestamp",
+    "category": "Digital Record",
+    "status": "current",
+    "lastReviewed": "2026-08-01",
+    "owner": "Helix Platform",
+    "elements": [2, 8, 12]
+  }
+]

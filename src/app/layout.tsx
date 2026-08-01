@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { FlhaProvider } from "@/components/providers/flha-provider";
+import { TimeClockProvider } from "@/components/providers/timeclock-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -50,7 +51,9 @@ export default function RootLayout({
       <body className="min-h-full bg-background font-sans">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <FlhaProvider>
-            <AppShell>{children}</AppShell>
+            <TimeClockProvider>
+              <AppShell>{children}</AppShell>
+            </TimeClockProvider>
           </FlhaProvider>
         </ThemeProvider>
       </body>

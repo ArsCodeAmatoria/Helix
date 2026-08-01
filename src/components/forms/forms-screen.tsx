@@ -6,7 +6,7 @@ import {
   CheckCircle2,
   ClipboardCheck,
   ClipboardList,
-  FileText,
+  Clock,
   FolderKanban,
   HardHat,
   Plus,
@@ -20,6 +20,12 @@ import { Badge } from "@/components/ui/badge";
 
 const assetModules = [
   {
+    href: "/timeclock",
+    label: "Time Clock",
+    icon: Clock,
+    color: "bg-[#12b76a]",
+  },
+  {
     href: "/forms/flha",
     label: "FLHA",
     icon: ClipboardCheck,
@@ -29,32 +35,26 @@ const assetModules = [
     href: "/projects",
     label: "Projects",
     icon: FolderKanban,
-    color: "bg-[#12b76a]",
+    color: "bg-[#f79009]",
   },
   {
     href: "/dashboard",
     label: "Safety Hub",
     icon: ShieldAlert,
-    color: "bg-[#f79009]",
+    color: "bg-[#ee46bc]",
     badge: 4,
   },
   {
     href: "/dashboard",
     label: "Equipment",
     icon: Wrench,
-    color: "bg-[#ee46bc]",
+    color: "bg-[#7a5af8]",
   },
   {
     href: "/profile",
     label: "My Crew",
     icon: HardHat,
     color: "bg-[#06aed4]",
-  },
-  {
-    href: "/notifications",
-    label: "Docs",
-    icon: FileText,
-    color: "bg-[#7a5af8]",
   },
 ];
 

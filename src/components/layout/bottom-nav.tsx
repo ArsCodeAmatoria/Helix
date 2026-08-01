@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
-  Bell,
   ClipboardList,
+  Clock,
   Grid2x2,
   Home,
   User,
@@ -14,9 +14,9 @@ import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/", label: "Home", icon: Home },
+  { href: "/timeclock", label: "Clock", icon: Clock },
   { href: "/forms", label: "Assets", icon: Grid2x2 },
-  { href: "/dashboard", label: "Activity", icon: ClipboardList },
-  { href: "/notifications", label: "Updates", icon: Bell },
+  { href: "/statistics", label: "COR", icon: ClipboardList },
   { href: "/profile", label: "Me", icon: User },
 ];
 

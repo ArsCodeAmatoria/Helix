@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import {
   Bell,
   ClipboardCheck,
+  Clock,
   CloudSun,
   FileText,
   FolderKanban,
@@ -18,13 +19,20 @@ import { ModuleTile } from "@/components/modules/module-tile";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { useTimeClock } from "@/components/providers/timeclock-provider";
 
 const quickActions = [
+  {
+    href: "/timeclock",
+    label: "Time Clock",
+    icon: Clock,
+    color: "bg-primary text-primary-foreground",
+  },
   {
     href: "/forms/flha",
     label: "Start FLHA",
     icon: ClipboardCheck,
-    color: "bg-primary text-primary-foreground",
+    color: "bg-muted text-foreground border border-border",
   },
   {
     href: "/projects",
@@ -38,15 +46,15 @@ const quickActions = [
     icon: ShieldAlert,
     color: "bg-muted text-foreground border border-border",
   },
-  {
-    href: "/notifications",
-    label: "Updates",
-    icon: Bell,
-    color: "bg-muted text-foreground border border-border",
-  },
 ];
 
 const modules = [
+  {
+    href: "/timeclock",
+    label: "Time Clock",
+    icon: Clock,
+    color: "bg-[#12b76a]",
+  },
   {
     href: "/forms/flha",
     label: "FLHA",
@@ -54,28 +62,21 @@ const modules = [
     color: "bg-[#2f6bff]",
   },
   {
+    href: "/statistics",
+    label: "COR Stats",
+    icon: ShieldAlert,
+    color: "bg-[#f79009]",
+  },
+  {
     href: "/projects",
     label: "Projects",
     icon: FolderKanban,
-    color: "bg-[#12b76a]",
+    color: "bg-[#7a5af8]",
   },
   {
     href: "/forms",
     label: "Forms",
     icon: FileText,
-    color: "bg-[#7a5af8]",
-  },
-  {
-    href: "/dashboard",
-    label: "Safety Hub",
-    icon: ShieldAlert,
-    color: "bg-[#f79009]",
-    badge: 4,
-  },
-  {
-    href: "/dashboard",
-    label: "Equipment",
-    icon: Wrench,
     color: "bg-[#ee46bc]",
   },
   {
@@ -91,11 +92,18 @@ export function HomeScreen() {
   const company = db.company;
   const worker = db.worker;
   const unread = db.notifications.filter((n) => !n.read).length;
+  const { activeVisit } = useTimeClock();
   const firstName = worker.name.split(" ")[0];
   const initials = worker.name
     .split(" ")
     .map((n) => n[0])
     .join("");
+
+  const moduleTiles = modules.map((m) =>
+    m.href === "/timeclock" && activeVisit
+      ? { ...m, badge: "IN" as string | number }
+      : m
+  );
 
   return (
     <div className="min-h-dvh bg-background">
@@ -182,7 +190,7 @@ export function HomeScreen() {
             </Link>
           </div>
           <div className="grid grid-cols-3 gap-3">
-            {modules.map((m, i) => (
+            {moduleTiles.map((m, i) => (
               <ModuleTile key={m.label} {...m} delay={i * 0.04} />
             ))}
           </div>

@@ -217,3 +217,14 @@ export type FlhaStepId =
   | "comments"
   | "signatures"
   | "preview";
+
+/** One site visit — clock in through clock out (or still open) */
+export interface SiteVisit {
+  id: string;
+  projectId: string;
+  clockIn: string;
+  clockOut: string | null;
+  note: string;
+  gpsIn: { lat: number; lng: number } | null;
+  gpsOut: { lat: number; lng: number } | null;
+}
