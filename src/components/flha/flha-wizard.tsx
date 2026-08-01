@@ -189,8 +189,10 @@ export function FlhaWizard() {
             {flha.currentStepId === "signatures" && (
               <SignatureModule
                 signatures={flha.state.signatures}
-                onWorkerSign={flha.setWorkerSignature}
-                onSupervisorSign={flha.setSupervisorSignature}
+                onEnsureDefaults={flha.ensureDefaultSigners}
+                onAdd={flha.addSigner}
+                onUpdate={flha.updateSigner}
+                onRemove={flha.removeSigner}
                 onCaptureGps={flha.captureGps}
               />
             )}

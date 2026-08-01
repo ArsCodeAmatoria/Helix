@@ -162,9 +162,25 @@ export interface PhotoItem {
   annotated: boolean;
 }
 
+export type SignerRole =
+  | "Worker"
+  | "Supervisor"
+  | "Safety Coordinator"
+  | "Rigger"
+  | "Crane Operator"
+  | "Crew Member"
+  | "Other";
+
+export interface SignerEntry {
+  id: string;
+  name: string;
+  role: SignerRole;
+  signature: string | null;
+  signedAt: string | null;
+}
+
 export interface SignatureData {
-  worker: string | null;
-  supervisor: string | null;
+  signers: SignerEntry[];
   gps: { lat: number; lng: number } | null;
   timestamp: string | null;
 }

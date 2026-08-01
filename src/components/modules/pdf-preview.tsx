@@ -186,36 +186,34 @@ export function PdfPreview({
 
           <Separator />
 
-          <section className="grid grid-cols-2 gap-4">
-            <div>
-              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Worker
-              </p>
-              {state.signatures.worker ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={state.signatures.worker}
-                  alt="Worker signature"
-                  className="h-16 w-full rounded-lg border bg-white object-contain"
-                />
-              ) : (
-                <p className="text-muted-foreground">—</p>
-              )}
-            </div>
-            <div>
-              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Supervisor
-              </p>
-              {state.signatures.supervisor ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={state.signatures.supervisor}
-                  alt="Supervisor signature"
-                  className="h-16 w-full rounded-lg border bg-white object-contain"
-                />
-              ) : (
-                <p className="text-muted-foreground">Pending</p>
-              )}
+          <section>
+            <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Signatures ({state.signatures.signers.length})
+            </h3>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {state.signatures.signers.map((signer) => (
+                <div key={signer.id} className="rounded-xl border p-3">
+                  <p className="font-semibold">{signer.name || "—"}</p>
+                  <p className="text-xs text-muted-foreground">{signer.role}</p>
+                  {signer.signature ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={signer.signature}
+                      alt={`${signer.name} signature`}
+                      className="mt-2 h-14 w-full rounded-lg border bg-white object-contain"
+                    />
+                  ) : (
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Not signed
+                    </p>
+                  )}
+                  {signer.signedAt && (
+                    <p className="mt-1 text-[10px] text-muted-foreground">
+                      {new Date(signer.signedAt).toLocaleString()}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </section>
 

@@ -12,28 +12,30 @@ import type {
   AdditionalHazard,
   EquipmentInspection,
   FlhaFormState,
-  FlhaStepId,
   PhotoItem,
   Role,
+  SignerEntry,
 } from "@/lib/types";
 import {
   INITIAL_FLHA_STATE,
   canProceed,
   createEmptyAdditionalHazard,
+  createEmptySigner,
   getActiveSteps,
 } from "@/lib/form-engine";
 import {
   getProject,
   getProjectEquipment,
   resolveHazardsFromTasks,
+  db,
 } from "@/lib/db";
 
 const STORAGE_KEY = "helix-flha";
 
 interface FlhaContextValue {
   state: FlhaFormState;
-  steps: FlhaStepId[];
-  currentStepId: FlhaStepId;
+  steps: ReturnType<typeof getActiveSteps>;
+  currentStepId: ReturnType<typeof getActiveSteps>[number];
   resolvedHazards: ReturnType<typeof resolveHazardsFromTasks>;
   progress: number;
   setProject: (projectId: string) => void;
@@ -63,8 +65,10 @@ interface FlhaContextValue {
   addPhoto: (photo: PhotoItem) => void;
   removePhoto: (id: string) => void;
   setComments: (value: string) => void;
-  setWorkerSignature: (dataUrl: string) => void;
-  setSupervisorSignature: (dataUrl: string) => void;
+  ensureDefaultSigners: () => void;
+  addSigner: (partial?: Partial<Omit<SignerEntry, "id">>) => void;
+  updateSigner: (id: string, patch: Partial<SignerEntry>) => void;
+  removeSigner: (id: string) => void;
   captureGps: () => void;
   next: () => { ok: boolean; message?: string };
   back: () => void;
@@ -80,7 +84,55 @@ function loadState(): FlhaFormState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return INITIAL_FLHA_STATE;
-    return { ...INITIAL_FLHA_STATE, ...JSON.parse(raw) };
+    const parsed = JSON.parse(raw) as Partial<FlhaFormState> & {
+      signatures?: {
+        signers?: SignerEntry[];
+        worker?: string | null;
+        supervisor?: string | null;
+        gps?: { lat: number; lng: number } | null;
+        timestamp?: string | null;
+      };
+    };
+    const merged: FlhaFormState = { ...INITIAL_FLHA_STATE, ...parsed };
+
+    // Migrate legacy worker/supervisor signature shape
+    const sig = parsed.signatures;
+    if (sig && !Array.isArray(sig.signers)) {
+      const signers: SignerEntry[] = [];
+      if (sig.worker) {
+        signers.push(
+          createEmptySigner({
+            name: db.worker.name,
+            role: "Worker",
+            signature: sig.worker,
+            signedAt: sig.timestamp ?? null,
+          })
+        );
+      }
+      if (sig.supervisor) {
+        signers.push(
+          createEmptySigner({
+            name: db.worker.supervisor,
+            role: "Supervisor",
+            signature: sig.supervisor,
+            signedAt: null,
+          })
+        );
+      }
+      merged.signatures = {
+        signers,
+        gps: sig.gps ?? null,
+        timestamp: sig.timestamp ?? null,
+      };
+    } else if (sig?.signers) {
+      merged.signatures = {
+        signers: sig.signers,
+        gps: sig.gps ?? null,
+        timestamp: sig.timestamp ?? null,
+      };
+    }
+
+    return merged;
   } catch {
     return INITIAL_FLHA_STATE;
   }
@@ -309,21 +361,75 @@ export function FlhaProvider({ children }: { children: React.ReactNode }) {
     setState((s) => ({ ...s, comments: value }));
   }, []);
 
-  const setWorkerSignature = useCallback((dataUrl: string) => {
+  const ensureDefaultSigners = useCallback(() => {
+    setState((s) => {
+      if (s.signatures.signers.length > 0) return s;
+      return {
+        ...s,
+        signatures: {
+          ...s.signatures,
+          signers: [
+            createEmptySigner({
+              name: db.worker.name,
+              role: "Worker",
+            }),
+            createEmptySigner({
+              name: db.worker.supervisor,
+              role: "Supervisor",
+            }),
+          ],
+        },
+      };
+    });
+  }, []);
+
+  const addSigner = useCallback(
+    (partial?: Partial<Omit<SignerEntry, "id">>) => {
+      setState((s) => ({
+        ...s,
+        signatures: {
+          ...s.signatures,
+          signers: [...s.signatures.signers, createEmptySigner(partial)],
+        },
+      }));
+    },
+    []
+  );
+
+  const updateSigner = useCallback(
+    (id: string, patch: Partial<SignerEntry>) => {
+      setState((s) => ({
+        ...s,
+        signatures: {
+          ...s.signatures,
+          signers: s.signatures.signers.map((signer) =>
+            signer.id === id
+              ? {
+                  ...signer,
+                  ...patch,
+                  signedAt:
+                    patch.signature !== undefined && patch.signature
+                      ? new Date().toISOString()
+                      : patch.signature === null || patch.signature === ""
+                        ? null
+                        : signer.signedAt,
+                }
+              : signer
+          ),
+          timestamp: new Date().toISOString(),
+        },
+      }));
+    },
+    []
+  );
+
+  const removeSigner = useCallback((id: string) => {
     setState((s) => ({
       ...s,
       signatures: {
         ...s.signatures,
-        worker: dataUrl,
-        timestamp: new Date().toISOString(),
+        signers: s.signatures.signers.filter((signer) => signer.id !== id),
       },
-    }));
-  }, []);
-
-  const setSupervisorSignature = useCallback((dataUrl: string) => {
-    setState((s) => ({
-      ...s,
-      signatures: { ...s.signatures, supervisor: dataUrl },
     }));
   }, []);
 
@@ -416,8 +522,10 @@ export function FlhaProvider({ children }: { children: React.ReactNode }) {
     addPhoto,
     removePhoto,
     setComments,
-    setWorkerSignature,
-    setSupervisorSignature,
+    ensureDefaultSigners,
+    addSigner,
+    updateSigner,
+    removeSigner,
     captureGps,
     next,
     back,

@@ -1,5 +1,17 @@
-import type { FlhaFormState, FlhaStepId, Role } from "@/lib/types";
+import type { FlhaFormState, FlhaStepId, Role, SignerEntry } from "@/lib/types";
 import { tasksTriggerLadder } from "@/lib/db";
+
+export function createEmptySigner(
+  partial?: Partial<Omit<SignerEntry, "id">>
+): SignerEntry {
+  return {
+    id: `signer-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+    name: partial?.name ?? "",
+    role: partial?.role ?? "Crew Member",
+    signature: partial?.signature ?? null,
+    signedAt: partial?.signedAt ?? null,
+  };
+}
 
 export const INITIAL_FLHA_STATE: FlhaFormState = {
   projectId: null,
@@ -21,8 +33,7 @@ export const INITIAL_FLHA_STATE: FlhaFormState = {
   photos: [],
   comments: "",
   signatures: {
-    worker: null,
-    supervisor: null,
+    signers: [],
     gps: null,
     timestamp: null,
   },
@@ -141,10 +152,22 @@ export function canProceed(
       return { ok: true };
     case "comments":
       return { ok: true };
-    case "signatures":
-      return state.signatures.worker
-        ? { ok: true }
-        : { ok: false, message: "Worker signature required" };
+    case "signatures": {
+      const signers = state.signatures.signers;
+      if (signers.length === 0) {
+        return { ok: false, message: "Add at least one signer" };
+      }
+      const incomplete = signers.some(
+        (s) => !s.name.trim() || !s.signature
+      );
+      if (incomplete) {
+        return {
+          ok: false,
+          message: "Each person needs a name and signature",
+        };
+      }
+      return { ok: true };
+    }
     case "preview":
       return { ok: true };
     default:
