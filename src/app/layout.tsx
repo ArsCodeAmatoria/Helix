@@ -8,6 +8,7 @@ import { InspectionLogProvider } from "@/components/providers/inspection-log-pro
 import { DocumentReviewProvider } from "@/components/providers/document-review-provider";
 import { BcCraneBinderProvider } from "@/components/providers/bc-crane-binder-provider";
 import { EvaluationProvider } from "@/components/providers/evaluation-provider";
+import { ToolboxProvider } from "@/components/providers/toolbox-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
   title: "Helix",
   description:
     "Construction workforce & safety platform for crane, rigging, concrete, and formwork crews.",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -62,7 +66,9 @@ export default function RootLayout({
                   <DocumentReviewProvider>
                     <BcCraneBinderProvider>
                       <EvaluationProvider>
-                        <AppShell>{children}</AppShell>
+                        <ToolboxProvider>
+                          <AppShell>{children}</AppShell>
+                        </ToolboxProvider>
                       </EvaluationProvider>
                     </BcCraneBinderProvider>
                   </DocumentReviewProvider>

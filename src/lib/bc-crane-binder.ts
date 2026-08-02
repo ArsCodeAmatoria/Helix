@@ -1,4 +1,5 @@
 import binderData from "@/data/bc-crane-binder.json";
+import { db, getEquipment, getProject } from "@/lib/db";
 import type {
   BcCraneBinderItemStatus,
   BcCraneBinderMeta,
@@ -38,86 +39,207 @@ export function createEmptyBinderState(): BcCraneBinderState {
   };
 }
 
-/** Demo seed — Oceanview TC-1 binder mostly complete for pre-assembly */
+/** Demo seed — Oceanview TC-1 binder filled from Helix project / equipment data */
 export function seedBinderState(): BcCraneBinderState {
   const base = createEmptyBinderState();
-  const present = (id: string, party: BcCraneBinderPartyId = "prime") => {
-    base.items[id] = { status: "present", partyId: party, notes: "" };
+  const project = getProject("proj-oceanview") ?? db.projects[0];
+  const crane = getEquipment("eq-tc1");
+  const company = db.company;
+
+  const present = (
+    id: string,
+    party: BcCraneBinderPartyId = "prime",
+    notes = ""
+  ) => {
+    base.items[id] = { status: "present", partyId: party, notes };
   };
-  const na = (id: string) => {
-    base.items[id] = { status: "na", partyId: "na", notes: "" };
+  const na = (id: string, notes = "") => {
+    base.items[id] = { status: "na", partyId: "na", notes };
   };
-  const missing = (id: string) => {
-    base.items[id] = { status: "missing", partyId: null, notes: "" };
+  const missing = (id: string, notes = "") => {
+    base.items[id] = { status: "missing", partyId: null, notes };
   };
 
-  base.siteAddress = "Oceanview Tower — 1288 Pacific Blvd, Vancouver";
+  const address = project
+    ? `${project.name.split("—")[0].trim()} — ${project.address}, ${project.city}, ${project.province}`
+    : "Oceanview Tower — 1288 Cordova St, Vancouver, BC";
+
+  base.siteAddress = address;
   base.meetingDate = new Date().toISOString().slice(0, 10);
   base.activitySupervisor = "Dave Okonkwo";
-  base.contractor = "Helix Construction Ltd.";
-  base.craneMake = "Liebherr";
-  base.craneModel = "280 EC-H 12 Litronic";
-  base.craneSerial = "TC-1-OV-280";
+  base.contractor = project?.primeContractor
+    ? `${company.name} (crane user) / ${project.primeContractor} (prime)`
+    : company.name;
+  base.craneMake = crane?.manufacturer ?? "Potain";
+  base.craneModel = crane?.model ?? "MD 365 B L16";
+  base.craneSerial = crane?.assetTag ? `${crane.assetTag}-OV-2026` : "TC-1-OV-2026";
 
-  for (const id of [
+  // Pre-assembly — Helix Oceanview package
+  present(
     "1",
+    "prime",
+    "NAV CANADA land-use submission filed for Oceanview TC-1 (Cordova St)."
+  );
+  present(
     "2",
+    "prime",
+    "Aeronautical assessment on file — St. Paul's helipad / YVR approach review."
+  );
+  present(
     "3",
+    "prime",
+    "30M33 assurance for east-elevation overhead lines — Rev B in binder drawer A."
+  );
+  na("4", "No TransLink TOH conflict for this erection sequence.");
+  present(
     "5",
+    "prime",
+    "Site power 480V — City of Vancouver electrical permit + FSR install package."
+  );
+  present(
     "6",
+    "prime",
+    `NOP-TC submitted for ${project?.projectNumber ?? "HX-2026-0847"} — WorkSafeBC tower crane project type.`
+  );
+  present(
     "7",
+    "owner",
+    "Engineer site layout Rev C — dual Potain radii (TC-1 MD 365 / TC-2 MR 615) with overlap clearances."
+  );
+  present(
     "8",
+    "prime",
+    "IFC foundation package + geotech + cylinder breaks ≥ manufacturer MPa — filed under Foundation."
+  );
+  present(
     "9",
+    "supervisor",
+    "Pre-assembly meeting completed in site trailer — FM-TC-01 walkthrough with all parties."
+  );
+  present(
     "10",
+    "prime",
+    "THARRP / VFRS high-angle rescue acknowledgment on file for tower cab rescue."
+  );
+  present(
     "11",
+    "prime",
+    "Municipal TMP + street-use permit #SU-2026-441 (Cordova staging)."
+  );
+  missing(
     "12",
+    "WorkSafeBC RF Coordination Request pending — radio Ch 3 Tower Ops confirmation."
+  );
+  present(
     "13",
+    "owner",
+    "Pre-erect NDT report current (<12 mo) — Pacific Crane Supply package."
+  );
+  na("14", "No WorkSafeBC variance required for this configuration.");
+  na("15", "No non-OEM surface additions (signage / banners) installed.");
+  present(
     "16",
+    "owner",
+    "Potain MD 365 B L16 crane-specific manual on site — cab + trailer copy."
+  );
+  present(
     "17",
+    "owner",
+    "Load chart posted in cab — Helix PDF: /crane-pdfs/potain-md365-data-sheet.pdf"
+  );
+  present(
     "18",
+    "owner",
+    "CSA Z248 compliance / certification report with panel sticker photos."
+  );
+  na("19", "No assist mobile crane for this TC-1 climb sequence.");
+  present(
     "20",
-    "25",
-    "27",
-    "28",
-    "31",
+    "supervisor",
+    "Activity supervisor visual component inspection complete prior to erect."
+  );
+  na("21", "Derrick not used.");
+  na("22", "Climbing package N/A until first climb window.");
+
+  // Zoning
+  na("23", "Single-crane primary ops today — zoning package staged for TC-2 overlap.");
+  na("24", "Anti-collision to be commissioned before TC-2 overlap resumes.");
+
+  // Ropes & test blocks
+  present("25", "owner", "Hoist rope mill certificate in Ropes tab.");
+  na("26", "Rotation-resistant rope shortening schedule N/A for installed rope type.");
+  present("27", "user", "Annual chain sling / rigging certs — Helix equipment log.");
+  present("28", "owner", "Manufacturer test block weights marked and certificates filed.");
+  na("29", "No HLL system on this crane configuration.");
+
+  // BTH
+  na("30", "DEP box not used this phase.");
+  present("31", "user", "BTH devices NDT + capacity plates — Helix inspections hub.");
+
+  // Procedures
+  present(
     "32",
+    "supervisor",
+    "Site-specific assembly/disassembly written procedures signed by erect crew."
+  );
+  present(
     "33",
+    "supervisor",
+    "Activity supervisor Dave Okonkwo + lead hand qualifications on NOP-TC package."
+  );
+  present(
     "34",
+    "supervisor",
+    "SWP assembly/disassembly — fall protection, LOA, lockout (Helix forms library)."
+  );
+  present(
     "35",
+    "user",
+    "SWP operation & maintenance — operator/maintenance fall-pro plans on file."
+  );
+  present(
     "36",
-    "37",
-    "38",
-    "40",
+    "prime",
+    `ERP posted — muster ${project?.musterPoint ?? "NW Cordova & Abbott"}; hospital ${project?.nearestHospital ?? "St. Paul's"}.`
+  );
+
+  // Post assembly
+  present("37", "owner", "Construction site tower crane / erectors report filed.");
+  present("38", "owner", "Preventive maintenance schedule booked with Pacific Crane Supply.");
+  missing(
+    "39",
+    "Post-install mast bolt retorque due after first climb — schedule with supervisor."
+  );
+  present("40", "user", "Operator orientation complete — Alex Nguyen / Nina Wallace.");
+  present(
     "41",
+    "user",
+    "Operator certification + separate proof of qualification on Helix team profiles."
+  );
+  present(
     "42",
-  ]) {
-    present(id, id === "16" || id === "17" || id === "20" ? "owner" : "prime");
-  }
-  for (const id of ["4", "14", "15", "19", "21", "22", "23", "24", "26", "29", "30", "39", "43"]) {
-    na(id);
-  }
-  missing("42"); // leave inspections log as attention item in seed? Actually already present - let me leave a couple missing for demo
-  // Override a couple as gaps for realism
-  base.items["12"] = {
-    status: "missing",
-    partyId: null,
-    notes: "RF coordination pending from city",
-  };
-  base.items["39"] = {
-    status: "missing",
-    partyId: "supervisor",
-    notes: "Mast bolt retorque schedule after first climb",
-  };
+    "user",
+    "Daily / shift inspection logs in Helix crane inspection log book."
+  );
+  na("43", "No repositioning since original install.");
 
   base.sectionNotes = {
-    "pre-assembly": "Pre-assembly meeting held on site trailer — package in binder drawer A.",
-    "post-assembly": "Retorque and RF items still open before next climb.",
+    "pre-assembly":
+      "Oceanview pre-assembly package in binder drawer A. RF coordination (#12) still open before next climb.",
+    zoning: "TC-2 overlap zoning/anti-collision to commission before dual-crane ops.",
+    ropes: "Mill certs + test block docs from owner package.",
+    bth: "BTH devices tracked in Helix inspections.",
+    procedures: "Site SWPs aligned to Helix FLHA / ERP / lift plan docs.",
+    "post-assembly":
+      "Retorque (#39) outstanding. Operator logs live in Helix inspections hub.",
   };
+
   base.otherDocs = [
-    "Site-specific swing radius drawing Rev C",
+    "Site-specific swing radius drawing Rev C (TC-1 / TC-2)",
     "Municipal street use permit #SU-2026-441",
-    "",
+    `Helix project ${project?.projectNumber ?? "HX-2026-0847"} — required docs: SWP pour, SJP rigging, ERP, orientation`,
   ];
+
   base.signOffs = {
     owner: {
       company: "Pacific Crane Supply",
@@ -126,25 +248,25 @@ export function seedBinderState(): BcCraneBinderState {
       confirmed: true,
     },
     prime: {
-      company: "Helix Construction Ltd.",
-      phone: "604-555-0199",
-      printName: "Sarah Mitchell",
+      company: project?.primeContractor ?? "Summit Builders Inc.",
+      phone: project?.emergencyContact?.split(" ")[0] ?? "604-555-2211",
+      printName: project?.projectManager ?? "Sarah Mitchell",
       confirmed: true,
     },
     supervisor: {
-      company: "Helix Construction Ltd.",
+      company: company.name,
       phone: "604-555-0188",
       printName: "Dave Okonkwo",
       confirmed: false,
     },
     user: {
-      company: "Helix Construction Ltd.",
-      phone: "604-555-0162",
+      company: company.name,
+      phone: company.phone,
       printName: "Alex Nguyen",
       confirmed: true,
     },
     mobile: {
-      company: "N/A — self-erect assist not required",
+      company: "N/A — assist mobile crane not required this sequence",
       phone: "",
       printName: "",
       confirmed: false,

@@ -1,0 +1,419 @@
+{
+  "disclaimer": "Helix toolbox talks summarize regulatory expectations for crew briefings. Always follow the posted site procedures, manufacturer instructions, and the current WorkSafeBC OHSR, BC Crane Safety guidance, and Technical Safety BC requirements.",
+  "authorities": [
+    {
+      "id": "worksafebc",
+      "name": "WorkSafeBC",
+      "shortName": "WorkSafeBC",
+      "url": "https://www.worksafebc.com/"
+    },
+    {
+      "id": "bc-crane-safety",
+      "name": "BC Crane Safety",
+      "shortName": "BC Crane Safety",
+      "url": "https://bccranesafety.ca/"
+    },
+    {
+      "id": "technical-safety-bc",
+      "name": "Technical Safety BC",
+      "shortName": "Technical Safety BC",
+      "url": "https://www.technicalsafetybc.ca/"
+    }
+  ],
+  "topics": [
+    {
+      "id": "tbt-blind-lift",
+      "title": "Blind lifts & radio protocol",
+      "category": "Rigging",
+      "summary": "When the operator cannot see the load path, a designated signal person must control the lift with clear radio protocol and stop authority.",
+      "talkingPoints": [
+        "Confirm one designated signal person for the blind portion of the lift — no competing radio traffic.",
+        "Use plain call signs, read-backs, and a mandatory emergency stop word known to the whole crew.",
+        "Pause the lift if radio contact drops, line of sight for the signal person is lost, or any person enters the exclusion zone.",
+        "Document the blind-lift plan on today’s FLHA / lift plan before the first pick."
+      ],
+      "discussionPrompts": [
+        "Who is today’s designated signal person for blind picks?",
+        "What is our emergency stop word on Channel 3?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 14 — Cranes & hoists (signalling / control of lifts)",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-14-cranes-and-hoists"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 14.14 / related signalling expectations for load control"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Tower crane site binder — procedures & safe work practices",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-tbt", "doc-sjp-blind", "doc-lift"]
+    },
+    {
+      "id": "tbt-swing-radius",
+      "title": "Swing radius & exclusion zones",
+      "category": "Tower crane",
+      "summary": "Keep personnel and equipment clear of the rotating superstructure, counterweights, and defined swing/exclusion zones at ground and deck levels.",
+      "talkingPoints": [
+        "Walk the marked swing radius and barricades before first hoist — confirm nothing new has entered the zone overnight.",
+        "Counterweight and rear of the crane are as hazardous as the load path — treat the full circle as controlled.",
+        "Coordinate overlapping crane radii (TC-1 / TC-2) before dual-crane operations resume.",
+        "Stop work and reset the zone if public interface, pump trucks, or mobile equipment breach barricades."
+      ],
+      "discussionPrompts": [
+        "Where are today’s barricades weakest at street level?",
+        "Who has authority to stop the crane if the zone is breached?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 14.84.1 — Multiple crane / proximity controls",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-14-cranes-and-hoists"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 14 — Crane operating clearances & site control"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Zoning & anti-collision documentation (FM-TC-01 / TBL-TC-02)",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-lift", "doc-swa"]
+    },
+    {
+      "id": "tbt-limits-approach",
+      "title": "Limits of approach — powerlines",
+      "category": "Electrical",
+      "summary": "Maintain Table 19.1.A clearances from energized systems. If clearances cannot be maintained, obtain a 30M33 assurance before work continues.",
+      "talkingPoints": [
+        "Identify overhead lines on the east elevation and any temporary feeds before boom or load movements.",
+        "If minimum distances cannot be maintained, stop — a written 30M33 assurance from the power system owner is required.",
+        "Spotters must understand stop criteria before the crane or boom approaches the LOA envelope.",
+        "File revised 30M33 versions in the tower crane site binder."
+      ],
+      "discussionPrompts": [
+        "Can we maintain Table 19.1.A distances on today’s picks?",
+        "Where is the current 30M33 kept on this site?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 19 — Electrical safety / Table 19.1.A",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-19-electrical-safety"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 19.24–19.28 & 14.52 — Assurance in writing (30M33)"
+        },
+        {
+          "authority": "Technical Safety BC",
+          "label": "Electrical safety — permits, installations & Field Safety Representatives",
+          "url": "https://www.technicalsafetybc.ca/electrical"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Site binder item 3 — 30M33 / Record of Discussion",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-swa"]
+    },
+    {
+      "id": "tbt-crane-power",
+      "title": "Tower crane power source & grounding",
+      "category": "Electrical",
+      "summary": "Crane electrical supply must be permitted, installed by a qualified FSR, and grounded per manufacturer instructions and Technical Safety BC requirements.",
+      "talkingPoints": [
+        "Confirm today’s crane supply: site power vs generator — voltage and permit type must match the crane.",
+        "Only a qualified Electrical Field Safety Representative (FSR) installs/modifies the crane feed.",
+        "Do not energize after storm damage, flooded gear, or tripped protection until FSR / maintenance clears it.",
+        "Keep electrical permit, install proof, and grounding photos in the site binder Power Source tab."
+      ],
+      "discussionPrompts": [
+        "Who is the on-call FSR if we lose crane power mid-shift?",
+        "Where is the electrical permit posted / filed?"
+      ],
+      "citations": [
+        {
+          "authority": "Technical Safety BC",
+          "label": "Electrical — permitting, installation & FSR requirements",
+          "url": "https://www.technicalsafetybc.ca/electrical"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 19.5 — Electrical equipment installation & use"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Site binder item 5 — Power Source Information (TBL-TC-02 / TBL-TC-03)",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "tbt-preuse-inspect",
+      "title": "Pre-use crane & rigging inspections",
+      "category": "Inspections",
+      "summary": "Operators and competent workers must complete required pre-use inspections and keep logs available to the crew and WorkSafeBC.",
+      "talkingPoints": [
+        "Complete the daily / shift crane inspection before the first critical lift — defects are red-tagged and reported.",
+        "Walk rigging gear: slings, shackles, hooks — remove damaged gear from service immediately.",
+        "Operator log must record tests, maintenance, misadventures, and repairs while the crane is on this site.",
+        "Inspection docs live in Helix inspection logs and the BC Crane binder post-assembly section."
+      ],
+      "discussionPrompts": [
+        "Any open defects on TC-1 or MC-4 from yesterday?",
+        "Who signs today’s rigging walkaround?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 14.13, 14.14, 14.35 — Inspection & maintenance",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-14-cranes-and-hoists"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 15 — Rigging inspection & removal from service"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "FM-TC-01 items 20 & 42 — Component inspections / logs",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "tbt-load-charts",
+      "title": "Load charts & rated capacity",
+      "category": "Tower crane",
+      "summary": "Never exceed rated capacity. Load charts must be available to the operator at the controls for the configured crane.",
+      "talkingPoints": [
+        "Verify radius, configuration, and reeving against the posted chart before accepting a pick weight.",
+        "Unknown or estimated loads are not acceptable — get a verified weight or engineered calculation.",
+        "Multi-crane or overlapping lifts need a written plan and clear primary/secondary roles.",
+        "Manufacturer charts in Helix are reference only — the serial-specific chart on the crane governs."
+      ],
+      "discussionPrompts": [
+        "What is the heaviest planned pick today and at what radius?",
+        "Is the cab chart matching today’s jib / mast configuration?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 14.5(3) & 14.75(2) — Load charts & rated capacity",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-14-cranes-and-hoists"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Site binder item 17 — General crane specifications & load chart",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-lift"]
+    },
+    {
+      "id": "tbt-fall-protection",
+      "title": "Fall protection on crane & formwork",
+      "category": "Fall protection",
+      "summary": "Site-specific fall protection plans are required for assembly, climbing, maintenance, and open-edge formwork — adjust plans when conditions change.",
+      "talkingPoints": [
+        "Use the plan that matches today’s task (assembly vs operation vs stripping) — do not mix procedures.",
+        "100% tie-off at open edges on Level 28 and during mast/jib access unless an engineered control applies.",
+        "Inspect harnesses, SRL/lanyards, and anchors as part of pre-use — damaged gear is removed from service.",
+        "Rescue capability must be identified before work at height begins."
+      ],
+      "discussionPrompts": [
+        "Which fall-pro plan covers this morning’s task?",
+        "Who is on the rescue team if someone is suspended?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 11 — Fall protection",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-11-fall-protection"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 14.88 — Fall protection & rescue related to tower cranes"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Safe work procedures — assembly / operation (FM-TC-01 items 34–36)",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-swp-pour"]
+    },
+    {
+      "id": "tbt-high-angle-rescue",
+      "title": "High-angle / cab rescue readiness",
+      "category": "Emergency",
+      "summary": "Confirm THARRP / fire-rescue capability or employer high-angle rescue before tower crane work where rescue from height may be required.",
+      "talkingPoints": [
+        "Know whether today’s rescue path is 911/THARRP or an on-site high-angle team — do not assume.",
+        "Operators and climbing/maintenance crews must know muster, radio channel, and who initiates rescue.",
+        "If a DEP box or personnel platform is used, complete pre-use inspection and dry-run documentation.",
+        "Keep high-angle / THARRP agreements in the site binder."
+      ],
+      "discussionPrompts": [
+        "What is the rescue activation number and radio channel?",
+        "Has anyone new to site been briefed on cab rescue?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 4.13 & 4.14 — Emergency preparedness / rescue",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-04-general-conditions"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "Guideline G4.13(3)(a) — THARRP / fire department rescue"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Site binder item 10 — High angle rescue / THARRP",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-erp"]
+    },
+    {
+      "id": "tbt-nop-tc",
+      "title": "NOP-TC & erector responsibilities",
+      "category": "Compliance",
+      "summary": "Notice of Project – Tower Crane must be submitted before erecting, climbing, repositioning, or dismantling, under a qualified activity supervisor.",
+      "talkingPoints": [
+        "NOP-TC is required at least two weeks before crane activity — confirm status before any climb or reconfiguration.",
+        "Activity supervisor must be qualified for this crane’s erect / climb / dismantle scope.",
+        "Post required notice information at the workplace for the duration of the activity (OHSR 14.73.3).",
+        "Use the FM-TC-01 checklist as the documentation backbone for the NOP-TC package."
+      ],
+      "discussionPrompts": [
+        "Is our NOP-TC current for this week’s planned activity?",
+        "Who is named as Activity Supervisor on the submission?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 14.73.3 — Notice of Project – Tower Crane",
+          "url": "https://www.worksafebc.com/en/about-us/news-events/announcements/2024/October/notice-of-project-tower-crane-update"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Tower Crane Site Binder templates (FM-TC-01)",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": []
+    },
+    {
+      "id": "tbt-concrete-pour",
+      "title": "Concrete pour under the hook",
+      "category": "Formwork",
+      "summary": "Coordinate pour sequence, exclusion zones, and communication between pump/bucket crew, signal person, and crane operator.",
+      "talkingPoints": [
+        "Confirm pour sequence, deck loading limits, and who controls the bucket or pump boom.",
+        "Keep non-essential workers clear of the load path and wet concrete splash zones.",
+        "Watch for formwork movement, vibrator cords, and open edges during placement.",
+        "Stop the pour if radio protocol fails or the exclusion zone is breached."
+      ],
+      "discussionPrompts": [
+        "Who owns stop-work authority during today’s pour?",
+        "Any new deck openings or weak panels since yesterday?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 20 — Construction / formwork & placing concrete (as applicable)",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-20-construction-excavation-and-demolition"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 14 — Crane control during concrete placement lifts"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Safe work procedures for crane-supported pours — site binder SWPs",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-swp-pour"]
+    },
+    {
+      "id": "tbt-rigging-cert",
+      "title": "Rigging certification & removal from service",
+      "category": "Rigging",
+      "summary": "Use certified gear within capacity. Inspect before use and remove damaged or overdue gear from service.",
+      "talkingPoints": [
+        "Check WLL tags, angles, and hitch type — capacity changes with configuration.",
+        "Annual / periodic inspections for chain slings and BTH devices must be current and filed.",
+        "Cut, crushed, heat-damaged, or unmarked gear is scrap — not ‘one more lift’.",
+        "Keep mill certificates and inspection records available with the site binder / Helix logs."
+      ],
+      "discussionPrompts": [
+        "Any gear due for periodic inspection this week?",
+        "Where do we quarantine damaged slings on this site?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 15 — Rigging",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-15-rigging"
+        },
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR 15.27–15.31 — Rope / sling testing & inspection"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "Site binder items 25–31 — Ropes, test blocks & BTH",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": ["doc-sjp-rig"]
+    },
+    {
+      "id": "tbt-lockout",
+      "title": "Lockout during crane maintenance",
+      "category": "Maintenance",
+      "summary": "De-energize and lock out energy sources before maintenance on crane electrical or mechanical systems — coordinate with permitted electrical work.",
+      "talkingPoints": [
+        "Identify all energy sources (electrical, hydraulic, stored mechanical) before opening panels or working on machinery.",
+        "Apply personal locks — verify zero energy before starting the task.",
+        "Electrical work on the crane feed requires a qualified FSR under Technical Safety BC rules.",
+        "Clear locks only after tools are removed and the area is confirmed safe."
+      ],
+      "discussionPrompts": [
+        "Who holds the keys for today’s planned maintenance window?",
+        "Is an FSR required for this task?"
+      ],
+      "citations": [
+        {
+          "authority": "WorkSafeBC",
+          "label": "OHSR Part 10 — De-energization and lockout",
+          "url": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-10-de-energization-and-lockout"
+        },
+        {
+          "authority": "Technical Safety BC",
+          "label": "Electrical work authorization & FSR scope",
+          "url": "https://www.technicalsafetybc.ca/electrical"
+        },
+        {
+          "authority": "BC Crane Safety",
+          "label": "SWP operation & maintenance — site binder item 35",
+          "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+        }
+      ],
+      "relatedDocumentIds": []
+    }
+  ]
+}

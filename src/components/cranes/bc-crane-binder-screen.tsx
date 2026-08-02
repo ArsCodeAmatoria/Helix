@@ -140,7 +140,7 @@ export function BcCraneBinderScreen() {
                 rel="noopener noreferrer"
               >
                 <ExternalLink className="size-4" />
-                Open PDF
+                Open checklist
               </a>
             </Button>
             <Button
@@ -149,8 +149,53 @@ export function BcCraneBinderScreen() {
               onClick={binder.loadSeed}
             >
               <RotateCcw className="size-4" />
-              Load demo
+              Fill Helix site
             </Button>
+          </div>
+        </div>
+
+        <div className="helix-card space-y-3 p-4">
+          <p className="text-sm font-bold">Official BC Crane Safety forms</p>
+          <p className="text-xs text-muted-foreground">
+            Downloaded templates for this binder. Keep signed paper copies as
+            the official record.
+          </p>
+          <div className="space-y-2">
+            {bcCraneBinder.forms.map((form) => (
+              <a
+                key={form.id}
+                href={form.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-2xl bg-muted/60 px-3 py-3 active:scale-[0.99]"
+              >
+                <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-orange-500/15 text-orange-700 dark:text-orange-400">
+                  <FileText className="size-5" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-bold text-primary">
+                    {form.docNumber}
+                  </p>
+                  <p className="text-sm font-semibold leading-snug">
+                    {form.title}
+                  </p>
+                </div>
+                <ExternalLink className="size-4 shrink-0 text-muted-foreground" />
+              </a>
+            ))}
+          </div>
+          <div className="space-y-1.5 pt-1">
+            {bcCraneBinder.externalLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm font-semibold text-primary underline-offset-2 hover:underline"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -354,6 +399,28 @@ export function BcCraneBinderScreen() {
                                 <p className="text-sm font-semibold leading-snug">
                                   {item.label}
                                 </p>
+                                {(item.ohsr || item.standards) && (
+                                  <p className="mt-1 text-[11px] text-muted-foreground">
+                                    {item.ohsr && item.ohsr !== "N/A"
+                                      ? `OHSR ${item.ohsr}`
+                                      : null}
+                                    {item.ohsr &&
+                                    item.ohsr !== "N/A" &&
+                                    item.standards &&
+                                    item.standards !== "N/A"
+                                      ? " · "
+                                      : null}
+                                    {item.standards &&
+                                    item.standards !== "N/A"
+                                      ? item.standards
+                                      : null}
+                                  </p>
+                                )}
+                                {item.notes && (
+                                  <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">
+                                    {item.notes}
+                                  </p>
+                                )}
                                 <div className="mt-2 flex flex-wrap gap-1.5">
                                   {bcCraneBinder.parties
                                     .filter((p) => p.id !== "na")

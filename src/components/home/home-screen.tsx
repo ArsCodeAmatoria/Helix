@@ -17,7 +17,7 @@ import { getTodaysProjects, db } from "@/lib/db";
 import { ProjectCard } from "@/components/modules/project-card";
 import { ModuleTile } from "@/components/modules/module-tile";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { HelixLogo } from "@/components/brand/helix-logo";
 import { Button } from "@/components/ui/button";
 import { useTimeClock } from "@/components/providers/timeclock-provider";
 
@@ -94,10 +94,6 @@ export function HomeScreen() {
   const unread = db.notifications.filter((n) => !n.read).length;
   const { activeVisit } = useTimeClock();
   const firstName = worker.name.split(" ")[0];
-  const initials = worker.name
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
 
   const moduleTiles = modules.map((m) =>
     m.href === "/timeclock" && activeVisit
@@ -110,11 +106,7 @@ export function HomeScreen() {
       {/* Feed header — Connecteam-style greeting */}
       <header className="bg-card px-4 pb-4 pt-[max(0.85rem,env(safe-area-inset-top))] shadow-[0_1px_0_rgba(16,24,40,0.04)]">
         <div className="flex items-center gap-3">
-          <Avatar className="size-12 border-2 border-primary/15">
-            <AvatarFallback className="bg-primary text-base font-bold text-primary-foreground">
-              {initials}
-            </AvatarFallback>
-          </Avatar>
+          <HelixLogo iconClassName="size-12" />
           <div className="min-w-0 flex-1">
             <p className="text-sm font-medium text-muted-foreground">
               {company.shortName}
@@ -237,9 +229,7 @@ export function HomeScreen() {
                 className="helix-card block space-y-3 p-4 transition-shadow active:scale-[0.99]"
               >
                 <div className="flex items-start gap-3">
-                  <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary text-sm font-bold text-primary-foreground">
-                    {company.logoText}
-                  </div>
+                  <HelixLogo iconClassName="size-10" />
                   <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-2">
                       <p className="font-semibold leading-snug">{n.title}</p>

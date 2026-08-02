@@ -23,7 +23,9 @@ import {
 import { computeWorkerCompliance } from "@/lib/cor-worker";
 import {
   computeWorkerActivity,
+  getMemberActivity,
   type ActivityBarItem,
+  type MemberActivitySummary,
 } from "@/lib/worker-activity";
 import { useTeamOptional } from "@/components/providers/team-provider";
 import { members as allMembers, initials } from "@/lib/team";
@@ -112,6 +114,13 @@ export function CorStatsScreen() {
   const [workerFilter, setWorkerFilter] = useState<WorkerFilter>("all");
   const [workerQuery, setWorkerQuery] = useState("");
   const [expandedWorkerId, setExpandedWorkerId] = useState<string | null>(null);
+  const [expandedActivityId, setExpandedActivityId] = useState<string | null>(
+    null
+  );
+  const [activityWorkerQuery, setActivityWorkerQuery] = useState("");
+  const [activityWorkerFilter, setActivityWorkerFilter] = useState<
+    "all" | "crew"
+  >("all");
 
   const selected =
     readiness.elements.find((e) => e.element.id === selectedId) ??
@@ -142,6 +151,30 @@ export function CorStatsScreen() {
       );
     });
   }, [compliance.workers, workerFilter, workerQuery]);
+
+  const filteredActivityWorkers = useMemo(() => {
+    const pool =
+      activityWorkerFilter === "crew" && team?.todaysMembers.length
+        ? new Set(team.todaysMembers.map((m) => m.id))
+        : null;
+    const q = activityWorkerQuery.trim().toLowerCase();
+    return activity.byWorker.filter((w) => {
+      if (pool && !pool.has(w.member.id)) return false;
+      if (!q) return true;
+      return (
+        w.member.name.toLowerCase().includes(q) ||
+        w.member.employeeNumber.includes(q) ||
+        w.member.role.toLowerCase().includes(q) ||
+        w.member.trade.toLowerCase().includes(q) ||
+        w.topTasks.some((t) => t.label.toLowerCase().includes(q))
+      );
+    });
+  }, [
+    activity.byWorker,
+    activityWorkerFilter,
+    activityWorkerQuery,
+    team?.todaysMembers,
+  ]);
 
   return (
     <div>
@@ -228,8 +261,8 @@ export function CorStatsScreen() {
               <Kpi
                 icon={<Users className="size-4" />}
                 color="bg-violet-500/10 text-violet-600"
-                value={activity.byRole[0]?.label ?? "—"}
-                label="Largest role"
+                value={activity.byWorker[0]?.member.name.split(" ")[0] ?? "—"}
+                label="Top hours"
               />
               <Kpi
                 icon={<ClipboardList className="size-4" />}
@@ -269,7 +302,7 @@ export function CorStatsScreen() {
               <ActivityBars items={activity.byRole} valueLabel="workers" />
             </section>
 
-            <section className="helix-card space-y-4 p-4 pb-6">
+            <section className="helix-card space-y-4 p-4">
               <div>
                 <h2 className="text-base font-bold">Roster by trade</h2>
                 <p className="text-sm text-muted-foreground">
@@ -277,6 +310,83 @@ export function CorStatsScreen() {
                 </p>
               </div>
               <ActivityBars items={activity.byTrade} valueLabel="workers" />
+            </section>
+
+            <section className="space-y-3 pb-6">
+              <div>
+                <h2 className="text-base font-bold">
+                  Individual workers ({filteredActivityWorkers.length})
+                </h2>
+                <p className="text-sm text-muted-foreground">
+                  FLHAs, hours, and top tasks per person ·{" "}
+                  {activity.periodLabel.toLowerCase()}.
+                </p>
+              </div>
+
+              <div className="relative">
+                <Search className="absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  value={activityWorkerQuery}
+                  onChange={(e) => setActivityWorkerQuery(e.target.value)}
+                  placeholder="Search worker or task…"
+                  className="h-14 rounded-2xl pl-11 text-base"
+                />
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {(
+                  [
+                    ["all", "All"],
+                    ["crew", "Today's crew"],
+                  ] as const
+                ).map(([id, label]) => (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => setActivityWorkerFilter(id)}
+                    className={cn(
+                      "rounded-full px-3.5 py-2 text-sm font-semibold",
+                      activityWorkerFilter === id
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground"
+                    )}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+
+              {activityWorkerFilter === "crew" &&
+                !team?.todaysMembers.length && (
+                  <div className="helix-card p-4 text-sm text-muted-foreground">
+                    No crew selected for today. Fill My Team first, or view All
+                    workers.
+                  </div>
+                )}
+
+              {filteredActivityWorkers.length === 0 && (
+                <div className="helix-card p-6 text-center text-sm text-muted-foreground">
+                  No workers match this filter.
+                </div>
+              )}
+
+              <div className="space-y-2">
+                {filteredActivityWorkers.map((w, i) => (
+                  <WorkerActivityCard
+                    key={w.member.id}
+                    summary={w}
+                    index={i}
+                    open={expandedActivityId === w.member.id}
+                    onToggle={() =>
+                      setExpandedActivityId(
+                        expandedActivityId === w.member.id
+                          ? null
+                          : w.member.id
+                      )
+                    }
+                  />
+                ))}
+              </div>
             </section>
           </>
         )}
@@ -500,7 +610,8 @@ export function CorStatsScreen() {
                     </button>
 
                     {open && (
-                      <div className="space-y-2 border-t border-border px-3.5 pb-3.5 pt-3">
+                      <div className="space-y-3 border-t border-border px-3.5 pb-3.5 pt-3">
+                        <MemberWorkStats memberId={w.member.id} />
                         <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                           Role requirements · {w.member.trade}
                         </p>
@@ -799,6 +910,164 @@ export function CorStatsScreen() {
         )}
       </main>
     </div>
+  );
+}
+
+function MemberWorkStats({ memberId }: { memberId: string }) {
+  const summary = getMemberActivity(memberId);
+  if (!summary) return null;
+
+  return (
+    <div className="space-y-2 rounded-2xl bg-orange-500/10 p-3">
+      <p className="text-xs font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400">
+        Work activity · {summary.periodLabel.toLowerCase()}
+      </p>
+      <div className="grid grid-cols-2 gap-2">
+        <div className="rounded-xl bg-background/70 px-3 py-2">
+          <p className="font-mono text-lg font-bold tabular-nums">
+            {summary.flhas}
+          </p>
+          <p className="text-[11px] text-muted-foreground">
+            FLHAs · {summary.percentOfFlhas}% of company
+          </p>
+        </div>
+        <div className="rounded-xl bg-background/70 px-3 py-2">
+          <p className="font-mono text-lg font-bold tabular-nums">
+            {summary.hours}
+            <span className="text-sm text-muted-foreground">h</span>
+          </p>
+          <p className="text-[11px] text-muted-foreground">
+            Hours · {summary.percentOfHours}% of company
+          </p>
+        </div>
+      </div>
+      {summary.topTasks.length > 0 && (
+        <div className="space-y-1.5 pt-1">
+          <p className="text-[11px] font-semibold text-muted-foreground">
+            Top tasks
+          </p>
+          {summary.topTasks.slice(0, 3).map((t) => (
+            <div
+              key={t.id}
+              className="flex items-center justify-between gap-2 text-sm"
+            >
+              <span className="truncate font-medium">{t.label}</span>
+              <span className="shrink-0 font-mono text-xs tabular-nums text-muted-foreground">
+                {t.count}× · {t.hours}h
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function WorkerActivityCard({
+  summary,
+  index,
+  open,
+  onToggle,
+}: {
+  summary: MemberActivitySummary;
+  index: number;
+  open: boolean;
+  onToggle: () => void;
+}) {
+  const { member } = summary;
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: Math.min(index * 0.02, 0.2) }}
+      className="helix-card overflow-hidden"
+    >
+      <button
+        type="button"
+        onClick={onToggle}
+        className="flex w-full items-start gap-3 p-3.5 text-left"
+      >
+        <Avatar className="size-11">
+          <AvatarFallback className="bg-orange-500/15 font-bold text-orange-700 dark:text-orange-400">
+            {initials(member.name)}
+          </AvatarFallback>
+        </Avatar>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-2">
+            <div>
+              <p className="font-bold leading-snug">{member.name}</p>
+              <p className="text-xs text-muted-foreground">
+                #{member.employeeNumber} · {member.role}
+              </p>
+            </div>
+            <Badge className="shrink-0 border-0 bg-orange-500/15 text-orange-700 dark:text-orange-400">
+              {summary.hours}h
+            </Badge>
+          </div>
+          <div className="mt-2 flex items-center justify-between gap-2 text-xs text-muted-foreground">
+            <span>
+              {summary.flhas} FLHAs · {summary.percentOfHours}% of hours
+            </span>
+            <span className="truncate font-medium text-foreground">
+              {summary.topTasks[0]?.label ?? "—"}
+            </span>
+          </div>
+          <Progress
+            value={summary.percentOfHours}
+            className="mt-2 h-2 [&_[data-slot=progress-indicator]]:bg-orange-500"
+          />
+          {!open && summary.topTasks.length > 0 && (
+            <p className="mt-2 line-clamp-1 text-xs text-muted-foreground">
+              Top:{" "}
+              {summary.topTasks
+                .slice(0, 3)
+                .map((t) => t.label)
+                .join(", ")}
+            </p>
+          )}
+        </div>
+      </button>
+
+      {open && (
+        <div className="space-y-3 border-t border-border px-3.5 pb-3.5 pt-3">
+          <div className="grid grid-cols-2 gap-2">
+            <div className="rounded-xl bg-muted/60 px-3 py-2.5">
+              <p className="font-mono text-xl font-bold tabular-nums">
+                {summary.flhas}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                FLHAs ({summary.percentOfFlhas}%)
+              </p>
+            </div>
+            <div className="rounded-xl bg-muted/60 px-3 py-2.5">
+              <p className="font-mono text-xl font-bold tabular-nums">
+                {summary.hours}
+                <span className="text-sm text-muted-foreground">h</span>
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                Hours ({summary.percentOfHours}%)
+              </p>
+            </div>
+          </div>
+
+          {summary.byCategory.length > 0 && (
+            <div>
+              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                Categories
+              </p>
+              <ActivityBars items={summary.byCategory} />
+            </div>
+          )}
+
+          <div>
+            <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Top tasks · {member.trade}
+            </p>
+            <ActivityBars items={summary.topTasks} />
+          </div>
+        </div>
+      )}
+    </motion.div>
   );
 }
 

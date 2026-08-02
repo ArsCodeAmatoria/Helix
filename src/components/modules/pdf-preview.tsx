@@ -2,6 +2,7 @@
 
 import { db, getProject, getTask } from "@/lib/db";
 import type { FlhaFormState, Hazard } from "@/lib/types";
+import { HelixLogo } from "@/components/brand/helix-logo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -33,9 +34,7 @@ export function PdfPreview({
       <Card className="overflow-hidden border-2 shadow-lg print:border-0 print:shadow-none">
         <CardHeader className="bg-slate-900 text-white dark:bg-slate-950">
           <div className="flex items-center gap-3">
-            <div className="flex size-12 items-center justify-center rounded-xl bg-sky-500 text-lg font-bold">
-              {company.logoText}
-            </div>
+            <HelixLogo iconClassName="size-12 rounded-xl bg-sky-500" />
             <div>
               <CardTitle className="text-lg text-white">{company.name}</CardTitle>
               <p className="text-sm text-slate-300">

@@ -19,7 +19,7 @@ import {
   seedBinderState,
 } from "@/lib/bc-crane-binder";
 
-const STORAGE_KEY = "helix-bc-crane-binder";
+const STORAGE_KEY = "helix-bc-crane-binder-v2";
 
 interface BcCraneBinderContextValue {
   state: BcCraneBinderState;

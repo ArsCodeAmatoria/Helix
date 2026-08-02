@@ -25,7 +25,6 @@ export interface Company {
   id: string;
   name: string;
   shortName: string;
-  logoText: string;
   phone: string;
   address: string;
 }
@@ -492,10 +491,24 @@ export interface BcCraneBinderMeta {
   subtitle: string;
   parties: { id: BcCraneBinderPartyId; label: string }[];
   signOffRoles: { id: string; role: string; description: string }[];
+  forms: {
+    id: string;
+    docNumber: string;
+    title: string;
+    file: string;
+    source: string;
+  }[];
+  externalLinks: { id: string; label: string; url: string }[];
   sections: {
     id: string;
     title: string;
-    items: { id: string; label: string }[];
+    items: {
+      id: string;
+      label: string;
+      notes?: string;
+      ohsr?: string;
+      standards?: string;
+    }[];
   }[];
 }
 
@@ -563,4 +576,47 @@ export interface EvaluationPathwayProgress {
   completedChecklistIds: string[];
   percent: number;
   status: "not-started" | "in-progress" | "complete";
+}
+
+/** Toolbox talks (crew safety briefings) */
+export type ToolboxAuthority =
+  | "WorkSafeBC"
+  | "BC Crane Safety"
+  | "Technical Safety BC";
+
+export interface ToolboxCitation {
+  authority: ToolboxAuthority;
+  label: string;
+  url?: string;
+}
+
+export interface ToolboxTopic {
+  id: string;
+  title: string;
+  category: string;
+  summary: string;
+  talkingPoints: string[];
+  discussionPrompts: string[];
+  citations: ToolboxCitation[];
+  relatedDocumentIds: string[];
+}
+
+export interface ToolboxAuthorityMeta {
+  id: string;
+  name: string;
+  shortName: string;
+  url: string;
+}
+
+export interface ToolboxTalkRecord {
+  id: string;
+  topicIds: string[];
+  title: string;
+  projectId: string | null;
+  deliveredAt: string;
+  facilitatorName: string;
+  attendeeMemberIds: string[];
+  notes: string;
+  /** Snapshot of generated talk body for history */
+  generatedSummary: string;
 }

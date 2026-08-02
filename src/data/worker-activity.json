@@ -4,35 +4,775 @@
   "totalFlhas": 148,
   "totalHours": 1842,
   "tasks": [
-    { "taskId": "task-pour", "count": 42, "hours": 168 },
-    { "taskId": "task-decking", "count": 38, "hours": 152 },
-    { "taskId": "task-rigging", "count": 36, "hours": 144 },
-    { "taskId": "task-strip", "count": 31, "hours": 124 },
-    { "taskId": "task-blind", "count": 28, "hours": 84 },
-    { "taskId": "task-signal", "count": 27, "hours": 81 },
-    { "taskId": "task-walls", "count": 24, "hours": 96 },
-    { "taskId": "task-tower-rigger", "count": 22, "hours": 88 },
-    { "taskId": "task-ops", "count": 21, "hours": 168 },
-    { "taskId": "task-columns", "count": 19, "hours": 76 },
-    { "taskId": "task-panel", "count": 18, "hours": 54 },
-    { "taskId": "task-bucket", "count": 17, "hours": 51 },
-    { "taskId": "task-housekeep", "count": 16, "hours": 48 },
-    { "taskId": "task-vibrator", "count": 15, "hours": 45 },
-    { "taskId": "task-scaffold", "count": 14, "hours": 56 },
-    { "taskId": "task-daily", "count": 14, "hours": 28 },
-    { "taskId": "task-ladder", "count": 12, "hours": 36 },
-    { "taskId": "task-mobile", "count": 11, "hours": 44 },
-    { "taskId": "task-peri", "count": 10, "hours": 40 },
-    { "taskId": "task-recv-fw", "count": 9, "hours": 27 },
-    { "taskId": "task-fly", "count": 8, "hours": 32 },
-    { "taskId": "task-gang", "count": 7, "hours": 28 },
-    { "taskId": "task-doka", "count": 7, "hours": 28 },
-    { "taskId": "task-shutdown", "count": 6, "hours": 12 },
-    { "taskId": "task-platform-r", "count": 5, "hours": 15 },
-    { "taskId": "task-maint", "count": 4, "hours": 16 },
-    { "taskId": "task-climbing", "count": 3, "hours": 18 },
-    { "taskId": "task-bucket-tc", "count": 3, "hours": 9 },
-    { "taskId": "task-platform-tc", "count": 2, "hours": 6 },
-    { "taskId": "task-recv-r", "count": 2, "hours": 6 }
+    {
+      "taskId": "task-pour",
+      "count": 42,
+      "hours": 168
+    },
+    {
+      "taskId": "task-decking",
+      "count": 38,
+      "hours": 152
+    },
+    {
+      "taskId": "task-rigging",
+      "count": 36,
+      "hours": 144
+    },
+    {
+      "taskId": "task-strip",
+      "count": 31,
+      "hours": 124
+    },
+    {
+      "taskId": "task-blind",
+      "count": 28,
+      "hours": 84
+    },
+    {
+      "taskId": "task-signal",
+      "count": 27,
+      "hours": 81
+    },
+    {
+      "taskId": "task-walls",
+      "count": 24,
+      "hours": 96
+    },
+    {
+      "taskId": "task-tower-rigger",
+      "count": 22,
+      "hours": 88
+    },
+    {
+      "taskId": "task-ops",
+      "count": 21,
+      "hours": 168
+    },
+    {
+      "taskId": "task-columns",
+      "count": 19,
+      "hours": 76
+    },
+    {
+      "taskId": "task-panel",
+      "count": 18,
+      "hours": 54
+    },
+    {
+      "taskId": "task-bucket",
+      "count": 17,
+      "hours": 51
+    },
+    {
+      "taskId": "task-housekeep",
+      "count": 16,
+      "hours": 48
+    },
+    {
+      "taskId": "task-vibrator",
+      "count": 15,
+      "hours": 45
+    },
+    {
+      "taskId": "task-scaffold",
+      "count": 14,
+      "hours": 56
+    },
+    {
+      "taskId": "task-daily",
+      "count": 14,
+      "hours": 28
+    },
+    {
+      "taskId": "task-ladder",
+      "count": 12,
+      "hours": 36
+    },
+    {
+      "taskId": "task-mobile",
+      "count": 11,
+      "hours": 44
+    },
+    {
+      "taskId": "task-peri",
+      "count": 10,
+      "hours": 40
+    },
+    {
+      "taskId": "task-recv-fw",
+      "count": 9,
+      "hours": 27
+    },
+    {
+      "taskId": "task-fly",
+      "count": 8,
+      "hours": 32
+    },
+    {
+      "taskId": "task-gang",
+      "count": 7,
+      "hours": 28
+    },
+    {
+      "taskId": "task-doka",
+      "count": 7,
+      "hours": 28
+    },
+    {
+      "taskId": "task-shutdown",
+      "count": 6,
+      "hours": 12
+    },
+    {
+      "taskId": "task-platform-r",
+      "count": 5,
+      "hours": 15
+    },
+    {
+      "taskId": "task-maint",
+      "count": 4,
+      "hours": 16
+    },
+    {
+      "taskId": "task-climbing",
+      "count": 3,
+      "hours": 18
+    },
+    {
+      "taskId": "task-bucket-tc",
+      "count": 3,
+      "hours": 9
+    },
+    {
+      "taskId": "task-platform-tc",
+      "count": 2,
+      "hours": 6
+    },
+    {
+      "taskId": "task-recv-r",
+      "count": 2,
+      "hours": 6
+    }
+  ],
+  "byMember": [
+    {
+      "memberId": "m-santos",
+      "flhas": 12,
+      "hours": 154,
+      "tasks": [
+        {
+          "taskId": "task-panel",
+          "count": 5,
+          "hours": 23
+        },
+        {
+          "taskId": "task-recv-r",
+          "count": 5,
+          "hours": 26
+        },
+        {
+          "taskId": "task-bucket",
+          "count": 4,
+          "hours": 31
+        },
+        {
+          "taskId": "task-platform-r",
+          "count": 3,
+          "hours": 13
+        },
+        {
+          "taskId": "task-tower-rigger",
+          "count": 3,
+          "hours": 19
+        },
+        {
+          "taskId": "task-blind",
+          "count": 1,
+          "hours": 5
+        },
+        {
+          "taskId": "task-mobile",
+          "count": 1,
+          "hours": 8
+        }
+      ]
+    },
+    {
+      "memberId": "m-tanaka",
+      "flhas": 11,
+      "hours": 143,
+      "tasks": [
+        {
+          "taskId": "task-decking",
+          "count": 5,
+          "hours": 26
+        },
+        {
+          "taskId": "task-rigging",
+          "count": 5,
+          "hours": 40
+        },
+        {
+          "taskId": "task-pour",
+          "count": 4,
+          "hours": 31
+        },
+        {
+          "taskId": "task-daily",
+          "count": 3,
+          "hours": 21
+        },
+        {
+          "taskId": "task-housekeep",
+          "count": 3,
+          "hours": 11
+        },
+        {
+          "taskId": "task-signal",
+          "count": 2,
+          "hours": 13
+        }
+      ]
+    },
+    {
+      "memberId": "m-oreilly",
+      "flhas": 8,
+      "hours": 125,
+      "tasks": [
+        {
+          "taskId": "task-doka",
+          "count": 5,
+          "hours": 34
+        },
+        {
+          "taskId": "task-walls",
+          "count": 5,
+          "hours": 34
+        },
+        {
+          "taskId": "task-fly",
+          "count": 5,
+          "hours": 37
+        },
+        {
+          "taskId": "task-ladder",
+          "count": 3,
+          "hours": 14
+        },
+        {
+          "taskId": "task-pour",
+          "count": 1,
+          "hours": 6
+        }
+      ]
+    },
+    {
+      "memberId": "m-okonkwo",
+      "flhas": 11,
+      "hours": 123,
+      "tasks": [
+        {
+          "taskId": "task-signal",
+          "count": 6,
+          "hours": 23
+        },
+        {
+          "taskId": "task-housekeep",
+          "count": 6,
+          "hours": 21
+        },
+        {
+          "taskId": "task-rigging",
+          "count": 5,
+          "hours": 25
+        },
+        {
+          "taskId": "task-strip",
+          "count": 3,
+          "hours": 21
+        },
+        {
+          "taskId": "task-pour",
+          "count": 2,
+          "hours": 16
+        }
+      ]
+    },
+    {
+      "memberId": "m-nguyen",
+      "flhas": 9,
+      "hours": 120,
+      "tasks": [
+        {
+          "taskId": "task-bucket-tc",
+          "count": 5,
+          "hours": 28
+        },
+        {
+          "taskId": "task-daily",
+          "count": 4,
+          "hours": 28
+        },
+        {
+          "taskId": "task-platform-tc",
+          "count": 4,
+          "hours": 21
+        },
+        {
+          "taskId": "task-ops",
+          "count": 3,
+          "hours": 16
+        },
+        {
+          "taskId": "task-climbing",
+          "count": 3,
+          "hours": 8
+        },
+        {
+          "taskId": "task-maint",
+          "count": 3,
+          "hours": 14
+        },
+        {
+          "taskId": "task-shutdown",
+          "count": 1,
+          "hours": 4
+        }
+      ]
+    },
+    {
+      "memberId": "m-rivera",
+      "flhas": 9,
+      "hours": 114,
+      "tasks": [
+        {
+          "taskId": "task-recv-fw",
+          "count": 6,
+          "hours": 27
+        },
+        {
+          "taskId": "task-peri",
+          "count": 5,
+          "hours": 32
+        },
+        {
+          "taskId": "task-ladder",
+          "count": 2,
+          "hours": 10
+        },
+        {
+          "taskId": "task-doka",
+          "count": 2,
+          "hours": 12
+        },
+        {
+          "taskId": "task-scaffold",
+          "count": 2,
+          "hours": 9
+        }
+      ]
+    },
+    {
+      "memberId": "m-morris",
+      "flhas": 10,
+      "hours": 109,
+      "tasks": [
+        {
+          "taskId": "task-ladder",
+          "count": 6,
+          "hours": 32
+        },
+        {
+          "taskId": "task-strip",
+          "count": 6,
+          "hours": 45
+        },
+        {
+          "taskId": "task-pour",
+          "count": 5,
+          "hours": 22
+        },
+        {
+          "taskId": "task-housekeep",
+          "count": 2,
+          "hours": 8
+        },
+        {
+          "taskId": "task-decking",
+          "count": 1,
+          "hours": 3
+        }
+      ]
+    },
+    {
+      "memberId": "m-wallace",
+      "flhas": 8,
+      "hours": 103,
+      "tasks": [
+        {
+          "taskId": "task-daily",
+          "count": 5,
+          "hours": 21
+        },
+        {
+          "taskId": "task-signal",
+          "count": 5,
+          "hours": 29
+        },
+        {
+          "taskId": "task-ops",
+          "count": 5,
+          "hours": 33
+        },
+        {
+          "taskId": "task-platform-tc",
+          "count": 4,
+          "hours": 19
+        }
+      ]
+    },
+    {
+      "memberId": "m-patel",
+      "flhas": 7,
+      "hours": 98,
+      "tasks": [
+        {
+          "taskId": "task-fly",
+          "count": 4,
+          "hours": 29
+        },
+        {
+          "taskId": "task-vibrator",
+          "count": 4,
+          "hours": 29
+        },
+        {
+          "taskId": "task-ladder",
+          "count": 3,
+          "hours": 21
+        },
+        {
+          "taskId": "task-strip",
+          "count": 2,
+          "hours": 15
+        },
+        {
+          "taskId": "task-doka",
+          "count": 1,
+          "hours": 3
+        }
+      ]
+    },
+    {
+      "memberId": "m-nair",
+      "flhas": 8,
+      "hours": 93,
+      "tasks": [
+        {
+          "taskId": "task-housekeep",
+          "count": 6,
+          "hours": 24
+        },
+        {
+          "taskId": "task-daily",
+          "count": 5,
+          "hours": 29
+        },
+        {
+          "taskId": "task-pour",
+          "count": 3,
+          "hours": 16
+        },
+        {
+          "taskId": "task-scaffold",
+          "count": 2,
+          "hours": 9
+        },
+        {
+          "taskId": "task-ladder",
+          "count": 1,
+          "hours": 6
+        }
+      ]
+    },
+    {
+      "memberId": "m-hassan",
+      "flhas": 7,
+      "hours": 85,
+      "tasks": [
+        {
+          "taskId": "task-pour",
+          "count": 5,
+          "hours": 12
+        },
+        {
+          "taskId": "task-daily",
+          "count": 4,
+          "hours": 15
+        },
+        {
+          "taskId": "task-scaffold",
+          "count": 4,
+          "hours": 11
+        },
+        {
+          "taskId": "task-ladder",
+          "count": 2,
+          "hours": 14
+        },
+        {
+          "taskId": "task-housekeep",
+          "count": 1,
+          "hours": 5
+        }
+      ]
+    },
+    {
+      "memberId": "m-chen",
+      "flhas": 8,
+      "hours": 83,
+      "tasks": [
+        {
+          "taskId": "task-tower-rigger",
+          "count": 5,
+          "hours": 36
+        },
+        {
+          "taskId": "task-panel",
+          "count": 4,
+          "hours": 24
+        },
+        {
+          "taskId": "task-blind",
+          "count": 2,
+          "hours": 8
+        },
+        {
+          "taskId": "task-signal",
+          "count": 1,
+          "hours": 9
+        },
+        {
+          "taskId": "task-platform-r",
+          "count": 1,
+          "hours": 6
+        }
+      ]
+    },
+    {
+      "memberId": "m-foster",
+      "flhas": 6,
+      "hours": 82,
+      "tasks": [
+        {
+          "taskId": "task-pour",
+          "count": 6,
+          "hours": 26
+        },
+        {
+          "taskId": "task-scaffold",
+          "count": 4,
+          "hours": 32
+        },
+        {
+          "taskId": "task-vibrator",
+          "count": 2,
+          "hours": 7
+        },
+        {
+          "taskId": "task-recv-fw",
+          "count": 2,
+          "hours": 12
+        },
+        {
+          "taskId": "task-strip",
+          "count": 1,
+          "hours": 5
+        }
+      ]
+    },
+    {
+      "memberId": "m-ikeda",
+      "flhas": 6,
+      "hours": 80,
+      "tasks": [
+        {
+          "taskId": "task-signal",
+          "count": 4,
+          "hours": 25
+        },
+        {
+          "taskId": "task-panel",
+          "count": 3,
+          "hours": 12
+        },
+        {
+          "taskId": "task-rigging",
+          "count": 2,
+          "hours": 9
+        },
+        {
+          "taskId": "task-bucket",
+          "count": 2,
+          "hours": 7
+        },
+        {
+          "taskId": "task-recv-r",
+          "count": 2,
+          "hours": 8
+        }
+      ]
+    },
+    {
+      "memberId": "m-doyle",
+      "flhas": 8,
+      "hours": 76,
+      "tasks": [
+        {
+          "taskId": "task-daily",
+          "count": 5,
+          "hours": 22
+        },
+        {
+          "taskId": "task-housekeep",
+          "count": 4,
+          "hours": 22
+        },
+        {
+          "taskId": "task-rigging",
+          "count": 2,
+          "hours": 17
+        },
+        {
+          "taskId": "task-pour",
+          "count": 2,
+          "hours": 8
+        },
+        {
+          "taskId": "task-decking",
+          "count": 1,
+          "hours": 6
+        }
+      ]
+    },
+    {
+      "memberId": "m-kim",
+      "flhas": 6,
+      "hours": 75,
+      "tasks": [
+        {
+          "taskId": "task-decking",
+          "count": 5,
+          "hours": 38
+        },
+        {
+          "taskId": "task-recv-fw",
+          "count": 2,
+          "hours": 9
+        },
+        {
+          "taskId": "task-ladder",
+          "count": 1,
+          "hours": 9
+        },
+        {
+          "taskId": "task-signal",
+          "count": 1,
+          "hours": 9
+        },
+        {
+          "taskId": "task-rigging",
+          "count": 1,
+          "hours": 5
+        },
+        {
+          "taskId": "task-strip",
+          "count": 1,
+          "hours": 5
+        }
+      ]
+    },
+    {
+      "memberId": "m-brooks",
+      "flhas": 5,
+      "hours": 69,
+      "tasks": [
+        {
+          "taskId": "task-ladder",
+          "count": 6,
+          "hours": 27
+        },
+        {
+          "taskId": "task-strip",
+          "count": 3,
+          "hours": 25
+        },
+        {
+          "taskId": "task-pour",
+          "count": 1,
+          "hours": 11
+        },
+        {
+          "taskId": "task-vibrator",
+          "count": 1,
+          "hours": 6
+        }
+      ]
+    },
+    {
+      "memberId": "m-lee",
+      "flhas": 6,
+      "hours": 66,
+      "tasks": [
+        {
+          "taskId": "task-blind",
+          "count": 6,
+          "hours": 24
+        },
+        {
+          "taskId": "task-recv-r",
+          "count": 4,
+          "hours": 23
+        },
+        {
+          "taskId": "task-signal",
+          "count": 3,
+          "hours": 12
+        },
+        {
+          "taskId": "task-panel",
+          "count": 1,
+          "hours": 8
+        }
+      ]
+    },
+    {
+      "memberId": "m-berg",
+      "flhas": 3,
+      "hours": 44,
+      "tasks": [
+        {
+          "taskId": "task-decking",
+          "count": 3,
+          "hours": 17
+        },
+        {
+          "taskId": "task-scaffold",
+          "count": 2,
+          "hours": 6
+        },
+        {
+          "taskId": "task-ladder",
+          "count": 2,
+          "hours": 10
+        },
+        {
+          "taskId": "task-vibrator",
+          "count": 1,
+          "hours": 10
+        }
+      ]
+    }
   ]
 }

@@ -12,6 +12,7 @@ import {
   FolderKanban,
   HardHat,
   Link2,
+  Megaphone,
   Plus,
   ShieldAlert,
   TowerControl,
@@ -67,6 +68,12 @@ const assetModules = [
     label: "BC Crane binder",
     icon: ClipboardList,
     color: "bg-[#f79009]",
+  },
+  {
+    href: "/forms/toolbox",
+    label: "Toolbox talks",
+    icon: Megaphone,
+    color: "bg-[#ea580c]",
   },
   {
     href: "/evaluations",
@@ -125,6 +132,15 @@ const recentForms = [
   },
   {
     id: "f4",
+    title: "Toolbox — Blind lifts & swing radius",
+    href: "/forms/toolbox",
+    status: "Delivered",
+    time: "Today 06:05",
+    statusColor:
+      "bg-orange-50 text-orange-700 dark:bg-orange-500/15 dark:text-orange-400",
+  },
+  {
+    id: "f5",
     title: "SJP — Blind Lift Radio Protocol",
     href: "/forms/documents/doc-sjp-blind",
     status: "Reviewed",
@@ -133,7 +149,7 @@ const recentForms = [
       "bg-sky-50 text-sky-700 dark:bg-sky-500/15 dark:text-sky-400",
   },
   {
-    id: "f5",
+    id: "f6",
     title: "FLHA — Fraser Crossing Columns",
     href: "/forms/flha?project=proj-fraser",
     status: "Draft",

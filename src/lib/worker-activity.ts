@@ -12,6 +12,17 @@ export interface ActivityBarItem {
   secondary?: string;
 }
 
+export interface MemberActivitySummary {
+  member: TeamMember;
+  flhas: number;
+  hours: number;
+  topTasks: ActivityBarItem[];
+  byCategory: ActivityBarItem[];
+  percentOfHours: number;
+  percentOfFlhas: number;
+  periodLabel: string;
+}
+
 export interface WorkerActivitySummary {
   periodLabel: string;
   siteNote: string;
@@ -21,6 +32,7 @@ export interface WorkerActivitySummary {
   byCategory: ActivityBarItem[];
   byRole: ActivityBarItem[];
   byTrade: ActivityBarItem[];
+  byWorker: MemberActivitySummary[];
   insight: string;
 }
 
@@ -43,10 +55,10 @@ function countBy<T>(
     .sort((a, b) => b.count - a.count || a.key.localeCompare(b.key));
 }
 
-export function computeWorkerActivity(
-  memberList: TeamMember[] = members
-): WorkerActivitySummary {
-  const taskRows = activityData.tasks
+function buildTaskRows(
+  rows: { taskId: string; count: number; hours: number }[]
+) {
+  return rows
     .map((row) => {
       const task = getTask(row.taskId);
       if (!task) return null;
@@ -60,17 +72,27 @@ export function computeWorkerActivity(
     })
     .filter((r): r is NonNullable<typeof r> => Boolean(r))
     .sort((a, b) => b.count - a.count);
+}
 
-  const totalTaskCount = taskRows.reduce((s, t) => s + t.count, 0);
-  const topTasks: ActivityBarItem[] = taskRows.slice(0, 10).map((t) => ({
+function toTopTasks(
+  taskRows: ReturnType<typeof buildTaskRows>,
+  limit = 10
+): ActivityBarItem[] {
+  const total = taskRows.reduce((s, t) => s + t.count, 0);
+  return taskRows.slice(0, limit).map((t) => ({
     id: t.id,
     label: t.label,
     count: t.count,
     hours: t.hours,
-    percent: pct(t.count, totalTaskCount),
+    percent: pct(t.count, total),
     secondary: t.category,
   }));
+}
 
+function toByCategory(
+  taskRows: ReturnType<typeof buildTaskRows>
+): ActivityBarItem[] {
+  const total = taskRows.reduce((s, t) => s + t.count, 0);
   const categoryMap = new Map<string, { count: number; hours: number }>();
   for (const t of taskRows) {
     const cur = categoryMap.get(t.category) ?? { count: 0, hours: 0 };
@@ -78,15 +100,44 @@ export function computeWorkerActivity(
     cur.hours += t.hours;
     categoryMap.set(t.category, cur);
   }
-  const byCategory: ActivityBarItem[] = Array.from(categoryMap.entries())
+  return Array.from(categoryMap.entries())
     .map(([label, v]) => ({
       id: label,
       label,
       count: v.count,
       hours: v.hours,
-      percent: pct(v.count, totalTaskCount),
+      percent: pct(v.count, total),
     }))
     .sort((a, b) => b.count - a.count);
+}
+
+export function getMemberActivity(
+  memberId: string,
+  memberList: TeamMember[] = members
+): MemberActivitySummary | null {
+  const member = memberList.find((m) => m.id === memberId);
+  const row = activityData.byMember.find((m) => m.memberId === memberId);
+  if (!member || !row) return null;
+
+  const taskRows = buildTaskRows(row.tasks);
+  return {
+    member,
+    flhas: row.flhas,
+    hours: row.hours,
+    topTasks: toTopTasks(taskRows, 6),
+    byCategory: toByCategory(taskRows),
+    percentOfHours: pct(row.hours, activityData.totalHours),
+    percentOfFlhas: pct(row.flhas, activityData.totalFlhas),
+    periodLabel: activityData.periodLabel,
+  };
+}
+
+export function computeWorkerActivity(
+  memberList: TeamMember[] = members
+): WorkerActivitySummary {
+  const taskRows = buildTaskRows(activityData.tasks);
+  const topTasks = toTopTasks(taskRows, 10);
+  const byCategory = toByCategory(taskRows);
 
   const roleCounts = countBy(memberList, (m) => m.role);
   const byRole: ActivityBarItem[] = roleCounts.map((r) => ({
@@ -106,9 +157,16 @@ export function computeWorkerActivity(
     secondary: `${t.count} worker${t.count === 1 ? "" : "s"}`,
   }));
 
+  const memberIds = new Set(memberList.map((m) => m.id));
+  const byWorker = activityData.byMember
+    .filter((row) => memberIds.has(row.memberId))
+    .map((row) => getMemberActivity(row.memberId, memberList))
+    .filter((r): r is MemberActivitySummary => Boolean(r))
+    .sort((a, b) => b.hours - a.hours || b.flhas - a.flhas);
+
   const top = topTasks[0];
   const topCat = byCategory[0];
-  const topRole = byRole[0];
+  const topWorker = byWorker[0];
   const insight = [
     top
       ? `${top.label} is the most selected FLHA task (${top.count}×, ${top.percent}% of selections).`
@@ -116,8 +174,8 @@ export function computeWorkerActivity(
     topCat
       ? `${topCat.label} work leads category mix at ${topCat.percent}%.`
       : null,
-    topRole
-      ? `Largest role group on roster: ${topRole.label} (${topRole.count}).`
+    topWorker
+      ? `${topWorker.member.name} leads crew hours (${topWorker.hours}h, ${topWorker.percentOfHours}%).`
       : null,
   ]
     .filter(Boolean)
@@ -132,6 +190,7 @@ export function computeWorkerActivity(
     byCategory,
     byRole,
     byTrade: byTrade.slice(0, 8),
+    byWorker,
     insight:
       insight ||
       `Across ${db.projects.length} projects, track which tasks crews select most on FLHAs.`,
