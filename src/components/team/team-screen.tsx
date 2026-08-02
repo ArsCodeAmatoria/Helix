@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import {
   Check,
   Eraser,
@@ -630,6 +631,17 @@ export function TeamScreen() {
             >
               Continue to signatures ({team.todaysMembers.length})
             </Button>
+            {team.todaysMembers.length > 0 && (
+              <Button
+                asChild
+                variant="outline"
+                className="h-12 w-full rounded-2xl font-semibold"
+              >
+                <Link href="/evaluations">
+                  Competency evaluations for crew
+                </Link>
+              </Button>
+            )}
           </section>
         )}
 

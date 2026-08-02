@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Award, Phone, Users } from "lucide-react";
+import { Award, ClipboardCheck, Phone, Users } from "lucide-react";
 import { db } from "@/lib/db";
 import { PageHeader } from "@/components/layout/page-header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,6 +35,32 @@ export function ProfileScreen() {
                 #{worker.employeeNumber} · {worker.trade}
               </p>
             </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <ClipboardCheck className="size-4" />
+              Continuous evaluations
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm">
+            <p className="text-muted-foreground">
+              Rigger pathway (Basics → Intermediate → Advanced) and site lift
+              sign-offs — concrete day, tables, Doka cart, gang forms, core
+              lifts. Supervisors review and sign as you qualify.
+            </p>
+            <Button asChild className="h-12 w-full rounded-2xl font-semibold">
+              <Link href="/evaluations/member/m-chen">My competency profile</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="h-12 w-full rounded-2xl font-semibold"
+            >
+              <Link href="/evaluations">All pathways &amp; workers</Link>
+            </Button>
           </CardContent>
         </Card>
 

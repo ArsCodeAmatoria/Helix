@@ -5,6 +5,9 @@ import { FlhaProvider } from "@/components/providers/flha-provider";
 import { TimeClockProvider } from "@/components/providers/timeclock-provider";
 import { TeamProvider } from "@/components/providers/team-provider";
 import { InspectionLogProvider } from "@/components/providers/inspection-log-provider";
+import { DocumentReviewProvider } from "@/components/providers/document-review-provider";
+import { BcCraneBinderProvider } from "@/components/providers/bc-crane-binder-provider";
+import { EvaluationProvider } from "@/components/providers/evaluation-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -56,7 +59,13 @@ export default function RootLayout({
             <TimeClockProvider>
               <TeamProvider>
                 <InspectionLogProvider>
-                  <AppShell>{children}</AppShell>
+                  <DocumentReviewProvider>
+                    <BcCraneBinderProvider>
+                      <EvaluationProvider>
+                        <AppShell>{children}</AppShell>
+                      </EvaluationProvider>
+                    </BcCraneBinderProvider>
+                  </DocumentReviewProvider>
                 </InspectionLogProvider>
               </TeamProvider>
             </TimeClockProvider>

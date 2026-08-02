@@ -1,0 +1,160 @@
+{
+  "source": "BC Crane Safety — Tower Crane Site Binder Document Checklist",
+  "docNumber": "FM-TC-01",
+  "docDate": "09/20/2024",
+  "pages": 6,
+  "copyright": "© 2024 BC Crane Safety · bccranesafety.ca",
+  "pdf": "/crane-pdfs/bc-crane-site-binder-checklist-fm-tc-01.pdf",
+  "title": "Tower Crane Site Binder Document Checklist",
+  "subtitle": "Pre-assembly / dismantling / climbing / repositioning requirements",
+  "parties": [
+    { "id": "owner", "label": "Owner / Supplier" },
+    { "id": "prime", "label": "Prime Contractor" },
+    { "id": "supervisor", "label": "Activity Supervisor" },
+    { "id": "user", "label": "Crane User" },
+    { "id": "mobile", "label": "Mobile Crane" },
+    { "id": "other", "label": "Other" },
+    { "id": "na", "label": "N/A" }
+  ],
+  "signOffRoles": [
+    {
+      "id": "owner",
+      "role": "Owner",
+      "description": "Owner / Supplier of the Tower Crane"
+    },
+    {
+      "id": "prime",
+      "role": "Prime Contractor",
+      "description": "Property owner / Prime contractor responsible for coordination of all employers at the workplace"
+    },
+    {
+      "id": "supervisor",
+      "role": "Activity Supervisor",
+      "description": "Qualified to erect, climb, reposition or dismantle this particular tower crane"
+    },
+    {
+      "id": "user",
+      "role": "Crane User",
+      "description": "Employer responsible for operation of the tower crane at this workplace"
+    },
+    {
+      "id": "mobile",
+      "role": "Mobile Crane",
+      "description": "Owner / Lessee of the mobile crane contracted to assist with the tower crane activity"
+    }
+  ],
+  "sections": [
+    {
+      "id": "pre-assembly",
+      "title": "Pre-Assembly Documentation",
+      "items": [
+        { "id": "1", "label": "Land Use / NAVCAN" },
+        { "id": "2", "label": "Aeronautical Agreement" },
+        {
+          "id": "3",
+          "label": "30M33 / Record of Discussion / Assurance in Writing"
+        },
+        {
+          "id": "4",
+          "label": "Trolley Overhead (TOH) Adjacent Works Documentation (if applicable)"
+        },
+        { "id": "5", "label": "Power Source Information" },
+        { "id": "6", "label": "Notice of Project — Tower Crane (NOP-TC)" },
+        { "id": "7", "label": "Site Layout / Design Package" },
+        {
+          "id": "8",
+          "label": "Foundation, Geotechnical / Soils Engineering & Cylinder Break Documentation"
+        },
+        { "id": "9", "label": "Pre-Assembly Meeting" },
+        {
+          "id": "10",
+          "label": "High Angle Rescue Information or Technical High Angle Rope Rescue Program (THARRP) Agreement"
+        },
+        { "id": "11", "label": "Traffic Control / Municipal Permits / Street Use" },
+        { "id": "12", "label": "Radio Frequency Application / Coordination" },
+        { "id": "13", "label": "Non-Destructive Testing (NDT) Report" },
+        { "id": "14", "label": "Variance or Acceptance Documentation" },
+        { "id": "15", "label": "“Additions” to Crane Surface" },
+        { "id": "16", "label": "Crane-Specific Manual" },
+        { "id": "17", "label": "General Crane Specifications & Load Chart" },
+        { "id": "18", "label": "CSA Compliance Documentation" },
+        { "id": "19", "label": "Mobile Crane Documentation" },
+        { "id": "20", "label": "Crane Component Inspections" },
+        { "id": "21", "label": "Derrick Documentation (if applicable)" },
+        { "id": "22", "label": "Crane Climbing Documentation (if applicable)" }
+      ]
+    },
+    {
+      "id": "zoning",
+      "title": "Zoning & Anti-Collision (if applicable)",
+      "items": [
+        { "id": "23", "label": "Zoning System Documentation" },
+        { "id": "24", "label": "Anti-Collision System Documentation" }
+      ]
+    },
+    {
+      "id": "ropes",
+      "title": "Ropes & Test Blocks",
+      "items": [
+        { "id": "25", "label": "Testing Certification for Hoist Ropes" },
+        { "id": "26", "label": "Hoist Rope Record (if applicable)" },
+        { "id": "27", "label": "Rigging Certification Documentation" },
+        { "id": "28", "label": "Test Block Documentation" },
+        { "id": "29", "label": "Horizontal Lifeline Documentation (if applicable)" }
+      ]
+    },
+    {
+      "id": "bth",
+      "title": "Below The Hook (BTH)",
+      "items": [
+        {
+          "id": "30",
+          "label": "DEP Box, Work Platforms & Secondary Rigging Documentation"
+        },
+        { "id": "31", "label": "Below the Hook Lifting Devices Documentation" }
+      ]
+    },
+    {
+      "id": "procedures",
+      "title": "Procedures & Compliance",
+      "items": [
+        {
+          "id": "32",
+          "label": "Crane Assembly / Disassembly Written Procedures (site-specific)"
+        },
+        {
+          "id": "33",
+          "label": "Crane Activity Supervisor & Lead Hand Qualification"
+        },
+        {
+          "id": "34",
+          "label": "Safe Work Procedures — Assembly / Disassembly"
+        },
+        {
+          "id": "35",
+          "label": "Safe Work Procedures — Operation & Maintenance"
+        },
+        { "id": "36", "label": "Emergency Response Plan" }
+      ]
+    },
+    {
+      "id": "post-assembly",
+      "title": "Post Assembly Documentation",
+      "items": [
+        { "id": "37", "label": "Construction Site Tower Crane Report" },
+        {
+          "id": "38",
+          "label": "Preventive Maintenance Schedule & Instruction"
+        },
+        { "id": "39", "label": "Post-Install Mast Bolt Retorque (if applicable)" },
+        { "id": "40", "label": "Operator Crane Orientation" },
+        {
+          "id": "41",
+          "label": "Operator Certification & Proof of Qualification"
+        },
+        { "id": "42", "label": "Inspections Documentation / Logs" },
+        { "id": "43", "label": "Repositioning Documentation" }
+      ]
+    }
+  ]
+}

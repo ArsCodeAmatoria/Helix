@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import {
+  ClipboardList,
   ExternalLink,
   FileText,
   Search,
@@ -74,7 +76,31 @@ export function CraneChartsScreen() {
           >
             Open crane &amp; rigging inspection log books
           </a>
+          <a
+            href="/forms/crane-binder"
+            className="ml-0 mt-1 inline-flex text-sm font-bold text-amber-900 underline dark:text-amber-200 sm:ml-4 sm:mt-0"
+          >
+            BC Crane erection binder (FM-TC-01)
+          </a>
         </div>
+
+        <Link
+          href="/forms/crane-binder"
+          className="helix-card flex items-start gap-3 p-4 active:scale-[0.99]"
+        >
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-700 dark:text-orange-400">
+            <ClipboardList className="size-5" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-bold leading-snug">
+              BC Crane Site Binder Checklist
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              FM-TC-01 — pre-assembly, climbing, dismantling &amp; sign-offs
+            </p>
+          </div>
+          <ExternalLink className="mt-1 size-4 shrink-0 text-muted-foreground" />
+        </Link>
 
         <div className="relative">
           <Search className="absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />

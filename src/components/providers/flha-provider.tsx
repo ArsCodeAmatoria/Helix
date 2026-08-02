@@ -51,6 +51,7 @@ interface FlhaContextValue {
   ) => void;
   removeAdditionalHazard: (id: string) => void;
   toggleDocument: (docId: string) => void;
+  markDocumentReviewed: (docId: string) => void;
   reviewAllDocuments: (docIds: string[]) => void;
   updateEquipmentInspection: (
     equipmentId: string,
@@ -293,6 +294,16 @@ export function FlhaProvider({ children }: { children: React.ReactNode }) {
         reviewedDocuments: exists
           ? s.reviewedDocuments.filter((id) => id !== docId)
           : [...s.reviewedDocuments, docId],
+      };
+    });
+  }, []);
+
+  const markDocumentReviewed = useCallback((docId: string) => {
+    setState((s) => {
+      if (s.reviewedDocuments.includes(docId)) return s;
+      return {
+        ...s,
+        reviewedDocuments: [...s.reviewedDocuments, docId],
       };
     });
   }, []);
@@ -550,6 +561,7 @@ export function FlhaProvider({ children }: { children: React.ReactNode }) {
     updateAdditionalHazard,
     removeAdditionalHazard,
     toggleDocument,
+    markDocumentReviewed,
     reviewAllDocuments,
     updateEquipmentInspection,
     toggleLadderType,
@@ -578,4 +590,8 @@ export function useFlha() {
   const ctx = useContext(FlhaContext);
   if (!ctx) throw new Error("useFlha must be used within FlhaProvider");
   return ctx;
+}
+
+export function useFlhaOptional() {
+  return useContext(FlhaContext);
 }

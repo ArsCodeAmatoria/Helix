@@ -110,6 +110,16 @@ export interface CraneLoadChart {
   source: string;
 }
 
+export interface DocumentReviewQuestion {
+  id: string;
+  prompt: string;
+  options: string[];
+  /** Index into options */
+  correctIndex: number;
+  /** Why the correct answer is right — shown after the worker answers */
+  explanation: string;
+}
+
 export interface SafeWorkDocument {
   id: string;
   title: string;
@@ -128,6 +138,15 @@ export interface SafeWorkDocument {
   steps: string[];
   emergency: string[];
   references: string[];
+  /** Comprehension check — prove review by answering; shows answer + why */
+  reviewQuestions: DocumentReviewQuestion[];
+}
+
+export interface DocumentReviewRecord {
+  documentId: string;
+  completedAt: string;
+  score: number;
+  total: number;
 }
 
 export interface DashboardStats {
@@ -448,4 +467,100 @@ export interface InspectionLogState {
   craneEntries: CraneInspectionEntry[];
   riggingEntries: RiggingInspectionEntry[];
   greasingEntries: CraneGreasingEntry[];
+}
+
+/** BC Crane Safety FM-TC-01 site binder */
+export type BcCraneBinderItemStatus = "present" | "missing" | "na" | null;
+
+export type BcCraneBinderPartyId =
+  | "owner"
+  | "prime"
+  | "supervisor"
+  | "user"
+  | "mobile"
+  | "other"
+  | "na";
+
+export interface BcCraneBinderMeta {
+  source: string;
+  docNumber: string;
+  docDate: string;
+  pages: number;
+  copyright: string;
+  pdf: string;
+  title: string;
+  subtitle: string;
+  parties: { id: BcCraneBinderPartyId; label: string }[];
+  signOffRoles: { id: string; role: string; description: string }[];
+  sections: {
+    id: string;
+    title: string;
+    items: { id: string; label: string }[];
+  }[];
+}
+
+export interface BcCraneBinderItemState {
+  status: BcCraneBinderItemStatus;
+  partyId: BcCraneBinderPartyId | null;
+  notes: string;
+}
+
+export interface BcCraneBinderSignOff {
+  company: string;
+  phone: string;
+  printName: string;
+  confirmed: boolean;
+}
+
+export interface BcCraneBinderState {
+  siteAddress: string;
+  meetingDate: string;
+  activitySupervisor: string;
+  contractor: string;
+  craneMake: string;
+  craneModel: string;
+  craneSerial: string;
+  items: Record<string, BcCraneBinderItemState>;
+  sectionNotes: Record<string, string>;
+  otherDocs: string[];
+  signOffs: Record<string, BcCraneBinderSignOff>;
+  updatedAt: string | null;
+}
+
+/** Continuous competency evaluations (rigger / crane operator) */
+export type EvaluationItemResult = "pass" | "fail" | "na" | null;
+
+export type EvaluationOverall = "pass" | "fail" | "conditional";
+
+export interface EvaluationCheckItem {
+  id: string;
+  label: string;
+  result: EvaluationItemResult;
+}
+
+export interface EvaluationRecord {
+  id: string;
+  memberId: string;
+  checklistId: string;
+  trackId: string;
+  stageId: string;
+  evaluatedAt: string;
+  evaluatorName: string;
+  evaluatorRole: string;
+  projectId: string | null;
+  items: EvaluationCheckItem[];
+  overall: EvaluationOverall;
+  notes: string;
+  /** Supervisor / foreman acknowledgement */
+  supervisorName: string;
+  supervisorSignature: string | null;
+  supervisorSignedAt: string | null;
+}
+
+export interface EvaluationPathwayProgress {
+  trackId: string;
+  stageId: string;
+  completedChecklistIds: string[];
+  percent: number;
+  status: "not-started" | "in-progress" | "complete";
 }

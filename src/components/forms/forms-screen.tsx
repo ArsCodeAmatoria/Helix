@@ -63,6 +63,18 @@ const assetModules = [
     color: "bg-[#ee46bc]",
   },
   {
+    href: "/forms/crane-binder",
+    label: "BC Crane binder",
+    icon: ClipboardList,
+    color: "bg-[#f79009]",
+  },
+  {
+    href: "/evaluations",
+    label: "Evaluations",
+    icon: HardHat,
+    color: "bg-[#12b76a]",
+  },
+  {
     href: "/projects",
     label: "Projects",
     icon: FolderKanban,

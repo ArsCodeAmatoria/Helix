@@ -5,9 +5,11 @@ import { motion } from "framer-motion";
 import {
   AlertTriangle,
   Award,
+  BarChart3,
   CheckCircle2,
   ClipboardList,
   FileWarning,
+  Hammer,
   Search,
   Shield,
   UserCheck,
@@ -19,6 +21,10 @@ import {
   type CoverageLevel,
 } from "@/lib/cor-stats";
 import { computeWorkerCompliance } from "@/lib/cor-worker";
+import {
+  computeWorkerActivity,
+  type ActivityBarItem,
+} from "@/lib/worker-activity";
 import { useTeamOptional } from "@/components/providers/team-provider";
 import { members as allMembers, initials } from "@/lib/team";
 import { PageHeader } from "@/components/layout/page-header";
@@ -42,12 +48,63 @@ const levelLabel: Record<CoverageLevel, string> = {
   gap: "Gap",
 };
 
-type View = "workers" | "company";
+type View = "workers" | "activity" | "company";
 type WorkerFilter = "all" | "missing" | "compliant" | "crew";
+
+function ActivityBars({
+  items,
+  valueLabel = "selections",
+}: {
+  items: ActivityBarItem[];
+  valueLabel?: string;
+}) {
+  const max = Math.max(...items.map((i) => i.count), 1);
+  return (
+    <div className="space-y-3">
+      {items.map((item, i) => (
+        <div key={item.id} className="space-y-1.5">
+          <div className="flex items-baseline justify-between gap-2">
+            <div className="min-w-0">
+              <p className="truncate text-sm font-semibold">{item.label}</p>
+              {item.secondary && (
+                <p className="text-[11px] text-muted-foreground">
+                  {item.secondary}
+                </p>
+              )}
+            </div>
+            <div className="shrink-0 text-right">
+              <p className="font-mono text-sm font-bold tabular-nums">
+                {item.count}
+                {item.hours != null ? (
+                  <span className="text-xs font-semibold text-muted-foreground">
+                    {" "}
+                    · {item.hours}h
+                  </span>
+                ) : null}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                {item.percent}% of {valueLabel}
+              </p>
+            </div>
+          </div>
+          <div className="h-2.5 overflow-hidden rounded-full bg-muted">
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: `${(item.count / max) * 100}%` }}
+              transition={{ delay: i * 0.03, duration: 0.35 }}
+              className="h-full rounded-full bg-primary"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export function CorStatsScreen() {
   const team = useTeamOptional();
   const readiness = useMemo(() => computeCorReadiness(), []);
+  const activity = useMemo(() => computeWorkerActivity(), []);
   const [view, setView] = useState<View>("workers");
   const [selectedId, setSelectedId] = useState<number | null>(
     readiness.elements[0]?.element.id ?? null
@@ -90,15 +147,16 @@ export function CorStatsScreen() {
     <div>
       <PageHeader
         title="COR Statistics"
-        subtitle="Worker compliance & BCCSA audit readiness"
+        subtitle="Worker compliance, work activity & audit readiness"
       />
 
       <main className="space-y-5 px-4 py-5">
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-3 gap-2">
           {(
             [
               ["workers", "Workers", Users],
-              ["company", "Company audit", Shield],
+              ["activity", "Work", BarChart3],
+              ["company", "Audit", Shield],
             ] as const
           ).map(([id, label, Icon]) => {
             const active = view === id;
@@ -108,7 +166,7 @@ export function CorStatsScreen() {
                 type="button"
                 onClick={() => setView(id)}
                 className={cn(
-                  "flex min-h-12 items-center justify-center gap-2 rounded-2xl text-sm font-semibold transition-colors",
+                  "flex min-h-12 items-center justify-center gap-1.5 rounded-2xl text-sm font-semibold transition-colors",
                   active
                     ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
                     : "bg-card text-muted-foreground ring-1 ring-border"
@@ -120,6 +178,108 @@ export function CorStatsScreen() {
             );
           })}
         </div>
+
+        {view === "activity" && (
+          <>
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-orange-950 p-5 text-white shadow-lg">
+              <div className="pointer-events-none absolute -right-8 -top-10 size-40 rounded-full bg-orange-500/20 blur-3xl" />
+              <div className="relative">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-orange-300">
+                  What workers do most · {activity.periodLabel}
+                </p>
+                <p className="mt-2 text-lg font-bold leading-snug">
+                  {activity.topTasks[0]?.label ?? "—"} leads FLHA tasks
+                </p>
+                <p className="mt-2 text-sm text-slate-300">{activity.insight}</p>
+              </div>
+              <div className="relative mt-4 grid grid-cols-2 gap-3">
+                <div className="rounded-2xl bg-white/10 px-3 py-2.5">
+                  <p className="font-mono text-2xl font-bold tabular-nums">
+                    {activity.totalFlhas}
+                  </p>
+                  <p className="text-[11px] text-slate-300">FLHAs logged</p>
+                </div>
+                <div className="rounded-2xl bg-white/10 px-3 py-2.5">
+                  <p className="font-mono text-2xl font-bold tabular-nums">
+                    {activity.totalHours}
+                    <span className="text-base text-orange-300">h</span>
+                  </p>
+                  <p className="text-[11px] text-slate-300">Crew hours</p>
+                </div>
+              </div>
+              <p className="relative mt-3 text-[11px] text-slate-400">
+                {activity.siteNote}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <Kpi
+                icon={<Hammer className="size-4" />}
+                color="bg-orange-500/10 text-orange-600"
+                value={activity.topTasks[0]?.label ?? "—"}
+                label="Top task"
+              />
+              <Kpi
+                icon={<BarChart3 className="size-4" />}
+                color="bg-sky-500/10 text-sky-600"
+                value={activity.byCategory[0]?.label ?? "—"}
+                label="Top category"
+              />
+              <Kpi
+                icon={<Users className="size-4" />}
+                color="bg-violet-500/10 text-violet-600"
+                value={activity.byRole[0]?.label ?? "—"}
+                label="Largest role"
+              />
+              <Kpi
+                icon={<ClipboardList className="size-4" />}
+                color="bg-emerald-500/10 text-emerald-600"
+                value={`${activity.topTasks[0]?.percent ?? 0}%`}
+                label="Share of selections"
+              />
+            </div>
+
+            <section className="helix-card space-y-4 p-4">
+              <div>
+                <h2 className="text-base font-bold">Top tasks</h2>
+                <p className="text-sm text-muted-foreground">
+                  Most common FLHA task selections — what crews actually do.
+                </p>
+              </div>
+              <ActivityBars items={activity.topTasks} />
+            </section>
+
+            <section className="helix-card space-y-4 p-4">
+              <div>
+                <h2 className="text-base font-bold">By work category</h2>
+                <p className="text-sm text-muted-foreground">
+                  Formwork vs rigging vs tower crane mix.
+                </p>
+              </div>
+              <ActivityBars items={activity.byCategory} />
+            </section>
+
+            <section className="helix-card space-y-4 p-4">
+              <div>
+                <h2 className="text-base font-bold">Roster by role</h2>
+                <p className="text-sm text-muted-foreground">
+                  How the workforce is composed today.
+                </p>
+              </div>
+              <ActivityBars items={activity.byRole} valueLabel="workers" />
+            </section>
+
+            <section className="helix-card space-y-4 p-4 pb-6">
+              <div>
+                <h2 className="text-base font-bold">Roster by trade</h2>
+                <p className="text-sm text-muted-foreground">
+                  Trade groups across the company directory.
+                </p>
+              </div>
+              <ActivityBars items={activity.byTrade} valueLabel="workers" />
+            </section>
+          </>
+        )}
 
         {view === "workers" && (
           <>
@@ -192,6 +352,24 @@ export function CorStatsScreen() {
                 label="Workers in view"
               />
             </div>
+
+            <button
+              type="button"
+              onClick={() => setView("activity")}
+              className="helix-card flex w-full items-center gap-3 p-4 text-left active:scale-[0.99]"
+            >
+              <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-700 dark:text-orange-400">
+                <BarChart3 className="size-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-bold">What workers do most</p>
+                <p className="text-sm text-muted-foreground">
+                  {activity.topTasks[0]?.label} ·{" "}
+                  {activity.topTasks[0]?.percent}% of FLHA tasks
+                </p>
+              </div>
+              <Badge variant="secondary">Open</Badge>
+            </button>
 
             <div className="relative">
               <Search className="absolute left-3.5 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />
@@ -645,7 +823,9 @@ function Kpi({
       >
         {icon}
       </div>
-      <p className="text-xl font-bold tabular-nums">{value}</p>
+      <p className="truncate text-xl font-bold tabular-nums leading-tight">
+        {value}
+      </p>
       <p className="text-[11px] font-medium text-muted-foreground">{label}</p>
     </div>
   );

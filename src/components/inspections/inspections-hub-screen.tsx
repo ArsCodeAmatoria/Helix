@@ -121,8 +121,25 @@ export function InspectionsHubScreen() {
           <section className="space-y-2 pb-4">
             <p className="text-sm text-muted-foreground">
               Open a crane log book to review history or start today&apos;s
-              inspection.
+              inspection. Use the BC Crane binder for erection / climb docs.
             </p>
+            <Link
+              href="/forms/crane-binder"
+              className="helix-card flex items-start gap-3 p-4 active:scale-[0.99]"
+            >
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-700 dark:text-orange-400">
+                <ClipboardCheck className="size-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-bold leading-snug">
+                  BC Crane erection binder
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  FM-TC-01 site binder document checklist
+                </p>
+              </div>
+              <ChevronRight className="mt-1 size-5 shrink-0 text-muted-foreground" />
+            </Link>
             {cranes.map((crane) => {
               const latest = log.latestCrane(crane.id);
               const entries = log.craneLogFor(crane.id);

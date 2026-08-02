@@ -149,6 +149,7 @@ export function FlhaWizard() {
                 reviewedIds={flha.state.reviewedDocuments}
                 onToggle={flha.toggleDocument}
                 onReviewAll={flha.reviewAllDocuments}
+                onMarkReviewed={flha.markDocumentReviewed}
               />
             )}
             {flha.currentStepId === "equipment" && (

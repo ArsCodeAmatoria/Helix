@@ -1,0 +1,528 @@
+{
+  "source": "Helix continuous competency — aligned with WorkSafeBC OHSR Part 14/15, BC Crane Safety, Fulford/Cranesafe rigger levels, and SkilledTradesBC Tower/Mobile Crane Operator pathways (Red Seal).",
+  "disclaimer": "Helix evaluations support employer competency tracking. They do not replace BC Crane Safety registration, Fulford Certificates of Competence, SkilledTradesBC exams, or Red Seal credentials.",
+  "tracks": [
+    {
+      "id": "rigger",
+      "title": "Rigger",
+      "authority": "WorkSafeBC OHSR 15.2 · Fulford/Cranesafe · BC Crane Safety guidance",
+      "summary": "Qualified rigger progression from fundamentals through advanced / load-turning skills, with site lift evaluations signed by supervisors.",
+      "stages": [
+        {
+          "id": "rig-basics",
+          "order": 1,
+          "title": "Rigging Basics (Level 1)",
+          "subtitle": "Fundamentals",
+          "description": "Hardware ID, WLL, sling angles, COG, inspection/rejection, hand signals, and supervised lifts. Maps to Fulford Rigging Fundamentals / Level 1 Certificate of Competence (typically 5-year competence card).",
+          "checklistIds": ["eval-rig-basics-theory", "eval-rig-basics-practical", "eval-signal"],
+          "credentialHint": "Fulford Level 1 Rigger Certificate of Competence"
+        },
+        {
+          "id": "rig-intermediate",
+          "order": 2,
+          "title": "Intermediate site lifts",
+          "subtitle": "Job-ready",
+          "description": "Repeated competent performance on common Helix picks — concrete day, tables, Doka cart, gang forms — under supervisor evaluation.",
+          "checklistIds": [
+            "eval-concrete-day",
+            "eval-tables",
+            "eval-doka-cart",
+            "eval-gang-forms"
+          ],
+          "credentialHint": "Employer competency — intermediate lift types"
+        },
+        {
+          "id": "rig-advanced",
+          "order": 3,
+          "title": "Advanced (Level 2+)",
+          "subtitle": "Complex lifts",
+          "description": "Multi-crane / blind / core / engineered picks. Aligns with Fulford Advanced Rigging (Level 2) and Load Turning & Drifting specialty.",
+          "checklistIds": [
+            "eval-elevator-core",
+            "eval-blind-lift",
+            "eval-panel-fly",
+            "eval-rig-advanced"
+          ],
+          "credentialHint": "Fulford Level 2 Advanced / Load Turning & Drifting"
+        }
+      ]
+    },
+    {
+      "id": "tower-crane",
+      "title": "Tower Crane Operator",
+      "authority": "BC Crane Safety registration · SkilledTradesBC Tower Crane Operator · Red Seal",
+      "summary": "From BC Crane Safety registration through Level exams, practical assessment, and Interprovincial Red Seal. STC compulsory trade effective July 5, 2027.",
+      "stages": [
+        {
+          "id": "tc-register",
+          "order": 1,
+          "title": "BC Crane Safety registration",
+          "subtitle": "Required to operate",
+          "description": "All crane operators in BC must register with BC Crane Safety before SkilledTradesBC apprenticeship registration (WorkSafeBC OHSR).",
+          "checklistIds": ["eval-tc-bcs-registration", "eval-tc-orientation"],
+          "credentialHint": "BC Crane Safety operator registration"
+        },
+        {
+          "id": "tc-level1",
+          "order": 2,
+          "title": "Level 1",
+          "subtitle": "Apprentice / SLE",
+          "description": "Technical training + SkilledTradesBC Level 1 Standardized Written Exam. Accumulate crane-related hours in electronic logbook.",
+          "checklistIds": ["eval-tc-level1-knowledge", "eval-tc-daily-ops"],
+          "credentialHint": "SkilledTradesBC Level 1 Standardized Written Exam"
+        },
+        {
+          "id": "tc-level2",
+          "order": 3,
+          "title": "Level 2 + practical",
+          "subtitle": "Toward CofQ",
+          "description": "Level 2 SLE, ~2,685 hours WBT, BC Crane Safety logbook sign-off, and SkilledTradesBC standardized practical assessment (Fulford).",
+          "checklistIds": ["eval-tc-level2-knowledge", "eval-tc-complex-lifts", "eval-tc-practical-prep"],
+          "credentialHint": "SkilledTradesBC Level 2 + practical assessment"
+        },
+        {
+          "id": "tc-redseal",
+          "order": 4,
+          "title": "Interprovincial Red Seal",
+          "subtitle": "Journeyperson",
+          "description": "Pass Interprovincial Red Seal exam (min. 70%). Earns Certificate of Qualification with Red Seal endorsement. STC: by July 5, 2027 must be apprentice, trade qualifier, or certified JP.",
+          "checklistIds": ["eval-tc-redseal-prep"],
+          "credentialHint": "Tower Crane Operator CofQ + Red Seal"
+        }
+      ]
+    },
+    {
+      "id": "mobile-crane",
+      "title": "Mobile Crane Operator",
+      "authority": "BC Crane Safety · SkilledTradesBC Mobile Crane Operator · Red Seal",
+      "summary": "Mobile crane pathway — BC Crane Safety registration, multi-level apprenticeship (~4,980 hours), practical assessment, Interprovincial Red Seal. STC compulsory July 5, 2027.",
+      "stages": [
+        {
+          "id": "mc-register",
+          "order": 1,
+          "title": "BC Crane Safety registration",
+          "subtitle": "Required to operate",
+          "description": "Register with BC Crane Safety prior to SkilledTradesBC apprenticeship.",
+          "checklistIds": ["eval-mc-bcs-registration", "eval-mc-orientation"],
+          "credentialHint": "BC Crane Safety operator registration"
+        },
+        {
+          "id": "mc-levels",
+          "order": 2,
+          "title": "Levels 1–3",
+          "subtitle": "Apprenticeship",
+          "description": "Technical training (~12 weeks over 3 years), Level SLEs, and logged mobile crane hours.",
+          "checklistIds": ["eval-mc-level1", "eval-mc-setup-lifts", "eval-mc-level-progress"],
+          "credentialHint": "SkilledTradesBC Level exams"
+        },
+        {
+          "id": "mc-redseal",
+          "order": 3,
+          "title": "Practical + Red Seal",
+          "subtitle": "Journeyperson",
+          "description": "Standardized practical assessment and Interprovincial Red Seal exam for CofQ with Red Seal endorsement.",
+          "checklistIds": ["eval-mc-practical-prep", "eval-mc-redseal-prep"],
+          "credentialHint": "Mobile Crane Operator CofQ + Red Seal"
+        }
+      ]
+    }
+  ],
+  "checklists": [
+    {
+      "id": "eval-rig-basics-theory",
+      "trackId": "rigger",
+      "stageId": "rig-basics",
+      "title": "Rigging Basics — knowledge check",
+      "category": "learning",
+      "audience": "Rigger",
+      "estimatedMinutes": 20,
+      "items": [
+        { "id": "rb1", "label": "Identifies sling types and reads WLL tags correctly" },
+        { "id": "rb2", "label": "Explains sling angle effect on capacity" },
+        { "id": "rb3", "label": "Estimates load weight / finds centre of gravity" },
+        { "id": "rb4", "label": "States hardware rejection criteria (OHSR Part 15)" },
+        { "id": "rb5", "label": "Demonstrates authorized crane hand / radio signals" },
+        { "id": "rb6", "label": "Describes stop-work / emergency stop call" }
+      ]
+    },
+    {
+      "id": "eval-rig-basics-practical",
+      "trackId": "rigger",
+      "stageId": "rig-basics",
+      "title": "Rigging Basics — practical",
+      "category": "practical",
+      "audience": "Rigger",
+      "estimatedMinutes": 45,
+      "items": [
+        { "id": "rp1", "label": "Inspects gear and rejects damaged components" },
+        { "id": "rp2", "label": "Selects hitch and hardware for a simple pick" },
+        { "id": "rp3", "label": "Applies tag line correctly; keeps clear of suspended load" },
+        { "id": "rp4", "label": "Communicates with operator before taking slack" },
+        { "id": "rp5", "label": "Lands load on blocking; disconnects only when slack" },
+        { "id": "rp6", "label": "Works under direct supervision of a qualified rigger" }
+      ]
+    },
+    {
+      "id": "eval-signal",
+      "trackId": "rigger",
+      "stageId": "rig-basics",
+      "title": "Signal person evaluation",
+      "category": "practical",
+      "audience": "Rigger",
+      "estimatedMinutes": 30,
+      "items": [
+        { "id": "sg1", "label": "Radio check and call signs confirmed" },
+        { "id": "sg2", "label": "Uses standard movement calls; operator repeats critical commands" },
+        { "id": "sg3", "label": "Maintains exclusion zone awareness" },
+        { "id": "sg4", "label": "Stops lift on lost / garbled radio" },
+        { "id": "sg5", "label": "Coordinates with backup signal person when required" }
+      ]
+    },
+    {
+      "id": "eval-concrete-day",
+      "trackId": "rigger",
+      "stageId": "rig-intermediate",
+      "title": "Concrete day — bucket / pour lifts",
+      "category": "site-lift",
+      "audience": "Rigger",
+      "estimatedMinutes": 40,
+      "items": [
+        { "id": "cd1", "label": "Reviews pour plan, bucket WLL, and exclusion under path" },
+        { "id": "cd2", "label": "Confirms form release / bracing before placing" },
+        { "id": "cd3", "label": "Rigs bucket; verifies latches / gates secure" },
+        { "id": "cd4", "label": "Maintains radio with operator and deck signal" },
+        { "id": "cd5", "label": "Controls splash / spill hazards; keeps personnel clear" },
+        { "id": "cd6", "label": "Stops pour on lost contact or unstable forms" },
+        { "id": "cd7", "label": "Housekeeps landing; reports gear issues" }
+      ]
+    },
+    {
+      "id": "eval-tables",
+      "trackId": "rigger",
+      "stageId": "rig-intermediate",
+      "title": "Fly tables / table hops",
+      "category": "site-lift",
+      "audience": "Rigger",
+      "estimatedMinutes": 45,
+      "items": [
+        { "id": "tb1", "label": "Confirms table weight, COG, and flying procedure" },
+        { "id": "tb2", "label": "Inspects flying gear / pick points before attach" },
+        { "id": "tb3", "label": "Clears path and landing; wind check with operator" },
+        { "id": "tb4", "label": "Uses tag lines; never guides under suspended table" },
+        { "id": "tb5", "label": "Coordinates release sequence with deck crew" },
+        { "id": "tb6", "label": "Lands on designated shores / blocking only" }
+      ]
+    },
+    {
+      "id": "eval-doka-cart",
+      "trackId": "rigger",
+      "stageId": "rig-intermediate",
+      "title": "Doka cart / material cart lifts",
+      "category": "site-lift",
+      "audience": "Rigger",
+      "estimatedMinutes": 30,
+      "items": [
+        { "id": "dk1", "label": "Verifies cart rating and load secured / banded" },
+        { "id": "dk2", "label": "Uses rated bridle / pick points per OEM" },
+        { "id": "dk3", "label": "Confirms wheels locked / gates closed before lift" },
+        { "id": "dk4", "label": "Keeps travel path clear; controls swing" },
+        { "id": "dk5", "label": "Lands level; chocks before disconnect" }
+      ]
+    },
+    {
+      "id": "eval-gang-forms",
+      "trackId": "rigger",
+      "stageId": "rig-intermediate",
+      "title": "Gang forms / large panel hops",
+      "category": "site-lift",
+      "audience": "Rigger",
+      "estimatedMinutes": 45,
+      "items": [
+        { "id": "gf1", "label": "Confirms panel weight, braces, and pick configuration" },
+        { "id": "gf2", "label": "Attaches crane gear before free-standing panel" },
+        { "id": "gf3", "label": "Exclusion zone below; spotter assigned" },
+        { "id": "gf4", "label": "Tag lines control panel orientation" },
+        { "id": "gf5", "label": "Lands on blocking; restores rails before bay open" },
+        { "id": "gf6", "label": "Does not attempt to catch a kicking panel" }
+      ]
+    },
+    {
+      "id": "eval-elevator-core",
+      "trackId": "rigger",
+      "stageId": "rig-advanced",
+      "title": "Elevator core / shaft lifts",
+      "category": "site-lift",
+      "audience": "Rigger",
+      "estimatedMinutes": 50,
+      "items": [
+        { "id": "ec1", "label": "Reviews engineered / site-specific core lift plan" },
+        { "id": "ec2", "label": "Confirms fall protection and shaft edge controls" },
+        { "id": "ec3", "label": "Verifies radio protocol for limited-visibility shaft" },
+        { "id": "ec4", "label": "Controls load drift; no personnel under load in shaft" },
+        { "id": "ec5", "label": "Coordinates with formwork / climbing crew sequence" },
+        { "id": "ec6", "label": "Documents holds / near misses before next pick" }
+      ]
+    },
+    {
+      "id": "eval-blind-lift",
+      "trackId": "rigger",
+      "stageId": "rig-advanced",
+      "title": "Blind lift evaluation",
+      "category": "site-lift",
+      "audience": "Rigger",
+      "estimatedMinutes": 40,
+      "items": [
+        { "id": "bl1", "label": "Confirms blind lift in briefing; names primary / backup signal" },
+        { "id": "bl2", "label": "Radio check operator ↔ signal ↔ supervisor" },
+        { "id": "bl3", "label": "Calls every movement; waits for operator repeat" },
+        { "id": "bl4", "label": "STOP + horn on one failed radio attempt" },
+        { "id": "bl5", "label": "Does not guess next move when contact lost" }
+      ]
+    },
+    {
+      "id": "eval-panel-fly",
+      "trackId": "rigger",
+      "stageId": "rig-advanced",
+      "title": "Panel flying (wind-sensitive)",
+      "category": "site-lift",
+      "audience": "Rigger",
+      "estimatedMinutes": 40,
+      "items": [
+        { "id": "pf1", "label": "Checks wind vs OEM / site limits before fly" },
+        { "id": "pf2", "label": "Uses approved flying frame / pick points" },
+        { "id": "pf3", "label": "Tag lines manned; clear swing path" },
+        { "id": "pf4", "label": "Aborts if wind or control is lost" }
+      ]
+    },
+    {
+      "id": "eval-rig-advanced",
+      "trackId": "rigger",
+      "stageId": "rig-advanced",
+      "title": "Advanced rigging — multi-point / turning",
+      "category": "practical",
+      "audience": "Rigger",
+      "estimatedMinutes": 60,
+      "items": [
+        { "id": "ra1", "label": "Plans multi-point hitch and load share" },
+        { "id": "ra2", "label": "Demonstrates controlled load turn / drift (or discusses with evaluator)" },
+        { "id": "ra3", "label": "Uses engineered lift plan when required" },
+        { "id": "ra4", "label": "Leads junior rigger with correct supervision" }
+      ]
+    },
+    {
+      "id": "eval-tc-bcs-registration",
+      "trackId": "tower-crane",
+      "stageId": "tc-register",
+      "title": "BC Crane Safety registration on file",
+      "category": "credential",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 15,
+      "items": [
+        { "id": "tcr1", "label": "BC Crane Safety registration number verified" },
+        { "id": "tcr2", "label": "Registration current / not expired" },
+        { "id": "tcr3", "label": "Matches crane type (tower) they will operate" }
+      ]
+    },
+    {
+      "id": "eval-tc-orientation",
+      "trackId": "tower-crane",
+      "stageId": "tc-register",
+      "title": "Operator crane orientation (site)",
+      "category": "practical",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 45,
+      "items": [
+        { "id": "tco1", "label": "Reviews site-specific load chart / configuration" },
+        { "id": "tco2", "label": "Completes daily inspection log before first lift" },
+        { "id": "tco3", "label": "Confirms radio channel, call signs, E-stop" },
+        { "id": "tco4", "label": "Knows wind limits and weathervane procedure" },
+        { "id": "tco5", "label": "Reviews ERP / high-angle rescue awareness" }
+      ]
+    },
+    {
+      "id": "eval-tc-level1-knowledge",
+      "trackId": "tower-crane",
+      "stageId": "tc-level1",
+      "title": "Tower crane Level 1 — knowledge",
+      "category": "learning",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 30,
+      "items": [
+        { "id": "tl11", "label": "Reads load chart for current configuration" },
+        { "id": "tl12", "label": "Explains anti-two-block / LMI function" },
+        { "id": "tl13", "label": "Describes powerline / collision avoidance basics" },
+        { "id": "tl14", "label": "Documents hours in BC Crane Safety electronic logbook" }
+      ]
+    },
+    {
+      "id": "eval-tc-daily-ops",
+      "trackId": "tower-crane",
+      "stageId": "tc-level1",
+      "title": "Tower crane daily operations eval",
+      "category": "practical",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 40,
+      "items": [
+        { "id": "td1", "label": "Smooth control; no shock loading" },
+        { "id": "td2", "label": "Follows signal person; holds on unclear calls" },
+        { "id": "td3", "label": "Maintains exclusion / does not leave load suspended unattended" },
+        { "id": "td4", "label": "Shutdown / weathervane per OEM at end of shift" }
+      ]
+    },
+    {
+      "id": "eval-tc-level2-knowledge",
+      "trackId": "tower-crane",
+      "stageId": "tc-level2",
+      "title": "Tower crane Level 2 — knowledge",
+      "category": "learning",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 30,
+      "items": [
+        { "id": "tl21", "label": "Understands climbing / jacking documentation requirements" },
+        { "id": "tl22", "label": "Applies critical lift criteria and when to escalate" },
+        { "id": "tl23", "label": "Zoning / anti-collision awareness (if equipped)" }
+      ]
+    },
+    {
+      "id": "eval-tc-complex-lifts",
+      "trackId": "tower-crane",
+      "stageId": "tc-level2",
+      "title": "Complex tower lifts (blind / core / pour)",
+      "category": "site-lift",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 45,
+      "items": [
+        { "id": "tcl1", "label": "Follows blind-lift radio protocol without deviation" },
+        { "id": "tcl2", "label": "Coordinates with superintendent on critical pours" },
+        { "id": "tcl3", "label": "Manages wind / drift; aborts when limits approached" },
+        { "id": "tcl4", "label": "Logs holds and near misses" }
+      ]
+    },
+    {
+      "id": "eval-tc-practical-prep",
+      "trackId": "tower-crane",
+      "stageId": "tc-level2",
+      "title": "Practical assessment readiness",
+      "category": "credential",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 25,
+      "items": [
+        { "id": "tpp1", "label": "Hours / logbook sign-off requirements reviewed" },
+        { "id": "tpp2", "label": "Level exam results on file (or scheduled)" },
+        { "id": "tpp3", "label": "Practical assessment booking path understood (Fulford)" }
+      ]
+    },
+    {
+      "id": "eval-tc-redseal-prep",
+      "trackId": "tower-crane",
+      "stageId": "tc-redseal",
+      "title": "Interprovincial Red Seal prep",
+      "category": "credential",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 20,
+      "items": [
+        { "id": "trs1", "label": "Eligible for IP exam (Level 1 SLE complete)" },
+        { "id": "trs2", "label": "Reviewed Red Seal Occupational Standard resources" },
+        { "id": "trs3", "label": "Aware of STC deadline July 5, 2027 (apprentice / TQ / JP)" },
+        { "id": "trs4", "label": "Supervisor confirms readiness to challenge IP exam" }
+      ]
+    },
+    {
+      "id": "eval-mc-bcs-registration",
+      "trackId": "mobile-crane",
+      "stageId": "mc-register",
+      "title": "BC Crane Safety registration (mobile)",
+      "category": "credential",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 15,
+      "items": [
+        { "id": "mcr1", "label": "BC Crane Safety registration verified for mobile" },
+        { "id": "mcr2", "label": "Registration current" }
+      ]
+    },
+    {
+      "id": "eval-mc-orientation",
+      "trackId": "mobile-crane",
+      "stageId": "mc-register",
+      "title": "Mobile crane site orientation",
+      "category": "practical",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 40,
+      "items": [
+        { "id": "mco1", "label": "Ground bearing / outrigger pads verified" },
+        { "id": "mco2", "label": "Setup level; chart configuration confirmed" },
+        { "id": "mco3", "label": "Powerline distances known" },
+        { "id": "mco4", "label": "Daily inspection completed and logged" }
+      ]
+    },
+    {
+      "id": "eval-mc-level1",
+      "trackId": "mobile-crane",
+      "stageId": "mc-levels",
+      "title": "Mobile Level 1 knowledge",
+      "category": "learning",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 25,
+      "items": [
+        { "id": "ml1", "label": "Load chart / range diagram for current boom" },
+        { "id": "ml2", "label": "Outrigger / tire lift differences understood" },
+        { "id": "ml3", "label": "Hours logged toward ~4,980 WBT requirement" }
+      ]
+    },
+    {
+      "id": "eval-mc-setup-lifts",
+      "trackId": "mobile-crane",
+      "stageId": "mc-levels",
+      "title": "Mobile setup & routine lifts",
+      "category": "practical",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 45,
+      "items": [
+        { "id": "ms1", "label": "Safe setup; pads / cribbing adequate" },
+        { "id": "ms2", "label": "Operates within chart; no overload" },
+        { "id": "ms3", "label": "Communicates with rigger / signal person" },
+        { "id": "ms4", "label": "Secures crane for travel / shutdown" }
+      ]
+    },
+    {
+      "id": "eval-mc-level-progress",
+      "trackId": "mobile-crane",
+      "stageId": "mc-levels",
+      "title": "Level exam progress check",
+      "category": "credential",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 15,
+      "items": [
+        { "id": "mlp1", "label": "Level 1 SLE status recorded" },
+        { "id": "mlp2", "label": "Plan for subsequent levels documented" }
+      ]
+    },
+    {
+      "id": "eval-mc-practical-prep",
+      "trackId": "mobile-crane",
+      "stageId": "mc-redseal",
+      "title": "Mobile practical assessment readiness",
+      "category": "credential",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 20,
+      "items": [
+        { "id": "mpp1", "label": "Practical assessment prerequisites met / scheduled" },
+        { "id": "mpp2", "label": "Logbook hours verified with sponsor" }
+      ]
+    },
+    {
+      "id": "eval-mc-redseal-prep",
+      "trackId": "mobile-crane",
+      "stageId": "mc-redseal",
+      "title": "Mobile Interprovincial Red Seal prep",
+      "category": "credential",
+      "audience": "Crane Operator",
+      "estimatedMinutes": 20,
+      "items": [
+        { "id": "mrs1", "label": "Eligible for IP Red Seal exam" },
+        { "id": "mrs2", "label": "Aware of STC compulsory date July 5, 2027" },
+        { "id": "mrs3", "label": "Supervisor sign-off on challenge readiness" }
+      ]
+    }
+  ]
+}

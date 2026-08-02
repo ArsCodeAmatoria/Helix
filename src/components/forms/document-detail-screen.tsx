@@ -12,6 +12,9 @@ import {
   Shield,
 } from "lucide-react";
 import { getDocument } from "@/lib/db";
+import { useDocumentReview } from "@/components/providers/document-review-provider";
+import { useFlhaOptional } from "@/components/providers/flha-provider";
+import { DocumentReviewQuiz } from "@/components/forms/document-review-quiz";
 import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -19,6 +22,10 @@ import { cn } from "@/lib/utils";
 
 export function DocumentDetailScreen({ id }: { id: string }) {
   const doc = getDocument(id);
+  const docReview = useDocumentReview();
+  const flha = useFlhaOptional();
+  const reviewComplete = doc ? docReview.isComplete(doc.id) : false;
+
   if (!doc) notFound();
 
   const isSwp = doc.category === "SWP";
@@ -166,6 +173,14 @@ export function DocumentDetailScreen({ id }: { id: string }) {
           </Section>
         )}
 
+        <DocumentReviewQuiz
+          documentId={doc.id}
+          questions={doc.reviewQuestions ?? []}
+          onPassed={() => {
+            flha?.markDocumentReviewed(doc.id);
+          }}
+        />
+
         <div className="grid gap-2 pb-4">
           <Button
             asChild
@@ -173,7 +188,9 @@ export function DocumentDetailScreen({ id }: { id: string }) {
             className="h-14 rounded-2xl text-base font-bold"
           >
             <Link href="/forms/flha">
-              Start FLHA with this context
+              {reviewComplete
+                ? "Back to FLHA — review recorded"
+                : "Start FLHA with this context"}
               <ArrowRight className="size-5" />
             </Link>
           </Button>
