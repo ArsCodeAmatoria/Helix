@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-/** Apple touch icon — Lucide DNA */
+/** Apple touch icon — Lucide fingerprint-pattern on Proven primary blue */
 export default function AppleIcon() {
   return new ImageResponse(
     (
@@ -15,7 +15,7 @@ export default function AppleIcon() {
           alignItems: "center",
           justifyContent: "center",
           background: "#2f6bff",
-          borderRadius: 36,
+          borderRadius: 40,
         }}
       >
         <svg
@@ -28,17 +28,15 @@ export default function AppleIcon() {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="m10 16 1.5 1.5" />
-          <path d="m14 8-1.5-1.5" />
-          <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993" />
-          <path d="m16.5 10.5 1 1" />
-          <path d="m17 6-2.891-2.891" />
-          <path d="M2 15c6.667-6 13.333 0 20-6" />
-          <path d="m20 9 .891.891" />
-          <path d="M3.109 14.109 4 15" />
-          <path d="m6.5 12.5 1 1" />
-          <path d="m7 18 2.891 2.891" />
-          <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993" />
+          <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" />
+          <path d="M14 13.12c0 2.38 0 6.38-1 8.88" />
+          <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02" />
+          <path d="M2 12a10 10 0 0 1 18-6" />
+          <path d="M2 16h.01" />
+          <path d="M21.8 16c.2-2 .131-5.354 0-6" />
+          <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2" />
+          <path d="M8.65 22c.21-.66.45-1.32.57-2" />
+          <path d="M9 6.8a6 6 0 0 1 9 5.2v2" />
         </svg>
       </div>
     ),

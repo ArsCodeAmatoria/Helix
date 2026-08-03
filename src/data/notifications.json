@@ -26,7 +26,7 @@
     "read": false,
     "href": "/projects/proj-burnaby",
     "cta": "View Burnaby site",
-    "postedBy": "Helix Weather Desk",
+    "postedBy": "Proven Weather Desk",
     "projectId": "proj-burnaby",
     "detail": "Environment Canada forecasts southwest gusts of 45–55 km/h at Burnaby Central after 14:00. Suspend non-essential crane and panel lifts if wind exceeds site limits. Keep Peri wall braces secured.",
     "bullets": [
@@ -98,7 +98,7 @@
     "read": false,
     "href": "/statistics",
     "cta": "Open COR workers",
-    "postedBy": "Helix COR",
+    "postedBy": "Proven COR",
     "detail": "Worker compliance checks against Element 8 (Training & Communication) show missing orientation, WHMIS, or trade tickets for several people on today’s roster. Resolve gaps before assigning high-risk tasks.",
     "bullets": [
       "Filter COR → Workers → Missing",
@@ -133,7 +133,7 @@
     "read": true,
     "href": "/timeclock",
     "cta": "Open Time Clock",
-    "postedBy": "Helix Time Clock",
+    "postedBy": "Proven Time Clock",
     "projectId": "proj-oceanview",
     "detail": "Remember to sign in with GPS when you arrive. If you move between Oceanview and Burnaby Central, switch sites in the time clock so hours land on the correct visit.",
     "bullets": [

@@ -1,6 +1,6 @@
 {
-  "source": "Helix continuous competency — aligned with WorkSafeBC OHSR Part 14/15, BC Crane Safety, Fulford/Cranesafe rigger levels, and SkilledTradesBC Tower/Mobile Crane Operator pathways (Red Seal).",
-  "disclaimer": "Helix evaluations support employer competency tracking. They do not replace BC Crane Safety registration, Fulford Certificates of Competence, SkilledTradesBC exams, or Red Seal credentials.",
+  "source": "Proven continuous competency — aligned with WorkSafeBC OHSR Part 14/15, BC Crane Safety, Fulford/Cranesafe rigger levels, and SkilledTradesBC Tower/Mobile Crane Operator pathways (Red Seal).",
+  "disclaimer": "Proven evaluations support employer competency tracking. They do not replace BC Crane Safety registration, Fulford Certificates of Competence, SkilledTradesBC exams, or Red Seal credentials.",
   "tracks": [
     {
       "id": "rigger",
@@ -22,7 +22,7 @@
           "order": 2,
           "title": "Intermediate site lifts",
           "subtitle": "Job-ready",
-          "description": "Repeated competent performance on common Helix picks — concrete day, tables, Doka cart, gang forms — under supervisor evaluation.",
+          "description": "Repeated competent performance on common Proven picks — concrete day, tables, Doka cart, gang forms — under supervisor evaluation.",
           "checklistIds": [
             "eval-concrete-day",
             "eval-tables",

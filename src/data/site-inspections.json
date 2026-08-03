@@ -89,7 +89,7 @@
       "id": "si-crane-4",
       "category": "crane-interface",
       "label": "Load chart / operator orientation current for active tower crane",
-      "guidance": "Serial-specific chart on the crane governs — Helix PDFs are reference."
+      "guidance": "Serial-specific chart on the crane governs — Proven PDFs are reference."
     },
     {
       "id": "si-public-1",

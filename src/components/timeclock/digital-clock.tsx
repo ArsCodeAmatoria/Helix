@@ -45,7 +45,7 @@ export function DigitalClock({ active = false, className }: DigitalClockProps) {
       <div className="relative flex items-start justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300/90">
-            Helix Time Clock
+            Proven Time Clock
           </p>
           <p className="mt-1 text-sm font-medium text-slate-300">
             {parts.dateLine}

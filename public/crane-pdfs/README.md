@@ -1,6 +1,6 @@
 # Crane load charts & BC Crane binder forms
 
-Manufacturer datasheets and BC Crane Safety site-binder templates for Helix prototype use.
+Manufacturer datasheets and BC Crane Safety site-binder templates for Proven prototype use.
 
 ## Load charts
 
@@ -40,6 +40,6 @@ Official templates from [BC Crane Safety — Tower Crane Site Binders](https://b
 | `tbl-setc-02-toc-notes.pdf` | TBL-SETC-02 | Requirement notes for self-erect items |
 | `tbl-setc-03-ohsr-csa.pdf` | TBL-SETC-03 | OHSR & CSA info for self-erect |
 
-Interactive UI: `/forms/crane-binder` — switch Tower / Self-erect, browse all PDFs with descriptions, fill Helix site checklist.
+Interactive UI: `/forms/crane-binder` — switch Tower / Self-erect, browse all PDFs with descriptions, fill Proven site checklist.
 
 **Important:** Guides and filled blocks are for reference and training only. Always operate from the serial-specific load chart and keep the signed paper / PDF binder as the official record.

@@ -226,11 +226,11 @@
   },
   {
     "id": "feat-flha",
-    "title": "Helix FLHA Engine (tasks → hazards → controls)",
+    "title": "Proven FLHA Engine (tasks → hazards → controls)",
     "category": "Digital Record",
     "status": "current",
     "lastReviewed": "2026-08-01",
-    "owner": "Helix Platform",
+    "owner": "Proven Platform",
     "elements": [2, 3, 4, 12]
   },
   {
@@ -239,7 +239,7 @@
     "category": "Digital Record",
     "status": "current",
     "lastReviewed": "2026-08-01",
-    "owner": "Helix Platform",
+    "owner": "Proven Platform",
     "elements": [6, 7, 9]
   },
   {
@@ -248,7 +248,7 @@
     "category": "Digital Record",
     "status": "current",
     "lastReviewed": "2026-08-01",
-    "owner": "Helix Platform",
+    "owner": "Proven Platform",
     "elements": [12]
   },
   {
@@ -257,7 +257,7 @@
     "category": "Digital Record",
     "status": "current",
     "lastReviewed": "2026-08-01",
-    "owner": "Helix Platform",
+    "owner": "Proven Platform",
     "elements": [12, 9, 10]
   },
   {
@@ -266,7 +266,7 @@
     "category": "Digital Record",
     "status": "current",
     "lastReviewed": "2026-08-01",
-    "owner": "Helix Platform",
+    "owner": "Proven Platform",
     "elements": [2, 8, 12]
   }
 ]

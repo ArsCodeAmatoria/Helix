@@ -63,7 +63,7 @@ export function createEmptyBinderState(
   };
 }
 
-/** Demo seed — Oceanview filled from Helix project / equipment data */
+/** Demo seed — Oceanview filled from Proven project / equipment data */
 export function seedBinderState(
   packId: BcCraneBinderPackId = "tower"
 ): BcCraneBinderState {
@@ -177,7 +177,7 @@ export function seedBinderState(
     present(
       "17",
       "owner",
-      "Load chart posted — Helix PDF: /crane-pdfs/potain-md365-data-sheet.pdf"
+      "Load chart posted — Proven PDF: /crane-pdfs/potain-md365-data-sheet.pdf"
     );
     present("18", "owner", "CSA Z248 compliance / certification report on file.");
     na("19", "No assist mobile crane for this TC-1 climb sequence.");
@@ -188,11 +188,11 @@ export function seedBinderState(
     na("24", "Anti-collision to commission before dual-crane ops.");
     present("25", "owner", "Hoist rope mill certificate in Ropes tab.");
     na("26", "Rotation-resistant rope shortening schedule N/A.");
-    present("27", "user", "Annual chain sling / rigging certs — Helix equipment log.");
+    present("27", "user", "Annual chain sling / rigging certs — Proven equipment log.");
     present("28", "owner", "Manufacturer test block weights marked and certificates filed.");
     na("29", "No HLL system on this crane configuration.");
     na("30", "DEP box not used this phase.");
-    present("31", "user", "BTH devices NDT + capacity plates — Helix inspections hub.");
+    present("31", "user", "BTH devices NDT + capacity plates — Proven inspections hub.");
     present("32", "supervisor", "Site-specific assembly/disassembly procedures signed.");
     present("33", "supervisor", "Activity supervisor + lead hand qualifications on NOP-TC.");
     present("34", "supervisor", "SWP assembly/disassembly on file.");
@@ -207,7 +207,7 @@ export function seedBinderState(
     missing("39", "Post-install mast bolt retorque due after first climb.");
     present("40", "user", "Operator orientation complete.");
     present("41", "user", "Operator certification + proof of qualification on file.");
-    present("42", "user", "Inspection logs in Helix crane inspection log book.");
+    present("42", "user", "Inspection logs in Proven crane inspection log book.");
     na("43", "No repositioning since original install.");
 
     base.sectionNotes = {
@@ -219,7 +219,7 @@ export function seedBinderState(
     base.otherDocs = [
       "Site-specific swing radius drawing Rev C (TC-1 / TC-2)",
       "Municipal street use permit #SU-2026-441",
-      `Helix project ${project?.projectNumber ?? "HX-2026-0847"} required docs package`,
+      `Proven project ${project?.projectNumber ?? "HX-2026-0847"} required docs package`,
     ];
   } else {
     // Self-erect item map (FM-SETC-01)
@@ -236,7 +236,7 @@ export function seedBinderState(
     present(
       "16",
       "owner",
-      "Load chart available at controls — Helix PDF: /crane-pdfs/potain-hdt80-product-guide.pdf"
+      "Load chart available at controls — Proven PDF: /crane-pdfs/potain-hdt80-product-guide.pdf"
     );
     present("17", "owner", "CSA compliance / certification report on file.");
     present("18", "supervisor", "Component visual inspection complete before erect.");
@@ -280,7 +280,7 @@ export function seedBinderState(
     base.otherDocs = [
       "Self-erect counterweight / ballast mark sheet",
       "Municipal street use permit #SU-2026-441",
-      "Potain HDT 80 product guide (Helix crane charts)",
+      "Potain HDT 80 product guide (Proven crane charts)",
     ];
   }
 

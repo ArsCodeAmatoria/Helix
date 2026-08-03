@@ -19,7 +19,7 @@
       "type": "Lifting bin",
       "assetTag": "BIN-DEB-01",
       "capacity": "2,000 kg",
-      "manufacturer": "Helix Yard",
+      "manufacturer": "Proven Yard",
       "status": "in-service",
       "lastInspection": "2026-08-01"
     },
@@ -30,7 +30,7 @@
       "type": "Lifting bin",
       "assetTag": "BIN-CON-02",
       "capacity": "1,500 kg",
-      "manufacturer": "Helix Yard",
+      "manufacturer": "Proven Yard",
       "status": "in-service",
       "lastInspection": "2026-07-31"
     },
@@ -85,7 +85,7 @@
       "type": "Bridle assembly",
       "assetTag": "BR-2L-5T-01",
       "capacity": "5,000 kg",
-      "manufacturer": "Crosby / Helix",
+      "manufacturer": "Crosby / Proven",
       "status": "in-service",
       "lastInspection": "2026-08-01"
     },
@@ -96,7 +96,7 @@
       "type": "Bridle assembly",
       "assetTag": "BR-4L-10T-02",
       "capacity": "10,000 kg",
-      "manufacturer": "Crosby / Helix",
+      "manufacturer": "Crosby / Proven",
       "status": "in-service",
       "lastInspection": "2026-07-29"
     },
@@ -228,7 +228,7 @@
       "type": "Equalizer",
       "assetTag": "EQ-PLT-02",
       "capacity": "15,000 kg",
-      "manufacturer": "Helix Fabrication",
+      "manufacturer": "Proven Fabrication",
       "status": "in-service",
       "lastInspection": "2026-07-24"
     },
@@ -272,7 +272,7 @@
       "type": "Tag line",
       "assetTag": "TL-SET-B",
       "capacity": "N/A",
-      "manufacturer": "Helix Yard",
+      "manufacturer": "Proven Yard",
       "status": "in-service",
       "lastInspection": "2026-08-01"
     },
@@ -283,7 +283,7 @@
       "type": "Softener / edge protector",
       "assetTag": "CS-PAIR-04",
       "capacity": "N/A",
-      "manufacturer": "Helix Yard",
+      "manufacturer": "Proven Yard",
       "status": "out-of-service",
       "lastInspection": "2026-07-20"
     },

@@ -31,7 +31,7 @@ export interface CorDocument {
   pages?: number;
 }
 
-/** Question-level Helix evidence mapping for readiness scoring */
+/** Question-level Proven evidence mapping for readiness scoring */
 const QUESTION_COVERAGE: Record<
   string,
   { level: CoverageLevel; evidenceIds: string[]; note?: string }
@@ -47,7 +47,7 @@ const QUESTION_COVERAGE: Record<
   "1.8": { level: "strong", evidenceIds: ["doc-hspolicy", "doc-johsc"] },
   "1.9": { level: "interview", evidenceIds: ["doc-bccsa-workbook", "doc-oms-interview", "doc-orient"], note: "Requires worker interviews at audit" },
 
-  // Element 2 — Hazard assessment (Helix strength)
+  // Element 2 — Hazard assessment (Proven strength)
   "2.1": { level: "strong", evidenceIds: ["feat-flha", "doc-swa"] },
   "2.2": { level: "strong", evidenceIds: ["feat-flha"] },
   "2.3": { level: "strong", evidenceIds: ["feat-flha", "feat-signatures"] },
@@ -57,7 +57,7 @@ const QUESTION_COVERAGE: Record<
   "2.7": { level: "strong", evidenceIds: ["feat-flha"] },
   "2.8": { level: "partial", evidenceIds: ["feat-flha", "feat-dashboard"] },
   "2.9": { level: "strong", evidenceIds: ["feat-flha", "feat-signatures", "doc-tbt"] },
-  "2.10": { level: "gap", evidenceIds: [], note: "Subcontractor evaluation process not yet in Helix" },
+  "2.10": { level: "gap", evidenceIds: [], note: "Subcontractor evaluation process not yet in Proven" },
   "2.11": { level: "partial", evidenceIds: ["feat-flha", "feat-dashboard"] },
 
   // Element 3 — SWP
@@ -135,7 +135,7 @@ const QUESTION_COVERAGE: Record<
   // Element 10 — Investigations
   "10.1": { level: "partial", evidenceIds: ["doc-invest"], note: "Procedure needs review (last Sep 2025)" },
   "10.2": { level: "partial", evidenceIds: ["doc-invest"] },
-  "10.3": { level: "gap", evidenceIds: ["doc-invest"], note: "Investigation case records sparse in Helix" },
+  "10.3": { level: "gap", evidenceIds: ["doc-invest"], note: "Investigation case records sparse in Proven" },
   "10.4": { level: "gap", evidenceIds: ["doc-invest"] },
   "10.5": { level: "partial", evidenceIds: ["feat-dashboard"] },
   "10.6": { level: "interview", evidenceIds: ["doc-bccsa-workbook", "doc-oms-interview", "doc-invest"] },
@@ -153,10 +153,10 @@ const QUESTION_COVERAGE: Record<
   "11.6": { level: "interview", evidenceIds: ["doc-bccsa-workbook", "doc-oms-interview", "doc-erp"] },
   "11.7": { level: "partial", evidenceIds: ["doc-erp"] },
   "11.8": { level: "partial", evidenceIds: ["doc-erp"] },
-  "11.9": { level: "gap", evidenceIds: ["doc-erp"], note: "Drill records not yet tracked in Helix" },
+  "11.9": { level: "gap", evidenceIds: ["doc-erp"], note: "Drill records not yet tracked in Proven" },
   "11.10": { level: "partial", evidenceIds: ["doc-erp"] },
 
-  // Element 12 — Records & stats (Helix strength)
+  // Element 12 — Records & stats (Proven strength)
   "12.1": { level: "strong", evidenceIds: ["feat-flha", "feat-timeclock", "feat-dashboard"] },
   "12.2": { level: "strong", evidenceIds: ["feat-dashboard"] },
   "12.3": { level: "strong", evidenceIds: ["feat-flha", "feat-signatures"] },

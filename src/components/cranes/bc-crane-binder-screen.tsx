@@ -202,7 +202,7 @@ export function BcCraneBinderScreen() {
               onClick={binder.loadSeed}
             >
               <RotateCcw className="size-4" />
-              Fill Helix site
+              Fill Proven site
             </Button>
           </div>
         </div>

@@ -420,7 +420,7 @@ export function ToolboxHubScreen() {
 
                 {generated.relatedDocuments.length > 0 && (
                   <div className="helix-card space-y-2 p-4">
-                    <h3 className="font-bold">Related Helix documents</h3>
+                    <h3 className="font-bold">Related Proven documents</h3>
                     {generated.relatedDocuments.map((doc) => (
                       <Link
                         key={doc.id}

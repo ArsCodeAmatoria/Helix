@@ -10,7 +10,7 @@
     "owner": "Priya Nair \u00b7 Safety",
     "summary": "Controls for deck and column concrete placement with tower crane buckets and vibrators.",
     "purpose": "Prevent struck-by, fall, and pour-related incidents during concrete placement.",
-    "scope": "Applies to all Helix crews placing concrete on elevated decks, columns, and walls using tower crane or pump.",
+    "scope": "Applies to all Proven crews placing concrete on elevated decks, columns, and walls using tower crane or pump.",
     "roles": [
       "Supervisor",
       "Rigger",
@@ -194,7 +194,7 @@
     "version": "1.4",
     "lastUpdated": "2026-04-10",
     "owner": "Mike Tanaka \u00b7 Yard",
-    "summary": "Material handling, forklift, and laydown controls at the Helix yard.",
+    "summary": "Material handling, forklift, and laydown controls at the Proven yard.",
     "purpose": "Prevent vehicle/pedestrian conflicts and material-handling injuries in the yard.",
     "scope": "Yard crew, deliveries, and any field worker picking up or returning materials/equipment.",
     "roles": [
@@ -270,7 +270,7 @@
     "owner": "Alex Nguyen \u00b7 Crane Ops",
     "summary": "Daily setup, communication, and shut-down for tower crane work.",
     "purpose": "Maintain controlled lifts and clear communication between operator, rigger, and signal person.",
-    "scope": "Tower crane operators, riggers, and signal persons on Helix high-rise sites.",
+    "scope": "Tower crane operators, riggers, and signal persons on Proven high-rise sites.",
     "roles": [
       "Tower Crane Operator",
       "Rigger",
@@ -358,7 +358,7 @@
     "owner": "Priya Nair \u00b7 Safety",
     "summary": "Fall protection selection, tie-off, and rescue readiness above 3 m or open edges.",
     "purpose": "Eliminate unprotected falls and ensure rescue capability on elevated work.",
-    "scope": "Any Helix worker exposed to a fall hazard of 3 m or more, or working near an open edge.",
+    "scope": "Any Proven worker exposed to a fall hazard of 3 m or more, or working near an open edge.",
     "roles": [
       "All field roles",
       "Supervisor",
@@ -445,8 +445,8 @@
     "lastUpdated": "2026-07-01",
     "owner": "Marcus Chen \u00b7 Lead Rigger",
     "summary": "Step-by-step job procedure for preparing, signalling, and landing suspended loads.",
-    "purpose": "Standardize how Helix crews rig and signal lifts so every pick follows the same safe sequence.",
-    "scope": "Riggers and signal persons supporting tower or mobile crane lifts on Helix projects.",
+    "purpose": "Standardize how Proven crews rig and signal lifts so every pick follows the same safe sequence.",
+    "scope": "Riggers and signal persons supporting tower or mobile crane lifts on Proven projects.",
     "roles": [
       "Rigger",
       "Signal Person",
@@ -623,7 +623,7 @@
     "owner": "Chris Doyle \u00b7 Supervisor",
     "summary": "Ordered sequence for stripping Peri wall forms without collapse or falling materials.",
     "purpose": "Provide a job-specific sequence so stripping crews remove forms in a controlled order.",
-    "scope": "Crews stripping vertical Peri wall forms on Helix projects after pour release.",
+    "scope": "Crews stripping vertical Peri wall forms on Proven projects after pour release.",
     "roles": [
       "Formwork Carpenter",
       "Labourer",
@@ -711,7 +711,7 @@
     "owner": "Jamie Brooks \u00b7 Equipment",
     "summary": "Pre-use checks and operating steps for scissor lifts and boom lifts on site.",
     "purpose": "Ensure only trained operators use MEWPs and that ground conditions and fall controls are verified.",
-    "scope": "Workers operating Helix MEWPs for install, inspection, or access tasks.",
+    "scope": "Workers operating Proven MEWPs for install, inspection, or access tasks.",
     "roles": [
       "Trained MEWP operator",
       "Supervisor",
@@ -750,7 +750,7 @@
     "reviewQuestions": [
       {
         "id": "q1",
-        "prompt": "Who may operate a Helix MEWP?",
+        "prompt": "Who may operate a Proven MEWP?",
         "options": [
           "Anyone with a driver\u2019s licence",
           "Only trained MEWP operators",
@@ -905,7 +905,7 @@
         "id": "q2",
         "prompt": "When do you escalate to the Critical Lift Plan?",
         "options": [
-          "Never on Helix sites",
+          "Never on Proven sites",
           "When critical lift criteria are met",
           "Only for mobile cranes",
           "Only if the client asks"
@@ -991,8 +991,8 @@
     "lastUpdated": "2026-03-01",
     "owner": "Priya Nair \u00b7 Safety",
     "summary": "Site emergency contacts, muster points, and response roles.",
-    "purpose": "Provide a single emergency response reference for all Helix sites.",
-    "scope": "All Helix workers and visitors on active projects.",
+    "purpose": "Provide a single emergency response reference for all Proven sites.",
+    "scope": "All Proven workers and visitors on active projects.",
     "roles": [
       "All workers",
       "First aid attendants",
@@ -1055,7 +1055,7 @@
     "version": "2026.2",
     "lastUpdated": "2026-07-01",
     "owner": "Priya Nair \u00b7 Safety",
-    "summary": "Mandatory orientation topics before a worker starts on a Helix site.",
+    "summary": "Mandatory orientation topics before a worker starts on a Proven site.",
     "purpose": "Ensure every worker knows site rules, hazards, reporting, and emergency procedures.",
     "scope": "All new and transferred workers before first task.",
     "roles": [
@@ -1192,7 +1192,7 @@
     "owner": "Tony Rivera \u00b7 Superintendent",
     "summary": "OEM erection and stripping guidance for formwork systems in use.",
     "purpose": "Ensure formwork is assembled per manufacturer requirements.",
-    "scope": "Formwork crews using Peri or Doka systems on Helix projects.",
+    "scope": "Formwork crews using Peri or Doka systems on Proven projects.",
     "roles": [
       "Formwork Carpenter",
       "Supervisor"

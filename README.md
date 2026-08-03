@@ -1,4 +1,4 @@
-# Helix
+# Proven
 
 Mobile-first construction workforce & safety prototype for crane, rigging, concrete, and formwork crews.
 
@@ -19,6 +19,23 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## PWA
+
+Proven installs as a Progressive Web App (standalone) in production.
+
+- Web app manifest: `/manifest.webmanifest`
+- Service worker via Serwist (`@serwist/turbopack`) at `/serwist/sw.js`
+- Offline fallback: `/~offline`
+- Icons: `public/icons/`
+
+Service worker registration is disabled in `next dev`. Use a production build to test install/offline:
+
+```bash
+npm run build && npm start
+```
+
+Then open the site and use **Install app** (Chrome/Edge) or **Add to Home Screen** (iOS Safari).
 
 ## Features
 

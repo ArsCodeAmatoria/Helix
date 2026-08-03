@@ -11,6 +11,7 @@ import { EvaluationProvider } from "@/components/providers/evaluation-provider";
 import { ToolboxProvider } from "@/components/providers/toolbox-provider";
 import { SiteInspectionProvider } from "@/components/providers/site-inspection-provider";
 import { DigitalFormsProvider } from "@/components/providers/digital-forms-provider";
+import { PwaProvider } from "@/components/providers/pwa-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -25,16 +26,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Helix",
+  applicationName: "Proven",
+  title: {
+    default: "Proven",
+    template: "%s · Proven",
+  },
   description:
     "Construction workforce & safety platform for crane, rigging, concrete, and formwork crews.",
+  manifest: "/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180" }],
   },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Helix",
+    title: "Proven",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  other: {
+    "mobile-web-app-capable": "yes",
   },
 };
 
@@ -60,29 +77,31 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-background font-sans">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <FlhaProvider>
-            <TimeClockProvider>
-              <TeamProvider>
-                <InspectionLogProvider>
-                  <DocumentReviewProvider>
-                    <BcCraneBinderProvider>
-                      <EvaluationProvider>
-                        <ToolboxProvider>
-                          <SiteInspectionProvider>
-                            <DigitalFormsProvider>
-                              <AppShell>{children}</AppShell>
-                            </DigitalFormsProvider>
-                          </SiteInspectionProvider>
-                        </ToolboxProvider>
-                      </EvaluationProvider>
-                    </BcCraneBinderProvider>
-                  </DocumentReviewProvider>
-                </InspectionLogProvider>
-              </TeamProvider>
-            </TimeClockProvider>
-          </FlhaProvider>
-        </ThemeProvider>
+        <PwaProvider>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+            <FlhaProvider>
+              <TimeClockProvider>
+                <TeamProvider>
+                  <InspectionLogProvider>
+                    <DocumentReviewProvider>
+                      <BcCraneBinderProvider>
+                        <EvaluationProvider>
+                          <ToolboxProvider>
+                            <SiteInspectionProvider>
+                              <DigitalFormsProvider>
+                                <AppShell>{children}</AppShell>
+                              </DigitalFormsProvider>
+                            </SiteInspectionProvider>
+                          </ToolboxProvider>
+                        </EvaluationProvider>
+                      </BcCraneBinderProvider>
+                    </DocumentReviewProvider>
+                  </InspectionLogProvider>
+                </TeamProvider>
+              </TimeClockProvider>
+            </FlhaProvider>
+          </ThemeProvider>
+        </PwaProvider>
       </body>
     </html>
   );

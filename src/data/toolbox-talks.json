@@ -1,5 +1,5 @@
 {
-  "disclaimer": "Helix toolbox talks summarize regulatory expectations for crew briefings. Always follow the posted site procedures, manufacturer instructions, and the current WorkSafeBC OHSR, BC Crane Safety guidance, and Technical Safety BC requirements.",
+  "disclaimer": "Proven toolbox talks summarize regulatory expectations for crew briefings. Always follow the posted site procedures, manufacturer instructions, and the current WorkSafeBC OHSR, BC Crane Safety guidance, and Technical Safety BC requirements.",
   "authorities": [
     {
       "id": "worksafebc",
@@ -167,7 +167,7 @@
         "Complete the daily / shift crane inspection before the first critical lift — defects are red-tagged and reported.",
         "Walk rigging gear: slings, shackles, hooks — remove damaged gear from service immediately.",
         "Operator log must record tests, maintenance, misadventures, and repairs while the crane is on this site.",
-        "Inspection docs live in Helix inspection logs and the BC Crane binder post-assembly section."
+        "Inspection docs live in Proven inspection logs and the BC Crane binder post-assembly section."
       ],
       "discussionPrompts": [
         "Any open defects on TC-1 or MC-4 from yesterday?",
@@ -200,7 +200,7 @@
         "Verify radius, configuration, and reeving against the posted chart before accepting a pick weight.",
         "Unknown or estimated loads are not acceptable — get a verified weight or engineered calculation.",
         "Multi-crane or overlapping lifts need a written plan and clear primary/secondary roles.",
-        "Manufacturer charts in Helix are reference only — the serial-specific chart on the crane governs."
+        "Manufacturer charts in Proven are reference only — the serial-specific chart on the crane governs."
       ],
       "discussionPrompts": [
         "What is the heaviest planned pick today and at what radius?",
@@ -357,7 +357,7 @@
         "Check WLL tags, angles, and hitch type — capacity changes with configuration.",
         "Annual / periodic inspections for chain slings and BTH devices must be current and filed.",
         "Cut, crushed, heat-damaged, or unmarked gear is scrap — not ‘one more lift’.",
-        "Keep mill certificates and inspection records available with the site binder / Helix logs."
+        "Keep mill certificates and inspection records available with the site binder / Proven logs."
       ],
       "discussionPrompts": [
         "Any gear due for periodic inspection this week?",
