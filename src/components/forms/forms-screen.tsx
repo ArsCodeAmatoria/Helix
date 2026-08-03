@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
   BookOpen,
+  Calculator,
   CheckCircle2,
   ChevronRight,
   ClipboardCheck,
@@ -32,6 +33,12 @@ const assetModules = [
     label: "Time Clock",
     icon: Clock,
     color: "bg-[#12b76a]",
+  },
+  {
+    href: "/calculator",
+    label: "Calculator",
+    icon: Calculator,
+    color: "bg-[#6172f3]",
   },
   {
     href: "/forms/flha",
@@ -104,7 +111,6 @@ const assetModules = [
     label: "Safety Hub",
     icon: ShieldAlert,
     color: "bg-[#12b76a]",
-    badge: 4,
   },
   {
     href: "/team",

@@ -189,11 +189,26 @@ export function ProfileScreen() {
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 p-5 text-white shadow-lg">
           <div className="pointer-events-none absolute -right-8 -top-10 size-40 rounded-full bg-sky-500/20 blur-3xl" />
           <div className="relative flex items-start gap-3">
-            <Avatar className="size-16 border-2 border-white/20">
-              <AvatarFallback className="bg-sky-500 text-xl font-bold text-white">
-                {initials(worker.name)}
-              </AvatarFallback>
-            </Avatar>
+            <Link
+              href="/notifications"
+              className="relative shrink-0"
+              aria-label={
+                unread > 0
+                  ? `Profile notifications, ${unread} unread`
+                  : "Notifications"
+              }
+            >
+              <Avatar className="size-16 border-2 border-white/20">
+                <AvatarFallback className="bg-sky-500 text-xl font-bold text-white">
+                  {initials(worker.name)}
+                </AvatarFallback>
+              </Avatar>
+              <UnreadCountBadge
+                count={unread}
+                ringClassName="ring-slate-900"
+                className="-top-1 -right-1 h-5 min-w-5 text-[10px]"
+              />
+            </Link>
             <div className="min-w-0 flex-1">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-300">
                 {worker.defaultRole}

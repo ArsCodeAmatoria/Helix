@@ -10,6 +10,8 @@ import {
   Home,
   User,
 } from "lucide-react";
+import { useNotificationsOptional } from "@/components/providers/notifications-provider";
+import { UnreadCountBadge } from "@/components/notifications/unread-count-badge";
 import { cn } from "@/lib/utils";
 
 const items = [
@@ -17,11 +19,13 @@ const items = [
   { href: "/timeclock", label: "Clock", icon: Clock },
   { href: "/forms", label: "Forms", icon: Grid2x2 },
   { href: "/statistics", label: "COR", icon: ClipboardList },
-  { href: "/profile", label: "Me", icon: User },
+  { href: "/profile", label: "Me", icon: User, badge: true },
 ];
 
 export function BottomNav() {
   const pathname = usePathname();
+  const notifications = useNotificationsOptional();
+  const unread = notifications?.unreadCount ?? 0;
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-border/70 bg-card/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_24px_rgba(16,24,40,0.06)] backdrop-blur-md">
@@ -42,6 +46,11 @@ export function BottomNav() {
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
                 )}
+                aria-label={
+                  item.badge && unread > 0
+                    ? `${item.label}, ${unread} unread`
+                    : item.label
+                }
               >
                 {active && (
                   <motion.span
@@ -50,7 +59,15 @@ export function BottomNav() {
                     transition={{ type: "spring", stiffness: 420, damping: 32 }}
                   />
                 )}
-                <Icon className={cn("size-[22px]", active && "stroke-[2.5]")} />
+                <span className="relative">
+                  <Icon className={cn("size-[22px]", active && "stroke-[2.5]")} />
+                  {item.badge ? (
+                    <UnreadCountBadge
+                      count={unread}
+                      className="-top-1.5 -right-2.5 h-4 min-w-4 text-[9px]"
+                    />
+                  ) : null}
+                </span>
                 <span>{item.label}</span>
               </Link>
             </li>

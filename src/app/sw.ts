@@ -31,3 +31,29 @@ const serwist = new Serwist({
 });
 
 serwist.addEventListeners();
+
+/** Keep home-screen icon badge in sync when the page posts unread counts. */
+self.addEventListener("message", (event: ExtendableMessageEvent) => {
+  const data = event.data as { type?: string; count?: number } | undefined;
+  if (!data || data.type !== "SET_APP_BADGE") return;
+
+  const count = typeof data.count === "number" ? data.count : 0;
+  const reg = self.registration as ServiceWorkerRegistration & {
+    setAppBadge?: (contents?: number) => Promise<void>;
+    clearAppBadge?: () => Promise<void>;
+  };
+
+  event.waitUntil(
+    (async () => {
+      try {
+        if (count > 0 && typeof reg.setAppBadge === "function") {
+          await reg.setAppBadge(count);
+        } else if (typeof reg.clearAppBadge === "function") {
+          await reg.clearAppBadge();
+        }
+      } catch {
+        /* Badging unsupported in this browser */
+      }
+    })()
+  );
+});

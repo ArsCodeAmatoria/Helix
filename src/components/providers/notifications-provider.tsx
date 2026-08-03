@@ -76,7 +76,7 @@ export function NotificationsProvider({
     void syncAppBadge(unreadCount);
   }, [hydrated, readIds, unreadCount]);
 
-  // Re-apply badge when returning to the installed app (iOS/Android).
+  // Re-apply badge when returning to the installed app / SW takes control.
   useEffect(() => {
     if (!hydrated) return;
     const onVisible = () => {
@@ -84,11 +84,24 @@ export function NotificationsProvider({
         void syncAppBadge(unreadCount);
       }
     };
+    const onController = () => {
+      void syncAppBadge(unreadCount);
+    };
     document.addEventListener("visibilitychange", onVisible);
     window.addEventListener("focus", onVisible);
+    navigator.serviceWorker?.addEventListener?.("controllerchange", onController);
+    // Extra passes help first install before Badging API is ready.
+    const t1 = window.setTimeout(() => void syncAppBadge(unreadCount), 800);
+    const t2 = window.setTimeout(() => void syncAppBadge(unreadCount), 2500);
     return () => {
       document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("focus", onVisible);
+      navigator.serviceWorker?.removeEventListener?.(
+        "controllerchange",
+        onController
+      );
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
     };
   }, [hydrated, unreadCount]);
 

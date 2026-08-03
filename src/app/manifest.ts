@@ -6,6 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "Proven",
     description:
       "Construction workforce & safety platform for crane, rigging, concrete, and formwork crews.",
+    id: "/",
     start_url: "/",
     scope: "/",
     display: "standalone",

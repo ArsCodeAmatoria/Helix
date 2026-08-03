@@ -7,6 +7,7 @@ import {
   ClipboardCheck,
   Clock,
   CloudSun,
+  Calculator,
   FileText,
   FolderKanban,
   HardHat,
@@ -66,6 +67,12 @@ const modules = [
     color: "bg-[#2f6bff]",
   },
   {
+    href: "/calculator",
+    label: "Calculator",
+    icon: Calculator,
+    color: "bg-[#6172f3]",
+  },
+  {
     href: "/statistics",
     label: "COR Stats",
     icon: ShieldAlert,
@@ -90,7 +97,6 @@ const modules = [
     color: "bg-[#06aed4]",
   },
 ];
-
 export function HomeScreen() {
   const projects = getTodaysProjects();
   const company = db.company;
