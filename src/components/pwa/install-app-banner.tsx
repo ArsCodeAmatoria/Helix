@@ -2,11 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { Download, X } from "lucide-react";
-import {
-  InstallGuideDialog,
-} from "@/components/pwa/install-app-button";
+import { InstallGuideDialog } from "@/components/pwa/install-app-button";
 import { useInstallAppOptional } from "@/components/pwa/install-app-provider";
-import { ProvenLogo } from "@/components/brand/proven-logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -76,7 +73,14 @@ export function InstallAppBanner({ className }: { className?: string }) {
         </button>
 
         <div className="relative flex items-start gap-3 pr-8">
-          <ProvenLogo iconClassName="size-14 rounded-2xl bg-white/20 text-white shadow-sm" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/icons/icon-192.png"
+            alt=""
+            width={56}
+            height={56}
+            className="size-14 rounded-2xl bg-white shadow-md ring-2 ring-white/30"
+          />
           <div className="min-w-0 flex-1 pt-0.5">
             <p className="text-[11px] font-bold tracking-wide text-sky-100 uppercase">
               Install for the field

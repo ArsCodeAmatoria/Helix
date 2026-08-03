@@ -13,6 +13,7 @@ import { SiteInspectionProvider } from "@/components/providers/site-inspection-p
 import { DigitalFormsProvider } from "@/components/providers/digital-forms-provider";
 import { PwaProvider } from "@/components/providers/pwa-provider";
 import { InstallAppProvider } from "@/components/pwa/install-app-provider";
+import { PwaIconPreload } from "@/components/pwa/pwa-icon-preload";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -77,6 +78,9 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <PwaIconPreload />
+      </head>
       <body className="min-h-full bg-background font-sans">
         <PwaProvider>
           <InstallAppProvider>
