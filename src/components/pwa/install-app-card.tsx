@@ -73,6 +73,7 @@ export function InstallAppCard() {
         open={guide != null}
         onOpenChange={(open) => !open && setGuide(null)}
         mode={guide ?? "manual"}
+        browserKind={installCtx.browserKind}
       />
     </>
   );

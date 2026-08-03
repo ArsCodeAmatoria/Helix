@@ -110,6 +110,7 @@ export function InstallAppBanner({ className }: { className?: string }) {
         open={guide != null}
         onOpenChange={(open) => !open && setGuide(null)}
         mode={guide ?? "manual"}
+        browserKind={installCtx?.browserKind}
       />
     </>
   );

@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Download, MoreVertical, Share } from "lucide-react";
-import { useInstallAppOptional } from "@/components/pwa/install-app-provider";
+import { Download, Share } from "lucide-react";
+import {
+  markInstallDismissed,
+  useInstallAppOptional,
+} from "@/components/pwa/install-app-provider";
+import { installStepsForBrowser, type BrowserKind } from "@/lib/browser";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -13,15 +17,22 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
-function InstallGuideDialog({
+export function InstallGuideDialog({
   open,
   onOpenChange,
   mode,
+  browserKind = "chrome",
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   mode: "ios" | "manual";
+  browserKind?: BrowserKind;
 }) {
+  const steps =
+    mode === "ios"
+      ? installStepsForBrowser("safari")
+      : installStepsForBrowser(browserKind);
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-sm rounded-3xl">
@@ -30,69 +41,29 @@ function InstallGuideDialog({
           <DialogDescription>
             {mode === "ios"
               ? "Add Proven to your Home Screen for full-screen access and offline pages."
-              : "Install Proven from your browser menu — it only takes a second."}
+              : "Follow these steps in your browser to install the Proven icon."}
           </DialogDescription>
         </DialogHeader>
-        {mode === "ios" ? (
-          <ol className="space-y-3 text-sm text-foreground">
-            <li className="flex gap-3">
+        <ol className="space-y-3 text-sm text-foreground">
+          {steps.map((step, i) => (
+            <li key={step} className="flex gap-3">
               <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
-                1
+                {i + 1}
               </span>
               <span>
-                Tap{" "}
-                <Share className="mx-0.5 inline size-4 align-[-2px] text-sky-600" />{" "}
-                <strong>Share</strong> in Safari.
+                {mode === "ios" && i === 0 ? (
+                  <>
+                    Tap{" "}
+                    <Share className="mx-0.5 inline size-4 align-[-2px] text-sky-600" />{" "}
+                    <strong>Share</strong> in Safari, then Add to Home Screen.
+                  </>
+                ) : (
+                  step
+                )}
               </span>
             </li>
-            <li className="flex gap-3">
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
-                2
-              </span>
-              <span>
-                Scroll and choose <strong>Add to Home Screen</strong>.
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
-                3
-              </span>
-              <span>
-                Tap <strong>Add</strong> — Proven opens like a native app.
-              </span>
-            </li>
-          </ol>
-        ) : (
-          <ol className="space-y-3 text-sm text-foreground">
-            <li className="flex gap-3">
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
-                1
-              </span>
-              <span>
-                Tap the browser menu{" "}
-                <MoreVertical className="mx-0.5 inline size-4 align-[-2px]" />{" "}
-                (Chrome / Edge).
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
-                2
-              </span>
-              <span>
-                Choose <strong>Install app</strong> or{" "}
-                <strong>Add to Home screen</strong>.
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
-                3
-              </span>
-              <span>
-                Confirm — Proven installs with the fingerprint icon.
-              </span>
-            </li>
-          </ol>
-        )}
+          ))}
+        </ol>
         <Button
           className="mt-2 h-12 w-full rounded-2xl text-base font-bold"
           onClick={() => onOpenChange(false)}
@@ -124,6 +95,7 @@ export function InstallAppButton({
     setBusy(true);
     try {
       const outcome = await installCtx.install();
+      if (outcome === "accepted") markInstallDismissed();
       if (outcome === "ios-guide") setGuide("ios");
       if (outcome === "manual-guide") setGuide("manual");
     } finally {
@@ -167,9 +139,8 @@ export function InstallAppButton({
         open={guide != null}
         onOpenChange={(open) => !open && setGuide(null)}
         mode={guide ?? "manual"}
+        browserKind={installCtx.browserKind}
       />
     </>
   );
 }
-
-export { InstallGuideDialog };

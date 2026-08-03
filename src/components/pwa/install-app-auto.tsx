@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Download, X } from "lucide-react";
 import { InstallGuideDialog } from "@/components/pwa/install-app-button";
-import { useInstallAppOptional } from "@/components/pwa/install-app-provider";
+import {
+  useInstallAppOptional,
+} from "@/components/pwa/install-app-provider";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -15,23 +17,25 @@ import {
 } from "@/components/ui/dialog";
 
 const AUTO_KEY = "proven-install-auto-shown";
-const DISMISS_KEY = "proven-install-auto-dismissed";
 
 /**
- * Auto-opens an install sheet on first visit (and when the browser
- * becomes ready to install), showing the Proven home-screen icon.
+ * Detects Chrome/Edge readiness and auto-opens install.
+ * When `beforeinstallprompt` is available, the next tap installs natively.
  */
 export function InstallAppAutoPrompt() {
   const installCtx = useInstallAppOptional();
   const [open, setOpen] = useState(false);
   const [guide, setGuide] = useState<"ios" | "manual" | null>(null);
   const [busy, setBusy] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    if (!installCtx?.showInstallUi) return;
-
+    if (!installCtx?.showInstallUi || dismissed) return;
     try {
-      if (localStorage.getItem(DISMISS_KEY) === "1") return;
+      if (localStorage.getItem("proven-install-auto-dismissed") === "1") {
+        setDismissed(true);
+        return;
+      }
     } catch {
       /* ignore */
     }
@@ -45,13 +49,15 @@ export function InstallAppAutoPrompt() {
       }
     };
 
-    // Open as soon as Chrome/Edge can install — icon + prompt ready.
+    // Chrome/Edge: open the moment install is available (after SW).
     if (installCtx.canPrompt) {
       openSheet();
       return;
     }
 
-    // First visit: show after a short beat so the icon has time to load.
+    // Still waiting on SW / BIP — show sheet once SW is ready so users tap to install.
+    if (!installCtx.swReady) return;
+
     let shown = false;
     try {
       shown = sessionStorage.getItem(AUTO_KEY) === "1";
@@ -60,11 +66,19 @@ export function InstallAppAutoPrompt() {
     }
     if (shown) return;
 
-    const timer = window.setTimeout(openSheet, 900);
+    const timer = window.setTimeout(openSheet, 600);
     return () => window.clearTimeout(timer);
-  }, [installCtx?.showInstallUi, installCtx?.canPrompt]);
+  }, [
+    installCtx?.showInstallUi,
+    installCtx?.canPrompt,
+    installCtx?.swReady,
+    dismissed,
+  ]);
 
-  if (!installCtx?.showInstallUi) return null;
+  if (!installCtx?.showInstallUi || dismissed) return null;
+
+  const browser = installCtx.browserLabel;
+  const chromiumReady = installCtx.canPrompt;
 
   async function onInstall() {
     if (!installCtx || busy) return;
@@ -73,11 +87,7 @@ export function InstallAppAutoPrompt() {
       const outcome = await installCtx.install();
       if (outcome === "accepted") {
         setOpen(false);
-        try {
-          localStorage.setItem(DISMISS_KEY, "1");
-        } catch {
-          /* ignore */
-        }
+        setDismissed(true);
       } else if (outcome === "ios-guide") {
         setOpen(false);
         setGuide("ios");
@@ -90,15 +100,28 @@ export function InstallAppAutoPrompt() {
     }
   }
 
-  function onDismiss() {
+  function onDismiss(event?: React.SyntheticEvent) {
+    event?.stopPropagation();
+    event?.nativeEvent?.stopImmediatePropagation?.();
+    installCtx?.dismissInstall();
+    setDismissed(true);
     setOpen(false);
     try {
-      localStorage.setItem(DISMISS_KEY, "1");
       sessionStorage.setItem(AUTO_KEY, "1");
     } catch {
       /* ignore */
     }
   }
+
+  const title = chromiumReady
+    ? `Install with ${browser}`
+    : `Add Proven · ${browser}`;
+
+  const description = chromiumReady
+    ? `${browser} is ready. Tap below (or anywhere) to install the Proven icon on your device.`
+    : installCtx.isIos
+      ? "Use Safari Share → Add to Home Screen to install the Proven icon."
+      : `Detected ${browser}. We'll open the install prompt as soon as it's ready — tap Download to continue.`;
 
   return (
     <>
@@ -109,10 +132,20 @@ export function InstallAppAutoPrompt() {
           else setOpen(true);
         }}
       >
-        <DialogContent className="max-w-sm gap-0 overflow-hidden rounded-[1.75rem] border-0 p-0 shadow-2xl">
+        <DialogContent
+          className="max-w-sm gap-0 overflow-hidden rounded-[1.75rem] border-0 p-0 shadow-2xl"
+          onPointerDownCapture={(e) => {
+            // Let "Not now" / close skip the global auto-install gesture.
+            const el = e.target as HTMLElement | null;
+            if (el?.closest("[data-install-skip]")) {
+              e.stopPropagation();
+            }
+          }}
+        >
           <div className="relative bg-gradient-to-br from-[#1e3a8a] via-[#2f6bff] to-[#0ea5e9] px-6 pt-6 pb-8 text-white">
             <button
               type="button"
+              data-install-skip
               onClick={onDismiss}
               className="absolute top-3 right-3 flex size-9 items-center justify-center rounded-full bg-black/20"
               aria-label="Close"
@@ -130,13 +163,16 @@ export function InstallAppAutoPrompt() {
                   className="size-24 rounded-[1.1rem]"
                 />
               </div>
-              <DialogHeader className="mt-5 space-y-1.5 text-center sm:text-center">
+              <p className="mt-4 rounded-full bg-white/20 px-3 py-1 text-[11px] font-bold tracking-wide text-sky-50 uppercase">
+                {browser}
+                {chromiumReady ? " · ready to install" : installCtx.swReady ? " · preparing" : " · loading"}
+              </p>
+              <DialogHeader className="mt-3 space-y-1.5 text-center sm:text-center">
                 <DialogTitle className="text-2xl font-bold text-white">
-                  Add Proven to your phone
+                  {title}
                 </DialogTitle>
                 <DialogDescription className="text-sm text-sky-50/95">
-                  The fingerprint icon installs on your home screen so crews can
-                  open forms offline, full-screen.
+                  {description}
                 </DialogDescription>
               </DialogHeader>
             </div>
@@ -151,13 +187,14 @@ export function InstallAppAutoPrompt() {
             >
               <Download className="size-5" />
               {busy
-                ? "Loading…"
-                : installCtx.canPrompt
-                  ? "Install with icon"
+                ? "Installing…"
+                : chromiumReady
+                  ? "Install Proven now"
                   : "Download app now"}
             </Button>
             <button
               type="button"
+              data-install-skip
               onClick={onDismiss}
               className="w-full py-2 text-sm font-semibold text-muted-foreground"
             >
@@ -171,6 +208,7 @@ export function InstallAppAutoPrompt() {
         open={guide != null}
         onOpenChange={(next) => !next && setGuide(null)}
         mode={guide ?? "manual"}
+        browserKind={installCtx.browserKind}
       />
     </>
   );
