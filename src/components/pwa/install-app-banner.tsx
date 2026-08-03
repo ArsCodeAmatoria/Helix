@@ -13,7 +13,7 @@ const DISMISS_KEY = "proven-install-banner-dismissed";
 export function InstallAppBanner({ className }: { className?: string }) {
   const installCtx = useInstallAppOptional();
   const [dismissed, setDismissed] = useState(true);
-  const [guide, setGuide] = useState<"ios" | "manual" | null>(null);
+  const [guideOpen, setGuideOpen] = useState(false);
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
@@ -31,8 +31,7 @@ export function InstallAppBanner({ className }: { className?: string }) {
     setBusy(true);
     try {
       const outcome = await installCtx.install();
-      if (outcome === "ios-guide") setGuide("ios");
-      if (outcome === "manual-guide") setGuide("manual");
+      if (outcome === "guide" || outcome === "dismissed") setGuideOpen(true);
       if (outcome === "accepted") {
         try {
           localStorage.setItem(DISMISS_KEY, "1");
@@ -102,15 +101,16 @@ export function InstallAppBanner({ className }: { className?: string }) {
           className="relative mt-4 h-14 w-full rounded-2xl bg-white text-base font-bold text-[#1e3a8a] shadow-md hover:bg-sky-50"
         >
           <Download className="size-5" />
-          {busy ? "Opening…" : "Download app now"}
+          {busy
+            ? "Opening…"
+            : `Install with ${installCtx.profile.shortLabel}`}
         </Button>
       </div>
 
       <InstallGuideDialog
-        open={guide != null}
-        onOpenChange={(open) => !open && setGuide(null)}
-        mode={guide ?? "manual"}
-        browserKind={installCtx?.browserKind}
+        open={guideOpen}
+        onOpenChange={setGuideOpen}
+        profile={installCtx.profile}
       />
     </>
   );

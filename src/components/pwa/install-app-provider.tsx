@@ -12,6 +12,8 @@ import React, {
 import {
   detectBrowser,
   type BrowserKind,
+  type DevicePlatform,
+  type InstallProfile,
 } from "@/lib/browser";
 
 interface BeforeInstallPromptEvent extends Event {
@@ -20,26 +22,20 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
 }
 
-export type InstallOutcome =
-  | "accepted"
-  | "dismissed"
-  | "unavailable"
-  | "ios-guide"
-  | "manual-guide";
+export type InstallOutcome = "accepted" | "dismissed" | "unavailable" | "guide";
 
 interface InstallAppContextValue {
   canPrompt: boolean;
   isInstalled: boolean;
-  isIos: boolean;
   showInstallUi: boolean;
-  /** Detected browser for install copy / routing. */
+  profile: InstallProfile;
   browserKind: BrowserKind;
   browserLabel: string;
+  platform: DevicePlatform;
   isChromium: boolean;
-  /** True after SW registration attempt finishes. */
+  isIos: boolean;
   swReady: boolean;
   install: () => Promise<InstallOutcome>;
-  /** Stop auto-install gestures (user chose Not now). */
   dismissInstall: () => void;
 }
 
@@ -56,30 +52,36 @@ function isStandaloneDisplay(): boolean {
   return mq || iosStandalone;
 }
 
+const fallbackProfile: InstallProfile = {
+  kind: "other",
+  platform: "desktop",
+  label: "Browser",
+  shortLabel: "Browser",
+  isChromium: false,
+  supportsNativeInstall: false,
+  steps: [],
+  summary: "",
+};
+
 export function InstallAppProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const deferredRef = useRef<BeforeInstallPromptEvent | null>(null);
+  const promptingRef = useRef(false);
   const [deferred, setDeferred] = useState<BeforeInstallPromptEvent | null>(
     null
   );
   const [isInstalled, setIsInstalled] = useState(false);
   const [hydrated, setHydrated] = useState(false);
   const [swReady, setSwReady] = useState(false);
-  const [browserKind, setBrowserKind] = useState<BrowserKind>("other");
-  const [browserLabel, setBrowserLabel] = useState("Browser");
-  const [isChromium, setIsChromium] = useState(false);
-  const [isIos, setIsIos] = useState(false);
+  const [profile, setProfile] = useState<InstallProfile>(fallbackProfile);
   const [userDismissed, setUserDismissed] = useState(false);
 
   useEffect(() => {
-    const browser = detectBrowser();
-    setBrowserKind(browser.kind);
-    setBrowserLabel(browser.label);
-    setIsChromium(browser.isChromium);
-    setIsIos(browser.isIos);
+    const detected = detectBrowser();
+    setProfile(detected);
     setIsInstalled(isStandaloneDisplay());
     try {
       setUserDismissed(localStorage.getItem(DISMISS_KEY) === "1");
@@ -111,7 +113,6 @@ export function InstallAppProvider({
     const mq = window.matchMedia("(display-mode: standalone)");
     mq.addEventListener?.("change", onDisplayChange);
 
-    // Wait for SW — required for Chrome installability.
     let cancelled = false;
     (async () => {
       if (!("serviceWorker" in navigator)) {
@@ -123,7 +124,6 @@ export function InstallAppProvider({
       } catch {
         /* ignore */
       }
-      // Give Serwist a moment to finish activate + claim.
       await new Promise((r) => setTimeout(r, 400));
       if (!cancelled) setSwReady(true);
     })();
@@ -136,33 +136,39 @@ export function InstallAppProvider({
     };
   }, []);
 
+  const runNativePrompt = useCallback(async (): Promise<InstallOutcome> => {
+    const bip = deferredRef.current;
+    if (!bip || promptingRef.current) return "unavailable";
+    promptingRef.current = true;
+    try {
+      await bip.prompt();
+      const choice = await bip.userChoice;
+      deferredRef.current = null;
+      setDeferred(null);
+      if (choice.outcome === "accepted") {
+        setIsInstalled(true);
+        try {
+          localStorage.setItem(DISMISS_KEY, "1");
+        } catch {
+          /* ignore */
+        }
+        return "accepted";
+      }
+      return "dismissed";
+    } catch {
+      return "guide";
+    } finally {
+      promptingRef.current = false;
+    }
+  }, []);
+
   const install = useCallback(async (): Promise<InstallOutcome> => {
     if (isInstalled) return "unavailable";
-    const bip = deferredRef.current ?? deferred;
-    if (bip) {
-      try {
-        await bip.prompt();
-        const choice = await bip.userChoice;
-        deferredRef.current = null;
-        setDeferred(null);
-        if (choice.outcome === "accepted") {
-          setIsInstalled(true);
-          try {
-            localStorage.setItem(DISMISS_KEY, "1");
-          } catch {
-            /* ignore */
-          }
-          return "accepted";
-        }
-        return "dismissed";
-      } catch {
-        if (isIos) return "ios-guide";
-        return "manual-guide";
-      }
+    if (deferredRef.current ?? deferred) {
+      return runNativePrompt();
     }
-    if (isIos || browserKind === "safari") return "ios-guide";
-    return "manual-guide";
-  }, [deferred, isInstalled, isIos, browserKind]);
+    return "guide";
+  }, [deferred, isInstalled, runNativePrompt]);
 
   const dismissInstall = useCallback(() => {
     setUserDismissed(true);
@@ -173,48 +179,27 @@ export function InstallAppProvider({
     }
   }, []);
 
-  // When Chrome is ready, auto-install on the next tap/key (gesture required).
+  // Auto native install on next tap once Chrome/Edge Android is ready.
   useEffect(() => {
     if (!deferred || isInstalled || userDismissed) return;
+    if (!profile.supportsNativeInstall) return;
 
-    let used = false;
     const onGesture = (event: Event) => {
-      if (used) return;
       const target = event.target as HTMLElement | null;
       if (target?.closest?.("[data-install-skip]")) return;
-
-      const bip = deferredRef.current;
-      if (!bip) return;
-      used = true;
-      void (async () => {
-        try {
-          await bip.prompt();
-          const choice = await bip.userChoice;
-          deferredRef.current = null;
-          setDeferred(null);
-          if (choice.outcome === "accepted") {
-            setIsInstalled(true);
-            try {
-              localStorage.setItem(DISMISS_KEY, "1");
-            } catch {
-              /* ignore */
-            }
-          } else {
-            used = false;
-          }
-        } catch {
-          used = false;
-        }
-      })();
+      if (!deferredRef.current || promptingRef.current) return;
+      void runNativePrompt();
     };
 
     window.addEventListener("pointerdown", onGesture, true);
-    window.addEventListener("keydown", onGesture, true);
-    return () => {
-      window.removeEventListener("pointerdown", onGesture, true);
-      window.removeEventListener("keydown", onGesture, true);
-    };
-  }, [deferred, isInstalled, userDismissed]);
+    return () => window.removeEventListener("pointerdown", onGesture, true);
+  }, [
+    deferred,
+    isInstalled,
+    userDismissed,
+    profile.supportsNativeInstall,
+    runNativePrompt,
+  ]);
 
   const canPrompt = Boolean(deferred) && !isInstalled;
   const showInstallUi = hydrated && !isInstalled;
@@ -223,11 +208,13 @@ export function InstallAppProvider({
     () => ({
       canPrompt,
       isInstalled,
-      isIos,
       showInstallUi,
-      browserKind,
-      browserLabel,
-      isChromium,
+      profile,
+      browserKind: profile.kind,
+      browserLabel: profile.label,
+      platform: profile.platform,
+      isChromium: profile.isChromium,
+      isIos: profile.platform === "ios",
       swReady,
       install,
       dismissInstall,
@@ -235,11 +222,8 @@ export function InstallAppProvider({
     [
       canPrompt,
       isInstalled,
-      isIos,
       showInstallUi,
-      browserKind,
-      browserLabel,
-      isChromium,
+      profile,
       swReady,
       install,
       dismissInstall,

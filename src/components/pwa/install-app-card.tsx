@@ -2,16 +2,14 @@
 
 import { useState } from "react";
 import { Download, Smartphone } from "lucide-react";
-import {
-  InstallGuideDialog,
-} from "@/components/pwa/install-app-button";
+import { InstallGuideDialog } from "@/components/pwa/install-app-button";
 import { useInstallAppOptional } from "@/components/pwa/install-app-provider";
 import { Button } from "@/components/ui/button";
 
 /** Profile / settings card to install the PWA. */
 export function InstallAppCard() {
   const installCtx = useInstallAppOptional();
-  const [guide, setGuide] = useState<"ios" | "manual" | null>(null);
+  const [guideOpen, setGuideOpen] = useState(false);
   const [busy, setBusy] = useState(false);
 
   if (!installCtx) return null;
@@ -37,8 +35,7 @@ export function InstallAppCard() {
     setBusy(true);
     try {
       const outcome = await installCtx.install();
-      if (outcome === "ios-guide") setGuide("ios");
-      if (outcome === "manual-guide") setGuide("manual");
+      if (outcome === "guide" || outcome === "dismissed") setGuideOpen(true);
     } finally {
       setBusy(false);
     }
@@ -65,15 +62,16 @@ export function InstallAppCard() {
           className="mt-4 h-12 w-full rounded-2xl bg-white font-bold text-[#1e3a8a] hover:bg-sky-50"
         >
           <Download className="size-4" />
-          {busy ? "Opening…" : "Download app now"}
+          {busy
+            ? "Opening…"
+            : `Install with ${installCtx.profile.shortLabel}`}
         </Button>
       </div>
 
       <InstallGuideDialog
-        open={guide != null}
-        onOpenChange={(open) => !open && setGuide(null)}
-        mode={guide ?? "manual"}
-        browserKind={installCtx.browserKind}
+        open={guideOpen}
+        onOpenChange={setGuideOpen}
+        profile={installCtx.profile}
       />
     </>
   );

@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Download, Share } from "lucide-react";
 import {
   markInstallDismissed,
   useInstallAppOptional,
 } from "@/components/pwa/install-app-provider";
-import { installStepsForBrowser, type BrowserKind } from "@/lib/browser";
+import type { InstallProfile } from "@/lib/browser";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -15,52 +14,43 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function InstallGuideDialog({
   open,
   onOpenChange,
-  mode,
-  browserKind = "chrome",
+  profile,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  mode: "ios" | "manual";
-  browserKind?: BrowserKind;
+  profile: InstallProfile;
 }) {
-  const steps =
-    mode === "ios"
-      ? installStepsForBrowser("safari")
-      : installStepsForBrowser(browserKind);
+  const steps = profile.steps.length
+    ? profile.steps
+    : [
+        "Open your browser menu",
+        "Choose Install app or Add to Home Screen",
+        "Confirm to add the Proven icon",
+      ];
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-sm rounded-3xl">
         <DialogHeader>
-          <DialogTitle>Download Proven app</DialogTitle>
-          <DialogDescription>
-            {mode === "ios"
-              ? "Add Proven to your Home Screen for full-screen access and offline pages."
-              : "Follow these steps in your browser to install the Proven icon."}
-          </DialogDescription>
+          <DialogTitle>Install with {profile.shortLabel}</DialogTitle>
+          <DialogDescription>{profile.summary}</DialogDescription>
         </DialogHeader>
+        <p className="rounded-xl bg-muted/60 px-3 py-2 text-xs font-semibold text-muted-foreground">
+          Detected: {profile.label}
+        </p>
         <ol className="space-y-3 text-sm text-foreground">
           {steps.map((step, i) => (
             <li key={step} className="flex gap-3">
               <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary">
                 {i + 1}
               </span>
-              <span>
-                {mode === "ios" && i === 0 ? (
-                  <>
-                    Tap{" "}
-                    <Share className="mx-0.5 inline size-4 align-[-2px] text-sky-600" />{" "}
-                    <strong>Share</strong> in Safari, then Add to Home Screen.
-                  </>
-                ) : (
-                  step
-                )}
-              </span>
+              <span>{step}</span>
             </li>
           ))}
         </ol>
@@ -85,7 +75,7 @@ export function InstallAppButton({
   variant = "icon",
 }: InstallAppButtonProps) {
   const installCtx = useInstallAppOptional();
-  const [guide, setGuide] = useState<"ios" | "manual" | null>(null);
+  const [guideOpen, setGuideOpen] = useState(false);
   const [busy, setBusy] = useState(false);
 
   if (!installCtx?.showInstallUi) return null;
@@ -96,8 +86,7 @@ export function InstallAppButton({
     try {
       const outcome = await installCtx.install();
       if (outcome === "accepted") markInstallDismissed();
-      if (outcome === "ios-guide") setGuide("ios");
-      if (outcome === "manual-guide") setGuide("manual");
+      if (outcome === "guide" || outcome === "dismissed") setGuideOpen(true);
     } finally {
       setBusy(false);
     }
@@ -136,10 +125,9 @@ export function InstallAppButton({
       )}
 
       <InstallGuideDialog
-        open={guide != null}
-        onOpenChange={(open) => !open && setGuide(null)}
-        mode={guide ?? "manual"}
-        browserKind={installCtx.browserKind}
+        open={guideOpen}
+        onOpenChange={setGuideOpen}
+        profile={installCtx.profile}
       />
     </>
   );
