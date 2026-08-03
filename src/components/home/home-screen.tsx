@@ -17,6 +17,8 @@ import { getTodaysProjects, db } from "@/lib/db";
 import { ProjectCard } from "@/components/modules/project-card";
 import { ModuleTile } from "@/components/modules/module-tile";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
+import { InstallAppButton } from "@/components/pwa/install-app-button";
+import { InstallAppBanner } from "@/components/pwa/install-app-banner";
 import { ProvenLogo } from "@/components/brand/proven-logo";
 import { Button } from "@/components/ui/button";
 import { useTimeClock } from "@/components/providers/timeclock-provider";
@@ -115,6 +117,7 @@ export function HomeScreen() {
               Hi, {firstName} 👋
             </h1>
           </div>
+          <InstallAppButton />
           <ThemeToggle />
           <Button
             variant="ghost"
@@ -133,6 +136,7 @@ export function HomeScreen() {
 
         {/* Quick actions */}
         <div className="-mx-4 mt-4 flex gap-2.5 overflow-x-auto px-4 pb-1 scrollbar-none">
+          <InstallAppButton variant="chip" />
           {quickActions.map((action) => {
             const Icon = action.icon;
             return (
@@ -150,6 +154,8 @@ export function HomeScreen() {
       </header>
 
       <main className="space-y-6 px-4 py-5">
+        <InstallAppBanner />
+
         {/* Weather strip */}
         {projects[0] && (
           <div className="helix-card flex items-center gap-3 px-4 py-3.5">

@@ -12,6 +12,7 @@ import { ToolboxProvider } from "@/components/providers/toolbox-provider";
 import { SiteInspectionProvider } from "@/components/providers/site-inspection-provider";
 import { DigitalFormsProvider } from "@/components/providers/digital-forms-provider";
 import { PwaProvider } from "@/components/providers/pwa-provider";
+import { InstallAppProvider } from "@/components/pwa/install-app-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -78,29 +79,31 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-background font-sans">
         <PwaProvider>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            <FlhaProvider>
-              <TimeClockProvider>
-                <TeamProvider>
-                  <InspectionLogProvider>
-                    <DocumentReviewProvider>
-                      <BcCraneBinderProvider>
-                        <EvaluationProvider>
-                          <ToolboxProvider>
-                            <SiteInspectionProvider>
-                              <DigitalFormsProvider>
-                                <AppShell>{children}</AppShell>
-                              </DigitalFormsProvider>
-                            </SiteInspectionProvider>
-                          </ToolboxProvider>
-                        </EvaluationProvider>
-                      </BcCraneBinderProvider>
-                    </DocumentReviewProvider>
-                  </InspectionLogProvider>
-                </TeamProvider>
-              </TimeClockProvider>
-            </FlhaProvider>
-          </ThemeProvider>
+          <InstallAppProvider>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+              <FlhaProvider>
+                <TimeClockProvider>
+                  <TeamProvider>
+                    <InspectionLogProvider>
+                      <DocumentReviewProvider>
+                        <BcCraneBinderProvider>
+                          <EvaluationProvider>
+                            <ToolboxProvider>
+                              <SiteInspectionProvider>
+                                <DigitalFormsProvider>
+                                  <AppShell>{children}</AppShell>
+                                </DigitalFormsProvider>
+                              </SiteInspectionProvider>
+                            </ToolboxProvider>
+                          </EvaluationProvider>
+                        </BcCraneBinderProvider>
+                      </DocumentReviewProvider>
+                    </InspectionLogProvider>
+                  </TeamProvider>
+                </TimeClockProvider>
+              </FlhaProvider>
+            </ThemeProvider>
+          </InstallAppProvider>
         </PwaProvider>
       </body>
     </html>

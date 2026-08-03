@@ -39,6 +39,7 @@ import { useDocumentReview } from "@/components/providers/document-review-provid
 import { useSiteInspections } from "@/components/providers/site-inspection-provider";
 import { useTeamOptional } from "@/components/providers/team-provider";
 import { PageHeader } from "@/components/layout/page-header";
+import { InstallAppCard } from "@/components/pwa/install-app-card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -237,6 +238,8 @@ export function ProfileScreen() {
             </div>
           </div>
         </div>
+
+        <InstallAppCard />
 
         {/* Clock status */}
         <Link

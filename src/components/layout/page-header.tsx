@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
+import { InstallAppButton } from "@/components/pwa/install-app-button";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +15,7 @@ interface PageHeaderProps {
   action?: React.ReactNode;
   className?: string;
   showTheme?: boolean;
+  showInstall?: boolean;
 }
 
 export function PageHeader({
@@ -24,6 +26,7 @@ export function PageHeader({
   action,
   className,
   showTheme = true,
+  showInstall = true,
 }: PageHeaderProps) {
   return (
     <header
@@ -58,6 +61,7 @@ export function PageHeader({
         </div>
         <div className="flex items-center gap-1">
           {action}
+          {showInstall && <InstallAppButton />}
           {showTheme && <ThemeToggle />}
         </div>
       </div>
