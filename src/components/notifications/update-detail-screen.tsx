@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -10,8 +11,9 @@ import {
   ListChecks,
   MapPin,
 } from "lucide-react";
-import { getNotification, getProject } from "@/lib/db";
+import { getProject } from "@/lib/db";
 import type { NotificationItem } from "@/lib/types";
+import { useNotifications } from "@/components/providers/notifications-provider";
 import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -39,7 +41,13 @@ const typeLabel: Record<NotificationItem["type"], string> = {
 };
 
 export function UpdateDetailScreen({ id }: { id: string }) {
-  const item = getNotification(id);
+  const { items, markRead } = useNotifications();
+  const item = items.find((n) => n.id === id);
+
+  useEffect(() => {
+    if (item) markRead(id);
+  }, [id, item, markRead]);
+
   if (!item) notFound();
 
   const project = item.projectId ? getProject(item.projectId) : undefined;

@@ -11,6 +11,7 @@ import { EvaluationProvider } from "@/components/providers/evaluation-provider";
 import { ToolboxProvider } from "@/components/providers/toolbox-provider";
 import { SiteInspectionProvider } from "@/components/providers/site-inspection-provider";
 import { DigitalFormsProvider } from "@/components/providers/digital-forms-provider";
+import { NotificationsProvider } from "@/components/providers/notifications-provider";
 import { PwaProvider } from "@/components/providers/pwa-provider";
 import { InstallAppProvider } from "@/components/pwa/install-app-provider";
 import { PwaIconPreload } from "@/components/pwa/pwa-icon-preload";
@@ -95,7 +96,9 @@ export default function RootLayout({
                             <ToolboxProvider>
                               <SiteInspectionProvider>
                                 <DigitalFormsProvider>
-                                  <AppShell>{children}</AppShell>
+                                  <NotificationsProvider>
+                                    <AppShell>{children}</AppShell>
+                                  </NotificationsProvider>
                                 </DigitalFormsProvider>
                               </SiteInspectionProvider>
                             </ToolboxProvider>

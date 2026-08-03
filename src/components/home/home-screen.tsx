@@ -19,9 +19,11 @@ import { ModuleTile } from "@/components/modules/module-tile";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { InstallAppButton } from "@/components/pwa/install-app-button";
 import { InstallAppBanner } from "@/components/pwa/install-app-banner";
+import { UnreadCountBadge } from "@/components/notifications/unread-count-badge";
 import { ProvenLogo } from "@/components/brand/proven-logo";
 import { Button } from "@/components/ui/button";
 import { useTimeClock } from "@/components/providers/timeclock-provider";
+import { useNotificationsOptional } from "@/components/providers/notifications-provider";
 
 const quickActions = [
   {
@@ -93,7 +95,10 @@ export function HomeScreen() {
   const projects = getTodaysProjects();
   const company = db.company;
   const worker = db.worker;
-  const unread = db.notifications.filter((n) => !n.read).length;
+  const notifications = useNotificationsOptional();
+  const unread =
+    notifications?.unreadCount ??
+    db.notifications.filter((n) => !n.read).length;
   const { activeVisit } = useTimeClock();
   const firstName = worker.name.split(" ")[0];
 
@@ -125,11 +130,16 @@ export function HomeScreen() {
             className="relative size-11 rounded-full bg-muted"
             asChild
           >
-            <Link href="/notifications" aria-label="Notifications">
+            <Link
+              href="/notifications"
+              aria-label={
+                unread > 0
+                  ? `Notifications, ${unread} unread`
+                  : "Notifications"
+              }
+            >
               <Bell className="size-5" />
-              {unread > 0 && (
-                <span className="absolute right-2 top-2 size-2.5 rounded-full bg-rose-500 ring-2 ring-card" />
-              )}
+              <UnreadCountBadge count={unread} />
             </Link>
           </Button>
         </div>
@@ -228,7 +238,7 @@ export function HomeScreen() {
             </Link>
           </div>
           <div className="space-y-3">
-            {db.notifications.slice(0, 3).map((n) => (
+            {(notifications?.items ?? db.notifications).slice(0, 3).map((n) => (
               <Link
                 key={n.id}
                 href={`/notifications/${n.id}`}

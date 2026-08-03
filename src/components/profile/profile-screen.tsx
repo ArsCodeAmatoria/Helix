@@ -17,7 +17,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
-import { db, getUnreadNotifications } from "@/lib/db";
+import { db } from "@/lib/db";
 import {
   getCurrentMember,
   getMemberCrews,
@@ -38,6 +38,8 @@ import { useToolbox } from "@/components/providers/toolbox-provider";
 import { useDocumentReview } from "@/components/providers/document-review-provider";
 import { useSiteInspections } from "@/components/providers/site-inspection-provider";
 import { useTeamOptional } from "@/components/providers/team-provider";
+import { useNotificationsOptional } from "@/components/providers/notifications-provider";
+import { UnreadCountBadge } from "@/components/notifications/unread-count-badge";
 import { PageHeader } from "@/components/layout/page-header";
 import { InstallAppCard } from "@/components/pwa/install-app-card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -116,8 +118,11 @@ export function ProfileScreen() {
   const toolbox = useToolbox();
   const reviews = useDocumentReview();
   const siteInspections = useSiteInspections();
+  const notifications = useNotificationsOptional();
 
-  const unread = getUnreadNotifications().length;
+  const unread =
+    notifications?.unreadCount ??
+    db.notifications.filter((n) => !n.read).length;
   const crews = member ? getMemberCrews(member.id) : [];
   const certs = mergedCertifications(worker.certifications, member);
 
@@ -207,12 +212,14 @@ export function ProfileScreen() {
             <Link
               href="/notifications"
               className="relative flex size-11 shrink-0 items-center justify-center rounded-full bg-white/10"
-              aria-label="Notifications"
+              aria-label={
+                unread > 0
+                  ? `Notifications, ${unread} unread`
+                  : "Notifications"
+              }
             >
               <Bell className="size-5" />
-              {unread > 0 && (
-                <span className="absolute right-2 top-2 size-2.5 rounded-full bg-rose-500 ring-2 ring-slate-900" />
-              )}
+              <UnreadCountBadge count={unread} ringClassName="ring-slate-900" />
             </Link>
           </div>
           <div className="relative mt-4 grid grid-cols-3 gap-2">

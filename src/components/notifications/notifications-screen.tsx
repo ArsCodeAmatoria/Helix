@@ -1,11 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronRight, Bell, CloudLightning, Info, AlertTriangle, ListChecks } from "lucide-react";
-import { db } from "@/lib/db";
+import {
+  ChevronRight,
+  Bell,
+  CloudLightning,
+  Info,
+  AlertTriangle,
+  ListChecks,
+} from "lucide-react";
 import type { NotificationItem } from "@/lib/types";
+import { useNotifications } from "@/components/providers/notifications-provider";
+import { UnreadCountBadge } from "@/components/notifications/unread-count-badge";
 import { PageHeader } from "@/components/layout/page-header";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const typeIcon: Record<NotificationItem["type"], typeof AlertTriangle> = {
@@ -30,21 +39,34 @@ const typeLabel: Record<NotificationItem["type"], string> = {
 };
 
 export function NotificationsScreen() {
-  const items = db.notifications;
-  const unread = items.filter((n) => !n.read).length;
+  const { items, unreadCount, markAllRead } = useNotifications();
 
   return (
     <div>
       <PageHeader
         title="Updates"
-        subtitle={`${unread} unread · ${items.length} total`}
+        subtitle={`${unreadCount} unread · ${items.length} total`}
         action={
-          <div className="flex size-11 items-center justify-center rounded-full bg-muted">
+          <div className="relative flex size-11 items-center justify-center rounded-full bg-muted">
             <Bell className="size-5 text-muted-foreground" />
+            <UnreadCountBadge count={unreadCount} />
           </div>
         }
       />
       <main className="space-y-3 px-4 py-5">
+        {unreadCount > 0 && (
+          <div className="flex justify-end">
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className="h-9 rounded-full px-3 text-xs font-bold text-primary"
+              onClick={markAllRead}
+            >
+              Mark all read
+            </Button>
+          </div>
+        )}
         {items.map((n) => {
           const Icon = typeIcon[n.type];
           return (
