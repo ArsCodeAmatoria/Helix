@@ -9,7 +9,10 @@ import React, {
   useState,
 } from "react";
 import { db } from "@/lib/db";
-import { syncAppBadge } from "@/lib/app-badge";
+import {
+  listenForAppBadgeUpgrade,
+  syncAppBadge,
+} from "@/lib/app-badge";
 import type { NotificationItem } from "@/lib/types";
 
 const STORAGE_KEY = "proven-notification-reads";
@@ -64,6 +67,8 @@ export function NotificationsProvider({
     setHydrated(true);
   }, []);
 
+  useEffect(() => listenForAppBadgeUpgrade(), []);
+
   const items = useMemo(() => mergeItems(readIds), [readIds]);
   const unreadCount = useMemo(
     () => items.filter((n) => !n.read).length,
@@ -76,29 +81,28 @@ export function NotificationsProvider({
     void syncAppBadge(unreadCount);
   }, [hydrated, readIds, unreadCount]);
 
-  // Re-apply badge when returning to the installed app / SW takes control.
+  // Re-apply when returning to the app / SW takes control (web.dev Badging API).
   useEffect(() => {
     if (!hydrated) return;
-    const onVisible = () => {
-      if (document.visibilityState === "visible") {
-        void syncAppBadge(unreadCount);
-      }
-    };
-    const onController = () => {
+    const refresh = () => {
       void syncAppBadge(unreadCount);
+    };
+    const onVisible = () => {
+      if (document.visibilityState === "visible") refresh();
     };
     document.addEventListener("visibilitychange", onVisible);
     window.addEventListener("focus", onVisible);
-    navigator.serviceWorker?.addEventListener?.("controllerchange", onController);
-    // Extra passes help first install before Badging API is ready.
-    const t1 = window.setTimeout(() => void syncAppBadge(unreadCount), 800);
-    const t2 = window.setTimeout(() => void syncAppBadge(unreadCount), 2500);
+    window.addEventListener("appinstalled", refresh);
+    navigator.serviceWorker?.addEventListener?.("controllerchange", refresh);
+    const t1 = window.setTimeout(refresh, 500);
+    const t2 = window.setTimeout(refresh, 2000);
     return () => {
       document.removeEventListener("visibilitychange", onVisible);
       window.removeEventListener("focus", onVisible);
+      window.removeEventListener("appinstalled", refresh);
       navigator.serviceWorker?.removeEventListener?.(
         "controllerchange",
-        onController
+        refresh
       );
       window.clearTimeout(t1);
       window.clearTimeout(t2);
