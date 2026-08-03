@@ -8,6 +8,7 @@ import {
   ChevronRight,
   ClipboardCheck,
   Link2,
+  MapPinned,
   Plus,
   TowerControl,
 } from "lucide-react";
@@ -70,6 +71,22 @@ export function InspectionsHubScreen() {
       />
 
       <main className="space-y-5 px-4 py-5">
+        <Link
+          href="/forms/site-inspections"
+          className="helix-card flex items-start gap-3 p-4 active:scale-[0.99]"
+        >
+          <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-sky-500/15 text-sky-700 dark:text-sky-400">
+            <MapPinned className="size-5" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-bold leading-snug">Site inspections</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Project walkthrough checklist, findings &amp; corrective actions
+            </p>
+          </div>
+          <ChevronRight className="mt-1 size-5 shrink-0 text-muted-foreground" />
+        </Link>
+
         <div className="grid grid-cols-2 gap-3">
           <div className="helix-card p-4">
             <div className="mb-2 flex size-10 items-center justify-center rounded-xl bg-orange-500/15 text-orange-700 dark:text-orange-400">

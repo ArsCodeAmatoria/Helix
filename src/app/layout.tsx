@@ -9,6 +9,7 @@ import { DocumentReviewProvider } from "@/components/providers/document-review-p
 import { BcCraneBinderProvider } from "@/components/providers/bc-crane-binder-provider";
 import { EvaluationProvider } from "@/components/providers/evaluation-provider";
 import { ToolboxProvider } from "@/components/providers/toolbox-provider";
+import { SiteInspectionProvider } from "@/components/providers/site-inspection-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -67,7 +68,9 @@ export default function RootLayout({
                     <BcCraneBinderProvider>
                       <EvaluationProvider>
                         <ToolboxProvider>
-                          <AppShell>{children}</AppShell>
+                          <SiteInspectionProvider>
+                            <AppShell>{children}</AppShell>
+                          </SiteInspectionProvider>
                         </ToolboxProvider>
                       </EvaluationProvider>
                     </BcCraneBinderProvider>

@@ -1,453 +1,923 @@
 {
-  "source": "BC Crane Safety \u2014 Tower Crane Site Binder Document Checklist",
-  "docNumber": "FM-TC-01",
-  "docDate": "09/20/2024",
-  "pages": 6,
+  "source": "BC Crane Safety \u2014 Tower Crane Site Binders",
+  "hubUrl": "https://bccranesafety.ca/resources/tower-crane-site-binder/",
+  "overview": "The Tower Crane and Self-Erect Tower Crane Site Binders are safe work practices and resources to demonstrate due diligence for site-specific crane operations and to support Notice of Project \u2013 Tower Crane (NOP-TC) submissions to WorkSafeBC. The Document Checklist is a mandatory component of NOP-TC. TOC Notes explain each regulatory document requirement; OHSR & CSA Info files include clickable links to WorkSafeBC regulations.",
   "copyright": "\u00a9 2024 BC Crane Safety \u00b7 bccranesafety.ca",
-  "pdf": "/crane-pdfs/bc-binder/tower-crane-site-binder-checklist-fm-tc-01.pdf",
-  "title": "Tower Crane Site Binder Document Checklist",
-  "subtitle": "Pre-assembly / dismantling / climbing / repositioning requirements",
-  "parties": [
-    {
-      "id": "owner",
-      "label": "Owner / Supplier"
-    },
-    {
-      "id": "prime",
-      "label": "Prime Contractor"
-    },
-    {
-      "id": "supervisor",
-      "label": "Activity Supervisor"
-    },
-    {
-      "id": "user",
-      "label": "Crane User"
-    },
-    {
-      "id": "mobile",
-      "label": "Mobile Crane"
-    },
-    {
-      "id": "other",
-      "label": "Other"
-    },
-    {
-      "id": "na",
-      "label": "N/A"
-    }
-  ],
-  "signOffRoles": [
-    {
-      "id": "owner",
-      "role": "Owner",
-      "description": "Owner / Supplier of the Tower Crane"
-    },
-    {
-      "id": "prime",
-      "role": "Prime Contractor",
-      "description": "Property owner / Prime contractor responsible for coordination of all employers at the workplace"
-    },
-    {
-      "id": "supervisor",
-      "role": "Activity Supervisor",
-      "description": "Qualified to erect, climb, reposition or dismantle this particular tower crane"
-    },
-    {
-      "id": "user",
-      "role": "Crane User",
-      "description": "Employer responsible for operation of the tower crane at this workplace"
-    },
-    {
-      "id": "mobile",
-      "role": "Mobile Crane",
-      "description": "Owner / Lessee of the mobile crane contracted to assist with the tower crane activity"
-    }
-  ],
-  "sections": [
-    {
-      "id": "pre-assembly",
-      "title": "Pre-Assembly Documentation",
-      "items": [
-        {
-          "id": "1",
-          "label": "Land Use / NAVCAN",
-          "notes": "8-12 weeks prior to starting construction, the Land Use Crane Submission Form must be filled out and submitted to NAVCAN for all cranes, in all locations, regardless of proximity to an aerodrome. https://www.navcanada.ca/en/aeronautical-information/land-use- program.aspx",
-          "ohsr": "N/A",
-          "standards": "N/A"
-        },
-        {
-          "id": "2",
-          "label": "Aeronautical Agreement",
-          "notes": "8-12 weeks prior to starting construction, submission of an aeronautical agreement to Transport Canada may be required when working within 6kms of an aerodrome- including hospitals with helicopter pads.",
-          "ohsr": "N/A",
-          "standards": "Canada Standard 621 Obstruction Marking and Lighting"
-        },
-        {
-          "id": "3",
-          "label": "30M33 / Record of Discussion / Assurance in Writing",
-          "notes": "If the minimum distances outlined in WorkSafeBC Table 19.1.A cannot be maintained because of the circumstances of work or the inadvertent movement of persons or equipment, an assurance in writing on a form acceptable to the Board (30M33) and signed by a representative of the owner of the power system, must be obtained. All versions/revisions of the 30M33 should be kept here.",
-          "ohsr": "14.52, 14.52.1, 19.24\u201319.28",
-          "standards": "CSA Z248-04 S8.13"
-        },
-        {
-          "id": "4",
-          "label": "Trolley Overhead (TOH) Adjacent Works Documentation (if applicable)",
-          "notes": "When working in proximity to any over, or underground transit systems there should be approval from the entity/owner your work can go through as planned. In Vancouver, consent from TransLink and an approved \"Construction Safe Work Plan\" is required if working within limits of approach of any powered or non-powered Trolley Overhead Infrastructure, or adjustment or relocation of TransLink TOH systems. https://www.trans",
-          "ohsr": "N/A",
-          "standards": "CSA Z248-04 S8.13.1.1"
-        },
-        {
-          "id": "5",
-          "label": "Power Source Information",
-          "notes": "Specify site power or generator power for the crane. Must include electrical permit (issued by municipality or Technical Safety BC and specifying the type of volts required for the crane), proof of installation from a qualified individual (Electrical Field Safety Representative (FSR)) and installed as per manufacturer instruction. Proof of grounding (pictures) are recommended to be filed here as well.",
-          "ohsr": "19.5",
-          "standards": "CSA Z248-04 S4.22.1"
-        },
-        {
-          "id": "6",
-          "label": "Notice of Project \u2014 Tower Crane (NOP-TC)",
-          "notes": "NOP-TC comes into effect October 1, 2024. More information on the NOP-TC can be found in part 14 of the WorkSafeBC Regulations.",
-          "ohsr": "14.73.3(3)",
-          "standards": "N/A"
-        },
-        {
-          "id": "7",
-          "label": "Site Layout / Design Package",
-          "notes": "Documents showing specific crane information and location on site- crane operating radii, boom and tower configurations and lengths, complete set of specifications, drawings, and instructions for this crane, including: the engineer's assembly drawing, complete with foundation design, tie-back design, mast bolting torques, custom transitions, tie-downs, etc. If multiple cranes on site it must show the overlap and incl",
-          "ohsr": "4.3, 14.74",
-          "standards": "CSA Z248-04 S4.6 & 5.7"
-        },
-        {
-          "id": "8",
-          "label": "Foundation, Geotechnical / Soils Engineering & Cylinder Break Documentation",
-          "notes": "Documentation Include foundation design drawings (Issued for Construction (IFC) drawings), foundation inspection report, reshoring/cribbing inspection (if applicable), and concrete compressive strength test report. Minimum concrete MPa requirement for tower crane foundation is determined by manufacturer or engineer. Soils/Geotechnical report is provided by the geotechnical engineer following their visit to inspect th",
-          "ohsr": "14.74, 14.73.2",
-          "standards": "CSA Z248-04 S5.3 / S6.4.8.3"
-        },
-        {
-          "id": "9",
-          "label": "Pre-Assembly Meeting",
-          "notes": "BC Crane Safety SWP Checklist document outlining responsibilities and documentation is a requirement of the WorkSafeBC Notice of Project-Tower Crane (NOP-TC) submission documentation. If possible, recommended to complete checklist with all associated parties a minimum of two weeks prior to assembly/disassembly to ensure the timely collection of all required documentation to complete the crane binder.",
-          "ohsr": "4.1, 4.3",
-          "standards": "CSA Z248-04 S5.2"
-        },
-        {
-          "id": "10",
-          "label": "High Angle Rescue Information or Technical High Angle Rope Rescue Program (THARRP) Agreement",
-          "notes": "Program (THARRP) Agreement If the jobsite is outside of the service area for a fire/rescue department or the department is incapable of rescue, high angle rescue must be in place for the jobsite by the employer. If calling 911 is the mode of rescue for tower crane emergencies, approval from the local fire department is required through the THARR Program administered by the British Columbia Construction Safety Associa",
-          "ohsr": "14.88(7)",
-          "standards": "N/A"
-        },
-        {
-          "id": "11",
-          "label": "Traffic Control / Municipal Permits / Street Use",
-          "notes": "Responsibility of the jobsite to organize and approve Traffic Management Plan (TMP) with the municipality, confirm trucking routes and staging areas for assembly/disassembly, designated parking areas, street closures, etc.",
-          "ohsr": "18.2",
-          "standards": "CSA Z248-04 S5.7"
-        },
-        {
-          "id": "12",
-          "label": "Radio Frequency Application / Coordination",
-          "notes": "Employers operating tower cranes, self-erecting cranes, or industrial cranes need to submit the Radio Frequency Coordination Request Form (found online through WorkSafeBC) when cranes will be in operation for more than one week, if there are any changes to the assigned radios, and/or on an annual basis as a frequency confirmation.",
-          "ohsr": "14.49",
-          "standards": "N/A"
-        },
-        {
-          "id": "13",
-          "label": "Non-Destructive Testing (NDT) Report",
-          "notes": "NDT is required prior to erection and annually thereafter for tower cranes. NDTs may also be used as diligence following an incident or misadventure to confirm integrity of the crane and components. Also note a structural report is required after a prolonged shutdown of the crane. If a tower crane is scheduled to be dismantled within 15 months of being erected, a visual inspection supervised by a professional enginee",
-          "ohsr": "14.77, 14.13(3), 14.16, 14.80, 14.75(5), 14.76",
-          "standards": "CSA Z248-04 S4.2 / S6.x"
-        },
-        {
-          "id": "14",
-          "label": "Variance or Acceptance Documentation",
-          "notes": "Documented approval from WorkSafeBC and all supporting documentation must be filed here.",
-          "ohsr": "WCA Part 2 Div 9",
-          "standards": "N/A"
-        },
-        {
-          "id": "15",
-          "label": "\u201cAdditions\u201d to Crane Surface",
-          "notes": "Must be as per instruction from the manufacturer or certified by an engineer. Examples: company signs, banners, anti-climbing equipment, etc. This tab does not apply to added sections when climbing a tower crane.",
-          "ohsr": "14.92(5)",
-          "standards": "CSA Z248-04 S8.15.1"
-        },
-        {
-          "id": "16",
-          "label": "Crane-Specific Manual",
-          "notes": "Must be on-site readily available to the operator, and on request by the Board.",
-          "ohsr": "14.12 & 14.79",
-          "standards": "CSA Z248-04 S5.2.1 & 8.3.1.2"
-        },
-        {
-          "id": "17",
-          "label": "General Crane Specifications & Load Chart",
-          "notes": "Load charts are found in the crane manual, must be permanently posted on the crane, or must be available to the crane operator who must keep it available at all times while operating. Load charts must be visible to the operator while seated at the controls and at remote control stations. Specification documents will often include typical crane configurations, load charts, and crane component dimensions and weights.",
-          "ohsr": "14.5(3) & 14.75(2)",
-          "standards": "CSA Z248-04 S4.7.3"
-        },
-        {
-          "id": "18",
-          "label": "CSA Compliance Documentation",
-          "notes": "Must include certification report. The inspector may put corresponding sticker/s on the structure/electrical panel to signify completion; recommendation if the inspection sticker is on the electrical panel of a tower crane to include pictures of it taken by the erectors in case a municipal or authority inspector needs to see it and won't climb the crane.",
-          "ohsr": "14.2(6)",
-          "standards": "CSA Z248-04 S4.21\u20135.6"
-        },
-        {
-          "id": "19",
-          "label": "Mobile Crane Documentation",
-          "notes": "All information and documentation to do with the mobile crane involved in the assembly, disassembly, repositioning, climbing, etc. to be filed here. Annual inspection, critical lift procedures (if required), lift plan, machine placement/ground conditions (Geotech report), etc.",
-          "ohsr": "14.34, 14.34.1, 14.42.1, 14.69, 14.71",
-          "standards": "CSA Z248-04 S5.1.2 & 8.10.3"
-        },
-        {
-          "id": "20",
-          "label": "Crane Component Inspections",
-          "notes": "A visual inspection of the crane components must be performed by the Crane Activity Supervisor who assesses for damage occurred during transport or otherwise. CSA states: \"Prior to erecting the crane, the crane components shall be visually inspected on site for damage from shipping and handling. Damaged structural members shall not be used until repaired or replaced and the repair or replacement approved by a profess",
-          "ohsr": "N/A",
-          "standards": "CSA Z248-04 S5.6"
-        },
-        {
-          "id": "21",
-          "label": "Derrick Documentation (if applicable)",
-          "notes": "If a derrick crane is used for erecting, climbing, dismantling, etc., detailed drawings signed and sealed by a professional engineer showing the location of the equipment, anchor bolts, guy wires, and all loads imposed on the structure by the weight of the equipment shall be provided and made available by filing all associated documents under this tab.",
-          "ohsr": "14.2(11)",
-          "standards": "CSA Z248-04 / ASME B30.6"
-        },
-        {
-          "id": "22",
-          "label": "Crane Climbing Documentation (if applicable)",
-          "notes": "Equipment design and specifications, Safe Work Procedures/Instructions, climbing system NDT (prior to assembly, and annually inspected thereafter when in use), NDT for any additional tower crane components being installed, and shoring inspection. ZONING & ANTI -COLLISION (if applicable)",
-          "ohsr": "14.73.2, 14.74, 14.75, 14.77",
-          "standards": "CSA Z248-04 climbing sections"
-        }
-      ]
-    },
-    {
-      "id": "zoning",
-      "title": "Zoning & Anti-Collision (if applicable)",
-      "items": [
-        {
-          "id": "23",
-          "label": "Zoning System Documentation",
-          "notes": "Including manuals, procedures, daily testing instructions/procedures, and a detailed site plan to show the power lines or items of avoidance. Non-OEM systems require additional approval or instruction from the manufacturer or professional engineer. Zoning system installation is required when in an overlap situation with an adjacent crane. (OHSR 14.84.1).",
-          "ohsr": "14.84.1",
-          "standards": "CSA Z248-04 S8.10"
-        },
-        {
-          "id": "24",
-          "label": "Anti-Collision System Documentation",
-          "notes": "Including manuals, procedures, daily testing instructions/procedures, and a detailed site plan showing the multiple crane locations. Non-OEM systems require additional approval or instruction from the manufacturer or professional engineer. Anti-collision system installation is required when there is an overlap situation with an adjacent crane. (OHSR 14.84.1). ROPES & TEST BLOCK S",
-          "ohsr": "14.84.1(3)(c.1) & 14.15",
-          "standards": "CSA Z248-04 S8.10 / S8.13.2"
-        }
-      ]
-    },
-    {
-      "id": "ropes",
-      "title": "Ropes & Test Blocks",
-      "items": [
-        {
-          "id": "25",
-          "label": "Testing Certification for Hoist Ropes",
-          "notes": "Commonly referred to as a \"mill certificate\", which includes manufacturer information on testing and certification. More information on content requirements outlined in the CSA standard.",
-          "ohsr": "15.27, 15.28, 15.31",
-          "standards": "CSA Z248-04 S4.11.3"
-        },
-        {
-          "id": "26",
-          "label": "Hoist Rope Record (if applicable)",
-          "notes": "Rotation resistant hoist ropes must be shortened 3 metres per every 500 hours of use (by a qualified person) unless specified by manufacturer, has 14+ outer strands, or has a plastic- coated inner core. File information required in OHSR 14.91(3) here on hoist rope.",
-          "ohsr": "14.91(3)",
-          "standards": "CSA Z248-04 S6.4.4.1"
-        },
-        {
-          "id": "27",
-          "label": "Rigging Certification Documentation",
-          "notes": "Annual chain sling inspections filed here. Periodic inspection intervals shall not exceed 1 yr. Documentation that the most recent periodic inspection was performed shall be maintained.",
-          "ohsr": "14.14, 15.30, 15.31",
-          "standards": "CSA Z248-04 S6.4.7 / ASME B30.9"
-        },
-        {
-          "id": "28",
-          "label": "Test Block Documentation",
-          "notes": "Test blocks and their lifting points shall be as specified by the crane manufacturer, or by a professional engineer. The weight of each test block must be accurately determined and durably/legibly marked on it.",
-          "ohsr": "14.82",
-          "standards": "CSA Z248-04 S6.3.3"
-        },
-        {
-          "id": "29",
-          "label": "Horizontal Lifeline Documentation (if applicable)",
-          "notes": "Instructions from the manufacturer, or a professional engineer, for installation and use, plus inspection documents to be filed here (if applicable). BELOW THE HOOK (BTH)",
-          "ohsr": "14.88(4)(d), 11.7",
-          "standards": "CSA Z248-04 S4.25.5"
-        }
-      ]
-    },
-    {
-      "id": "bth",
-      "title": "Below The Hook (BTH)",
-      "items": [
-        {
-          "id": "30",
-          "label": "DEP Box, Work Platforms & Secondary Rigging Documentation",
-          "notes": "Engineered drawings, proof of pre-use inspection/confirmation \"safe for use\", any specific procedures, dry run documentation, and information/instruction for the secondary rigging attachment/secondary support anchorage to be filed here. TOC # Documentation Required Y/N",
-          "ohsr": "13.2(2)(b), 13.27\u201313.29",
-          "standards": "WPL 2-2004 / ASME B30.9"
-        },
-        {
-          "id": "31",
-          "label": "Below the Hook Lifting Devices Documentation",
-          "notes": "Manufacturer instructions for use and capacity information, NDT inspection hard copies (inspection plates on the unit must be accompanied by a hard copy document), approved engineering/design documents, and proof of inspections from qualified individuals filed here. PROCEDURES & COMPLIANCE",
-          "ohsr": "15.57\u201315.60, 15.30",
-          "standards": "ASME B30.9-2006"
-        }
-      ]
-    },
-    {
-      "id": "procedures",
-      "title": "Procedures & Compliance",
-      "items": [
-        {
-          "id": "32",
-          "label": "Crane Assembly / Disassembly Written Procedures (site-specific)",
-          "notes": "Crane to be erected according to manufacturer procedures or approved engineering direction signed off by all assembly/disassembly workers involved. If applicable, the design, location, and method of attaching a tower crane operators cab must be approved by the crane manufacturer or by a professional engineer. Rated capacities must be adjusted as necessary if using a cab type and location not approved by the manufactu",
-          "ohsr": "14.75(2)",
-          "standards": "CSA Z248-04 s.5.2.1"
-        },
-        {
-          "id": "33",
-          "label": "Crane Activity Supervisor & Lead Hand Qualification",
-          "notes": "Outlined in the Notice of Project- Tower Crane requirements, the supervisor and lead hand must be qualified and competent in all phases of crane erection, dismantling, and climbing. Certification is an asset.",
-          "ohsr": "14.73.3(3)",
-          "standards": "CSA Z248-04 S5.1"
-        },
-        {
-          "id": "34",
-          "label": "Safe Work Procedures \u2014 Assembly / Disassembly",
-          "notes": "Examples can include fall protection plan (required to be site-specific, accurate to the task being performed, must be adjusted for changing site conditions such as pre/post building construction), overlap procedures (to include other cranes, mobile equipment, pump trucks, etc.), lockout/tagout, limits of approach (LOA), blind lifts, etc.",
-          "ohsr": "14.84.1(3)(d), 10.4, 11.3",
-          "standards": "CSA Z248-04 S8.10.2.4"
-        },
-        {
-          "id": "35",
-          "label": "Safe Work Procedures \u2014 Operation & Maintenance",
-          "notes": "Examples can include: fall protection plan (required to be site-specific and accurate to the task being performed- operator or maintenance fall pro plan shouldn't include assembly/disassembly info and must be adjusted for changing site conditions such as pre/post building construction, overlap procedure (to include other cranes, mobile equipment, placing booms, pump trucks, etc.), lockout/tagout, limits of approach (",
-          "ohsr": "14.84.1(3)(d), 11.3, 14.88(7), 10.4",
-          "standards": "CSA Z248-04 S8.10.2.4"
-        },
-        {
-          "id": "36",
-          "label": "Emergency Response Plan",
-          "notes": "Rescue procedures must be available and clearly outlined for the operator, technicians, inspectors, etc. who will be in the cab or on the crane. Procedures must be signed and understood by all parties prior to work - Rescue team identified? Appropriate equipment on site for rescue? THARRP application completed (WorkSafeBC Guideline- G4.13(3)(a))? If a DEP box is to be used, pre-use inspection, dry run, secondary supp",
-          "ohsr": "4.13 & 4.14",
-          "standards": "WPL 2-2004"
-        }
-      ]
-    },
-    {
-      "id": "post-assembly",
-      "title": "Post Assembly Documentation",
-      "items": [
-        {
-          "id": "37",
-          "label": "Construction Site Tower Crane Report",
-          "notes": "Comprehensive document commonly referred to as the \u201cerectors report\u201d filled out by the crane erector confirming it has been inspected, repaired, erected, and tested in accordance with manufacturer's specifications, professional engineer direction, applicable standards, and the Occupational Health and Safety Regulation in mind. Supporting documentation may be required for some items.",
-          "ohsr": "N/A",
-          "standards": "CSA Z248-04 S4.6.4.1 / S5.1.2"
-        },
-        {
-          "id": "38",
-          "label": "Preventive Maintenance Schedule & Instruction",
-          "notes": "Include crane-specific maintenance program, applicable procedures, and information on the qualified maintenance/repair personnel. Recommendation to have maintenance dates pre-arranged with the jobsite as close to assembly as possible to avoid re- scheduling/conflicts.",
-          "ohsr": "4.3, 14.13",
-          "standards": "CSA Z248-04 S7.1\u20137.3"
-        },
-        {
-          "id": "39",
-          "label": "Post-Install Mast Bolt Retorque (if applicable)",
-          "notes": "All information including frequency, torque specs, and proof of completion to be filed here.",
-          "ohsr": "4.3",
-          "standards": "CSA Z248-04 S6.4.3"
-        },
-        {
-          "id": "40",
-          "label": "Operator Crane Orientation",
-          "notes": "Each operator must have a documented orientation on the specific crane to which they are operating on site. If a new or backup operator is hired, they must also receive the crane- specific orientation.",
-          "ohsr": "14.34",
-          "standards": "CSA Z248-04 S8.2.2.1"
-        },
-        {
-          "id": "41",
-          "label": "Operator Certification & Proof of Qualification",
-          "notes": "Certification and proof of qualification are separate documents- a ticket/certification is not acknowledged as proof of qualification by WorkSafeBC. The crane operator's employer should have proof of qualification on file to provide for this section. If the operator has a Provisional designation, their Full Scope mentor/qualified supervisor and any supporting documentation to their mentorship should be filed here as ",
-          "ohsr": "14.34.1, 14.34",
-          "standards": "CSA Z248-04 S8.2.1 & 8.2.2"
-        },
-        {
-          "id": "42",
-          "label": "Inspections Documentation / Logs",
-          "notes": "If the following inspections are not filed in this crane binder, they must be accessible to the operator, associated workers, and WorkSafeBC at all times. The OPERATOR LOG includes records of any tests, inspections, maintenance, repairs, revisions, modifications, misadventures, damage and subsequent repairs done to the crane while erected at the current site. PRE-USE INSPECTIONS are as per manufacturer instruction an",
-          "ohsr": "14.13, 14.14, 14.35, 14.75, 14.81(2), 14.91, 15.25, 15.31",
-          "standards": "CSA Z248-04 S6.2.3"
-        },
-        {
-          "id": "43",
-          "label": "Repositioning Documentation",
-          "notes": "Repositioning includes any change in the crane configuration from the way it was originally installed, including climbing, change of boom length, etc. Before a tower crane is put into service after its mast has been repositioned, a professional engineer must certify that the parts of the crane affected by the repositioning process have been properly installed and any required reshoring for, and bracing to, the suppor",
-          "ohsr": "14.75",
-          "standards": "N/A"
-        }
-      ]
-    }
-  ],
-  "forms": [
-    {
-      "id": "fm-tc-01",
-      "docNumber": "FM-TC-01",
-      "title": "Tower Crane Site Binder Document Checklist",
-      "file": "/crane-pdfs/bc-binder/tower-crane-site-binder-checklist-fm-tc-01.pdf",
-      "source": "BC Crane Safety"
-    },
-    {
-      "id": "tbl-tc-01",
-      "docNumber": "TBL-TC-01",
-      "title": "Tower Crane Binder \u2014 Table of Contents",
-      "file": "/crane-pdfs/bc-binder/tower-crane-binder-toc.pdf",
-      "source": "BC Crane Safety"
-    },
-    {
-      "id": "tbl-tc-02",
-      "docNumber": "TBL-TC-02",
-      "title": "Tower Crane Binder \u2014 Table of Contents Notes",
-      "file": "/crane-pdfs/bc-binder/tower-crane-binder-toc-notes.pdf",
-      "source": "BC Crane Safety"
-    },
-    {
-      "id": "tbl-tc-03",
-      "docNumber": "TBL-TC-03",
-      "title": "OHSR & CSA Info for Tower Crane",
-      "file": "/crane-pdfs/bc-binder/ohsr-csa-information-for-tower-crane.pdf",
-      "source": "BC Crane Safety"
-    }
-  ],
   "externalLinks": [
-    {
-      "id": "nop-tc",
-      "label": "WorkSafeBC \u2014 Notice of Project (NOP-TC)",
-      "url": "https://www.worksafebc.com/en/health-safety/create-manage/managing-risk-injury/notice-project"
-    },
     {
       "id": "bc-binder-hub",
       "label": "BC Crane Safety \u2014 Tower Crane Site Binders",
-      "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/"
+      "url": "https://bccranesafety.ca/resources/tower-crane-site-binder/",
+      "description": "Official template library for tower and self-erect binders."
+    },
+    {
+      "id": "nop-tc",
+      "label": "WorkSafeBC \u2014 Submit a Notice of Project (NOP-TC)",
+      "url": "https://www.worksafebc.com/en/health-safety/create-manage/managing-risk-injury/notice-project",
+      "description": "Submit NOP-TC at least 2 weeks before erecting, climbing, repositioning, or dismantling. Choose Tower Crane as Project Type."
+    },
+    {
+      "id": "nop-tc-update",
+      "label": "WorkSafeBC \u2014 Notice of Project\u2013Tower Crane update",
+      "url": "https://www.worksafebc.com/en/about-us/news-events/announcements/2024/October/notice-of-project-tower-crane-update",
+      "description": "Regulatory update (Oct 1, 2024) describing NOP-TC and site binder templates."
+    },
+    {
+      "id": "supervision-plan",
+      "label": "WorkSafeBC \u2014 Supervision Plan for Tower Crane Operator Training",
+      "url": "https://www.worksafebc.com/en/resources/health-safety/forms/supervision-plan-tower-crane-operator-training",
+      "description": "Required written supervision plan template for provisional (in-training) tower crane operators."
+    },
+    {
+      "id": "competency-eval",
+      "label": "WorkSafeBC \u2014 Evaluating Competency of a Tower Crane Operator",
+      "url": "https://www.worksafebc.com/en/resources/health-safety/books-guides/evaluating-competency-level-tower-crane-operator",
+      "description": "Guidance for evaluating tower crane operator competency."
     },
     {
       "id": "navcan",
       "label": "NAV CANADA Land Use Program",
-      "url": "https://www.navcanada.ca/en/aeronautical-information/land-use-program.aspx"
+      "url": "https://www.navcanada.ca/en/aeronautical-information/land-use-program.aspx",
+      "description": "Land Use Crane Submission Form \u2014 required for all cranes regardless of aerodrome proximity."
+    }
+  ],
+  "packs": [
+    {
+      "id": "tower",
+      "label": "Tower Crane",
+      "docNumber": "FM-TC-01",
+      "docDate": "09/20/2024",
+      "pages": 6,
+      "title": "Tower Crane Site Binder Document Checklist",
+      "subtitle": "Pre-assembly / dismantling / climbing / repositioning requirements",
+      "description": "Use for conventional / top-slewing / flat-top / luffing tower cranes. 43 documentation items covering foundation, NDT, zoning, ropes, BTH, procedures, and post-assembly.",
+      "pdf": "/crane-pdfs/bc-binder/tower/fm-tc-01-checklist.pdf",
+      "forms": [
+        {
+          "id": "fm-tc-01",
+          "docNumber": "FM-TC-01",
+          "title": "Tower Crane Site Binder Document Checklist",
+          "description": "Mandatory checklist for pre-assembly, dismantling, climbing, and repositioning. Required component when submitting a Notice of Project \u2013 Tower Crane (NOP-TC) to WorkSafeBC.",
+          "file": "/crane-pdfs/bc-binder/tower/fm-tc-01-checklist.pdf",
+          "source": "BC Crane Safety",
+          "pages": "6",
+          "date": "09/20/2024"
+        },
+        {
+          "id": "tbl-tc-01",
+          "docNumber": "TBL-TC-01",
+          "title": "Tower Crane Binder \u2014 Table of Contents",
+          "description": "Numbered table of contents template for organizing all tower crane site binder documentation tabs.",
+          "file": "/crane-pdfs/bc-binder/tower/tbl-tc-01-toc.pdf",
+          "source": "BC Crane Safety",
+          "pages": "2",
+          "date": "09/20/2024"
+        },
+        {
+          "id": "tbl-tc-02",
+          "docNumber": "TBL-TC-02",
+          "title": "Tower Crane Binder \u2014 Table of Contents Notes",
+          "description": "Detailed regulatory explanations for each TOC item \u2014 what documents belong in each tab and why they are required.",
+          "file": "/crane-pdfs/bc-binder/tower/tbl-tc-02-toc-notes.pdf",
+          "source": "BC Crane Safety",
+          "pages": "8",
+          "date": "12/12/2024"
+        },
+        {
+          "id": "tbl-tc-03",
+          "docNumber": "TBL-TC-03",
+          "title": "OHSR & CSA Info for Tower Crane",
+          "description": "Cross-reference of each binder item to WorkSafeBC OHSR sections and CSA Z248 (and related) standards, with links for compliance checking.",
+          "file": "/crane-pdfs/bc-binder/tower/tbl-tc-03-ohsr-csa.pdf",
+          "source": "BC Crane Safety",
+          "pages": "3",
+          "date": "09/20/2024"
+        }
+      ],
+      "parties": [
+        {
+          "id": "owner",
+          "label": "Owner / Supplier"
+        },
+        {
+          "id": "prime",
+          "label": "Prime Contractor"
+        },
+        {
+          "id": "supervisor",
+          "label": "Activity Supervisor"
+        },
+        {
+          "id": "user",
+          "label": "Crane User"
+        },
+        {
+          "id": "mobile",
+          "label": "Mobile Crane"
+        },
+        {
+          "id": "other",
+          "label": "Other"
+        },
+        {
+          "id": "na",
+          "label": "N/A"
+        }
+      ],
+      "signOffRoles": [
+        {
+          "id": "owner",
+          "role": "Owner",
+          "description": "Owner / Supplier of the Tower Crane"
+        },
+        {
+          "id": "prime",
+          "role": "Prime Contractor",
+          "description": "Property owner / Prime contractor responsible for coordination of all employers at the workplace"
+        },
+        {
+          "id": "supervisor",
+          "role": "Activity Supervisor",
+          "description": "Qualified to erect, climb, reposition or dismantle this particular tower crane"
+        },
+        {
+          "id": "user",
+          "role": "Crane User",
+          "description": "Employer responsible for operation of the tower crane at this workplace"
+        },
+        {
+          "id": "mobile",
+          "role": "Mobile Crane",
+          "description": "Owner / Lessee of the mobile crane contracted to assist with the tower crane activity"
+        }
+      ],
+      "sections": [
+        {
+          "id": "pre-assembly",
+          "title": "Pre-Assembly Documentation",
+          "items": [
+            {
+              "id": "1",
+              "label": "Land Use / NAVCAN",
+              "notes": "8-12 weeks prior to starting construction, the Land Use Crane Submission Form must be filled out and submitted to NAVCAN for all cranes, in all locations, regardless of proximity to an aerodrome. https://www.navcanada.ca/en/aeronautical-information/land-use- program.aspx",
+              "ohsr": "N/A",
+              "standards": "N/A"
+            },
+            {
+              "id": "2",
+              "label": "Aeronautical Agreement",
+              "notes": "8-12 weeks prior to starting construction, submission of an aeronautical agreement to Transport Canada may be required when working within 6kms of an aerodrome- including hospitals with helicopter pads.",
+              "ohsr": "N/A",
+              "standards": "Canada Standard 621 Obstruction Marking and Lighting"
+            },
+            {
+              "id": "3",
+              "label": "30M33 / Record of Discussion / Assurance in Writing",
+              "notes": "If the minimum distances outlined in WorkSafeBC Table 19.1.A cannot be maintained because of the circumstances of work or the inadvertent movement of persons or equipment, an assurance in writing on a form acceptable to the Board (30M33) and signed by a representative of the owner of the power system, must be obtained. All versions/revisions of the 30M33 should be kept here.",
+              "ohsr": "14.52, 14.52.1, 19.24\u201319.28",
+              "standards": "CSA Z248-04 S8.13"
+            },
+            {
+              "id": "4",
+              "label": "Trolley Overhead (TOH) Adjacent Works Documentation (if applicable)",
+              "notes": "When working in proximity to any over, or underground transit systems there should be approval from the entity/owner your work can go through as planned. In Vancouver, consent from TransLink and an approved \"Construction Safe Work Plan\" is required if working within limits of approach of any powered or non-powered Trolley Overhead Infrastructure, or adjustment or relocation of TransLink TOH systems. https://www.trans",
+              "ohsr": "N/A",
+              "standards": "CSA Z248-04 S8.13.1.1"
+            },
+            {
+              "id": "5",
+              "label": "Power Source Information",
+              "notes": "Specify site power or generator power for the crane. Must include electrical permit (issued by municipality or Technical Safety BC and specifying the type of volts required for the crane), proof of installation from a qualified individual (Electrical Field Safety Representative (FSR)) and installed as per manufacturer instruction. Proof of grounding (pictures) are recommended to be filed here as well.",
+              "ohsr": "19.5",
+              "standards": "CSA Z248-04 S4.22.1"
+            },
+            {
+              "id": "6",
+              "label": "Notice of Project \u2014 Tower Crane (NOP-TC)",
+              "notes": "NOP-TC comes into effect October 1, 2024. More information on the NOP-TC can be found in part 14 of the WorkSafeBC Regulations.",
+              "ohsr": "14.73.3(3)",
+              "standards": "N/A"
+            },
+            {
+              "id": "7",
+              "label": "Site Layout / Design Package",
+              "notes": "Documents showing specific crane information and location on site- crane operating radii, boom and tower configurations and lengths, complete set of specifications, drawings, and instructions for this crane, including: the engineer's assembly drawing, complete with foundation design, tie-back design, mast bolting torques, custom transitions, tie-downs, etc. If multiple cranes on site it must show the overlap and incl",
+              "ohsr": "4.3, 14.74",
+              "standards": "CSA Z248-04 S4.6 & 5.7"
+            },
+            {
+              "id": "8",
+              "label": "Foundation, Geotechnical / Soils Engineering & Cylinder Break Documentation",
+              "notes": "Documentation Include foundation design drawings (Issued for Construction (IFC) drawings), foundation inspection report, reshoring/cribbing inspection (if applicable), and concrete compressive strength test report. Minimum concrete MPa requirement for tower crane foundation is determined by manufacturer or engineer. Soils/Geotechnical report is provided by the geotechnical engineer following their visit to inspect th",
+              "ohsr": "14.74, 14.73.2",
+              "standards": "CSA Z248-04 S5.3 / S6.4.8.3"
+            },
+            {
+              "id": "9",
+              "label": "Pre-Assembly Meeting",
+              "notes": "BC Crane Safety SWP Checklist document outlining responsibilities and documentation is a requirement of the WorkSafeBC Notice of Project-Tower Crane (NOP-TC) submission documentation. If possible, recommended to complete checklist with all associated parties a minimum of two weeks prior to assembly/disassembly to ensure the timely collection of all required documentation to complete the crane binder.",
+              "ohsr": "4.1, 4.3",
+              "standards": "CSA Z248-04 S5.2"
+            },
+            {
+              "id": "10",
+              "label": "High Angle Rescue Information or Technical High Angle Rope Rescue Program (THARRP) Agreement",
+              "notes": "Program (THARRP) Agreement If the jobsite is outside of the service area for a fire/rescue department or the department is incapable of rescue, high angle rescue must be in place for the jobsite by the employer. If calling 911 is the mode of rescue for tower crane emergencies, approval from the local fire department is required through the THARR Program administered by the British Columbia Construction Safety Associa",
+              "ohsr": "14.88(7)",
+              "standards": "N/A"
+            },
+            {
+              "id": "11",
+              "label": "Traffic Control / Municipal Permits / Street Use",
+              "notes": "Responsibility of the jobsite to organize and approve Traffic Management Plan (TMP) with the municipality, confirm trucking routes and staging areas for assembly/disassembly, designated parking areas, street closures, etc.",
+              "ohsr": "18.2",
+              "standards": "CSA Z248-04 S5.7"
+            },
+            {
+              "id": "12",
+              "label": "Radio Frequency Application / Coordination",
+              "notes": "Employers operating tower cranes, self-erecting cranes, or industrial cranes need to submit the Radio Frequency Coordination Request Form (found online through WorkSafeBC) when cranes will be in operation for more than one week, if there are any changes to the assigned radios, and/or on an annual basis as a frequency confirmation.",
+              "ohsr": "14.49",
+              "standards": "N/A"
+            },
+            {
+              "id": "13",
+              "label": "Non-Destructive Testing (NDT) Report",
+              "notes": "NDT is required prior to erection and annually thereafter for tower cranes. NDTs may also be used as diligence following an incident or misadventure to confirm integrity of the crane and components. Also note a structural report is required after a prolonged shutdown of the crane. If a tower crane is scheduled to be dismantled within 15 months of being erected, a visual inspection supervised by a professional enginee",
+              "ohsr": "14.77, 14.13(3), 14.16, 14.80, 14.75(5), 14.76",
+              "standards": "CSA Z248-04 S4.2 / S6.x"
+            },
+            {
+              "id": "14",
+              "label": "Variance or Acceptance Documentation",
+              "notes": "Documented approval from WorkSafeBC and all supporting documentation must be filed here.",
+              "ohsr": "WCA Part 2 Div 9",
+              "standards": "N/A"
+            },
+            {
+              "id": "15",
+              "label": "\u201cAdditions\u201d to Crane Surface",
+              "notes": "Must be as per instruction from the manufacturer or certified by an engineer. Examples: company signs, banners, anti-climbing equipment, etc. This tab does not apply to added sections when climbing a tower crane.",
+              "ohsr": "14.92(5)",
+              "standards": "CSA Z248-04 S8.15.1"
+            },
+            {
+              "id": "16",
+              "label": "Crane-Specific Manual",
+              "notes": "Must be on-site readily available to the operator, and on request by the Board.",
+              "ohsr": "14.12 & 14.79",
+              "standards": "CSA Z248-04 S5.2.1 & 8.3.1.2"
+            },
+            {
+              "id": "17",
+              "label": "General Crane Specifications & Load Chart",
+              "notes": "Load charts are found in the crane manual, must be permanently posted on the crane, or must be available to the crane operator who must keep it available at all times while operating. Load charts must be visible to the operator while seated at the controls and at remote control stations. Specification documents will often include typical crane configurations, load charts, and crane component dimensions and weights.",
+              "ohsr": "14.5(3) & 14.75(2)",
+              "standards": "CSA Z248-04 S4.7.3"
+            },
+            {
+              "id": "18",
+              "label": "CSA Compliance Documentation",
+              "notes": "Must include certification report. The inspector may put corresponding sticker/s on the structure/electrical panel to signify completion; recommendation if the inspection sticker is on the electrical panel of a tower crane to include pictures of it taken by the erectors in case a municipal or authority inspector needs to see it and won't climb the crane.",
+              "ohsr": "14.2(6)",
+              "standards": "CSA Z248-04 S4.21\u20135.6"
+            },
+            {
+              "id": "19",
+              "label": "Mobile Crane Documentation",
+              "notes": "All information and documentation to do with the mobile crane involved in the assembly, disassembly, repositioning, climbing, etc. to be filed here. Annual inspection, critical lift procedures (if required), lift plan, machine placement/ground conditions (Geotech report), etc.",
+              "ohsr": "14.34, 14.34.1, 14.42.1, 14.69, 14.71",
+              "standards": "CSA Z248-04 S5.1.2 & 8.10.3"
+            },
+            {
+              "id": "20",
+              "label": "Crane Component Inspections",
+              "notes": "A visual inspection of the crane components must be performed by the Crane Activity Supervisor who assesses for damage occurred during transport or otherwise. CSA states: \"Prior to erecting the crane, the crane components shall be visually inspected on site for damage from shipping and handling. Damaged structural members shall not be used until repaired or replaced and the repair or replacement approved by a profess",
+              "ohsr": "N/A",
+              "standards": "CSA Z248-04 S5.6"
+            },
+            {
+              "id": "21",
+              "label": "Derrick Documentation (if applicable)",
+              "notes": "If a derrick crane is used for erecting, climbing, dismantling, etc., detailed drawings signed and sealed by a professional engineer showing the location of the equipment, anchor bolts, guy wires, and all loads imposed on the structure by the weight of the equipment shall be provided and made available by filing all associated documents under this tab.",
+              "ohsr": "14.2(11)",
+              "standards": "CSA Z248-04 / ASME B30.6"
+            },
+            {
+              "id": "22",
+              "label": "Crane Climbing Documentation (if applicable)",
+              "notes": "Equipment design and specifications, Safe Work Procedures/Instructions, climbing system NDT (prior to assembly, and annually inspected thereafter when in use), NDT for any additional tower crane components being installed, and shoring inspection. ZONING & ANTI -COLLISION (if applicable)",
+              "ohsr": "14.73.2, 14.74, 14.75, 14.77",
+              "standards": "CSA Z248-04 climbing sections"
+            }
+          ]
+        },
+        {
+          "id": "zoning",
+          "title": "Zoning & Anti-Collision (if applicable)",
+          "items": [
+            {
+              "id": "23",
+              "label": "Zoning System Documentation",
+              "notes": "Including manuals, procedures, daily testing instructions/procedures, and a detailed site plan to show the power lines or items of avoidance. Non-OEM systems require additional approval or instruction from the manufacturer or professional engineer. Zoning system installation is required when in an overlap situation with an adjacent crane. (OHSR 14.84.1).",
+              "ohsr": "14.84.1",
+              "standards": "CSA Z248-04 S8.10"
+            },
+            {
+              "id": "24",
+              "label": "Anti-Collision System Documentation",
+              "notes": "Including manuals, procedures, daily testing instructions/procedures, and a detailed site plan showing the multiple crane locations. Non-OEM systems require additional approval or instruction from the manufacturer or professional engineer. Anti-collision system installation is required when there is an overlap situation with an adjacent crane. (OHSR 14.84.1). ROPES & TEST BLOCK S",
+              "ohsr": "14.84.1(3)(c.1) & 14.15",
+              "standards": "CSA Z248-04 S8.10 / S8.13.2"
+            }
+          ]
+        },
+        {
+          "id": "ropes",
+          "title": "Ropes & Test Blocks",
+          "items": [
+            {
+              "id": "25",
+              "label": "Testing Certification for Hoist Ropes",
+              "notes": "Commonly referred to as a \"mill certificate\", which includes manufacturer information on testing and certification. More information on content requirements outlined in the CSA standard.",
+              "ohsr": "15.27, 15.28, 15.31",
+              "standards": "CSA Z248-04 S4.11.3"
+            },
+            {
+              "id": "26",
+              "label": "Hoist Rope Record (if applicable)",
+              "notes": "Rotation resistant hoist ropes must be shortened 3 metres per every 500 hours of use (by a qualified person) unless specified by manufacturer, has 14+ outer strands, or has a plastic- coated inner core. File information required in OHSR 14.91(3) here on hoist rope.",
+              "ohsr": "14.91(3)",
+              "standards": "CSA Z248-04 S6.4.4.1"
+            },
+            {
+              "id": "27",
+              "label": "Rigging Certification Documentation",
+              "notes": "Annual chain sling inspections filed here. Periodic inspection intervals shall not exceed 1 yr. Documentation that the most recent periodic inspection was performed shall be maintained.",
+              "ohsr": "14.14, 15.30, 15.31",
+              "standards": "CSA Z248-04 S6.4.7 / ASME B30.9"
+            },
+            {
+              "id": "28",
+              "label": "Test Block Documentation",
+              "notes": "Test blocks and their lifting points shall be as specified by the crane manufacturer, or by a professional engineer. The weight of each test block must be accurately determined and durably/legibly marked on it.",
+              "ohsr": "14.82",
+              "standards": "CSA Z248-04 S6.3.3"
+            },
+            {
+              "id": "29",
+              "label": "Horizontal Lifeline Documentation (if applicable)",
+              "notes": "Instructions from the manufacturer, or a professional engineer, for installation and use, plus inspection documents to be filed here (if applicable). BELOW THE HOOK (BTH)",
+              "ohsr": "14.88(4)(d), 11.7",
+              "standards": "CSA Z248-04 S4.25.5"
+            }
+          ]
+        },
+        {
+          "id": "bth",
+          "title": "Below The Hook (BTH)",
+          "items": [
+            {
+              "id": "30",
+              "label": "DEP Box, Work Platforms & Secondary Rigging Documentation",
+              "notes": "Engineered drawings, proof of pre-use inspection/confirmation \"safe for use\", any specific procedures, dry run documentation, and information/instruction for the secondary rigging attachment/secondary support anchorage to be filed here. TOC # Documentation Required Y/N",
+              "ohsr": "13.2(2)(b), 13.27\u201313.29",
+              "standards": "WPL 2-2004 / ASME B30.9"
+            },
+            {
+              "id": "31",
+              "label": "Below the Hook Lifting Devices Documentation",
+              "notes": "Manufacturer instructions for use and capacity information, NDT inspection hard copies (inspection plates on the unit must be accompanied by a hard copy document), approved engineering/design documents, and proof of inspections from qualified individuals filed here. PROCEDURES & COMPLIANCE",
+              "ohsr": "15.57\u201315.60, 15.30",
+              "standards": "ASME B30.9-2006"
+            }
+          ]
+        },
+        {
+          "id": "procedures",
+          "title": "Procedures & Compliance",
+          "items": [
+            {
+              "id": "32",
+              "label": "Crane Assembly / Disassembly Written Procedures (site-specific)",
+              "notes": "Crane to be erected according to manufacturer procedures or approved engineering direction signed off by all assembly/disassembly workers involved. If applicable, the design, location, and method of attaching a tower crane operators cab must be approved by the crane manufacturer or by a professional engineer. Rated capacities must be adjusted as necessary if using a cab type and location not approved by the manufactu",
+              "ohsr": "14.75(2)",
+              "standards": "CSA Z248-04 s.5.2.1"
+            },
+            {
+              "id": "33",
+              "label": "Crane Activity Supervisor & Lead Hand Qualification",
+              "notes": "Outlined in the Notice of Project- Tower Crane requirements, the supervisor and lead hand must be qualified and competent in all phases of crane erection, dismantling, and climbing. Certification is an asset.",
+              "ohsr": "14.73.3(3)",
+              "standards": "CSA Z248-04 S5.1"
+            },
+            {
+              "id": "34",
+              "label": "Safe Work Procedures \u2014 Assembly / Disassembly",
+              "notes": "Examples can include fall protection plan (required to be site-specific, accurate to the task being performed, must be adjusted for changing site conditions such as pre/post building construction), overlap procedures (to include other cranes, mobile equipment, pump trucks, etc.), lockout/tagout, limits of approach (LOA), blind lifts, etc.",
+              "ohsr": "14.84.1(3)(d), 10.4, 11.3",
+              "standards": "CSA Z248-04 S8.10.2.4"
+            },
+            {
+              "id": "35",
+              "label": "Safe Work Procedures \u2014 Operation & Maintenance",
+              "notes": "Examples can include: fall protection plan (required to be site-specific and accurate to the task being performed- operator or maintenance fall pro plan shouldn't include assembly/disassembly info and must be adjusted for changing site conditions such as pre/post building construction, overlap procedure (to include other cranes, mobile equipment, placing booms, pump trucks, etc.), lockout/tagout, limits of approach (",
+              "ohsr": "14.84.1(3)(d), 11.3, 14.88(7), 10.4",
+              "standards": "CSA Z248-04 S8.10.2.4"
+            },
+            {
+              "id": "36",
+              "label": "Emergency Response Plan",
+              "notes": "Rescue procedures must be available and clearly outlined for the operator, technicians, inspectors, etc. who will be in the cab or on the crane. Procedures must be signed and understood by all parties prior to work - Rescue team identified? Appropriate equipment on site for rescue? THARRP application completed (WorkSafeBC Guideline- G4.13(3)(a))? If a DEP box is to be used, pre-use inspection, dry run, secondary supp",
+              "ohsr": "4.13 & 4.14",
+              "standards": "WPL 2-2004"
+            }
+          ]
+        },
+        {
+          "id": "post-assembly",
+          "title": "Post Assembly Documentation",
+          "items": [
+            {
+              "id": "37",
+              "label": "Construction Site Tower Crane Report",
+              "notes": "Comprehensive document commonly referred to as the \u201cerectors report\u201d filled out by the crane erector confirming it has been inspected, repaired, erected, and tested in accordance with manufacturer's specifications, professional engineer direction, applicable standards, and the Occupational Health and Safety Regulation in mind. Supporting documentation may be required for some items.",
+              "ohsr": "N/A",
+              "standards": "CSA Z248-04 S4.6.4.1 / S5.1.2"
+            },
+            {
+              "id": "38",
+              "label": "Preventive Maintenance Schedule & Instruction",
+              "notes": "Include crane-specific maintenance program, applicable procedures, and information on the qualified maintenance/repair personnel. Recommendation to have maintenance dates pre-arranged with the jobsite as close to assembly as possible to avoid re- scheduling/conflicts.",
+              "ohsr": "4.3, 14.13",
+              "standards": "CSA Z248-04 S7.1\u20137.3"
+            },
+            {
+              "id": "39",
+              "label": "Post-Install Mast Bolt Retorque (if applicable)",
+              "notes": "All information including frequency, torque specs, and proof of completion to be filed here.",
+              "ohsr": "4.3",
+              "standards": "CSA Z248-04 S6.4.3"
+            },
+            {
+              "id": "40",
+              "label": "Operator Crane Orientation",
+              "notes": "Each operator must have a documented orientation on the specific crane to which they are operating on site. If a new or backup operator is hired, they must also receive the crane- specific orientation.",
+              "ohsr": "14.34",
+              "standards": "CSA Z248-04 S8.2.2.1"
+            },
+            {
+              "id": "41",
+              "label": "Operator Certification & Proof of Qualification",
+              "notes": "Certification and proof of qualification are separate documents- a ticket/certification is not acknowledged as proof of qualification by WorkSafeBC. The crane operator's employer should have proof of qualification on file to provide for this section. If the operator has a Provisional designation, their Full Scope mentor/qualified supervisor and any supporting documentation to their mentorship should be filed here as ",
+              "ohsr": "14.34.1, 14.34",
+              "standards": "CSA Z248-04 S8.2.1 & 8.2.2"
+            },
+            {
+              "id": "42",
+              "label": "Inspections Documentation / Logs",
+              "notes": "If the following inspections are not filed in this crane binder, they must be accessible to the operator, associated workers, and WorkSafeBC at all times. The OPERATOR LOG includes records of any tests, inspections, maintenance, repairs, revisions, modifications, misadventures, damage and subsequent repairs done to the crane while erected at the current site. PRE-USE INSPECTIONS are as per manufacturer instruction an",
+              "ohsr": "14.13, 14.14, 14.35, 14.75, 14.81(2), 14.91, 15.25, 15.31",
+              "standards": "CSA Z248-04 S6.2.3"
+            },
+            {
+              "id": "43",
+              "label": "Repositioning Documentation",
+              "notes": "Repositioning includes any change in the crane configuration from the way it was originally installed, including climbing, change of boom length, etc. Before a tower crane is put into service after its mast has been repositioned, a professional engineer must certify that the parts of the crane affected by the repositioning process have been properly installed and any required reshoring for, and bracing to, the suppor",
+              "ohsr": "14.75",
+              "standards": "N/A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "self-erect",
+      "label": "Self-Erect Tower Crane",
+      "docNumber": "FM-SETC-01",
+      "docDate": "09/20/2024",
+      "pages": 6,
+      "title": "Self-Erect Tower Crane Site Binder Document Checklist",
+      "subtitle": "Pre-assembly / dismantling / climbing / repositioning for self-erect cranes",
+      "description": "Use for self-erecting tower cranes. 40 documentation items with self-erect-specific notes on annual visual + NDT certification, counterweights, and shoring on suspended slabs.",
+      "pdf": "/crane-pdfs/bc-binder/self-erect/fm-setc-01-checklist.pdf",
+      "forms": [
+        {
+          "id": "fm-setc-01",
+          "docNumber": "FM-SETC-01",
+          "title": "Self-Erect Tower Crane Site Binder Document Checklist",
+          "description": "Mandatory checklist for self-erect tower crane pre-assembly, dismantling, climbing, and repositioning. Required with NOP-TC submissions for self-erect crane activity.",
+          "file": "/crane-pdfs/bc-binder/self-erect/fm-setc-01-checklist.pdf",
+          "source": "BC Crane Safety",
+          "pages": "6",
+          "date": "09/20/2024"
+        },
+        {
+          "id": "tbl-setc-01",
+          "docNumber": "TBL-SETC-01",
+          "title": "Self-Erect Tower Crane Binder \u2014 Table of Contents",
+          "description": "Numbered TOC template tailored to self-erect tower crane documentation (40 items).",
+          "file": "/crane-pdfs/bc-binder/self-erect/tbl-setc-01-toc.pdf",
+          "source": "BC Crane Safety",
+          "pages": "2",
+          "date": "09/20/2024"
+        },
+        {
+          "id": "tbl-setc-02",
+          "docNumber": "TBL-SETC-02",
+          "title": "Self-Erect Tower Crane Binder \u2014 Table of Contents Notes",
+          "description": "Requirement notes for each self-erect binder tab, including NDT, counterweights, shoring on suspended slabs, and rescue expectations.",
+          "file": "/crane-pdfs/bc-binder/self-erect/tbl-setc-02-toc-notes.pdf",
+          "source": "BC Crane Safety",
+          "pages": "7",
+          "date": "12/12/2024"
+        },
+        {
+          "id": "tbl-setc-03",
+          "docNumber": "TBL-SETC-03",
+          "title": "OHSR & CSA Info for Self-Erect Tower Crane",
+          "description": "OHSR and CSA/ASME standards map for self-erect tower crane binder items.",
+          "file": "/crane-pdfs/bc-binder/self-erect/tbl-setc-03-ohsr-csa.pdf",
+          "source": "BC Crane Safety",
+          "pages": "4",
+          "date": "09/20/2024"
+        }
+      ],
+      "parties": [
+        {
+          "id": "owner",
+          "label": "Owner / Supplier"
+        },
+        {
+          "id": "prime",
+          "label": "Prime Contractor"
+        },
+        {
+          "id": "supervisor",
+          "label": "Activity Supervisor"
+        },
+        {
+          "id": "user",
+          "label": "Crane User"
+        },
+        {
+          "id": "mobile",
+          "label": "Mobile Crane"
+        },
+        {
+          "id": "other",
+          "label": "Other"
+        },
+        {
+          "id": "na",
+          "label": "N/A"
+        }
+      ],
+      "signOffRoles": [
+        {
+          "id": "owner",
+          "role": "Owner",
+          "description": "Owner / Supplier of the Tower Crane"
+        },
+        {
+          "id": "prime",
+          "role": "Prime Contractor",
+          "description": "Property owner / Prime contractor responsible for coordination of all employers at the workplace"
+        },
+        {
+          "id": "supervisor",
+          "role": "Activity Supervisor",
+          "description": "Qualified to erect, climb, reposition or dismantle this self-erect tower crane"
+        },
+        {
+          "id": "user",
+          "role": "Crane User",
+          "description": "Employer responsible for operation of the tower crane at this workplace"
+        },
+        {
+          "id": "mobile",
+          "role": "Mobile Crane",
+          "description": "Owner / Lessee of the mobile crane contracted to assist in the erection and installation of the self-erect tower crane"
+        }
+      ],
+      "sections": [
+        {
+          "id": "pre-assembly",
+          "title": "Pre-Assembly Documentation",
+          "items": [
+            {
+              "id": "1",
+              "label": "Land Use / NAVCAN",
+              "notes": "8-12 weeks prior to starting construction, the Land Use Crane Submission Form must be filled out and submitted to NAVCAN for all cranes, in all locations, regardless of proximity to an aerodrome. https://www.navcanada.ca/en/aeronautical-information/land-use- program.aspx",
+              "ohsr": "N/A",
+              "standards": "N/A"
+            },
+            {
+              "id": "2",
+              "label": "Aeronautical Agreement (if applicable)",
+              "notes": "8-12 weeks prior to starting construction, submission of an aeronautical agreement to Transport Canada may be required when working within 6kms of an aerodrome- including hospitals with helicopter pads.",
+              "ohsr": "N/A",
+              "standards": "Canada Standard 621"
+            },
+            {
+              "id": "3",
+              "label": "30M33 / Record of Discussion / Assurance in Writing",
+              "notes": "If the minimum distances outlined in WorkSafeBC Table 19.1.A cannot be maintained because of the circumstances of work or the inadvertent movement of persons or equipment, an assurance in writing on a form acceptable to the Board (30M33) and signed by a representative of the owner of the power system, must be obtained. All versions/revisions of the 30M33 should be kept here.",
+              "ohsr": "14.52, 14.52.1, 19.24\u201319.28",
+              "standards": "CSA Z248-04 S8.13"
+            },
+            {
+              "id": "4",
+              "label": "Trolley Overhead (TOH) Adjacent Works Documentation (if applicable)",
+              "notes": "When working in proximity to any over, or underground transit systems there should be approval from the entity/owner your work can go through as planned. In Vancouver, consent from TransLink and an approved \"Construction Safe Work Plan\" is required if working within limits of approach of any powered or non-powered Trolley Overhead Infrastructure, or adjustment or relocation of TransLink TOH systems. https://www.translink.ca/about-us/doing-business-with-translink/temporary-tra",
+              "ohsr": "N/A",
+              "standards": "CSA Z248-04 S8.13.1.1"
+            },
+            {
+              "id": "5",
+              "label": "Power Source Information",
+              "notes": "Specify site power or generator power for the crane. Must include electrical permit (issued by municipality or Technical Safety BC and specifying the type of volts required for the crane), proof of installation from a qualified individual (Electrical Field Safety Representative (FSR)) and installed as per manufacturer instruction. Proof of grounding (pictures) are recommended to be filed here as well.",
+              "ohsr": "19.5",
+              "standards": "CSA Z248-04 S4.22.1"
+            },
+            {
+              "id": "6",
+              "label": "Notice of Project \u2014 Tower Crane (NOP-TC)",
+              "notes": "NOP-TC comes into effect October 1, 2024, more information on the NOP-TC can be found in part 14 WorkSafeBC Regulations. Self-erect cranes are included in NOP-TC requirements. TOC # Documentation Required Y/N",
+              "ohsr": "14.73.3(3)",
+              "standards": "N/A"
+            },
+            {
+              "id": "7",
+              "label": "Site Layout / Design Package",
+              "notes": "Documents showing specific crane information and location on site- crane operating radii, boom and tower configurations and lengths, complete set of specifications, drawings, and instructions for this crane, including: the engineer's assembly drawing, complete with foundation design, custom transitions, tie-downs, etc. If multiple cranes on site it must show the overlap and include all clearance distances between cranes/buildings/adjacent structures etc.",
+              "ohsr": "4.3, 14.74",
+              "standards": "CSA Z248-04 S4.6 & 5.7"
+            },
+            {
+              "id": "8",
+              "label": "Foundation, Shoring, Geotechnical / Soils Engineering Documentation",
+              "notes": "Include foundation design drawings (Issued for Construction (IFC) drawings), foundation inspection report, reshoring/cribbing inspection (if applicable), and concrete compressive strength test report. Minimum concrete MPa requirement for crane foundation is determined by manufacturer or engineer (if applicable). Soils/Geotechnical report is provided by the geotechnical engineer following their visit to inspect the site preparation. If the crane is erected on a suspended slab,",
+              "ohsr": "14.74, 14.73.2",
+              "standards": "CSA Z248-04 S5.3 / S6.4.8.3"
+            },
+            {
+              "id": "9",
+              "label": "Pre-Assembly Meeting",
+              "notes": "BC Crane Safety SWP Checklist document outlining responsibilities and documentation is a requirement of the WorkSafeBC Notice of Project-Tower Crane (NOP-TC) submission documentation. If possible, recommended to complete checklist with all associated parties a minimum of two weeks prior to assembly/disassembly to ensure the timely collection of all required documentation to complete the crane binder.",
+              "ohsr": "4.1, 4.3",
+              "standards": "CSA Z248-04 S5.2"
+            },
+            {
+              "id": "10",
+              "label": "Traffic Control / Municipal Permits / Street Use",
+              "notes": "Responsibility of the jobsite to organize and approve Traffic Management Plan (TMP) with the municipality, confirm trucking routes, designated parking areas, street closures, etc.",
+              "ohsr": "18.2",
+              "standards": "CSA Z248-04 S5.7"
+            },
+            {
+              "id": "11",
+              "label": "Radio Frequency Application / Coordination",
+              "notes": "Employers operating tower cranes, self-erecting cranes, or industrial cranes need to submit the Radio Frequency Coordination Request Form (found online through WorkSafeBC) when cranes will be in operation for more than one week, if there are any changes to the assigned radios, and/or on an annual basis as a frequency confirmation. TOC # Documentation Required Y/N",
+              "ohsr": "14.49",
+              "standards": "N/A"
+            },
+            {
+              "id": "12",
+              "label": "Non-Destructive Testing (NDT) Reports",
+              "notes": "Self-erecting tower cranes must be visually inspected annually by a qualified person each time they are erected and must be inspected and certified by an NDT at least once every 12 months. NDT's may also be used as diligence following an incident or misadventure to confirm integrity of the crane and components. Also note, a structural report is required after a prolonged shutdown of the crane. Regarding a certification of repairs or modification (if applicable), any repairs t",
+              "ohsr": "14.77, 14.13(3), 14.16, 14.80, 14.75(5), 14.76",
+              "standards": "CSA Z248-04 NDT sections"
+            },
+            {
+              "id": "13",
+              "label": "Variance or Acceptance Documentation",
+              "notes": "Documented approval from WorkSafeBC and all supporting files must be filed here.",
+              "ohsr": "WCA Part 2 Div 9",
+              "standards": "N/A"
+            },
+            {
+              "id": "14",
+              "label": "\u201cAdditions\u201d to Crane Surface",
+              "notes": "Must be as per instruction from the manufacturer or certified by an engineer. Examples: company signs, horizontal lifelines for jib/boom access, banners, anti-climbing equipment, etc. This tab does not apply to added sections when climbing a self-erect tower crane.",
+              "ohsr": "14.92(5)",
+              "standards": "CSA Z248-04 S8.15.1"
+            },
+            {
+              "id": "15",
+              "label": "Crane-Specific Manual",
+              "notes": "Must be on-site readily available to the operator, and on request by the Board.",
+              "ohsr": "14.12 & 14.79",
+              "standards": "CSA Z248-04 S5.2.1 & 8.3.1.2"
+            },
+            {
+              "id": "16",
+              "label": "General Crane Specifications & Load Chart",
+              "notes": "Load charts are found in the crane manual, must be permanently posted on the crane, or must be available to the crane operator who must keep it available at all times while operating. Load charts must be visible to the operator while seated at the controls and at remote control stations. Specification documents will often include typical crane configurations, load charts, and crane component dimensions and weights.",
+              "ohsr": "14.5(3) & 14.75(2)",
+              "standards": "CSA Z248-04 S4.7.3"
+            },
+            {
+              "id": "17",
+              "label": "CSA Compliance Documentation",
+              "notes": "Must include certification report and stickers on the structure/electrical panel. Recommendation to include pictures from erectors of the locations of the inspection stickers on the various locations if not visible from the ground. TOC # Documentation Required Y/N",
+              "ohsr": "14.2(6)",
+              "standards": "CSA Z248-04 S4.21\u20135.6"
+            },
+            {
+              "id": "18",
+              "label": "Crane Component Inspections",
+              "notes": "A visual inspection of the crane components must be performed by the Crane Activity Supervisor who assesses for damage occurred during transport or otherwise. CSA states: \"Prior to erecting the crane, the crane components shall be visually inspected on site for damage from shipping and handling. Damaged structural members shall not be used until repaired or replaced and the repair or replacement approved by a professional engineer. Reports of these inspections shall be made a",
+              "ohsr": "N/A",
+              "standards": "CSA Z248-04 S5.6"
+            },
+            {
+              "id": "19",
+              "label": "Mobile Crane Documentation",
+              "notes": "All information and documentation to do with the mobile crane involved in the assembly, disassembly, repositioning, climbing, etc. to be filed here. Annual inspection, critical lift procedures (if required), lift plan, machine placement/ground conditions (Geotech report), etc.",
+              "ohsr": "14.34, 14.34.1, 14.42.1, 14.69, 14.71",
+              "standards": "CSA Z248-04 S5.1.2 & 8.10.3"
+            },
+            {
+              "id": "20",
+              "label": "High Angle Rescue Information or THARRP Agreement (if applicable)",
+              "notes": "Program (THARRP) Agreement (if applicable) If using high angle rescue for assembly, maintenance, operation, climbing, or disassembly and the jobsite is outside of the service area for a fire/rescue department or the department is incapable of rescue, high angle rescue must be in place for the jobsite by the employer. If calling 911 is the mode of rescue for a crane emergency, approval from the local fire department is required through the THARR Program administered by the Bri",
+              "ohsr": "14.88(7)",
+              "standards": "N/A"
+            },
+            {
+              "id": "21",
+              "label": "Derrick Documentation (if applicable)",
+              "notes": "If a derrick crane is used for erecting, climbing, dismantling, etc. All procedures and documentation required to be filed here. Documentation to include detailed drawings authenticated by a professional engineer showing the location of the equipment, anchor bolts, guy wires, and all loads imposed on the structure by the weight of the equipment.",
+              "ohsr": "14.2(11)",
+              "standards": "CSA Z248-04 / ASME B30.6"
+            },
+            {
+              "id": "22",
+              "label": "Crane Climbing Documentation (if applicable)",
+              "notes": "Equipment design and specifications, Safe Work Procedures/Instructions, climbing system NDT (prior to assembly, and annually inspected thereafter when in use), NDT for any additional crane components being installed, and shoring inspection. ZONING & ANTI -COLLISION",
+              "ohsr": "14.73.2, 14.74, 14.75, 14.77",
+              "standards": "CSA Z248-04 climbing sections"
+            }
+          ]
+        },
+        {
+          "id": "zoning",
+          "title": "Zoning & Anti-Collision (if applicable)",
+          "items": [
+            {
+              "id": "23",
+              "label": "Zoning System Documentation",
+              "notes": "Including manuals, procedures, daily testing instructions/procedures, and a detailed site plan to show the power lines or items of avoidance. Non-OEM systems require additional approval or instruction from the manufacturer or professional engineer. Zoning system installation is required when in an overlap situation with an adjacent crane. (OHSR 14.84.1). TOC # Documentation Required Y/N",
+              "ohsr": "14.84.1",
+              "standards": "CSA Z248-04 S8.10"
+            },
+            {
+              "id": "24",
+              "label": "Anti-Collision System Documentation",
+              "notes": "Including manuals, procedures, daily testing instructions/procedures, and a detailed site plan showing the multiple crane locations. Non-OEM systems require additional approval or instruction from the manufacturer or professional engineer. Anti-collision system installation is required when there is an overlap situation with an adjacent crane. (OHSR 14.84.1). ROPES & TEST BLOCKS",
+              "ohsr": "14.84.1(3)(c.1) & 14.15",
+              "standards": "CSA Z248-04 S8.10 / S8.13.2"
+            }
+          ]
+        },
+        {
+          "id": "ropes",
+          "title": "Ropes & Test Blocks",
+          "items": [
+            {
+              "id": "25",
+              "label": "Testing Certification for Hoist Ropes",
+              "notes": "Commonly referred to as a \"mill certificate\" which includes manufacturer information on testing and certification. More information on content requirements outlined in the CSA standard.",
+              "ohsr": "15.27, 15.28, 15.31",
+              "standards": "CSA Z248-04 S4.11.3"
+            },
+            {
+              "id": "26",
+              "label": "Hoist Rope Record (if applicable)",
+              "notes": "Rotation resistant hoist ropes must be shortened 3 metres per every 500 hours of use (by a qualified person) unless specified by manufacturer, has 14+ outer strands, or has a plastic- coated inner core. File information required in OHSR 14.91(3) here on hoist rope.",
+              "ohsr": "14.91(3)",
+              "standards": "CSA Z248-04 S6.4.4.1"
+            },
+            {
+              "id": "27",
+              "label": "Rigging Certification Documentation",
+              "notes": "Annual chain sling inspections filed here. Periodic inspection intervals shall not exceed 1 yr. Documentation that the most recent periodic inspection was performed shall be maintained.",
+              "ohsr": "14.14, 15.30, 15.31",
+              "standards": "CSA Z248-04 S6.4.7 / ASME B30.9"
+            },
+            {
+              "id": "28",
+              "label": "Test Block Documentation",
+              "notes": "Test blocks and their lifting points shall be as specified by the crane manufacturer, or by a professional engineer. The weight of each test block must be accurately determined and durably/legibly marked on it. BELOW THE HOOK ( BTH)",
+              "ohsr": "14.82",
+              "standards": "CSA Z248-04 S6.3.3"
+            }
+          ]
+        },
+        {
+          "id": "bth",
+          "title": "Below The Hook (BTH)",
+          "items": [
+            {
+              "id": "29",
+              "label": "Below the Hook Lifting Devices Documentation",
+              "notes": "Manufacturer instructions for use and capacity information, NDT inspection hard copies (inspection plates on the unit must be accompanied by a hard copy document), sealed engineering/design documents, and proof of inspections from qualified individuals filed here.",
+              "ohsr": "15.57\u201315.60, 15.30",
+              "standards": "ASME B30.9-2006"
+            },
+            {
+              "id": "30",
+              "label": "DEP Box, Work Platforms & Secondary Rigging Documentation (if applicable)",
+              "notes": "Manufacturer instructions for use and capacity information, NDT inspection hard copies (inspection plates on the unit must be accompanied by a hard copy document), sealed engineering/design documents, and proof of inspections from qualified individuals filed here. TOC # Documentation Required Y/N PROCEDURES & COMPLIANCE",
+              "ohsr": "13.2(2)(b), 13.27\u201313.29",
+              "standards": "WPL-2 / ASME B30.9"
+            }
+          ]
+        },
+        {
+          "id": "procedures",
+          "title": "Procedures & Compliance",
+          "items": [
+            {
+              "id": "31",
+              "label": "Crane Assembly / Disassembly Written Procedures (site-specific)",
+              "notes": "Crane to be erected according to manufacturer procedures or approved engineering direction signed off by all assembly/disassembly workers involved. If applicable, the design, location, and method of attaching the crane operators cab must be approved by the crane manufacturer or by a professional engineer. Rated capacities must be adjusted as necessary if using a cab type and location not approved by the manufacturer.",
+              "ohsr": "14.75(2)",
+              "standards": "CSA Z248-04 s.5.2.1"
+            },
+            {
+              "id": "32",
+              "label": "Crane Activity Supervisor & Lead Hand Qualifications",
+              "notes": "Outlined in the Notice of Project- Tower Crane requirements, the supervisor and lead hand must be qualified and competent in all phases of crane erection, dismantling, and climbing. Certification is an asset.",
+              "ohsr": "14.73.3(3)",
+              "standards": "CSA Z248-04 S5.1"
+            },
+            {
+              "id": "33",
+              "label": "Safe Work Procedures \u2014 Assembly / Disassembly",
+              "notes": "Examples can include: fall protection plan (required to be site-specific, accurate to the task being performed, must be adjusted for changing site conditions such as pre/post building construction), overlap procedures (to include other cranes, mobile equipment, pump trucks, etc.), lockout/tagout, limits of approach (LOA), blind lifts, etc.",
+              "ohsr": "14.84.1(3)(d), 10.4, 11.3",
+              "standards": "CSA Z248-04 S8.10.2.4"
+            },
+            {
+              "id": "34",
+              "label": "Safe Work Procedures \u2014 Operation & Maintenance",
+              "notes": "Examples can include: fall protection plan (required to be site-specific, accurate to the task being performed, must be adjusted for changing site conditions such as pre/post building construction), overlap procedures (to include other cranes, mobile equipment, placing booms, pump trucks, etc.), lockout/tagout, limits of approach (LOA), blind lifts, etc.",
+              "ohsr": "14.84.1(3)(d), 11.3, 14.88(7), 10.4",
+              "standards": "CSA Z248-04 S8.10.2.4"
+            },
+            {
+              "id": "35",
+              "label": "Emergency Response Plan",
+              "notes": "Rescue procedures must be available and clearly outlined for the operator, technicians, inspectors, etc. who will be in the cab or on the crane. Procedures must be signed and understood by all parties prior to work - Rescue team identified? Appropriate equipment on site for rescue? THARRP application completed (WorkSafeBC Guideline- G4.13(3)(a))? If a DEP box is to be used, pre-use inspection, dry run, secondary support rigging, etc. POST- ASSEMBLY DOCUMENTATION",
+              "ohsr": "4.13 & 4.14",
+              "standards": "WPL 2-2004"
+            }
+          ]
+        },
+        {
+          "id": "post-assembly",
+          "title": "Post Assembly Documentation",
+          "items": [
+            {
+              "id": "36",
+              "label": "Construction Site Tower Crane Report",
+              "notes": "Comprehensive document commonly referred to as the \"erectors report\" is filled out by the crane erector confirming it has been inspected, repaired, erected, and tested in accordance with manufacturer's specifications, professional engineer direction, applicable standards, and the Occupational Health and Safety Regulation in mind. Supporting documentation may be required for some items. TOC # Documentation Required Y/N",
+              "ohsr": "N/A",
+              "standards": "CSA Z248-04 S4.6.4.1 / S5.1.2"
+            },
+            {
+              "id": "37",
+              "label": "Preventive Maintenance Schedule & Instruction",
+              "notes": "Include crane-specific maintenance program, applicable procedures, and information on the qualified maintenance/repair personnel. Recommendation to have maintenance dates pre-arranged with the jobsite as close to assembly as possible to avoid re- scheduling/conflicts.",
+              "ohsr": "4.3, 14.13",
+              "standards": "CSA Z248-04 S7.1\u20137.3"
+            },
+            {
+              "id": "38",
+              "label": "Operator Crane Orientation",
+              "notes": "Each operator must have a documented orientation on the specific crane to which they are operating on site. If a new or backup operator is hired, they must also receive the crane- specific orientation.",
+              "ohsr": "14.34",
+              "standards": "CSA Z248-04 S8.2.2.1"
+            },
+            {
+              "id": "39",
+              "label": "Operator Certification & Proof of Qualification",
+              "notes": "Certification and proof of qualification are separate documents- a ticket/certification is not acknowledged as proof of qualification by WorkSafeBC. The crane operator's employer should have proof of qualification on file to provide for this section. If the operator has a Provisional designation, their Full Scope mentor/qualified supervisor and any supporting documentation to their mentorship should be filed here as well. More information on operator qualifications and compet",
+              "ohsr": "14.34.1, 14.34",
+              "standards": "CSA Z248-04 S8.2.1 & 8.2.2"
+            },
+            {
+              "id": "40",
+              "label": "Inspections Documentation / Logs",
+              "notes": "If the following inspections are not filed in this crane binder, they must be accessible to the operator, associated workers, and WorkSafeBC at all times. The OPERATOR LOG includes records of any tests, inspections, maintenance, repairs, revisions, modifications, misadventures, damage, and subsequent repairs done to the crane while erected at the current site. PRE-USE INSPECTIONS are as per manufacturer instruction and/or Regulation requirements. Documented proof of pre-use i",
+              "ohsr": "14.13, 14.14, 14.35, 14.75, 14.81(2), 14.91, 15.25, 15.31",
+              "standards": "CSA Z248-04 S6.2.3"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

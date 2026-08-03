@@ -11,7 +11,7 @@ import {
   Clock,
   FolderKanban,
   HardHat,
-  Link2,
+  MapPinned,
   Megaphone,
   Plus,
   ShieldAlert,
@@ -44,6 +44,12 @@ const assetModules = [
     label: "Inspections",
     icon: Wrench,
     color: "bg-[#f79009]",
+  },
+  {
+    href: "/forms/site-inspections",
+    label: "Site inspections",
+    icon: MapPinned,
+    color: "bg-[#0284c7]",
   },
   {
     href: "/forms/swp",
@@ -123,6 +129,15 @@ const recentForms = [
   },
   {
     id: "f3",
+    title: "Site inspection — Oceanview L28",
+    href: "/forms/site-inspections",
+    status: "2 findings",
+    time: "Today 06:30",
+    statusColor:
+      "bg-rose-50 text-rose-700 dark:bg-rose-500/15 dark:text-rose-400",
+  },
+  {
+    id: "f4",
     title: "Rigging pre-use walkaround",
     href: "/forms/inspections/rigging",
     status: "Passed",
@@ -131,7 +146,7 @@ const recentForms = [
       "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-400",
   },
   {
-    id: "f4",
+    id: "f5",
     title: "Toolbox — Blind lifts & swing radius",
     href: "/forms/toolbox",
     status: "Delivered",
@@ -140,7 +155,7 @@ const recentForms = [
       "bg-orange-50 text-orange-700 dark:bg-orange-500/15 dark:text-orange-400",
   },
   {
-    id: "f5",
+    id: "f6",
     title: "SJP — Blind Lift Radio Protocol",
     href: "/forms/documents/doc-sjp-blind",
     status: "Reviewed",
@@ -149,7 +164,7 @@ const recentForms = [
       "bg-sky-50 text-sky-700 dark:bg-sky-500/15 dark:text-sky-400",
   },
   {
-    id: "f6",
+    id: "f7",
     title: "FLHA — Fraser Crossing Columns",
     href: "/forms/flha?project=proj-fraser",
     status: "Draft",
@@ -200,21 +215,21 @@ export function FormsScreen() {
             <div className="flex size-11 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-700 dark:text-orange-400">
               <TowerControl className="size-5" />
             </div>
-            <p className="font-bold leading-snug">Crane inspections</p>
+            <p className="font-bold leading-snug">Crane &amp; rigging</p>
             <p className="text-xs text-muted-foreground">
-              Daily / shift log books per crane
+              Equipment log books
             </p>
           </Link>
           <Link
-            href="/forms/inspections"
+            href="/forms/site-inspections"
             className="helix-card flex flex-col gap-2 p-4 active:scale-[0.99]"
           >
-            <div className="flex size-11 items-center justify-center rounded-2xl bg-violet-500/15 text-violet-700 dark:text-violet-400">
-              <Link2 className="size-5" />
+            <div className="flex size-11 items-center justify-center rounded-2xl bg-sky-500/15 text-sky-700 dark:text-sky-400">
+              <MapPinned className="size-5" />
             </div>
-            <p className="font-bold leading-snug">Rigging inspections</p>
+            <p className="font-bold leading-snug">Site inspections</p>
             <p className="text-xs text-muted-foreground">
-              Bins, slings, bridles, hook &amp; block + more
+              Walkthrough · findings · CAs
             </p>
           </Link>
         </div>

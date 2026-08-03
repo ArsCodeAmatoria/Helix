@@ -10,18 +10,31 @@ import React, {
 } from "react";
 import type {
   BcCraneBinderItemStatus,
+  BcCraneBinderPack,
+  BcCraneBinderPackId,
   BcCraneBinderPartyId,
   BcCraneBinderState,
 } from "@/lib/types";
 import {
   binderProgress,
   createEmptyBinderState,
+  getBinderPack,
   seedBinderState,
 } from "@/lib/bc-crane-binder";
 
-const STORAGE_KEY = "helix-bc-crane-binder-v2";
+const STORAGE_KEY = "helix-bc-crane-binder-v3";
+
+type PackStates = Record<BcCraneBinderPackId, BcCraneBinderState>;
+
+interface StoredBinder {
+  activePack: BcCraneBinderPackId;
+  packs: PackStates;
+}
 
 interface BcCraneBinderContextValue {
+  pack: BcCraneBinderPack;
+  packId: BcCraneBinderPackId;
+  setPackId: (id: BcCraneBinderPackId) => void;
   state: BcCraneBinderState;
   progress: ReturnType<typeof binderProgress>;
   updateHeader: (patch: Partial<BcCraneBinderState>) => void;
@@ -41,28 +54,77 @@ interface BcCraneBinderContextValue {
 const BcCraneBinderContext =
   createContext<BcCraneBinderContextValue | null>(null);
 
-function loadState(): BcCraneBinderState {
-  if (typeof window === "undefined") return seedBinderState();
+function defaultPackStates(): PackStates {
+  return {
+    tower: seedBinderState("tower"),
+    "self-erect": seedBinderState("self-erect"),
+  };
+}
+
+function loadStored(): StoredBinder {
+  if (typeof window === "undefined") {
+    return { activePack: "tower", packs: defaultPackStates() };
+  }
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
-      const seeded = seedBinderState();
+      const seeded = { activePack: "tower" as const, packs: defaultPackStates() };
       localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
       return seeded;
     }
-    const parsed = JSON.parse(raw) as BcCraneBinderState;
-    const empty = createEmptyBinderState();
+    const parsed = JSON.parse(raw) as StoredBinder | BcCraneBinderState;
+    // migrate v2 single-state → v3 packs
+    if (parsed && "items" in parsed && !("packs" in parsed)) {
+      const legacy = parsed as BcCraneBinderState;
+      const packs = defaultPackStates();
+      packs.tower = {
+        ...createEmptyBinderState("tower"),
+        ...legacy,
+        packId: "tower",
+        items: {
+          ...createEmptyBinderState("tower").items,
+          ...legacy.items,
+        },
+        signOffs: {
+          ...createEmptyBinderState("tower").signOffs,
+          ...legacy.signOffs,
+        },
+      };
+      return { activePack: "tower", packs };
+    }
+    const stored = parsed as StoredBinder;
+    const emptyTower = createEmptyBinderState("tower");
+    const emptySetc = createEmptyBinderState("self-erect");
     return {
-      ...empty,
-      ...parsed,
-      items: { ...empty.items, ...parsed.items },
-      signOffs: { ...empty.signOffs, ...parsed.signOffs },
-      otherDocs: parsed.otherDocs?.length
-        ? parsed.otherDocs
-        : empty.otherDocs,
+      activePack: stored.activePack === "self-erect" ? "self-erect" : "tower",
+      packs: {
+        tower: {
+          ...emptyTower,
+          ...stored.packs?.tower,
+          packId: "tower",
+          items: { ...emptyTower.items, ...stored.packs?.tower?.items },
+          signOffs: {
+            ...emptyTower.signOffs,
+            ...stored.packs?.tower?.signOffs,
+          },
+        },
+        "self-erect": {
+          ...emptySetc,
+          ...stored.packs?.["self-erect"],
+          packId: "self-erect",
+          items: {
+            ...emptySetc.items,
+            ...stored.packs?.["self-erect"]?.items,
+          },
+          signOffs: {
+            ...emptySetc.signOffs,
+            ...stored.packs?.["self-erect"]?.signOffs,
+          },
+        },
+      },
     };
   } catch {
-    return seedBinderState();
+    return { activePack: "tower", packs: defaultPackStates() };
   }
 }
 
@@ -71,34 +133,57 @@ export function BcCraneBinderProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [state, setState] = useState<BcCraneBinderState>(createEmptyBinderState);
+  const [activePack, setActivePack] = useState<BcCraneBinderPackId>("tower");
+  const [packs, setPacks] = useState<PackStates>(() => ({
+    tower: createEmptyBinderState("tower"),
+    "self-erect": createEmptyBinderState("self-erect"),
+  }));
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    setState(loadState());
+    const stored = loadStored();
+    setActivePack(stored.activePack);
+    setPacks(stored.packs);
     setHydrated(true);
   }, []);
 
   useEffect(() => {
     if (!hydrated) return;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }, [state, hydrated]);
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ activePack, packs } satisfies StoredBinder)
+    );
+  }, [activePack, packs, hydrated]);
+
+  const state = packs[activePack];
+  const pack = getBinderPack(activePack);
 
   const touch = useCallback(
     (updater: (s: BcCraneBinderState) => BcCraneBinderState) => {
-      setState((s) => ({
-        ...updater(s),
-        updatedAt: new Date().toISOString(),
-      }));
+      setPacks((prev) => {
+        const current = prev[activePack];
+        return {
+          ...prev,
+          [activePack]: {
+            ...updater(current),
+            packId: activePack,
+            updatedAt: new Date().toISOString(),
+          },
+        };
+      });
     },
-    []
+    [activePack]
   );
+
+  const setPackId = useCallback((id: BcCraneBinderPackId) => {
+    setActivePack(id);
+  }, []);
 
   const updateHeader = useCallback(
     (patch: Partial<BcCraneBinderState>) => {
-      touch((s) => ({ ...s, ...patch }));
+      touch((s) => ({ ...s, ...patch, packId: activePack }));
     },
-    [touch]
+    [touch, activePack]
   );
 
   const setItemStatus = useCallback(
@@ -213,17 +298,26 @@ export function BcCraneBinderProvider({
   );
 
   const reset = useCallback(() => {
-    setState(createEmptyBinderState());
-  }, []);
+    setPacks((prev) => ({
+      ...prev,
+      [activePack]: createEmptyBinderState(activePack),
+    }));
+  }, [activePack]);
 
   const loadSeed = useCallback(() => {
-    setState(seedBinderState());
-  }, []);
+    setPacks((prev) => ({
+      ...prev,
+      [activePack]: seedBinderState(activePack),
+    }));
+  }, [activePack]);
 
   const progress = useMemo(() => binderProgress(state), [state]);
 
   const value = useMemo(
     () => ({
+      pack,
+      packId: activePack,
+      setPackId,
       state,
       progress,
       updateHeader,
@@ -237,6 +331,9 @@ export function BcCraneBinderProvider({
       loadSeed,
     }),
     [
+      pack,
+      activePack,
+      setPackId,
       state,
       progress,
       updateHeader,

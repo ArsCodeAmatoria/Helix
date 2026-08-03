@@ -1,0 +1,179 @@
+{
+  "disclaimer": "Site inspections document workplace conditions and corrective actions. Close findings before work continues in affected areas. Follow WorkSafeBC OHSR, BC Crane Safety guidance, and Technical Safety BC requirements where they apply.",
+  "categories": [
+    { "id": "access", "label": "Access & egress", "icon": "door" },
+    { "id": "housekeeping", "label": "Housekeeping", "icon": "broom" },
+    { "id": "fall-protection", "label": "Fall protection", "icon": "shield" },
+    { "id": "crane-interface", "label": "Crane interface", "icon": "crane" },
+    { "id": "public-interface", "label": "Public interface", "icon": "users" },
+    { "id": "electrical", "label": "Electrical", "icon": "zap" },
+    { "id": "ppe", "label": "PPE & signage", "icon": "hardhat" },
+    { "id": "emergency", "label": "Emergency & fire", "icon": "alert" },
+    { "id": "formwork", "label": "Formwork & materials", "icon": "layers" },
+    { "id": "environmental", "label": "Environmental", "icon": "cloud" }
+  ],
+  "checklist": [
+    {
+      "id": "si-access-1",
+      "category": "access",
+      "label": "Site access routes clear, lit, and free of trip hazards",
+      "guidance": "Confirm primary and secondary egress paths are usable for all crews on shift."
+    },
+    {
+      "id": "si-access-2",
+      "category": "access",
+      "label": "Muster point posted and unobstructed",
+      "guidance": "Match posted muster to the project emergency plan."
+    },
+    {
+      "id": "si-access-3",
+      "category": "access",
+      "label": "Ladders / stairs secured with required landings and handrails",
+      "guidance": "Remove damaged or unsecured ladders from service."
+    },
+    {
+      "id": "si-hk-1",
+      "category": "housekeeping",
+      "label": "Work decks free of scrap, cords, and loose materials in travel paths",
+      "guidance": "Housekeeping prevents slips and protects fall-protection systems."
+    },
+    {
+      "id": "si-hk-2",
+      "category": "housekeeping",
+      "label": "Material stacks stable, tagged, and outside swing / exclusion zones",
+      "guidance": "Untagged or unstable stacks create hop and crane interface hazards."
+    },
+    {
+      "id": "si-hk-3",
+      "category": "housekeeping",
+      "label": "Waste / recycling segregated and not blocking exits",
+      "guidance": "Overfull bins at egress points are a finding."
+    },
+    {
+      "id": "si-fp-1",
+      "category": "fall-protection",
+      "label": "Guardrails / covers intact at all open edges and floor openings",
+      "guidance": "Temporary edge protection required before trade re-entry after pours."
+    },
+    {
+      "id": "si-fp-2",
+      "category": "fall-protection",
+      "label": "Site-specific fall protection plan matches today’s tasks",
+      "guidance": "Assembly, stripping, and maintenance plans must not be mixed."
+    },
+    {
+      "id": "si-fp-3",
+      "category": "fall-protection",
+      "label": "Harnesses / SRLs in use where required; damaged gear quarantined",
+      "guidance": "Inspect anchors and connectors as part of the walk."
+    },
+    {
+      "id": "si-crane-1",
+      "category": "crane-interface",
+      "label": "Swing radius / exclusion zone barricaded and respected",
+      "guidance": "Include counterweight area and street-level public interface."
+    },
+    {
+      "id": "si-crane-2",
+      "category": "crane-interface",
+      "label": "Signal person / radio protocol posted for blind or controlled lifts",
+      "guidance": "One designated signal person; emergency stop word known to crew."
+    },
+    {
+      "id": "si-crane-3",
+      "category": "crane-interface",
+      "label": "No unauthorized personnel under the hook or in LOA envelopes",
+      "guidance": "Stop work if the zone is breached."
+    },
+    {
+      "id": "si-crane-4",
+      "category": "crane-interface",
+      "label": "Load chart / operator orientation current for active tower crane",
+      "guidance": "Serial-specific chart on the crane governs — Helix PDFs are reference."
+    },
+    {
+      "id": "si-public-1",
+      "category": "public-interface",
+      "label": "Pedestrian / traffic controls match the approved TMP",
+      "guidance": "Street-use and sidewalk closures must match municipal permit."
+    },
+    {
+      "id": "si-public-2",
+      "category": "public-interface",
+      "label": "Site perimeter fencing / gates secured; visitor sign-in enforced",
+      "guidance": "Public interface at street level is a high-exposure risk."
+    },
+    {
+      "id": "si-elec-1",
+      "category": "electrical",
+      "label": "Temporary power panels labeled; cords elevated / protected",
+      "guidance": "Damaged cords are tagged out — Technical Safety BC / FSR for permanent feeds."
+    },
+    {
+      "id": "si-elec-2",
+      "category": "electrical",
+      "label": "Limits of approach to overhead lines maintained or 30M33 on file",
+      "guidance": "If Table 19.1.A distances cannot be maintained, stop for assurance."
+    },
+    {
+      "id": "si-elec-3",
+      "category": "electrical",
+      "label": "Tower crane power source permit / grounding documentation available",
+      "guidance": "Site binder Power Source tab or equivalent on site."
+    },
+    {
+      "id": "si-ppe-1",
+      "category": "ppe",
+      "label": "Required PPE worn in controlled areas (hard hat, hi-vis, footwear, eye)",
+      "guidance": "Spot-check trades at access and under the hook."
+    },
+    {
+      "id": "si-ppe-2",
+      "category": "ppe",
+      "label": "Hazard / mandatory PPE signage posted at access points",
+      "guidance": "Update signs when site conditions change (pour, climb, strip)."
+    },
+    {
+      "id": "si-em-1",
+      "category": "emergency",
+      "label": "ERP / rescue plan posted; radio channel known to crews",
+      "guidance": "Confirm hospital, muster, and tower cab rescue path."
+    },
+    {
+      "id": "si-em-2",
+      "category": "emergency",
+      "label": "Fire extinguishers / first aid accessible and inspected",
+      "guidance": "Check dates and clear access around stations."
+    },
+    {
+      "id": "si-em-3",
+      "category": "emergency",
+      "label": "High-angle / THARRP capability confirmed for tower crane work",
+      "guidance": "Do not assume 911 alone without local fire/THARRP acknowledgment."
+    },
+    {
+      "id": "si-fw-1",
+      "category": "formwork",
+      "label": "Formwork / falsework appears sound; engineer holds observed where required",
+      "guidance": "Do not strip or load against an open engineering hold."
+    },
+    {
+      "id": "si-fw-2",
+      "category": "formwork",
+      "label": "Rebar / protruding steel capped or guarded in travel areas",
+      "guidance": "Impalement protection required in active work zones."
+    },
+    {
+      "id": "si-env-1",
+      "category": "environmental",
+      "label": "Weather / wind conditions acceptable for planned crane and deck work",
+      "guidance": "Pause lifts when manufacturer / site wind limits are exceeded."
+    },
+    {
+      "id": "si-env-2",
+      "category": "environmental",
+      "label": "Silica / dust / washout controls in place for today’s tasks",
+      "guidance": "Wet methods, vacuums, and designated washout as required."
+    }
+  ]
+}

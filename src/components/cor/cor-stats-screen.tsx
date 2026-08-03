@@ -8,6 +8,8 @@ import {
   BarChart3,
   CheckCircle2,
   ClipboardList,
+  ExternalLink,
+  FileText,
   FileWarning,
   Hammer,
   Search,
@@ -737,6 +739,62 @@ export function CorStatsScreen() {
               />
             </div>
 
+            {(() => {
+              const auditPdfs = readiness.docs.filter((d) => d.file);
+              if (auditPdfs.length === 0) return null;
+              const accent = (id: string) =>
+                id === "doc-bccsa-workbook"
+                  ? "bg-indigo-500/15 text-indigo-700 dark:text-indigo-400"
+                  : "bg-sky-500/15 text-sky-700 dark:text-sky-400";
+              const openAccent = (id: string) =>
+                id === "doc-bccsa-workbook"
+                  ? "text-indigo-700 dark:text-indigo-400"
+                  : "text-sky-700 dark:text-sky-400";
+              return (
+                <div className="space-y-2">
+                  <p className="text-sm font-bold">Audit reference PDFs</p>
+                  {auditPdfs.map((doc) => (
+                    <a
+                      key={doc.id}
+                      href={doc.file}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="helix-card flex items-start gap-3 p-4 transition-shadow hover:shadow-md"
+                    >
+                      <div
+                        className={cn(
+                          "flex size-10 shrink-0 items-center justify-center rounded-xl",
+                          accent(doc.id)
+                        )}
+                      >
+                        <FileText className="size-5" />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          <p className="text-sm font-bold leading-snug">
+                            {doc.title}
+                          </p>
+                          <ExternalLink className="size-3.5 shrink-0 text-muted-foreground" />
+                        </div>
+                        <p className="mt-1 text-[12px] leading-relaxed text-muted-foreground">
+                          {doc.description ?? doc.category}
+                        </p>
+                        <p
+                          className={cn(
+                            "mt-2 text-[11px] font-medium",
+                            openAccent(doc.id)
+                          )}
+                        >
+                          Open PDF
+                          {doc.pages ? ` · ${doc.pages} pages` : ""}
+                        </p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              );
+            })()}
+
             {!readiness.passesOverall && (
               <div className="helix-card flex gap-3 border border-amber-200 bg-amber-50/80 p-4 dark:border-amber-500/30 dark:bg-amber-500/10">
                 <AlertTriangle className="mt-0.5 size-5 shrink-0 text-amber-600" />
@@ -835,31 +893,55 @@ export function CorStatsScreen() {
                 {selected.docs.length > 0 && (
                   <div className="helix-card space-y-2 p-4">
                     <p className="text-sm font-bold">Linked documentation</p>
-                    {selected.docs.map((d) => (
-                      <div
-                        key={d.id}
-                        className="flex items-start justify-between gap-2 rounded-xl bg-muted/50 px-3 py-2.5"
-                      >
-                        <div>
-                          <p className="text-sm font-semibold leading-snug">
-                            {d.title}
-                          </p>
-                          <p className="text-[11px] text-muted-foreground">
-                            {d.category} · {d.owner} · Reviewed {d.lastReviewed}
-                          </p>
-                        </div>
-                        <Badge
-                          className={cn(
-                            "border-0 capitalize",
-                            d.status === "current"
-                              ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
-                              : "bg-amber-500/15 text-amber-700 dark:text-amber-400"
-                          )}
+                    {selected.docs.map((d) => {
+                      const inner = (
+                        <>
+                          <div className="min-w-0">
+                            <p className="text-sm font-semibold leading-snug">
+                              {d.title}
+                              {d.file ? (
+                                <ExternalLink className="ml-1.5 inline size-3 align-[-1px] text-muted-foreground" />
+                              ) : null}
+                            </p>
+                            <p className="text-[11px] text-muted-foreground">
+                              {d.category} · {d.owner} · Reviewed{" "}
+                              {d.lastReviewed}
+                            </p>
+                          </div>
+                          <Badge
+                            className={cn(
+                              "shrink-0 border-0 capitalize",
+                              d.status === "current"
+                                ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                                : "bg-amber-500/15 text-amber-700 dark:text-amber-400"
+                            )}
+                          >
+                            {d.status.replace("-", " ")}
+                          </Badge>
+                        </>
+                      );
+                      if (d.file) {
+                        return (
+                          <a
+                            key={d.id}
+                            href={d.file}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-start justify-between gap-2 rounded-xl bg-muted/50 px-3 py-2.5 transition-colors hover:bg-muted"
+                          >
+                            {inner}
+                          </a>
+                        );
+                      }
+                      return (
+                        <div
+                          key={d.id}
+                          className="flex items-start justify-between gap-2 rounded-xl bg-muted/50 px-3 py-2.5"
                         >
-                          {d.status.replace("-", " ")}
-                        </Badge>
-                      </div>
-                    ))}
+                          {inner}
+                        </div>
+                      );
+                    })}
                   </div>
                 )}
 

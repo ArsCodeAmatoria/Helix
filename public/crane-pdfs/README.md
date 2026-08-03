@@ -18,17 +18,28 @@ Manufacturer datasheets and BC Crane Safety site-binder templates for Helix prot
 | `terex-ctt392-16-datasheet.pdf` | Terex | CTT 392-16 |
 | `terex-ctt472-20-datasheet.pdf` | Terex | CTT 472-20 |
 
-## BC Crane Safety — Tower Crane Site Binder (`bc-binder/`)
+## BC Crane Safety — Site binders (`bc-binder/`)
 
-Official templates from [BC Crane Safety](https://bccranesafety.ca/resources/tower-crane-site-binder/):
+Official templates from [BC Crane Safety — Tower Crane Site Binders](https://bccranesafety.ca/resources/tower-crane-site-binder/).
+
+### Tower Crane (`bc-binder/tower/`)
 
 | File | Doc # | Purpose |
 |------|-------|---------|
-| `tower-crane-site-binder-checklist-fm-tc-01.pdf` | FM-TC-01 | Site binder document checklist (mandatory with NOP-TC) |
-| `tower-crane-binder-toc.pdf` | TBL-TC-01 | Table of contents |
-| `tower-crane-binder-toc-notes.pdf` | TBL-TC-02 | Requirement notes for each TOC item |
-| `ohsr-csa-information-for-tower-crane.pdf` | TBL-TC-03 | OHSR & CSA standards cross-reference |
+| `fm-tc-01-checklist.pdf` | FM-TC-01 | Site binder document checklist (mandatory with NOP-TC) |
+| `tbl-tc-01-toc.pdf` | TBL-TC-01 | Table of contents |
+| `tbl-tc-02-toc-notes.pdf` | TBL-TC-02 | Requirement notes / descriptions for each TOC item |
+| `tbl-tc-03-ohsr-csa.pdf` | TBL-TC-03 | OHSR & CSA standards cross-reference |
 
-Interactive checklist UI: `/forms/crane-binder` — tap **Fill Helix site** to load Oceanview TC-1 header, docs, and sign-offs.
+### Self-Erect Tower Crane (`bc-binder/self-erect/`)
+
+| File | Doc # | Purpose |
+|------|-------|---------|
+| `fm-setc-01-checklist.pdf` | FM-SETC-01 | Self-erect site binder document checklist |
+| `tbl-setc-01-toc.pdf` | TBL-SETC-01 | Table of contents |
+| `tbl-setc-02-toc-notes.pdf` | TBL-SETC-02 | Requirement notes for self-erect items |
+| `tbl-setc-03-ohsr-csa.pdf` | TBL-SETC-03 | OHSR & CSA info for self-erect |
+
+Interactive UI: `/forms/crane-binder` — switch Tower / Self-erect, browse all PDFs with descriptions, fill Helix site checklist.
 
 **Important:** Guides and filled blocks are for reference and training only. Always operate from the serial-specific load chart and keep the signed paper / PDF binder as the official record.

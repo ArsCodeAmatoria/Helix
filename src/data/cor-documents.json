@@ -1,5 +1,77 @@
 [
   {
+    "id": "doc-bccsa-workbook",
+    "title": "BCCSA COR Internal Audit Workbook (OMS Interview Questions)",
+    "category": "Audit Workbook",
+    "status": "current",
+    "lastReviewed": "2026-08-02",
+    "owner": "COR Auditor / Safety",
+    "elements": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "file": "/cor-pdfs/bccsa-cor-internal-audit-workbook.pdf",
+    "description": "BCCSA COR OHSMS internal audit workbook / OMS & Worker Interview Questions — Owner/Manager/Supervisor and worker interviews, site inspection guidance, evidence verification, auditor observations, corrective action tracking, and continuous improvement recommendations.",
+    "pages": 111
+  },
+  {
+    "id": "doc-cor-site-inspection",
+    "title": "Internal COR Site Inspection Checklist",
+    "category": "Inspections",
+    "status": "current",
+    "lastReviewed": "2026-08-02",
+    "owner": "COR Auditor / Safety",
+    "elements": [1, 2, 3, 4, 5, 6, 8, 9, 11],
+    "file": "/cor-pdfs/internal-cor-site-inspection-checklist.pdf",
+    "description": "Internal COR site inspection checklist for auditors — management commitment, hazard assessment, SWP/SJP, PPE, training, and field observations with worker interview prompts.",
+    "pages": 12
+  },
+  {
+    "id": "doc-daily-safety-checklist",
+    "title": "Daily Site Safety Checklist",
+    "category": "Inspections",
+    "status": "current",
+    "lastReviewed": "2026-08-02",
+    "owner": "Supervisors / Crane crews",
+    "elements": [9, 2, 3, 4, 7],
+    "file": "/cor-pdfs/daily-site-safety-checklist.pdf",
+    "description": "Daily site safety checklist for crane & concrete formwork operations — general conditions, FLHA/toolbox planning, crane, rigging, and formwork Yes/No/N/A items.",
+    "pages": 6
+  },
+  {
+    "id": "doc-daily-site-inspection",
+    "title": "Daily Site Inspection",
+    "category": "Inspections",
+    "status": "current",
+    "lastReviewed": "2026-08-02",
+    "owner": "Supervisors / Foremen",
+    "elements": [9, 2, 6],
+    "file": "/cor-pdfs/daily-site-inspection.pdf",
+    "description": "Daily crew & work-scope site inspection — weather, activities, high-risk work, and field checklist for supervisors and foremen.",
+    "pages": 23
+  },
+  {
+    "id": "doc-site-inspection-form",
+    "title": "Comprehensive Construction Site Inspection",
+    "category": "Inspections",
+    "status": "current",
+    "lastReviewed": "2026-08-02",
+    "owner": "Safety Coordinator / Supervisors",
+    "elements": [9, 2, 6, 7, 11],
+    "file": "/cor-pdfs/comprehensive-construction-site-inspection.pdf",
+    "description": "Full construction site inspection workbook — inspection info, workforce, general conditions, and category checklists with Yes/No/N/A and comments (daily through internal audit).",
+    "pages": 101
+  },
+  {
+    "id": "doc-oms-interview",
+    "title": "OMS & Worker Interview Guide",
+    "category": "Audit Interview",
+    "status": "current",
+    "lastReviewed": "2026-08-02",
+    "owner": "COR Auditor / Safety",
+    "elements": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+    "file": "/cor-pdfs/oms-worker-interview-guide.pdf",
+    "description": "Owner / Manager / Supervisor (OMS) and Worker interview guide for COR audits — 45 bilingual questions with evidence checklists, expected evidence, and auditor assessment across all 14 COR elements.",
+    "pages": 88
+  },
+  {
     "id": "doc-hspolicy",
     "title": "Health & Safety Policy",
     "category": "Policy",

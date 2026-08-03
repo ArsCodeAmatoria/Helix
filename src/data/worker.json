@@ -1,5 +1,6 @@
 {
   "id": "w-10042",
+  "memberId": "m-chen",
   "name": "Marcus Chen",
   "employeeNumber": "10042",
   "trade": "Formwork / Crane Support",
@@ -13,7 +14,11 @@
   "supervisor": "Dave Okonkwo",
   "crew": "Crew B — Tower & Deck",
   "phone": "778-555-0142",
+  "email": "marcus.chen@helix.example",
+  "hireDate": "2022-03-14",
+  "emergencyContact": "Amy Chen · 604-555-0148",
   "certifications": [
+    "Site Orientation",
     "Rigging Ticket — Level 2",
     "Fall Protection",
     "WHMIS 2015",

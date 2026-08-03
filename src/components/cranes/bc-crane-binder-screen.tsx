@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   AlertTriangle,
   Check,
@@ -14,10 +14,15 @@ import {
 } from "lucide-react";
 import { useBcCraneBinder } from "@/components/providers/bc-crane-binder-provider";
 import {
-  bcCraneBinder,
+  allBinderForms,
+  bcCraneCatalog,
   cycleItemStatus,
 } from "@/lib/bc-crane-binder";
-import type { BcCraneBinderItemStatus, BcCraneBinderPartyId } from "@/lib/types";
+import type {
+  BcCraneBinderItemStatus,
+  BcCraneBinderPackId,
+  BcCraneBinderPartyId,
+} from "@/lib/types";
 import { PageHeader } from "@/components/layout/page-header";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +32,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 
-type Tab = "header" | "docs" | "signoffs";
+type Tab = "library" | "header" | "docs" | "signoffs";
 
 function statusStyle(status: BcCraneBinderItemStatus) {
   if (status === "present") {
@@ -82,15 +87,22 @@ function StatusButton({
 
 export function BcCraneBinderScreen() {
   const binder = useBcCraneBinder();
-  const { state, progress } = binder;
-  const [tab, setTab] = useState<Tab>("docs");
+  const { pack, packId, setPackId, state, progress } = binder;
+  const [tab, setTab] = useState<Tab>("library");
   const [openSection, setOpenSection] = useState<string>(
-    bcCraneBinder.sections[0]?.id ?? ""
+    pack.sections[0]?.id ?? ""
   );
+  const [libraryFilter, setLibraryFilter] = useState<"all" | BcCraneBinderPackId>(
+    "all"
+  );
+
+  useEffect(() => {
+    setOpenSection(pack.sections[0]?.id ?? "");
+  }, [pack.id, pack.sections]);
 
   const missingItems = useMemo(() => {
     const list: { id: string; label: string; section: string }[] = [];
-    for (const section of bcCraneBinder.sections) {
+    for (const section of pack.sections) {
       for (const item of section.items) {
         if (state.items[item.id]?.status === "missing") {
           list.push({
@@ -102,13 +114,19 @@ export function BcCraneBinderScreen() {
       }
     }
     return list;
-  }, [state.items]);
+  }, [pack.sections, state.items]);
+
+  const libraryForms = useMemo(() => {
+    const all = allBinderForms();
+    if (libraryFilter === "all") return all;
+    return all.filter((f) => f.packId === libraryFilter);
+  }, [libraryFilter]);
 
   return (
     <div>
       <PageHeader
-        title="BC Crane erection binder"
-        subtitle={`${bcCraneBinder.docNumber} · Site binder checklist`}
+        title="BC Crane site binders"
+        subtitle="Tower · Self-erect · official downloads"
         backHref="/forms"
       />
 
@@ -119,28 +137,63 @@ export function BcCraneBinderScreen() {
               <TowerControl className="size-6" />
             </div>
             <div className="min-w-0 flex-1">
-              <Badge className="mb-2 border-0 bg-orange-500/15 text-orange-800 dark:text-orange-300">
-                {bcCraneBinder.docNumber} · {bcCraneBinder.docDate}
-              </Badge>
-              <p className="font-bold leading-snug">{bcCraneBinder.title}</p>
+              <p className="font-bold leading-snug">
+                {bcCraneCatalog.source}
+              </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                {bcCraneBinder.subtitle}
+                {bcCraneCatalog.overview}
               </p>
             </div>
           </div>
           <p className="text-xs text-muted-foreground">
-            {bcCraneBinder.copyright}. Interactive checklist for Helix sites —
-            keep the signed paper / PDF binder as the official record.
+            {bcCraneCatalog.copyright}. Keep signed paper / PDF binders as the
+            official record for NOP-TC.
           </p>
-          <div className="grid grid-cols-2 gap-2">
-            <Button asChild variant="outline" className="h-11 rounded-xl">
-              <a
-                href={bcCraneBinder.pdf}
-                target="_blank"
-                rel="noopener noreferrer"
+        </div>
+
+        <div className="grid grid-cols-2 gap-2">
+          {bcCraneCatalog.packs.map((p) => (
+            <button
+              key={p.id}
+              type="button"
+              onClick={() => setPackId(p.id)}
+              className={cn(
+                "rounded-2xl p-3.5 text-left transition-colors",
+                packId === p.id
+                  ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
+                  : "bg-card text-foreground ring-1 ring-border"
+              )}
+            >
+              <p className="text-xs font-bold uppercase tracking-wide opacity-80">
+                {p.docNumber}
+              </p>
+              <p className="mt-1 text-sm font-bold leading-snug">{p.label}</p>
+              <p
+                className={cn(
+                  "mt-1 text-[11px] leading-snug",
+                  packId === p.id
+                    ? "text-primary-foreground/80"
+                    : "text-muted-foreground"
+                )}
               >
+                {p.sections.reduce((n, s) => n + s.items.length, 0)} checklist
+                items · {p.forms.length} PDFs
+              </p>
+            </button>
+          ))}
+        </div>
+
+        <div className="helix-card space-y-2 p-4">
+          <Badge className="border-0 bg-orange-500/15 text-orange-800 dark:text-orange-300">
+            Active · {pack.docNumber} · {pack.docDate}
+          </Badge>
+          <p className="font-bold leading-snug">{pack.title}</p>
+          <p className="text-sm text-muted-foreground">{pack.description}</p>
+          <div className="grid grid-cols-2 gap-2 pt-1">
+            <Button asChild variant="outline" className="h-11 rounded-xl">
+              <a href={pack.pdf} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="size-4" />
-                Open checklist
+                Open checklist PDF
               </a>
             </Button>
             <Button
@@ -155,55 +208,10 @@ export function BcCraneBinderScreen() {
         </div>
 
         <div className="helix-card space-y-3 p-4">
-          <p className="text-sm font-bold">Official BC Crane Safety forms</p>
-          <p className="text-xs text-muted-foreground">
-            Downloaded templates for this binder. Keep signed paper copies as
-            the official record.
-          </p>
-          <div className="space-y-2">
-            {bcCraneBinder.forms.map((form) => (
-              <a
-                key={form.id}
-                href={form.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-2xl bg-muted/60 px-3 py-3 active:scale-[0.99]"
-              >
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-orange-500/15 text-orange-700 dark:text-orange-400">
-                  <FileText className="size-5" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="text-xs font-bold text-primary">
-                    {form.docNumber}
-                  </p>
-                  <p className="text-sm font-semibold leading-snug">
-                    {form.title}
-                  </p>
-                </div>
-                <ExternalLink className="size-4 shrink-0 text-muted-foreground" />
-              </a>
-            ))}
-          </div>
-          <div className="space-y-1.5 pt-1">
-            {bcCraneBinder.externalLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-sm font-semibold text-primary underline-offset-2 hover:underline"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="helix-card space-y-3 p-4">
           <div className="flex items-center justify-between gap-2">
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                Binder progress
+                {pack.label} progress
               </p>
               <p className="font-mono text-2xl font-bold tabular-nums">
                 {progress.answered}/{progress.total}
@@ -236,7 +244,7 @@ export function BcCraneBinderScreen() {
           </p>
         </div>
 
-        {missingItems.length > 0 && (
+        {missingItems.length > 0 && tab !== "library" && (
           <div className="helix-card flex gap-3 border border-rose-200 bg-rose-50/70 p-4 dark:border-rose-500/30 dark:bg-rose-500/10">
             <AlertTriangle className="mt-0.5 size-5 shrink-0 text-rose-600" />
             <div className="min-w-0 text-sm">
@@ -257,12 +265,13 @@ export function BcCraneBinderScreen() {
           </div>
         )}
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-4 gap-2">
           {(
             [
+              ["library", "PDFs"],
               ["header", "Site"],
               ["docs", "Docs"],
-              ["signoffs", "Sign-off"],
+              ["signoffs", "Sign"],
             ] as const
           ).map(([id, label]) => (
             <button
@@ -280,6 +289,98 @@ export function BcCraneBinderScreen() {
             </button>
           ))}
         </div>
+
+        {tab === "library" && (
+          <section className="space-y-4 pb-6">
+            <div className="flex flex-wrap gap-2">
+              {(
+                [
+                  ["all", "All downloads"],
+                  ["tower", "Tower"],
+                  ["self-erect", "Self-erect"],
+                ] as const
+              ).map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => setLibraryFilter(id)}
+                  className={cn(
+                    "rounded-full px-3.5 py-2 text-sm font-semibold",
+                    libraryFilter === id
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                  )}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            <div className="space-y-2">
+              {libraryForms.map((form) => (
+                <a
+                  key={form.id}
+                  href={form.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="helix-card flex items-start gap-3 p-4 active:scale-[0.99]"
+                >
+                  <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-700 dark:text-orange-400">
+                    <FileText className="size-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Badge variant="secondary">{form.docNumber}</Badge>
+                      <Badge className="border-0 bg-muted text-muted-foreground">
+                        {form.packLabel}
+                      </Badge>
+                      {form.pages && (
+                        <span className="text-[11px] text-muted-foreground">
+                          {form.pages} pg · {form.date}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-1.5 text-sm font-bold leading-snug">
+                      {form.title}
+                    </p>
+                    <p className="mt-1 text-xs leading-snug text-muted-foreground">
+                      {form.description}
+                    </p>
+                  </div>
+                  <ExternalLink className="mt-1 size-4 shrink-0 text-muted-foreground" />
+                </a>
+              ))}
+            </div>
+
+            <div className="helix-card space-y-3 p-4">
+              <p className="font-bold">Related WorkSafeBC / NAV CANADA links</p>
+              <p className="text-sm text-muted-foreground">
+                External forms and guidance referenced by the binder packs.
+              </p>
+              <div className="space-y-3">
+                {bcCraneCatalog.externalLinks.map((link) => (
+                  <a
+                    key={link.id}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-2xl bg-muted/60 px-3.5 py-3"
+                  >
+                    <p className="flex items-center gap-2 text-sm font-semibold text-primary">
+                      {link.label}
+                      <ExternalLink className="size-3.5 shrink-0" />
+                    </p>
+                    {link.description && (
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        {link.description}
+                      </p>
+                    )}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {tab === "header" && (
           <section className="space-y-3 pb-4">
@@ -326,7 +427,7 @@ export function BcCraneBinderScreen() {
               when it applies.
             </p>
 
-            {bcCraneBinder.sections.map((section) => {
+            {pack.sections.map((section) => {
               const open = openSection === section.id;
               const sectionItems = section.items.map(
                 (item) => state.items[item.id]
@@ -422,7 +523,7 @@ export function BcCraneBinderScreen() {
                                   </p>
                                 )}
                                 <div className="mt-2 flex flex-wrap gap-1.5">
-                                  {bcCraneBinder.parties
+                                  {pack.parties
                                     .filter((p) => p.id !== "na")
                                     .map((party) => (
                                       <button
@@ -487,7 +588,8 @@ export function BcCraneBinderScreen() {
             <div className="helix-card space-y-3 p-4">
               <p className="font-bold">Other site-specific documents</p>
               <p className="text-sm text-muted-foreground">
-                Extra tower crane ops docs required for this site (FM-TC-01 p.5).
+                Extra site-specific docs for this {pack.label.toLowerCase()}{" "}
+                binder ({pack.docNumber} other-docs page).
               </p>
               {state.otherDocs.map((doc, i) => (
                 <Input
@@ -508,7 +610,7 @@ export function BcCraneBinderScreen() {
               Role confirmations from FM-TC-01 sign-off page. Capture company,
               contact, and printed name.
             </p>
-            {bcCraneBinder.signOffRoles.map((role) => {
+            {pack.signOffRoles.map((role) => {
               const row = state.signOffs[role.id] ?? {
                 company: "",
                 phone: "",

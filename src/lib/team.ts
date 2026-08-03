@@ -73,3 +73,27 @@ export function initials(name: string): string {
     .slice(0, 2)
     .toUpperCase();
 }
+
+/** Resolve the logged-in worker to their team directory member */
+export function getCurrentMember(
+  worker: { memberId?: string; employeeNumber: string; name: string }
+): TeamMember | undefined {
+  if (worker.memberId) {
+    const byId = getMember(worker.memberId);
+    if (byId) return byId;
+  }
+  return (
+    members.find((m) => m.employeeNumber === worker.employeeNumber) ??
+    members.find((m) => m.name === worker.name)
+  );
+}
+
+/** Union of worker profile certs + team directory certs */
+export function mergedCertifications(
+  workerCerts: string[],
+  member?: TeamMember
+): string[] {
+  return Array.from(
+    new Set([...(member?.certifications ?? []), ...workerCerts])
+  );
+}

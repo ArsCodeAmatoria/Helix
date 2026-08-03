@@ -31,6 +31,8 @@ export interface Company {
 
 export interface Worker {
   id: string;
+  /** Linked team directory member id (e.g. m-chen) */
+  memberId?: string;
   name: string;
   employeeNumber: string;
   trade: string;
@@ -39,7 +41,10 @@ export interface Worker {
   supervisor: string;
   crew: string;
   phone: string;
+  email?: string;
   certifications: string[];
+  emergencyContact?: string;
+  hireDate?: string;
 }
 
 export interface Project {
@@ -468,7 +473,7 @@ export interface InspectionLogState {
   greasingEntries: CraneGreasingEntry[];
 }
 
-/** BC Crane Safety FM-TC-01 site binder */
+/** BC Crane Safety site binder (Tower + Self-Erect packs) */
 export type BcCraneBinderItemStatus = "present" | "missing" | "na" | null;
 
 export type BcCraneBinderPartyId =
@@ -480,25 +485,39 @@ export type BcCraneBinderPartyId =
   | "other"
   | "na";
 
-export interface BcCraneBinderMeta {
+export type BcCraneBinderPackId = "tower" | "self-erect";
+
+export interface BcCraneBinderForm {
+  id: string;
+  docNumber: string;
+  title: string;
+  description: string;
+  file: string;
   source: string;
+  pages?: string;
+  date?: string;
+}
+
+export interface BcCraneBinderExternalLink {
+  id: string;
+  label: string;
+  url: string;
+  description?: string;
+}
+
+export interface BcCraneBinderPack {
+  id: BcCraneBinderPackId;
+  label: string;
   docNumber: string;
   docDate: string;
   pages: number;
-  copyright: string;
-  pdf: string;
   title: string;
   subtitle: string;
+  description: string;
+  pdf: string;
+  forms: BcCraneBinderForm[];
   parties: { id: BcCraneBinderPartyId; label: string }[];
   signOffRoles: { id: string; role: string; description: string }[];
-  forms: {
-    id: string;
-    docNumber: string;
-    title: string;
-    file: string;
-    source: string;
-  }[];
-  externalLinks: { id: string; label: string; url: string }[];
   sections: {
     id: string;
     title: string;
@@ -511,6 +530,18 @@ export interface BcCraneBinderMeta {
     }[];
   }[];
 }
+
+export interface BcCraneBinderCatalog {
+  source: string;
+  hubUrl: string;
+  overview: string;
+  copyright: string;
+  externalLinks: BcCraneBinderExternalLink[];
+  packs: BcCraneBinderPack[];
+}
+
+/** @deprecated use BcCraneBinderPack — kept for gradual migration */
+export type BcCraneBinderMeta = BcCraneBinderPack;
 
 export interface BcCraneBinderItemState {
   status: BcCraneBinderItemStatus;
@@ -526,6 +557,7 @@ export interface BcCraneBinderSignOff {
 }
 
 export interface BcCraneBinderState {
+  packId: BcCraneBinderPackId;
   siteAddress: string;
   meetingDate: string;
   activitySupervisor: string;
@@ -619,4 +651,61 @@ export interface ToolboxTalkRecord {
   notes: string;
   /** Snapshot of generated talk body for history */
   generatedSummary: string;
+}
+
+/** Project site inspections (walkthroughs) */
+export type SiteInspectionSeverity = "low" | "medium" | "high";
+
+export type SiteInspectionFindingStatus = "open" | "in-progress" | "closed";
+
+export interface SiteInspectionCategory {
+  id: string;
+  label: string;
+  icon: string;
+}
+
+export interface SiteInspectionCheckTemplate {
+  id: string;
+  category: string;
+  label: string;
+  guidance?: string;
+}
+
+export interface SiteInspectionCheckItem {
+  id: string;
+  category: string;
+  label: string;
+  guidance?: string;
+  result: InspectionCheckResult;
+  note: string;
+}
+
+export interface SiteInspectionCorrectiveAction {
+  description: string;
+  assignee: string;
+  dueDate: string;
+  status: SiteInspectionFindingStatus;
+  priority: SiteInspectionSeverity;
+}
+
+export interface SiteInspectionFinding {
+  id: string;
+  checkId: string | null;
+  title: string;
+  description: string;
+  location: string;
+  severity: SiteInspectionSeverity;
+  correctiveAction: SiteInspectionCorrectiveAction;
+}
+
+export interface SiteInspectionRecord {
+  id: string;
+  projectId: string;
+  inspectedAt: string;
+  inspector: string;
+  weatherNotes: string;
+  comments: string;
+  checks: SiteInspectionCheckItem[];
+  findings: SiteInspectionFinding[];
+  overall: InspectionOverall;
 }
