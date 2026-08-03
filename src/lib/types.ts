@@ -709,3 +709,93 @@ export interface SiteInspectionRecord {
   findings: SiteInspectionFinding[];
   overall: InspectionOverall;
 }
+
+/** Digital COR / audit forms digitized from PDF workbooks */
+export type DigitalFormKind = "checklist" | "interview" | "audit-plan";
+
+export type DigitalFormStatus = "draft" | "completed";
+
+export interface DigitalFormMetaField {
+  id: string;
+  label: string;
+  type: "text" | "textarea" | "select" | "multiselect";
+  options?: string[];
+}
+
+export interface DigitalFormCategory {
+  id: string;
+  label: string;
+  icon: string;
+}
+
+export interface DigitalFormCheckTemplate {
+  id: string;
+  category: string;
+  label: string;
+  guidance?: string;
+}
+
+export interface DigitalFormCheckItem {
+  id: string;
+  category: string;
+  label: string;
+  guidance?: string;
+  result: InspectionCheckResult;
+  note: string;
+}
+
+export interface DigitalFormInterviewQuestion {
+  id: string;
+  number: number;
+  audience: "oms" | "worker" | "both";
+  title: string;
+  prompt: string;
+  elementHint?: string;
+}
+
+export interface DigitalFormInterviewAnswer {
+  questionId: string;
+  response: string;
+  assessment: "strong" | "adequate" | "gap" | "na" | null;
+  evidenceNotes: string;
+}
+
+export interface DigitalFormTemplate {
+  id: string;
+  title: string;
+  subtitle: string;
+  kind: DigitalFormKind;
+  sourcePdf: string;
+  pages: number;
+  corDocId?: string;
+  elements: number[];
+  disclaimer: string;
+  metaFields: DigitalFormMetaField[];
+  categories?: DigitalFormCategory[];
+  checklist?: DigitalFormCheckTemplate[];
+  questions?: DigitalFormInterviewQuestion[];
+  linkedForms?: string[];
+  workerPrompts?: { id: string; category: string; prompt: string }[];
+}
+
+export interface DigitalFormIndexEntry {
+  id: string;
+  title: string;
+  kind: DigitalFormKind;
+  file: string;
+  sourcePdf: string;
+  pages: number;
+}
+
+export interface DigitalFormRecord {
+  id: string;
+  formId: string;
+  createdAt: string;
+  updatedAt: string;
+  status: DigitalFormStatus;
+  meta: Record<string, string | string[]>;
+  checks: DigitalFormCheckItem[];
+  answers: DigitalFormInterviewAnswer[];
+  notes: string;
+  overall: InspectionOverall | null;
+}

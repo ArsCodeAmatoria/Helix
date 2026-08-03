@@ -1,0 +1,424 @@
+{
+  "id": "oms-worker-interview",
+  "title": "OMS & Worker Interview Guide",
+  "subtitle": "45 COR audit interview questions for OMS and workers",
+  "kind": "interview",
+  "sourcePdf": "/cor-pdfs/oms-worker-interview-guide.pdf",
+  "pages": 88,
+  "corDocId": "doc-oms-interview",
+  "elements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "disclaimer": "Ask each question as written. Record responses in the interviewee's words. Verify with documentation and observations. Do not coach answers.",
+  "metaFields": [
+    {
+      "id": "interviewee",
+      "label": "Interviewee name",
+      "type": "text"
+    },
+    {
+      "id": "position",
+      "label": "Position",
+      "type": "text"
+    },
+    {
+      "id": "project",
+      "label": "Department / Project",
+      "type": "text"
+    },
+    {
+      "id": "years",
+      "label": "Years with company",
+      "type": "text"
+    },
+    {
+      "id": "auditor",
+      "label": "Auditor",
+      "type": "text"
+    },
+    {
+      "id": "audience",
+      "label": "Interview type",
+      "type": "select",
+      "options": [
+        "OMS (Owner / Manager / Supervisor)",
+        "Worker"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "oms-q1",
+      "number": 1,
+      "audience": "both",
+      "title": "Health & Safety Policy",
+      "prompt": "Does the health and safety policy outline your responsibilities regarding health and safety?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q2",
+      "number": 2,
+      "audience": "both",
+      "title": "Purpose of the Health &",
+      "prompt": "What is the purpose of the health and safety policy?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q3",
+      "number": 3,
+      "audience": "both",
+      "title": "Hazard Identification",
+      "prompt": "Are hazards identified and formally assessed before work starts?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q4",
+      "number": 4,
+      "audience": "both",
+      "title": "Ongoing Hazard Assessment",
+      "prompt": "Are hazards re-assessed as the job progresses or as procedures or conditions change?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q5",
+      "number": 5,
+      "audience": "both",
+      "title": "Participation in Hazard",
+      "prompt": "Are you involved in assessing hazards for formal and ongoing hazard assessments? If not, who is?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q6",
+      "number": 6,
+      "audience": "both",
+      "title": "Hazard Control",
+      "prompt": "Are you involved in controlling the hazards, or told how the hazards will be controlled?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q7",
+      "number": 7,
+      "audience": "both",
+      "title": "Hazard Control",
+      "prompt": "How do you review, evaluate, and enforce recommendations for hazard control?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q8",
+      "number": 8,
+      "audience": "both",
+      "title": "Safe Work Practices",
+      "prompt": "Have you been involved in the development and/or review of safe work practices in the past 12 months?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q9",
+      "number": 9,
+      "audience": "both",
+      "title": "Safe Job Procedures",
+      "prompt": "Have you been involved in the development and/or review of safe job procedures in the past 12 months?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q10",
+      "number": 10,
+      "audience": "both",
+      "title": "Company Rules",
+      "prompt": "Where are the company rules posted or how are they made available to you?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q11",
+      "number": 11,
+      "audience": "both",
+      "title": "Enforcement of Company",
+      "prompt": "Give an example of how rules are enforced.",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q12",
+      "number": 12,
+      "audience": "both",
+      "title": "Personal Protective",
+      "prompt": "Who provides specialized PPE?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q13",
+      "number": 13,
+      "audience": "both",
+      "title": "PPE Training",
+      "prompt": "Does the company provide training in the use of basic and specialized PPE?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q14",
+      "number": 14,
+      "audience": "both",
+      "title": "PPE Selection",
+      "prompt": "What criteria are used to select proper PPE for specific jobs?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q15",
+      "number": 15,
+      "audience": "both",
+      "title": "Preventive Maintenance",
+      "prompt": "How does maintenance meet regulatory and/or manufacturers' standards?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q16",
+      "number": 16,
+      "audience": "both",
+      "title": "Defective Equipment",
+      "prompt": "If equipment or tools are defective, what happens to them?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q17",
+      "number": 17,
+      "audience": "both",
+      "title": "Qualified Maintenance",
+      "prompt": "Is the individual who performs maintenance and inspection of tools and equipment qualified to perform this task?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q18",
+      "number": 18,
+      "audience": "both",
+      "title": "New Worker Orientation",
+      "prompt": "Is it mandatory for workers to receive a new-hire orientation before starting work?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q19",
+      "number": 19,
+      "audience": "both",
+      "title": "Mandatory Training",
+      "prompt": "Are mandatory training requirements verified or training provided before starting work?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q20",
+      "number": 20,
+      "audience": "both",
+      "title": "Job-Specific Training",
+      "prompt": "Do workers get training for specific jobs?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q21",
+      "number": 21,
+      "audience": "both",
+      "title": "Supervisor Training",
+      "prompt": "Do supervisors receive training in inspections and health and safety responsibilities?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q22",
+      "number": 22,
+      "audience": "both",
+      "title": "Knowledge & Competency",
+      "prompt": "Is there a system in place to measure knowledge and competency?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q23",
+      "number": 23,
+      "audience": "both",
+      "title": "Health & Safety Meetings",
+      "prompt": "Does the company hold health and safety meetings (excluding JOHS Committee meetings)?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q24",
+      "number": 24,
+      "audience": "both",
+      "title": "Participation in Meetings",
+      "prompt": "Do you attend?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q25",
+      "number": 25,
+      "audience": "both",
+      "title": "Two-Way Communication",
+      "prompt": "How do you encourage two-way communication in safety meetings?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q26",
+      "number": 26,
+      "audience": "both",
+      "title": "Workplace Inspections",
+      "prompt": "Are inspections performed as required?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q27",
+      "number": 27,
+      "audience": "both",
+      "title": "Corrective Actions",
+      "prompt": "Are identified deficiencies corrected promptly?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q28",
+      "number": 28,
+      "audience": "both",
+      "title": "Management Participation in",
+      "prompt": "Does senior management review and participate in the inspection process?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q29",
+      "number": 29,
+      "audience": "both",
+      "title": "Communication of",
+      "prompt": "How are inspection results communicated to workers?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q30",
+      "number": 30,
+      "audience": "both",
+      "title": "Incident Investigation",
+      "prompt": "When a serious or potentially serious incident occurs, is it investigated?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q31",
+      "number": 31,
+      "audience": "both",
+      "title": "Incident Reporting &",
+      "prompt": "Have you been trained in the reporting and investigation process?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q32",
+      "number": 32,
+      "audience": "both",
+      "title": "Near Miss Reporting",
+      "prompt": "Are you recording no-loss incidents (near misses)?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q33",
+      "number": 33,
+      "audience": "both",
+      "title": "Implementation of",
+      "prompt": "Are incident recommendations implemented in a timely manner?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q34",
+      "number": 34,
+      "audience": "both",
+      "title": "Communication of",
+      "prompt": "How are investigation results or findings communicated to workers?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q35",
+      "number": 35,
+      "audience": "both",
+      "title": "Emergency Preparedness",
+      "prompt": "Explain your role and responsibility in relation to the emergency preparedness (response) plan(s).",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q36",
+      "number": 36,
+      "audience": "both",
+      "title": "Emergency Assistance",
+      "prompt": "If an emergency occurred, how would you get assistance?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q37",
+      "number": 37,
+      "audience": "both",
+      "title": "First Aid Coverage",
+      "prompt": "Are the required numbers of first aid personnel available on-site?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q38",
+      "number": 38,
+      "audience": "both",
+      "title": "Transportation to Medical",
+      "prompt": "If someone needed transportation to a medical facility, how would this be done?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q39",
+      "number": 39,
+      "audience": "both",
+      "title": "Previous Audit Action Plans",
+      "prompt": "After your last audit, was an action plan communicated and implemented?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q40",
+      "number": 40,
+      "audience": "both",
+      "title": "Legislative Requirements",
+      "prompt": "Do you regularly refer to relevant legislation as part of job planning?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q41",
+      "number": 41,
+      "audience": "both",
+      "title": "Legislative Rights &",
+      "prompt": "How does your company make employees aware of their legislative rights and responsibilities?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q42",
+      "number": 42,
+      "audience": "both",
+      "title": "Regulatory Reporting",
+      "prompt": "What are the company's regulatory reporting (WorkSafeBC) requirements?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q43",
+      "number": 43,
+      "audience": "both",
+      "title": "Joint Health & Safety",
+      "prompt": "Who is your JOHS Committee or Worker Representative, and how would you contact them?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q44",
+      "number": 44,
+      "audience": "both",
+      "title": "Committee Responsibilities",
+      "prompt": "Do you know what the JOHS Committee or Worker Representative does?",
+      "elementHint": ""
+    },
+    {
+      "id": "oms-q45",
+      "number": 45,
+      "audience": "both",
+      "title": "Committee Participation",
+      "prompt": "Do you or any member of the committee participate in inspections, incident investigations, or the resolution of safety issues?",
+      "elementHint": ""
+    }
+  ]
+}

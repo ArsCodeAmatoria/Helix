@@ -52,6 +52,12 @@ const assetModules = [
     color: "bg-[#0284c7]",
   },
   {
+    href: "/forms/cor",
+    label: "COR digital forms",
+    icon: ClipboardList,
+    color: "bg-[#0369a1]",
+  },
+  {
     href: "/forms/swp",
     label: "SWPs",
     icon: BookOpen,

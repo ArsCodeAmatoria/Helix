@@ -1,0 +1,153 @@
+{
+  "id": "bccsa-cor-audit-workbook",
+  "title": "BCCSA COR Internal Audit Workbook",
+  "subtitle": "Audit planning, scope, and sign-off (use with interview & site forms)",
+  "kind": "audit-plan",
+  "sourcePdf": "/cor-pdfs/bccsa-cor-internal-audit-workbook.pdf",
+  "pages": 111,
+  "corDocId": "doc-bccsa-workbook",
+  "elements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "disclaimer": "Plan and scope the internal COR audit here, then complete OMS/Worker interviews and site inspection digital forms. Same content as OMS Interview Questions PDF.",
+  "metaFields": [
+    {
+      "id": "company",
+      "label": "Company",
+      "type": "text"
+    },
+    {
+      "id": "project",
+      "label": "Project",
+      "type": "text"
+    },
+    {
+      "id": "projectNumber",
+      "label": "Project number",
+      "type": "text"
+    },
+    {
+      "id": "siteAddress",
+      "label": "Site address",
+      "type": "text"
+    },
+    {
+      "id": "auditors",
+      "label": "Auditor(s)",
+      "type": "text"
+    },
+    {
+      "id": "auditType",
+      "label": "Audit type",
+      "type": "multiselect",
+      "options": [
+        "Internal COR Audit",
+        "Pre-Certification Audit",
+        "Annual Internal Audit",
+        "Management Review",
+        "Other"
+      ]
+    },
+    {
+      "id": "prime",
+      "label": "Prime contractor",
+      "type": "text"
+    },
+    {
+      "id": "client",
+      "label": "Owner / Client",
+      "type": "text"
+    },
+    {
+      "id": "startTime",
+      "label": "Audit start time",
+      "type": "text"
+    },
+    {
+      "id": "finishTime",
+      "label": "Audit finish time",
+      "type": "text"
+    },
+    {
+      "id": "description",
+      "label": "Project description",
+      "type": "textarea"
+    },
+    {
+      "id": "activities",
+      "label": "Current work activities",
+      "type": "textarea"
+    },
+    {
+      "id": "totalEmployees",
+      "label": "Total employees on site",
+      "type": "text"
+    },
+    {
+      "id": "companyEmployees",
+      "label": "Company employees",
+      "type": "text"
+    },
+    {
+      "id": "subEmployees",
+      "label": "Subcontractor employees",
+      "type": "text"
+    },
+    {
+      "id": "workersInterviewed",
+      "label": "Workers interviewed (count)",
+      "type": "text"
+    },
+    {
+      "id": "omsInterviewed",
+      "label": "OMS interviewed (count)",
+      "type": "text"
+    },
+    {
+      "id": "strengths",
+      "label": "Strengths",
+      "type": "textarea"
+    },
+    {
+      "id": "deficiencies",
+      "label": "Deficiencies",
+      "type": "textarea"
+    },
+    {
+      "id": "immediateActions",
+      "label": "Immediate corrective actions",
+      "type": "textarea"
+    },
+    {
+      "id": "overallAssessment",
+      "label": "Overall assessment",
+      "type": "textarea"
+    },
+    {
+      "id": "auditorComments",
+      "label": "Auditor comments",
+      "type": "textarea"
+    }
+  ],
+  "linkedForms": [
+    "oms-worker-interview",
+    "internal-cor-site-inspection",
+    "comprehensive-site-inspection"
+  ],
+  "categories": [],
+  "checklist": [],
+  "questions": []
+}

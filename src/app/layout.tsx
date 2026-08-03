@@ -10,6 +10,7 @@ import { BcCraneBinderProvider } from "@/components/providers/bc-crane-binder-pr
 import { EvaluationProvider } from "@/components/providers/evaluation-provider";
 import { ToolboxProvider } from "@/components/providers/toolbox-provider";
 import { SiteInspectionProvider } from "@/components/providers/site-inspection-provider";
+import { DigitalFormsProvider } from "@/components/providers/digital-forms-provider";
 import { AppShell } from "@/components/layout/app-shell";
 import "./globals.css";
 
@@ -69,7 +70,9 @@ export default function RootLayout({
                       <EvaluationProvider>
                         <ToolboxProvider>
                           <SiteInspectionProvider>
-                            <AppShell>{children}</AppShell>
+                            <DigitalFormsProvider>
+                              <AppShell>{children}</AppShell>
+                            </DigitalFormsProvider>
                           </SiteInspectionProvider>
                         </ToolboxProvider>
                       </EvaluationProvider>

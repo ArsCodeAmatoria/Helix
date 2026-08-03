@@ -1,0 +1,4142 @@
+{
+  "id": "comprehensive-site-inspection",
+  "title": "Comprehensive Construction Site Inspection",
+  "subtitle": "Full multi-section site inspection workbook",
+  "kind": "checklist",
+  "sourcePdf": "/cor-pdfs/comprehensive-construction-site-inspection.pdf",
+  "pages": 101,
+  "corDocId": "doc-site-inspection-form",
+  "elements": [
+    9,
+    2,
+    6,
+    7,
+    11
+  ],
+  "disclaimer": "Use for weekly, management, WorkSafeBC prep, or internal audit site inspections. Document deficiencies and corrective actions.",
+  "metaFields": [
+    {
+      "id": "inspectionType",
+      "label": "Inspection type",
+      "type": "multiselect",
+      "options": [
+        "Daily",
+        "Weekly",
+        "Monthly",
+        "Supervisor Inspection",
+        "Management Inspection",
+        "Follow-up Inspection",
+        "WorkSafeBC Preparation",
+        "Internal Audit"
+      ]
+    },
+    {
+      "id": "project",
+      "label": "Project name",
+      "type": "text"
+    },
+    {
+      "id": "projectNumber",
+      "label": "Project number",
+      "type": "text"
+    },
+    {
+      "id": "prime",
+      "label": "Prime contractor",
+      "type": "text"
+    },
+    {
+      "id": "client",
+      "label": "Client",
+      "type": "text"
+    },
+    {
+      "id": "address",
+      "label": "Project address",
+      "type": "text"
+    },
+    {
+      "id": "inspector",
+      "label": "Inspector",
+      "type": "text"
+    },
+    {
+      "id": "position",
+      "label": "Position",
+      "type": "text"
+    },
+    {
+      "id": "weather",
+      "label": "Weather",
+      "type": "text"
+    },
+    {
+      "id": "activities",
+      "label": "Work activities today",
+      "type": "multiselect",
+      "options": [
+        "Tower Crane",
+        "Mobile Crane",
+        "Rigging",
+        "Concrete Placement",
+        "Formwork",
+        "Rebar",
+        "Decking",
+        "Excavation",
+        "Hoisting",
+        "Deliveries",
+        "Welding",
+        "Cutting",
+        "Grinding",
+        "Silica-Producing Work",
+        "Demolition",
+        "Structural Steel",
+        "Scaffolding",
+        "Electrical",
+        "Mechanical",
+        "Roofing",
+        "Interior Work"
+      ]
+    },
+    {
+      "id": "workerCount",
+      "label": "Total workers",
+      "type": "text"
+    }
+  ],
+  "categories": [
+    {
+      "id": "csi-2",
+      "label": "Section 2 \u2014 General Site Conditions",
+      "icon": "check"
+    },
+    {
+      "id": "csi-3",
+      "label": "Section 3 \u2014 Housekeeping & Material",
+      "icon": "check"
+    },
+    {
+      "id": "csi-4",
+      "label": "Section 4 \u2014 Fall Protection",
+      "icon": "check"
+    },
+    {
+      "id": "csi-5",
+      "label": "Section 5 \u2014 Tower Crane Operations",
+      "icon": "check"
+    },
+    {
+      "id": "csi-6",
+      "label": "Section 6 \u2014 Rigging Operations",
+      "icon": "check"
+    },
+    {
+      "id": "csi-7",
+      "label": "Section 7 \u2014 Concrete Formwork &",
+      "icon": "check"
+    },
+    {
+      "id": "csi-8",
+      "label": "Section 8 \u2014 Mobile Equipment & Heavy",
+      "icon": "check"
+    },
+    {
+      "id": "csi-9",
+      "label": "Section 9 \u2014 Scaffolds & Temporary Work",
+      "icon": "check"
+    },
+    {
+      "id": "csi-10",
+      "label": "Section 10 \u2014 Excavation, Trenching &",
+      "icon": "check"
+    },
+    {
+      "id": "csi-11",
+      "label": "Section 11 \u2014 Electrical Safety & Temporary",
+      "icon": "check"
+    },
+    {
+      "id": "csi-12",
+      "label": "Section 12 \u2014 Fire Protection & Hot Work",
+      "icon": "check"
+    },
+    {
+      "id": "csi-13",
+      "label": "Section 13 \u2014 WHMIS & Hazardous Products",
+      "icon": "check"
+    },
+    {
+      "id": "csi-14",
+      "label": "Section 14 \u2014 Personal Protective",
+      "icon": "check"
+    },
+    {
+      "id": "csi-15",
+      "label": "Section 15 \u2014 Occupational Hygiene",
+      "icon": "check"
+    },
+    {
+      "id": "csi-16",
+      "label": "Section 16 \u2014 First Aid & Emergency",
+      "icon": "check"
+    },
+    {
+      "id": "csi-17",
+      "label": "Section 17 \u2014 Environmental Protection",
+      "icon": "check"
+    },
+    {
+      "id": "csi-18",
+      "label": "Section 18 \u2014 Documentation, Training &",
+      "icon": "check"
+    },
+    {
+      "id": "csi-19",
+      "label": "Section 19 \u2014 Site Security & Public",
+      "icon": "check"
+    },
+    {
+      "id": "csi-20",
+      "label": "Section 20 \u2014 Inspection Summary,",
+      "icon": "check"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "csi-2-site-access-controlled-fencing-secure",
+      "category": "csi-2",
+      "label": "Site access controlled Fencing secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-2-signage-posted-emergency-information-posted-site",
+      "category": "csi-2",
+      "label": "Signage posted Emergency information posted Site lighting adequate Access roads maintained Pedestrian routes identified Vehicle routes separated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-2-traffic-control-in-place-delivery-area-organized",
+      "category": "csi-2",
+      "label": "Traffic control in place Delivery area organized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-2-laydown-area-organized-public-protected-from-haz",
+      "category": "csi-2",
+      "label": "Laydown area organized Public protected from hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-2-security-maintained-after-hours",
+      "category": "csi-2",
+      "label": "Security maintained after hours",
+      "guidance": ""
+    },
+    {
+      "id": "csi-2-site-free-from-unauthorized-access-project-infor",
+      "category": "csi-2",
+      "label": "Site free from unauthorized access Project information board current",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-storage-objective-verify-that-the-worksite-is-or",
+      "category": "csi-3",
+      "label": "Storage Objective: Verify that the worksite is organized, free of unnecessary hazards, and materials are stored safely to prevent injuries, property damage, and delays.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-3-1-general-housekeeping-work-areas-clean-and-or",
+      "category": "csi-3",
+      "label": "3.1 General Housekeeping Work areas clean and orderly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-walkways-free-of-obstructions",
+      "category": "csi-3",
+      "label": "Walkways free of obstructions",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-stairways-clear-access-to-ladders-unobstructed",
+      "category": "csi-3",
+      "label": "Stairways clear Access to ladders unobstructed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-emergency-exits-accessible-escape-routes-clearly",
+      "category": "csi-3",
+      "label": "Emergency exits accessible Escape routes clearly maintained Trip hazards removed Slip hazards controlled Adequate lighting provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-work-areas-free-of-unnecessary-clutter",
+      "category": "csi-3",
+      "label": "Work areas free of unnecessary clutter",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-3-2-waste-management-garbage-removed-regularly",
+      "category": "csi-3",
+      "label": "3.2 Waste Management Garbage removed regularly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-scrap-wood-disposed-of-properly",
+      "category": "csi-3",
+      "label": "Scrap wood disposed of properly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-nails-bent-over-or-removed-scrap-steel-stored-sa",
+      "category": "csi-3",
+      "label": "Nails bent over or removed Scrap steel stored safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-banding-removed-from-walkways-waste-bins-availab",
+      "category": "csi-3",
+      "label": "Banding removed from walkways Waste bins available Bins not overflowing",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-recycling-separated-where-required-3-3-material-",
+      "category": "csi-3",
+      "label": "Recycling separated where required 3.3 Material Storage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-materials-stacked-securely-materials-protected-f",
+      "category": "csi-3",
+      "label": "Materials stacked securely Materials protected from collapse",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-storage-areas-clearly-designated",
+      "category": "csi-3",
+      "label": "Storage areas clearly designated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-materials-stored-away-from-edges",
+      "category": "csi-3",
+      "label": "Materials stored away from edges",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-loads-not-blocking-exits-pallets-in-good-conditi",
+      "category": "csi-3",
+      "label": "Loads not blocking exits Pallets in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-dunnage-used-where-required-bundles-secured-agai",
+      "category": "csi-3",
+      "label": "Dunnage used where required Bundles secured against movement",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-stored-materials-stable-maximum-stacking-heights",
+      "category": "csi-3",
+      "label": "Stored materials stable Maximum stacking heights maintained 3.4 Formwork & Concrete Materials",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-formwork-panels-stacked-safely",
+      "category": "csi-3",
+      "label": "Formwork panels stacked safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-shores-stored-properly-falsework-components-orga",
+      "category": "csi-3",
+      "label": "Shores stored properly Falsework components organized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-form-ties-stored-safely-lumber-sorted-and-organi",
+      "category": "csi-3",
+      "label": "Form ties stored safely Lumber sorted and organized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-damaged-materials-removed-3-5-rigging-lifting-ge",
+      "category": "csi-3",
+      "label": "Damaged materials removed 3.5 Rigging & Lifting Gear Storage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-slings-stored-off-the-ground",
+      "category": "csi-3",
+      "label": "Slings stored off the ground",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-shackles-stored-properly-hooks-protected-from-da",
+      "category": "csi-3",
+      "label": "Shackles stored properly Hooks protected from damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-spreader-bars-properly-supported",
+      "category": "csi-3",
+      "label": "Spreader bars properly supported",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-rigging-protected-from-weather",
+      "category": "csi-3",
+      "label": "Rigging protected from weather",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-damaged-rigging-removed-from-service-3-6-compres",
+      "category": "csi-3",
+      "label": "Damaged rigging removed from service 3.6 Compressed Gas & Flammables",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-cylinders-secured-upright-valve-caps-installed-o",
+      "category": "csi-3",
+      "label": "Cylinders secured upright Valve caps installed Oxygen separated from fuel gas",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-flammable-liquids-labelled-fuel-storage-area-ide",
+      "category": "csi-3",
+      "label": "Flammable liquids labelled Fuel storage area identified Ignition sources controlled Spill containment provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-3-3-7-general-observations",
+      "category": "csi-3",
+      "label": "3.7 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-objective-verify-that-all-work-at-heights-is-pla",
+      "category": "csi-4",
+      "label": "Objective: Verify that all work at heights is planned, controlled, and performed in compliance with company procedures and applicable regulations.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-4-1-planning-hazard-assessment",
+      "category": "csi-4",
+      "label": "4.1 Planning & Hazard Assessment",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-fall-hazards-identified-before-work-flha-complet",
+      "category": "csi-4",
+      "label": "Fall hazards identified before work FLHA completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-safe-work-procedure-available-workers-understand",
+      "category": "csi-4",
+      "label": "Safe Work Procedure available Workers understand fall hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-rescue-plan-available-rescue-equipment-available",
+      "category": "csi-4",
+      "label": "Rescue plan available Rescue equipment available Rescue personnel identified 4.2 Guardrails",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-guardrails-installed-where-required-top-rails-se",
+      "category": "csi-4",
+      "label": "Guardrails installed where required Top rails secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-mid-rails-installed-toe-boards-installed-where-r",
+      "category": "csi-4",
+      "label": "Mid rails installed Toe boards installed where required Guardrails free from damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-temporary-guardrails-secure-guardrails-not-remov",
+      "category": "csi-4",
+      "label": "Temporary guardrails secure Guardrails not removed without authorization",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-openings-protected-immediately-after-removal",
+      "category": "csi-4",
+      "label": "Openings protected immediately after removal",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-4-3-floor-shaft-openings-floor-openings-covered",
+      "category": "csi-4",
+      "label": "4.3 Floor & Shaft Openings Floor openings covered",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-covers-secured-covers-clearly-marked",
+      "category": "csi-4",
+      "label": "Covers secured Covers clearly marked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-elevator-shafts-protected-stair-openings-protect",
+      "category": "csi-4",
+      "label": "Elevator shafts protected Stair openings protected Service openings protected Penetrations identified 4.4 Personal Fall Protection Equipment",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-harness-inspected-before-use",
+      "category": "csi-4",
+      "label": "Harness inspected before use",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-harness-free-of-damage-lanyard-inspected-energy-",
+      "category": "csi-4",
+      "label": "Harness free of damage Lanyard inspected Energy absorber in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-snap-hooks-operational-connectors-compatible",
+      "category": "csi-4",
+      "label": "Snap hooks operational Connectors compatible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-equipment-within-inspection-period",
+      "category": "csi-4",
+      "label": "Equipment within inspection period",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-defective-equipment-removed-from-service-4-5-anc",
+      "category": "csi-4",
+      "label": "Defective equipment removed from service 4.5 Anchorage Systems",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-approved-anchor-points-used-anchors-identified-a",
+      "category": "csi-4",
+      "label": "Approved anchor points used Anchors identified Anchor locations appropriate",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-swing-fall-hazards-minimized",
+      "category": "csi-4",
+      "label": "Swing fall hazards minimized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-horizontal-lifelines-inspected-vertical-lifeline",
+      "category": "csi-4",
+      "label": "Horizontal lifelines inspected Vertical lifelines protected Anchorage free from damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-4-6-work-at-leading-edges-leading-edge-protected",
+      "category": "csi-4",
+      "label": "4.6 Work at Leading Edges Leading edge protected Workers tied off",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-work-area-barricaded-materials-secured-dropped-o",
+      "category": "csi-4",
+      "label": "Work area barricaded Materials secured Dropped object controls implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-spotter-used-where-required-4-7-ladders-access-l",
+      "category": "csi-4",
+      "label": "Spotter used where required 4.7 Ladders & Access Ladders inspected Ladders secured Proper ladder angle maintained Ladder extends above landing",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-three-point-contact-maintained-damaged-ladders-r",
+      "category": "csi-4",
+      "label": "Three-point contact maintained Damaged ladders removed from service Access ladders free from obstruction",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-4-8-elevated-work-platforms-platform-fully-decke",
+      "category": "csi-4",
+      "label": "4.8 Elevated Work Platforms Platform fully decked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-guardrails-complete-access-gates-functional",
+      "category": "csi-4",
+      "label": "Guardrails complete Access gates functional",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-platform-load-limits-posted-materials-secured-pl",
+      "category": "csi-4",
+      "label": "Platform load limits posted Materials secured Platform inspected 4.9 Worker Competency",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-workers-trained-in-fall-protection",
+      "category": "csi-4",
+      "label": "Workers trained in fall protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-training-records-available-workers-demonstrate-p",
+      "category": "csi-4",
+      "label": "Training records available Workers demonstrate proper tie-off",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-rescue-procedures-understood",
+      "category": "csi-4",
+      "label": "Rescue procedures understood",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-supervisor-monitoring-compliance",
+      "category": "csi-4",
+      "label": "Supervisor monitoring compliance",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-unsafe-practices-corrected-immediately",
+      "category": "csi-4",
+      "label": "Unsafe practices corrected immediately",
+      "guidance": ""
+    },
+    {
+      "id": "csi-4-4-10-general-observations",
+      "category": "csi-4",
+      "label": "4.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-5-1-documentation-qualifications",
+      "category": "csi-5",
+      "label": "5.1 Documentation & Qualifications",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-current-crane-inspection-certificate-available-d",
+      "category": "csi-5",
+      "label": "Current crane inspection certificate available Daily operator inspection completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-crane-logbook-current-maintenance-records-availa",
+      "category": "csi-5",
+      "label": "Crane logbook current Maintenance records available Operator qualified for crane",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-operator-competency-verified",
+      "category": "csi-5",
+      "label": "Operator competency verified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-rigger-qualified-signaller-qualified",
+      "category": "csi-5",
+      "label": "Rigger qualified Signaller qualified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-lift-director-identified-if-required",
+      "category": "csi-5",
+      "label": "Lift director identified (if required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-lift-plan-available-where-required",
+      "category": "csi-5",
+      "label": "Lift plan available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-5-2-crane-condition-mast-visually-inspected-towe",
+      "category": "csi-5",
+      "label": "5.2 Crane Condition Mast visually inspected Tower free of visible damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-climbing-frame-secure-counterweights-secure",
+      "category": "csi-5",
+      "label": "Climbing frame secure Counterweights secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-jib-free-of-damage-counter-jib-free-of-damage",
+      "category": "csi-5",
+      "label": "Jib free of damage Counter-jib free of damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-trolley-operating-correctly-hook-block-in-good-c",
+      "category": "csi-5",
+      "label": "Trolley operating correctly Hook block in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-wire-rope-appears-serviceable",
+      "category": "csi-5",
+      "label": "Wire rope appears serviceable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-rope-reeving-correct-limit-switches-functional",
+      "category": "csi-5",
+      "label": "Rope reeving correct Limit switches functional",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-emergency-stop-functional-5-3-crane-access-acces",
+      "category": "csi-5",
+      "label": "Emergency stop functional 5.3 Crane Access Access ladder secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-rest-platforms-clear-fall-protection-provided",
+      "category": "csi-5",
+      "label": "Rest platforms clear Fall protection provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-ladder-free-of-damage-climbing-access-unobstruct",
+      "category": "csi-5",
+      "label": "Ladder free of damage Climbing access unobstructed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-cab-access-safe-cab-housekeeping-acceptable-5-4-",
+      "category": "csi-5",
+      "label": "Cab access safe Cab housekeeping acceptable 5.4 Operator Practices",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-pre-shift-inspection-completed",
+      "category": "csi-5",
+      "label": "Pre-shift inspection completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-operator-using-seatbelt-if-equipped",
+      "category": "csi-5",
+      "label": "Operator using seatbelt (if equipped)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-operator-maintains-communication",
+      "category": "csi-5",
+      "label": "Operator maintains communication",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-no-distractions-observed-load-chart-available-wi",
+      "category": "csi-5",
+      "label": "No distractions observed Load chart available Wind speed monitored",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-crane-left-in-weathervane-when-unattended",
+      "category": "csi-5",
+      "label": "Crane left in weathervane when unattended",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-unauthorized-persons-kept-out-of-cab",
+      "category": "csi-5",
+      "label": "Unauthorized persons kept out of cab",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-5-5-lift-planning-load-weight-known",
+      "category": "csi-5",
+      "label": "5.5 Lift Planning Load weight known",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-load-within-crane-capacity-centre-of-gravity-con",
+      "category": "csi-5",
+      "label": "Load within crane capacity Centre of gravity considered",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-landing-area-prepared-travel-path-clear-blind-li",
+      "category": "csi-5",
+      "label": "Landing area prepared Travel path clear Blind lifts planned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-critical-lift-identified-lift-plan-reviewed-with",
+      "category": "csi-5",
+      "label": "Critical lift identified Lift plan reviewed with crew",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-environmental-conditions-assessed",
+      "category": "csi-5",
+      "label": "Environmental conditions assessed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-5-6-rigging-during-lift-rigging-inspected-before",
+      "category": "csi-5",
+      "label": "5.6 Rigging During Lift Rigging inspected before lift",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-correct-sling-selected-sling-angles-acceptable-s",
+      "category": "csi-5",
+      "label": "Correct sling selected Sling angles acceptable Shackles properly installed Hooks equipped with safety latches",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-tag-lines-used-where-required-load-balanced",
+      "category": "csi-5",
+      "label": "Tag lines used where required Load balanced",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-trial-lift-completed-when-required",
+      "category": "csi-5",
+      "label": "Trial lift completed (when required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-no-personnel-under-suspended-load",
+      "category": "csi-5",
+      "label": "No personnel under suspended load",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-load-landed-safely-5-7-communication",
+      "category": "csi-5",
+      "label": "Load landed safely 5.7 Communication",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-dedicated-signaller-assigned",
+      "category": "csi-5",
+      "label": "Dedicated signaller assigned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-standard-hand-signals-used-radios-functioning",
+      "category": "csi-5",
+      "label": "Standard hand signals used Radios functioning",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-radio-channel-clear-operator-acknowledges-comman",
+      "category": "csi-5",
+      "label": "Radio channel clear Operator acknowledges commands",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-stop-signal-understood-by-all",
+      "category": "csi-5",
+      "label": "Stop signal understood by all",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-5-8-lift-area-safety-exclusion-zone-established",
+      "category": "csi-5",
+      "label": "5.8 Lift Area Safety Exclusion zone established",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-swing-radius-protected-public-protected-other-tr",
+      "category": "csi-5",
+      "label": "Swing radius protected Public protected Other trades clear of lift area",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-barricades-maintained-spotters-used-where-requir",
+      "category": "csi-5",
+      "label": "Barricades maintained Spotters used where required 5.9 Weather Conditions",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-wind-within-operating-limits",
+      "category": "csi-5",
+      "label": "Wind within operating limits",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-visibility-acceptable-lightning-procedures-under",
+      "category": "csi-5",
+      "label": "Visibility acceptable Lightning procedures understood",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-ice-or-snow-hazards-assessed",
+      "category": "csi-5",
+      "label": "Ice or snow hazards assessed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-weather-monitored-throughout-shift",
+      "category": "csi-5",
+      "label": "Weather monitored throughout shift",
+      "guidance": ""
+    },
+    {
+      "id": "csi-5-5-10-general-observations",
+      "category": "csi-5",
+      "label": "5.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-objective-verify-that-all-rigging-equipment-rigg",
+      "category": "csi-6",
+      "label": "Objective: Verify that all rigging equipment, rigging practices, personnel, and lifting operations are safe and comply with company procedures and applicable regulations.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-6-1-qualified-personnel-qualified-rigger-assigne",
+      "category": "csi-6",
+      "label": "6.1 Qualified Personnel Qualified rigger assigned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-signaller-identified-lift-director-identified-wh",
+      "category": "csi-6",
+      "label": "Signaller identified Lift director identified (when required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-workers-understand-their-responsibilities",
+      "category": "csi-6",
+      "label": "Workers understand their responsibilities",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-crew-communication-effective",
+      "category": "csi-6",
+      "label": "Crew communication effective",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-new-workers-adequately-supervised",
+      "category": "csi-6",
+      "label": "New workers adequately supervised",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-6-2-rigging-inspection-rigging-visually-inspecte",
+      "category": "csi-6",
+      "label": "6.2 Rigging Inspection Rigging visually inspected before use",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-identification-tags-legible-wll-tags-readable",
+      "category": "csi-6",
+      "label": "Identification tags legible WLL tags readable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-defective-rigging-removed-from-service-rigging-s",
+      "category": "csi-6",
+      "label": "Defective rigging removed from service Rigging stored properly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-inspection-records-available-if-applicable",
+      "category": "csi-6",
+      "label": "Inspection records available (if applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-6-3-wire-rope-slings-no-broken-wires-beyond-allo",
+      "category": "csi-6",
+      "label": "6.3 Wire Rope Slings No broken wires beyond allowable limits",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-bird-caging-no-kinks-no-crushing",
+      "category": "csi-6",
+      "label": "No bird-caging No kinks No crushing",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-severe-corrosion-flemish-eyes-acceptable-end-",
+      "category": "csi-6",
+      "label": "No severe corrosion Flemish eyes acceptable End fittings secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-6-4-synthetic-slings-no-cuts-or-tears",
+      "category": "csi-6",
+      "label": "6.4 Synthetic Slings No cuts or tears",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-melted-fibres-no-chemical-damage",
+      "category": "csi-6",
+      "label": "No melted fibres No chemical damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-stitching-intact-labels-readable",
+      "category": "csi-6",
+      "label": "Stitching intact Labels readable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-proper-sling-selected-6-5-chain-slings",
+      "category": "csi-6",
+      "label": "Proper sling selected 6.5 Chain Slings",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-stretched-links-no-cracked-links",
+      "category": "csi-6",
+      "label": "No stretched links No cracked links",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-gouges-or-excessive-wear-master-link-acceptab",
+      "category": "csi-6",
+      "label": "No gouges or excessive wear Master link acceptable Grab hooks serviceable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-6-6-shackles-correct-shackle-selected",
+      "category": "csi-6",
+      "label": "6.6 Shackles Correct shackle selected",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-wll-visible-pin-fully-engaged",
+      "category": "csi-6",
+      "label": "WLL visible Pin fully engaged",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-bent-bow-no-thread-damage",
+      "category": "csi-6",
+      "label": "No bent bow No thread damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-unauthorized-modifications",
+      "category": "csi-6",
+      "label": "No unauthorized modifications",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-correct-pin-type-used-6-7-hooks",
+      "category": "csi-6",
+      "label": "Correct pin type used 6.7 Hooks",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-safety-latch-functional-hook-not-twisted",
+      "category": "csi-6",
+      "label": "Safety latch functional Hook not twisted",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-hook-throat-opening-acceptable-no-cracks-or-defo",
+      "category": "csi-6",
+      "label": "Hook throat opening acceptable No cracks or deformation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-excessive-wear-6-8-lifting-practices",
+      "category": "csi-6",
+      "label": "No excessive wear 6.8 Lifting Practices",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-load-weight-known-centre-of-gravity-identified-s",
+      "category": "csi-6",
+      "label": "Load weight known Centre of gravity identified Sling angles acceptable Edge protection used",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-load-balanced-trial-lift-completed-where-require",
+      "category": "csi-6",
+      "label": "Load balanced Trial lift completed (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-shock-loading-no-side-loading",
+      "category": "csi-6",
+      "label": "No shock loading No side loading",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-load-landed-safely-6-9-exclusion-zones",
+      "category": "csi-6",
+      "label": "Load landed safely 6.9 Exclusion Zones",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-lift-area-barricaded-workers-outside-load-path",
+      "category": "csi-6",
+      "label": "Lift area barricaded Workers outside load path",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-no-one-beneath-suspended-load",
+      "category": "csi-6",
+      "label": "No one beneath suspended load",
+      "guidance": ""
+    },
+    {
+      "id": "csi-6-spotter-used-where-required-public-protected-6-1",
+      "category": "csi-6",
+      "label": "Spotter used where required Public protected 6.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-1-planning-engineering-approved-engineered-dra",
+      "category": "csi-7",
+      "label": "7.1 Planning & Engineering Approved engineered drawings available Current revision on site Supervisor familiar with drawings",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-crew-reviewed-work-plan-flha-completed",
+      "category": "csi-7",
+      "label": "Crew reviewed work plan FLHA completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-safe-work-procedure-available-design-changes-app",
+      "category": "csi-7",
+      "label": "Safe Work Procedure available Design changes approved Concrete pour sequence reviewed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-2-material-condition-form-panels-undamaged",
+      "category": "csi-7",
+      "label": "7.2 Material Condition Form panels undamaged",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-walers-in-good-condition-soldiers-free-of-damage",
+      "category": "csi-7",
+      "label": "Walers in good condition Soldiers free of damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-strongbacks-straight-form-ties-correct-type",
+      "category": "csi-7",
+      "label": "Strongbacks straight Form ties correct type",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-hardware-complete-damaged-components-removed-com",
+      "category": "csi-7",
+      "label": "Hardware complete Damaged components removed Components stored correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-3-falsework-shoring-shores-installed-correctly",
+      "category": "csi-7",
+      "label": "7.3 Falsework & Shoring Shores installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-base-plates-installed-screw-jacks-properly-adjus",
+      "category": "csi-7",
+      "label": "Base plates installed Screw jacks properly adjusted",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-shores-plumb-bracing-complete",
+      "category": "csi-7",
+      "label": "Shores plumb Bracing complete",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-bearing-surfaces-adequate-no-damaged-shoring-com",
+      "category": "csi-7",
+      "label": "Bearing surfaces adequate No damaged shoring components",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-reshoring-installed-as-required-7-4-wall-forms",
+      "category": "csi-7",
+      "label": "Reshoring installed as required 7.4 Wall Forms",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-forms-properly-aligned-kickers-secure",
+      "category": "csi-7",
+      "label": "Forms properly aligned Kickers secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-bracing-complete-tie-spacing-correct",
+      "category": "csi-7",
+      "label": "Bracing complete Tie spacing correct",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-form-pressure-considered-access-platforms-instal",
+      "category": "csi-7",
+      "label": "Form pressure considered Access platforms installed Guardrails complete",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-concrete-clean-out-complete-7-5-deck-formwork-de",
+      "category": "csi-7",
+      "label": "Concrete clean-out complete 7.5 Deck Formwork Deck panels installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-joists-installed-correctly-beam-supports-secure",
+      "category": "csi-7",
+      "label": "Joists installed correctly Beam supports secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-edge-protection-installed-openings-protected-can",
+      "category": "csi-7",
+      "label": "Edge protection installed Openings protected Cantilevers properly supported",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-loading-within-design-limits",
+      "category": "csi-7",
+      "label": "Loading within design limits",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-6-climbing-systems-doka-peri-ulma",
+      "category": "csi-7",
+      "label": "7.6 Climbing Systems (Doka / PERI / ULMA",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-similar-climbing-brackets-installed-correctly",
+      "category": "csi-7",
+      "label": "/ Similar) Climbing brackets installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-anchor-cones-secure-climbing-bolts-installed-cor",
+      "category": "csi-7",
+      "label": "Anchor cones secure Climbing bolts installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-platforms-fully-decked-guardrails-complete",
+      "category": "csi-7",
+      "label": "Platforms fully decked Guardrails complete",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-gates-operational-toe-boards-installed-access-la",
+      "category": "csi-7",
+      "label": "Gates operational Toe boards installed Access ladders secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-fall-protection-available-climbing-procedure-fol",
+      "category": "csi-7",
+      "label": "Fall protection available Climbing procedure followed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-7-concrete-placement-pour-sequence-followed",
+      "category": "csi-7",
+      "label": "7.7 Concrete Placement Pour sequence followed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-pump-operator-communicating-hose-controlled-work",
+      "category": "csi-7",
+      "label": "Pump operator communicating Hose controlled Workers clear of pinch points",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-forms-monitored-during-pour-excessive-deflection",
+      "category": "csi-7",
+      "label": "Forms monitored during pour Excessive deflection observed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-blowout-hazards-monitored-emergency-stop-plan-un",
+      "category": "csi-7",
+      "label": "Blowout hazards monitored Emergency stop plan understood",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-8-form-stripping-engineer-supervisor-approval-",
+      "category": "csi-7",
+      "label": "7.8 Form Stripping Engineer/supervisor approval obtained",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-concrete-strength-confirmed-area-below-barricade",
+      "category": "csi-7",
+      "label": "Concrete strength confirmed Area below barricaded",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-crane-lift-coordinated-rigging-inspected-compone",
+      "category": "csi-7",
+      "label": "Crane lift coordinated Rigging inspected Components lowered safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-workers-protected-from-falling-objects",
+      "category": "csi-7",
+      "label": "Workers protected from falling objects",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-9-general-safety-workers-trained",
+      "category": "csi-7",
+      "label": "7.9 General Safety Workers trained",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-manufacturer-instructions-available-housekeeping",
+      "category": "csi-7",
+      "label": "Manufacturer instructions available Housekeeping maintained Material storage organized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-7-7-10-general-observations",
+      "category": "csi-7",
+      "label": "7.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-1-operator-qualifications-operator-authorized-",
+      "category": "csi-8",
+      "label": "8.1 Operator Qualifications Operator authorized by employer",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-operator-competency-verified",
+      "category": "csi-8",
+      "label": "Operator competency verified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-required-training-completed-familiar-with-manufa",
+      "category": "csi-8",
+      "label": "Required training completed Familiar with manufacturer's instructions",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-site-orientation-completed-safe-operating-proced",
+      "category": "csi-8",
+      "label": "Site orientation completed Safe operating procedures understood",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-2-daily-equipment-inspection",
+      "category": "csi-8",
+      "label": "8.2 Daily Equipment Inspection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-defective-equipment-removed-from-service-fire-ex",
+      "category": "csi-8",
+      "label": "Defective equipment removed from service Fire extinguisher inspected Mirrors clean",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-windows-clean-camera-system-functioning",
+      "category": "csi-8",
+      "label": "Windows clean Camera system functioning",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-3-equipment-condition-seat-belt-functional",
+      "category": "csi-8",
+      "label": "8.3 Equipment Condition Seat belt functional",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-horn-operational-backup-alarm-functioning",
+      "category": "csi-8",
+      "label": "Horn operational Backup alarm functioning",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-lights-operational-beacon-operating",
+      "category": "csi-8",
+      "label": "Lights operational Beacon operating",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-windshield-wipers-operational",
+      "category": "csi-8",
+      "label": "Windshield wipers operational",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-tires-tracks-in-good-condition",
+      "category": "csi-8",
+      "label": "Tires/tracks in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-hydraulic-leaks-absent-fuel-leaks-absent",
+      "category": "csi-8",
+      "label": "Hydraulic leaks absent Fuel leaks absent",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-guards-installed-steps-and-handholds-secure",
+      "category": "csi-8",
+      "label": "Guards installed Steps and handholds secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-cab-clean-and-organized-8-4-safe-operation",
+      "category": "csi-8",
+      "label": "Cab clean and organized 8.4 Safe Operation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-seat-belt-worn-three-point-contact-used",
+      "category": "csi-8",
+      "label": "Seat belt worn Three-point contact used",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-safe-speed-maintained-blind-corners-approached-c",
+      "category": "csi-8",
+      "label": "Safe speed maintained Blind corners approached cautiously",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-loads-carried-low-operator-maintains-visibility",
+      "category": "csi-8",
+      "label": "Loads carried low Operator maintains visibility",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-equipment-not-overloaded-spotter-used-where-requ",
+      "category": "csi-8",
+      "label": "Equipment not overloaded Spotter used where required No passengers unless permitted",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-5-traffic-management-traffic-management-plan-a",
+      "category": "csi-8",
+      "label": "8.5 Traffic Management Traffic management plan available Pedestrian routes identified Equipment routes designated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-crossing-points-controlled-spotters-used-where-n",
+      "category": "csi-8",
+      "label": "Crossing points controlled Spotters used where necessary",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-speed-limits-posted-barriers-maintained-public-p",
+      "category": "csi-8",
+      "label": "Speed limits posted Barriers maintained Public protected 8.6 Telehandlers & Forklifts",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-forks-undamaged-fork-locking-pins-secure",
+      "category": "csi-8",
+      "label": "Forks undamaged Fork locking pins secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-attachments-approved-load-chart-available-outrig",
+      "category": "csi-8",
+      "label": "Attachments approved Load chart available Outriggers deployed (when required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-ground-conditions-suitable-load-secured-personne",
+      "category": "csi-8",
+      "label": "Ground conditions suitable Load secured Personnel not lifted unless approved platform used",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-7-mewps-boom-lifts-scissor-lifts",
+      "category": "csi-8",
+      "label": "8.7 MEWPs (Boom Lifts & Scissor Lifts)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-daily-inspection-completed-emergency-lowering-te",
+      "category": "csi-8",
+      "label": "Daily inspection completed Emergency lowering tested",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-guardrails-complete-gate-closes-properly",
+      "category": "csi-8",
+      "label": "Guardrails complete Gate closes properly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-harness-used-when-required-lanyard-attached-to-a",
+      "category": "csi-8",
+      "label": "Harness used when required Lanyard attached to approved anchor Surface suitable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-overhead-hazards-assessed-outriggers-deployed-if",
+      "category": "csi-8",
+      "label": "Overhead hazards assessed Outriggers deployed (if equipped)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-8-excavators-loaders-skid-steers",
+      "category": "csi-8",
+      "label": "8.8 Excavators, Loaders & Skid Steers",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-swing-radius-protected-workers-outside-operating",
+      "category": "csi-8",
+      "label": "Swing radius protected Workers outside operating zone",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-bucket-lowered-when-parked-attachments-secured-u",
+      "category": "csi-8",
+      "label": "Bucket lowered when parked Attachments secured Underground utilities identified Excavation edge maintained No workers beneath raised attachments",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-9-parking-shutdown-equipment-parked-safely",
+      "category": "csi-8",
+      "label": "8.9 Parking & Shutdown Equipment parked safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-parking-brake-applied-attachments-lowered",
+      "category": "csi-8",
+      "label": "Parking brake applied Attachments lowered",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-engine-shut-down-keys-removed-where-required-equ",
+      "category": "csi-8",
+      "label": "Engine shut down Keys removed where required Equipment secured against unauthorized use",
+      "guidance": ""
+    },
+    {
+      "id": "csi-8-8-10-general-observations",
+      "category": "csi-8",
+      "label": "8.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-platforms-objective-verify-that-all-scaffolds-te",
+      "category": "csi-9",
+      "label": "Platforms Objective: Verify that all scaffolds, temporary work platforms, access systems, and suspended work platforms are erected, inspected, and used safely.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-9-1-documentation-competency",
+      "category": "csi-9",
+      "label": "9.1 Documentation & Competency",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-scaffold-inspection-completed",
+      "category": "csi-9",
+      "label": "Scaffold inspection completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-scaffold-tagged-green-yellow-red",
+      "category": "csi-9",
+      "label": "Scaffold tagged (Green/Yellow/Red)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-inspection-tag-current-competent-person-identifi",
+      "category": "csi-9",
+      "label": "Inspection tag current Competent person identified Scaffold users trained",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-manufacturer-s-instructions-available-if-require",
+      "category": "csi-9",
+      "label": "Manufacturer's instructions available (if required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-engineering-available-where-required",
+      "category": "csi-9",
+      "label": "Engineering available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-9-2-scaffold-foundation-stable-ground",
+      "category": "csi-9",
+      "label": "9.2 Scaffold Foundation Stable ground",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-mud-sills-installed-base-plates-installed-screw-",
+      "category": "csi-9",
+      "label": "Mud sills installed Base plates installed Screw jacks adjusted correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-scaffold-plumb-settlement-not-observed",
+      "category": "csi-9",
+      "label": "Scaffold plumb Settlement not observed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-9-3-scaffold-structure-frames-undamaged",
+      "category": "csi-9",
+      "label": "9.3 Scaffold Structure Frames undamaged",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-cross-braces-installed-locking-pins-installed-co",
+      "category": "csi-9",
+      "label": "Cross braces installed Locking pins installed Couplers secure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-diagonal-bracing-complete-ties-installed-as-requ",
+      "category": "csi-9",
+      "label": "Diagonal bracing complete Ties installed as required Outriggers installed (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-no-unauthorized-modifications",
+      "category": "csi-9",
+      "label": "No unauthorized modifications",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-9-4-platforms-platform-fully-decked",
+      "category": "csi-9",
+      "label": "9.4 Platforms Platform fully decked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-planks-secured-no-damaged-planks",
+      "category": "csi-9",
+      "label": "Planks secured No damaged planks",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-proper-platform-width-platform-free-of-debris",
+      "category": "csi-9",
+      "label": "Proper platform width Platform free of debris",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-materials-stored-safely-load-limits-not-exceeded",
+      "category": "csi-9",
+      "label": "Materials stored safely Load limits not exceeded",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-9-5-guardrails-fall-protection",
+      "category": "csi-9",
+      "label": "9.5 Guardrails & Fall Protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-top-rail-installed-mid-rail-installed-toe-boards",
+      "category": "csi-9",
+      "label": "Top rail installed Mid rail installed Toe boards installed End protection installed Fall protection used where required Anchor points suitable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-rescue-procedures-available-9-6-access-safe-ladd",
+      "category": "csi-9",
+      "label": "Rescue procedures available 9.6 Access Safe ladder access provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-stair-tower-available-where-required",
+      "category": "csi-9",
+      "label": "Stair tower available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-access-unobstructed-ladder-secured-access-gates-",
+      "category": "csi-9",
+      "label": "Access unobstructed Ladder secured Access gates functioning",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-workers-maintain-three-point-contact",
+      "category": "csi-9",
+      "label": "Workers maintain three-point contact",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-9-7-suspended-work-platforms",
+      "category": "csi-9",
+      "label": "9.7 Suspended Work Platforms",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-platform-inspected-suspension-system-inspected-s",
+      "category": "csi-9",
+      "label": "Platform inspected Suspension system inspected Suspension ropes in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-counterweights-secured-independent-lifelines-ins",
+      "category": "csi-9",
+      "label": "Counterweights secured Independent lifelines installed Workers tied off correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-emergency-descent-equipment-available-rescue-pla",
+      "category": "csi-9",
+      "label": "Emergency descent equipment available Rescue plan available 9.8 Rolling Scaffolds",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-casters-locked-during-use-outriggers-installed-w",
+      "category": "csi-9",
+      "label": "Casters locked during use Outriggers installed (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-workers-not-riding-during-movement",
+      "category": "csi-9",
+      "label": "Workers not riding during movement",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-surface-level-and-suitable-height-to-base-ratio-",
+      "category": "csi-9",
+      "label": "Surface level and suitable Height-to-base ratio acceptable 9.9 Housekeeping Around Scaffold",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-access-area-clear-materials-organized",
+      "category": "csi-9",
+      "label": "Access area clear Materials organized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-falling-object-protection-provided",
+      "category": "csi-9",
+      "label": "Falling object protection provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-9-barricades-installed-below-warning-signage-poste",
+      "category": "csi-9",
+      "label": "Barricades installed below Warning signage posted 9.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-10-1-planning-documentation",
+      "category": "csi-10",
+      "label": "10.1 Planning & Documentation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-excavation-permit-completed-flha-completed",
+      "category": "csi-10",
+      "label": "Excavation permit completed FLHA completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-safe-work-procedure-available-supervisor-assigne",
+      "category": "csi-10",
+      "label": "Safe Work Procedure available Supervisor assigned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-daily-inspection-completed-competent-person-iden",
+      "category": "csi-10",
+      "label": "Daily inspection completed Competent person identified Engineering available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-10-2-utility-locates-bc-one-call-completed",
+      "category": "csi-10",
+      "label": "10.2 Utility Locates BC One Call completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-utility-locates-current-utilities-clearly-marked",
+      "category": "csi-10",
+      "label": "Utility locates current Utilities clearly marked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-utility-drawings-available-overhead-utilities-id",
+      "category": "csi-10",
+      "label": "Utility drawings available Overhead utilities identified Underground services protected Hand digging used where required Utility owners notified (if required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-10-3-excavation-stability-soil-conditions-assess",
+      "category": "csi-10",
+      "label": "10.3 Excavation Stability Soil conditions assessed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-signs-of-movement-monitored-excavation-walls-sta",
+      "category": "csi-10",
+      "label": "Signs of movement monitored Excavation walls stable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-sloping-adequate-benching-adequate-shoring-insta",
+      "category": "csi-10",
+      "label": "Sloping adequate Benching adequate Shoring installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-trench-box-installed-correctly",
+      "category": "csi-10",
+      "label": "Trench box installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-daily-inspection-completed-after-weather-changes",
+      "category": "csi-10",
+      "label": "Daily inspection completed after weather changes",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-10-4-access-egress-safe-access-provided",
+      "category": "csi-10",
+      "label": "10.4 Access & Egress Safe access provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-ladders-properly-secured-ladder-spacing-acceptab",
+      "category": "csi-10",
+      "label": "Ladders properly secured Ladder spacing acceptable Access routes unobstructed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-workers-able-to-exit-quickly",
+      "category": "csi-10",
+      "label": "Workers able to exit quickly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-emergency-access-maintained-10-5-spoil-piles-mat",
+      "category": "csi-10",
+      "label": "Emergency access maintained 10.5 Spoil Piles & Materials",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-spoil-piles-set-back-from-edge",
+      "category": "csi-10",
+      "label": "Spoil piles set back from edge",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-materials-kept-away-from-edge",
+      "category": "csi-10",
+      "label": "Materials kept away from edge",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-equipment-clear-of-excavation-edge",
+      "category": "csi-10",
+      "label": "Equipment clear of excavation edge",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-falling-material-hazards-controlled-edge-protect",
+      "category": "csi-10",
+      "label": "Falling material hazards controlled Edge protection installed 10.6 Water Control",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-water-accumulation-controlled-pumps-operational",
+      "category": "csi-10",
+      "label": "Water accumulation controlled Pumps operational",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-drainage-adequate-surface-runoff-controlled-grou",
+      "category": "csi-10",
+      "label": "Drainage adequate Surface runoff controlled Ground stability maintained 10.7 Heavy Equipment Around Excavations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-equipment-kept-safe-distance-from-edge",
+      "category": "csi-10",
+      "label": "Equipment kept safe distance from edge",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-swing-radius-controlled-spotter-used-where-requi",
+      "category": "csi-10",
+      "label": "Swing radius controlled Spotter used where required Workers separated from equipment",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-equipment-access-controlled-ground-capable-of-su",
+      "category": "csi-10",
+      "label": "Equipment access controlled Ground capable of supporting equipment",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-10-8-worker-protection-workers-remain-inside-pro",
+      "category": "csi-10",
+      "label": "10.8 Worker Protection Workers remain inside protective system",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-no-workers-beneath-suspended-loads",
+      "category": "csi-10",
+      "label": "No workers beneath suspended loads",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-hard-hats-worn-high-visibility-clothing-worn",
+      "category": "csi-10",
+      "label": "Hard hats worn High visibility clothing worn",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-air-quality-acceptable-confined-space-assessment",
+      "category": "csi-10",
+      "label": "Air quality acceptable Confined space assessment completed (where applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-10-9-barricades-public-protection",
+      "category": "csi-10",
+      "label": "10.9 Barricades & Public Protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-barricades-installed-warning-signs-posted-excava",
+      "category": "csi-10",
+      "label": "Barricades installed Warning signs posted Excavation illuminated at night",
+      "guidance": ""
+    },
+    {
+      "id": "csi-10-public-protected-vehicle-protection-installed-10",
+      "category": "csi-10",
+      "label": "Public protected Vehicle protection installed 10.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-11-1-documentation-planning",
+      "category": "csi-11",
+      "label": "11.1 Documentation & Planning",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-temporary-power-plan-available-electrical-work-a",
+      "category": "csi-11",
+      "label": "Temporary power plan available Electrical work authorized Qualified electrician available Energized work minimized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-lockout-procedures-available-workers-trained-in-",
+      "category": "csi-11",
+      "label": "Lockout procedures available Workers trained in electrical hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-11-2-temporary-power-distribution",
+      "category": "csi-11",
+      "label": "11.2 Temporary Power Distribution",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-temporary-panels-secured-panels-properly-labeled",
+      "category": "csi-11",
+      "label": "Temporary panels secured Panels properly labeled",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-panel-covers-installed-breakers-identified-unuse",
+      "category": "csi-11",
+      "label": "Panel covers installed Breakers identified Unused openings covered",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-adequate-working-clearance-maintained-weather-pr",
+      "category": "csi-11",
+      "label": "Adequate working clearance maintained Weather protection provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-11-3-ground-fault-protection",
+      "category": "csi-11",
+      "label": "11.3 Ground Fault Protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-gfcis-installed-where-required-gfcis-tested",
+      "category": "csi-11",
+      "label": "GFCIs installed where required GFCIs tested",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-defective-gfcis-replaced-portable-gfcis-availabl",
+      "category": "csi-11",
+      "label": "Defective GFCIs replaced Portable GFCIs available Workers understand testing procedure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-11-4-extension-cords-portable-electrical",
+      "category": "csi-11",
+      "label": "11.4 Extension Cords & Portable Electrical",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-equipment-extension-cords-undamaged",
+      "category": "csi-11",
+      "label": "Equipment Extension cords undamaged",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-no-exposed-conductors-ground-pins-intact",
+      "category": "csi-11",
+      "label": "No exposed conductors Ground pins intact",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-cord-connections-protected-cords-not-routed-thro",
+      "category": "csi-11",
+      "label": "Cord connections protected Cords not routed through water",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-cords-protected-from-vehicle-traffic",
+      "category": "csi-11",
+      "label": "Cords protected from vehicle traffic",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-cords-not-creating-trip-hazards",
+      "category": "csi-11",
+      "label": "Cords not creating trip hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-portable-tools-inspected-double-insulated-tools-",
+      "category": "csi-11",
+      "label": "Portable tools inspected Double-insulated tools identified 11.5 Lockout / Tagout (LOTO)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-lockout-devices-available-energy-sources-identif",
+      "category": "csi-11",
+      "label": "Lockout devices available Energy sources identified Equipment isolated before work Locks individually assigned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-tags-completed-properly-zero-energy-verified",
+      "category": "csi-11",
+      "label": "Tags completed properly Zero energy verified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-lock-removal-controlled-11-6-overhead-undergroun",
+      "category": "csi-11",
+      "label": "Lock removal controlled 11.6 Overhead & Underground Electrical",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-hazards-overhead-power-lines-identified-minimum-",
+      "category": "csi-11",
+      "label": "Hazards Overhead power lines identified Minimum approach distances maintained Warning signs posted Spotter used when required Underground electrical services marked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-electrical-utility-contacted-where-required-11-7",
+      "category": "csi-11",
+      "label": "Electrical utility contacted where required 11.7 Generators & Temporary Power",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-sources-generator-grounded-fuel-stored-safely",
+      "category": "csi-11",
+      "label": "Sources Generator grounded Fuel stored safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-exhaust-directed-away-from-workers",
+      "category": "csi-11",
+      "label": "Exhaust directed away from workers",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-fire-extinguisher-available-generator-inspected-",
+      "category": "csi-11",
+      "label": "Fire extinguisher available Generator inspected Cables protected from damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-11-8-battery-charging-stations",
+      "category": "csi-11",
+      "label": "11.8 Battery Charging Stations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-charging-area-ventilated-fire-extinguisher-avail",
+      "category": "csi-11",
+      "label": "Charging area ventilated Fire extinguisher available Chargers in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-no-combustible-materials-nearby",
+      "category": "csi-11",
+      "label": "No combustible materials nearby",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-batteries-free-from-visible-damage",
+      "category": "csi-11",
+      "label": "Batteries free from visible damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-11-9-general-electrical-safety",
+      "category": "csi-11",
+      "label": "11.9 General Electrical Safety",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-electrical-rooms-secure-warning-labels-visible",
+      "category": "csi-11",
+      "label": "Electrical rooms secure Warning labels visible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-housekeeping-maintained-no-unauthorized-electric",
+      "category": "csi-11",
+      "label": "Housekeeping maintained No unauthorized electrical work observed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-emergency-disconnects-accessible",
+      "category": "csi-11",
+      "label": "Emergency disconnects accessible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-11-11-10-general-observations",
+      "category": "csi-11",
+      "label": "11.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-objective-verify-that-fire-prevention-measures-h",
+      "category": "csi-12",
+      "label": "Objective: Verify that fire prevention measures, hot work activities, fuel storage, and emergency fire response are properly managed to reduce the risk of fire and explosion.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-12-1-fire-prevention-fire-prevention-plan-availa",
+      "category": "csi-12",
+      "label": "12.1 Fire Prevention Fire prevention plan available Fire hazards identified Combustible materials minimized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-waste-removed-regularly-smoking-areas-designated",
+      "category": "csi-12",
+      "label": "Waste removed regularly Smoking areas designated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-no-unauthorized-smoking-observed",
+      "category": "csi-12",
+      "label": "No unauthorized smoking observed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-ignition-sources-controlled-12-2-fire-extinguish",
+      "category": "csi-12",
+      "label": "Ignition sources controlled 12.2 Fire Extinguishers",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-fire-extinguishers-available-correct-extinguishe",
+      "category": "csi-12",
+      "label": "Fire extinguishers available Correct extinguisher type provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-extinguishers-inspected-monthly",
+      "category": "csi-12",
+      "label": "Extinguishers inspected monthly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-inspection-tags-current-easily-accessible",
+      "category": "csi-12",
+      "label": "Inspection tags current Easily accessible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-clearly-visible-proper-mounting-height",
+      "category": "csi-12",
+      "label": "Clearly visible Proper mounting height",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-no-visible-damage-workers-know-extinguisher-loca",
+      "category": "csi-12",
+      "label": "No visible damage Workers know extinguisher locations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-12-3-hot-work-operations-hot-work-permit-complet",
+      "category": "csi-12",
+      "label": "12.3 Hot Work Operations Hot work permit completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-permit-available-at-work-area",
+      "category": "csi-12",
+      "label": "Permit available at work area",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-fire-watch-assigned-fire-watch-trained",
+      "category": "csi-12",
+      "label": "Fire watch assigned Fire watch trained",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-fire-watch-remains-after-work-completed",
+      "category": "csi-12",
+      "label": "Fire watch remains after work completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-combustibles-removed-or-protected-sparks-contain",
+      "category": "csi-12",
+      "label": "Combustibles removed or protected Sparks contained",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-ventilation-adequate-area-monitored-after-comple",
+      "category": "csi-12",
+      "label": "Ventilation adequate Area monitored after completion",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-12-4-welding-cutting-equipment",
+      "category": "csi-12",
+      "label": "12.4 Welding & Cutting Equipment",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-welding-machine-inspected-leads-free-of-damage",
+      "category": "csi-12",
+      "label": "Welding machine inspected Leads free of damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-ground-clamp-secure-electrode-holder-in-good-con",
+      "category": "csi-12",
+      "label": "Ground clamp secure Electrode holder in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-flash-protection-provided-welding-curtains-insta",
+      "category": "csi-12",
+      "label": "Flash protection provided Welding curtains installed Cylinders secured upright",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-valve-caps-installed-when-not-in-use",
+      "category": "csi-12",
+      "label": "Valve caps installed when not in use",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-regulators-in-good-condition",
+      "category": "csi-12",
+      "label": "Regulators in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-flashback-arrestors-installed-hoses-free-of-leak",
+      "category": "csi-12",
+      "label": "Flashback arrestors installed Hoses free of leaks",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-oxygen-and-fuel-gas-stored-separately",
+      "category": "csi-12",
+      "label": "Oxygen and fuel gas stored separately",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-12-5-flammable-combustible-liquids",
+      "category": "csi-12",
+      "label": "12.5 Flammable & Combustible Liquids",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-approved-storage-containers-used",
+      "category": "csi-12",
+      "label": "Approved storage containers used",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-containers-properly-labeled-storage-cabinets-ava",
+      "category": "csi-12",
+      "label": "Containers properly labeled Storage cabinets available Spill containment provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-quantities-minimized-fuel-dispensing-controlled-",
+      "category": "csi-12",
+      "label": "Quantities minimized Fuel dispensing controlled Static bonding used where required 12.6 Propane & Fuel Storage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-propane-cylinders-secured-cylinders-protected-fr",
+      "category": "csi-12",
+      "label": "Propane cylinders secured Cylinders protected from impact",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-valves-protected-storage-away-from-ignition-sour",
+      "category": "csi-12",
+      "label": "Valves protected Storage away from ignition sources",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-fuel-tanks-labeled-no-leaks-observed",
+      "category": "csi-12",
+      "label": "Fuel tanks labeled No leaks observed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-12-7-emergency-response-fire-alarm-procedures-po",
+      "category": "csi-12",
+      "label": "12.7 Emergency Response Fire alarm procedures posted Emergency contacts posted Fire department access maintained Hydrants unobstructed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-muster-points-identified-workers-understand-evac",
+      "category": "csi-12",
+      "label": "Muster points identified Workers understand evacuation procedures",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-12-8-housekeeping-combustible-waste-removed-oily",
+      "category": "csi-12",
+      "label": "12.8 Housekeeping Combustible waste removed Oily rags properly disposed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-cardboard-accumulation-controlled-pallets-stacke",
+      "category": "csi-12",
+      "label": "Cardboard accumulation controlled Pallets stacked safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-exit-routes-unobstructed-12-9-fire-safety-traini",
+      "category": "csi-12",
+      "label": "Exit routes unobstructed 12.9 Fire Safety Training",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-workers-trained-in-extinguisher-use",
+      "category": "csi-12",
+      "label": "Workers trained in extinguisher use",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-fire-watch-understands-responsibilities",
+      "category": "csi-12",
+      "label": "Fire watch understands responsibilities",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-emergency-drills-completed-supervisors-familiar-",
+      "category": "csi-12",
+      "label": "Emergency drills completed Supervisors familiar with emergency procedures",
+      "guidance": ""
+    },
+    {
+      "id": "csi-12-12-10-general-observations",
+      "category": "csi-12",
+      "label": "12.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-13-1-whmis-program-whmis-program-implemented",
+      "category": "csi-13",
+      "label": "13.1 WHMIS Program WHMIS program implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-whmis-training-completed-refresher-training-comp",
+      "category": "csi-13",
+      "label": "WHMIS training completed Refresher training completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-workers-understand-whmis-labels",
+      "category": "csi-13",
+      "label": "Workers understand WHMIS labels",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-workers-understand-sdss-workers-know-emergency-p",
+      "category": "csi-13",
+      "label": "Workers understand SDSs Workers know emergency procedures",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-13-2-product-identification-all-hazardous-produc",
+      "category": "csi-13",
+      "label": "13.2 Product Identification All hazardous products labeled",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-workplace-labels-complete-supplier-labels-legibl",
+      "category": "csi-13",
+      "label": "Workplace labels complete Supplier labels legible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-containers-in-good-condition",
+      "category": "csi-13",
+      "label": "Containers in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-unlabeled-containers-not-observed",
+      "category": "csi-13",
+      "label": "Unlabeled containers not observed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-decanted-products-relabeled-13-3-safety-data-she",
+      "category": "csi-13",
+      "label": "Decanted products relabeled 13.3 Safety Data Sheets (SDS)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-sdss-available-on-site-sdss-accessible-to-worker",
+      "category": "csi-13",
+      "label": "SDSs available on site SDSs accessible to workers",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-sdss-current-workers-know-sds-location",
+      "category": "csi-13",
+      "label": "SDSs current Workers know SDS location",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-emergency-information-available-13-4-chemical-st",
+      "category": "csi-13",
+      "label": "Emergency information available 13.4 Chemical Storage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-chemicals-stored-in-designated-area",
+      "category": "csi-13",
+      "label": "Chemicals stored in designated area",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-incompatible-chemicals-separated",
+      "category": "csi-13",
+      "label": "Incompatible chemicals separated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-containers-closed-when-not-in-use",
+      "category": "csi-13",
+      "label": "Containers closed when not in use",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-storage-area-ventilated-secondary-containment-pr",
+      "category": "csi-13",
+      "label": "Storage area ventilated Secondary containment provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-shelving-stable-containers-protected-from-damage",
+      "category": "csi-13",
+      "label": "Shelving stable Containers protected from damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-no-leaking-containers-13-5-flammable-hazardous-p",
+      "category": "csi-13",
+      "label": "No leaking containers 13.5 Flammable & Hazardous Products",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-flammable-products-stored-correctly",
+      "category": "csi-13",
+      "label": "Flammable products stored correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-aerosol-cans-stored-safely-solvents-stored-corre",
+      "category": "csi-13",
+      "label": "Aerosol cans stored safely Solvents stored correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-form-oil-containers-labeled-epoxy-products-store",
+      "category": "csi-13",
+      "label": "Form oil containers labeled Epoxy products stored safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-curing-compounds-stored-correctly",
+      "category": "csi-13",
+      "label": "Curing compounds stored correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-grout-and-additives-stored-safely",
+      "category": "csi-13",
+      "label": "Grout and additives stored safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-13-6-compressed-gases-cylinders-secured-upright",
+      "category": "csi-13",
+      "label": "13.6 Compressed Gases Cylinders secured upright",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-valve-protection-installed-regulators-in-good-co",
+      "category": "csi-13",
+      "label": "Valve protection installed Regulators in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-empty-cylinders-identified-oxygen-separated-from",
+      "category": "csi-13",
+      "label": "Empty cylinders identified Oxygen separated from fuel gas",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-cylinders-protected-from-impact",
+      "category": "csi-13",
+      "label": "Cylinders protected from impact",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-13-7-spill-prevention-response",
+      "category": "csi-13",
+      "label": "13.7 Spill Prevention & Response",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-spill-kits-available-spill-kits-fully-stocked",
+      "category": "csi-13",
+      "label": "Spill kits available Spill kits fully stocked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-workers-know-spill-procedures",
+      "category": "csi-13",
+      "label": "Workers know spill procedures",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-spill-response-equipment-accessible",
+      "category": "csi-13",
+      "label": "Spill response equipment accessible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-drip-trays-used-where-required-environmental-rep",
+      "category": "csi-13",
+      "label": "Drip trays used where required Environmental reporting procedures known",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-13-8-hazardous-waste-hazardous-waste-identified-",
+      "category": "csi-13",
+      "label": "13.8 Hazardous Waste Hazardous waste identified Waste containers labeled",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-waste-stored-correctly-disposal-records-maintain",
+      "category": "csi-13",
+      "label": "Waste stored correctly Disposal records maintained Used absorbents disposed of properly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-empty-containers-managed-correctly",
+      "category": "csi-13",
+      "label": "Empty containers managed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-13-9-worker-practices-required-ppe-worn",
+      "category": "csi-13",
+      "label": "13.9 Worker Practices Required PPE worn",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-no-eating-drinking-near-chemicals",
+      "category": "csi-13",
+      "label": "No eating/drinking near chemicals",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-good-hygiene-practices-followed",
+      "category": "csi-13",
+      "label": "Good hygiene practices followed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-eyewash-station-available-where-required",
+      "category": "csi-13",
+      "label": "Eyewash station available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-chemical-exposure-minimized-unsafe-practices-cor",
+      "category": "csi-13",
+      "label": "Chemical exposure minimized Unsafe practices corrected",
+      "guidance": ""
+    },
+    {
+      "id": "csi-13-13-10-general-observations",
+      "category": "csi-13",
+      "label": "13.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-equipment-ppe-objective-verify-that-workers-are-",
+      "category": "csi-14",
+      "label": "Equipment (PPE) Objective: Verify that workers are wearing, inspecting, maintaining, and using the appropriate personal protective equipment for the hazards present.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-1-general-ppe-compliance-minimum-ppe-requirem",
+      "category": "csi-14",
+      "label": "14.1 General PPE Compliance Minimum PPE requirements being followed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-ppe-appropriate-for-work-being-performed",
+      "category": "csi-14",
+      "label": "PPE appropriate for work being performed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-ppe-in-good-condition-damaged-ppe-removed-from-s",
+      "category": "csi-14",
+      "label": "PPE in good condition Damaged PPE removed from service Workers understand PPE requirements",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-supervisors-enforcing-ppe-requirements",
+      "category": "csi-14",
+      "label": "Supervisors enforcing PPE requirements",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-2-head-protection-hard-hats-worn-where-requir",
+      "category": "csi-14",
+      "label": "14.2 Head Protection Hard hats worn where required Hard hats free of cracks or damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-suspension-system-in-good-condition",
+      "category": "csi-14",
+      "label": "Suspension system in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-chin-straps-used-where-required-hard-hats-not-mo",
+      "category": "csi-14",
+      "label": "Chin straps used where required Hard hats not modified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-expiry-manufacturer-recommendations-met",
+      "category": "csi-14",
+      "label": "Expiry/manufacturer recommendations met",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-3-eye-face-protection-safety-glasses-worn",
+      "category": "csi-14",
+      "label": "14.3 Eye & Face Protection Safety glasses worn",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-side-shields-installed-face-shields-used-where-r",
+      "category": "csi-14",
+      "label": "Side shields installed Face shields used where required Welding shields appropriate",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-eye-protection-clean-and-undamaged",
+      "category": "csi-14",
+      "label": "Eye protection clean and undamaged",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-prescription-safety-eyewear-used-where-required-",
+      "category": "csi-14",
+      "label": "Prescription safety eyewear used where required 14.4 Hearing Protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-hearing-protection-available-hearing-protection-",
+      "category": "csi-14",
+      "label": "Hearing protection available Hearing protection worn where required Earplugs fitted correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-earmuffs-in-good-condition-noise-hazards-identif",
+      "category": "csi-14",
+      "label": "Earmuffs in good condition Noise hazards identified 14.5 Hand Protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-gloves-appropriate-for-task-cut-resistant-gloves",
+      "category": "csi-14",
+      "label": "Gloves appropriate for task Cut-resistant gloves used where required Chemical-resistant gloves used where required Welding gloves used where required Gloves free from damage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-6-foot-protection-csa-approved-safety-footwea",
+      "category": "csi-14",
+      "label": "14.6 Foot Protection CSA-approved safety footwear worn",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-footwear-in-good-condition-soles-provide-adequat",
+      "category": "csi-14",
+      "label": "Footwear in good condition Soles provide adequate traction",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-metatarsal-protection-used-where-required-slip-h",
+      "category": "csi-14",
+      "label": "Metatarsal protection used where required Slip hazards addressed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-7-high-visibility-apparel",
+      "category": "csi-14",
+      "label": "14.7 High-Visibility Apparel",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-high-visibility-apparel-worn",
+      "category": "csi-14",
+      "label": "High-visibility apparel worn",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-garments-clean-and-visible-reflective-striping-i",
+      "category": "csi-14",
+      "label": "Garments clean and visible Reflective striping intact",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-appropriate-class-of-high-visibility-clothing-us",
+      "category": "csi-14",
+      "label": "Appropriate class of high-visibility clothing used",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-8-respiratory-protection-respirator-required-",
+      "category": "csi-14",
+      "label": "14.8 Respiratory Protection Respirator required for task",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-correct-respirator-selected-fit-testing-complete",
+      "category": "csi-14",
+      "label": "Correct respirator selected Fit testing completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-user-seal-check-performed-cartridges-within-serv",
+      "category": "csi-14",
+      "label": "User seal check performed Cartridges within service life",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-respirators-clean-and-stored-properly",
+      "category": "csi-14",
+      "label": "Respirators clean and stored properly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-medical-clearance-completed-where-required",
+      "category": "csi-14",
+      "label": "Medical clearance completed (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-9-task-specific-ppe-arc-flash-ppe-available-w",
+      "category": "csi-14",
+      "label": "14.9 Task-Specific PPE Arc flash PPE available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-chainsaw-ppe-used-where-applicable",
+      "category": "csi-14",
+      "label": "Chainsaw PPE used (where applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-concrete-finishing-ppe-appropriate",
+      "category": "csi-14",
+      "label": "Concrete finishing PPE appropriate",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-chemical-splash-protection-available-floatation-",
+      "category": "csi-14",
+      "label": "Chemical splash protection available Floatation devices used (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-specialized-ppe-available-for-unique-hazards",
+      "category": "csi-14",
+      "label": "Specialized PPE available for unique hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-10-fall-protection-ppe-harness-inspected-befo",
+      "category": "csi-14",
+      "label": "14.10 Fall Protection PPE Harness inspected before use",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-lanyard-inspected-energy-absorber-in-good-condit",
+      "category": "csi-14",
+      "label": "Lanyard inspected Energy absorber in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-connectors-compatible-anchor-point-approved-work",
+      "category": "csi-14",
+      "label": "Connectors compatible Anchor point approved Workers tied off correctly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-14-14-11-general-observations",
+      "category": "csi-14",
+      "label": "14.11 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-objective-verify-that-exposure-to-chemical-physi",
+      "category": "csi-15",
+      "label": "Objective: Verify that exposure to chemical, physical, biological, and environmental hazards is identified, assessed, monitored, and controlled to protect worker health.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-1-hazard-assessment-occupational-hygiene-haza",
+      "category": "csi-15",
+      "label": "15.1 Hazard Assessment Occupational hygiene hazards identified Exposure assessment completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-control-measures-implemented",
+      "category": "csi-15",
+      "label": "Control measures implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-workers-informed-of-exposure-hazards",
+      "category": "csi-15",
+      "label": "Workers informed of exposure hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-air-monitoring-completed-where-required",
+      "category": "csi-15",
+      "label": "Air monitoring completed (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-exposure-records-maintained-15-2-silica-dust",
+      "category": "csi-15",
+      "label": "Exposure records maintained 15.2 Silica Dust",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-silica-exposure-assessment-completed",
+      "category": "csi-15",
+      "label": "Silica exposure assessment completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-silica-control-plan-available-wet-cutting-method",
+      "category": "csi-15",
+      "label": "Silica control plan available Wet cutting methods used",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-dust-extraction-systems-operating",
+      "category": "csi-15",
+      "label": "Dust extraction systems operating",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-hepa-vacuums-used-dry-sweeping-prohibited",
+      "category": "csi-15",
+      "label": "HEPA vacuums used Dry sweeping prohibited",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-correct-respirators-worn-workers-trained-in-sili",
+      "category": "csi-15",
+      "label": "Correct respirators worn Workers trained in silica hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-3-dust-control-dust-minimized-at-source",
+      "category": "csi-15",
+      "label": "15.3 Dust Control Dust minimized at source",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-housekeeping-prevents-dust-accumulation",
+      "category": "csi-15",
+      "label": "Housekeeping prevents dust accumulation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-ventilation-adequate-dust-barriers-installed-whe",
+      "category": "csi-15",
+      "label": "Ventilation adequate Dust barriers installed where required Dust not affecting adjacent work areas",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-4-welding-fumes-hot-work-local-exhaust-ventil",
+      "category": "csi-15",
+      "label": "15.4 Welding Fumes & Hot Work Local exhaust ventilation provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-respiratory-protection-used-welding-area-ventila",
+      "category": "csi-15",
+      "label": "Respiratory protection used Welding area ventilated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-confined-space-hazards-assessed",
+      "category": "csi-15",
+      "label": "Confined space hazards assessed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-workers-positioned-out-of-fume-plume",
+      "category": "csi-15",
+      "label": "Workers positioned out of fume plume",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-5-diesel-exhaust-carbon-monoxide",
+      "category": "csi-15",
+      "label": "15.5 Diesel Exhaust & Carbon Monoxide",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-diesel-equipment-emissions-minimized",
+      "category": "csi-15",
+      "label": "Diesel equipment emissions minimized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-engines-not-idling-unnecessarily",
+      "category": "csi-15",
+      "label": "Engines not idling unnecessarily",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-indoor-ventilation-adequate-carbon-monoxide-moni",
+      "category": "csi-15",
+      "label": "Indoor ventilation adequate Carbon monoxide monitoring provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-workers-aware-of-exposure-symptoms",
+      "category": "csi-15",
+      "label": "Workers aware of exposure symptoms",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-6-noise-exposure-high-noise-areas-identified-",
+      "category": "csi-15",
+      "label": "15.6 Noise Exposure High-noise areas identified Noise monitoring completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-hearing-protection-worn-hearing-protection-suita",
+      "category": "csi-15",
+      "label": "Hearing protection worn Hearing protection suitable",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-noise-warning-signs-posted-exposure-duration-con",
+      "category": "csi-15",
+      "label": "Noise warning signs posted Exposure duration controlled 15.7 Hand-Arm & Whole-Body Vibration",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-high-vibration-tools-identified-tool-maintenance",
+      "category": "csi-15",
+      "label": "High-vibration tools identified Tool maintenance current",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-exposure-time-limited-anti-vibration-controls-im",
+      "category": "csi-15",
+      "label": "Exposure time limited Anti-vibration controls implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-workers-trained-on-vibration-hazards",
+      "category": "csi-15",
+      "label": "Workers trained on vibration hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-8-heat-cold-stress-heat-stress-plan-implement",
+      "category": "csi-15",
+      "label": "15.8 Heat & Cold Stress Heat stress plan implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-potable-drinking-water-available-rest-breaks-pro",
+      "category": "csi-15",
+      "label": "Potable drinking water available Rest breaks provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-shade-available-during-hot-weather",
+      "category": "csi-15",
+      "label": "Shade available during hot weather",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-workers-monitored-for-heat-illness",
+      "category": "csi-15",
+      "label": "Workers monitored for heat illness",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-cold-weather-protection-provided",
+      "category": "csi-15",
+      "label": "Cold weather protection provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-warm-up-areas-available-workers-aware-of-cold-st",
+      "category": "csi-15",
+      "label": "Warm-up areas available Workers aware of cold stress symptoms",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-9-lighting-air-quality-sanitation",
+      "category": "csi-15",
+      "label": "15.9 Lighting, Air Quality & Sanitation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-work-areas-adequately-illuminated",
+      "category": "csi-15",
+      "label": "Work areas adequately illuminated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-emergency-lighting-available-ventilation-adequat",
+      "category": "csi-15",
+      "label": "Emergency lighting available Ventilation adequate Wash stations available Toilets clean and maintained Handwashing facilities supplied",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-drinking-water-protected-from-contamination",
+      "category": "csi-15",
+      "label": "Drinking water protected from contamination",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-10-biological-hazards-mould-hazards-identifie",
+      "category": "csi-15",
+      "label": "15.10 Biological Hazards Mould hazards identified Sewage exposure controlled Bird or animal waste managed safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-insect-or-pest-hazards-controlled-appropriate-pp",
+      "category": "csi-15",
+      "label": "Insect or pest hazards controlled Appropriate PPE provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-15-15-11-general-observations",
+      "category": "csi-15",
+      "label": "15.11 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-16-1-emergency-planning-site-emergency-response-",
+      "category": "csi-16",
+      "label": "16.1 Emergency Planning Site Emergency Response Plan available Workers familiar with emergency procedures",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-emergency-contact-numbers-posted-site-address-cl",
+      "category": "csi-16",
+      "label": "Emergency contact numbers posted Site address clearly posted GPS coordinates available (where applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-emergency-procedures-reviewed-during-orientation",
+      "category": "csi-16",
+      "label": "Emergency procedures reviewed during orientation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-emergency-procedures-reviewed-during-toolbox-mee",
+      "category": "csi-16",
+      "label": "Emergency procedures reviewed during toolbox meetings",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-16-2-first-aid-required-level-of-first-aid-avail",
+      "category": "csi-16",
+      "label": "16.2 First Aid Required level of first aid available First aid attendants available First aid attendants identified First aid room maintained (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-first-aid-supplies-stocked-stretcher-available-w",
+      "category": "csi-16",
+      "label": "First aid supplies stocked Stretcher available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-spine-board-available-where-required",
+      "category": "csi-16",
+      "label": "Spine board available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-aed-available-where-required",
+      "category": "csi-16",
+      "label": "AED available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-inspection-records-current-16-3-emergency-commun",
+      "category": "csi-16",
+      "label": "Inspection records current 16.3 Emergency Communications",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-radios-operational-emergency-radio-channel-ident",
+      "category": "csi-16",
+      "label": "Radios operational Emergency radio channel identified Cell phone service available Satellite phone available (remote sites)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-air-horn-or-emergency-alarm-available-workers-kn",
+      "category": "csi-16",
+      "label": "Air horn or emergency alarm available Workers know emergency communication procedure",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-16-4-fire-evacuation-evacuation-routes-posted-ex",
+      "category": "csi-16",
+      "label": "16.4 Fire & Evacuation Evacuation routes posted Exit routes unobstructed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-muster-point-identified-muster-point-signed",
+      "category": "csi-16",
+      "label": "Muster point identified Muster point signed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-accountability-procedure-established",
+      "category": "csi-16",
+      "label": "Accountability procedure established",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-fire-alarm-procedure-understood",
+      "category": "csi-16",
+      "label": "Fire alarm procedure understood",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-fire-drills-completed-16-5-rescue-equipment",
+      "category": "csi-16",
+      "label": "Fire drills completed 16.5 Rescue Equipment",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-rescue-equipment-available-rescue-equipment-insp",
+      "category": "csi-16",
+      "label": "Rescue equipment available Rescue equipment inspected Fall rescue equipment available Confined space rescue equipment available Rescue equipment accessible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-rescue-personnel-identified-16-6-incident-report",
+      "category": "csi-16",
+      "label": "Rescue personnel identified 16.6 Incident Reporting",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-incident-reporting-procedure-available-near-miss",
+      "category": "csi-16",
+      "label": "Incident reporting procedure available Near misses reported",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-serious-incidents-reported-immediately",
+      "category": "csi-16",
+      "label": "Serious incidents reported immediately",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-investigation-forms-available-corrective-actions",
+      "category": "csi-16",
+      "label": "Investigation forms available Corrective actions tracked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-lessons-learned-communicated",
+      "category": "csi-16",
+      "label": "Lessons learned communicated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-16-7-severe-weather-weather-monitored",
+      "category": "csi-16",
+      "label": "16.7 Severe Weather Weather monitored",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-lightning-procedures-available-high-wind-procedu",
+      "category": "csi-16",
+      "label": "Lightning procedures available High wind procedures available Extreme heat procedures available Cold weather procedures available Workers aware of weather response plan",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-16-8-crane-high-risk-rescue",
+      "category": "csi-16",
+      "label": "16.8 Crane & High-Risk Rescue",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-suspended-worker-rescue-plan-available-tower-cra",
+      "category": "csi-16",
+      "label": "Suspended worker rescue plan available Tower crane rescue procedure available Personnel lift rescue plan available High-angle rescue considered",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-rescue-responsibilities-assigned",
+      "category": "csi-16",
+      "label": "Rescue responsibilities assigned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-emergency-access-maintained-16-9-medical-transpo",
+      "category": "csi-16",
+      "label": "Emergency access maintained 16.9 Medical Transportation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-transportation-procedure-established",
+      "category": "csi-16",
+      "label": "Transportation procedure established",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-nearest-medical-facility-identified-hospital-dir",
+      "category": "csi-16",
+      "label": "Nearest medical facility identified Hospital directions available Emergency vehicle access maintained Landing area identified (if applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-16-16-10-general-observations",
+      "category": "csi-16",
+      "label": "16.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-17-1-environmental-planning-environmental-manage",
+      "category": "csi-17",
+      "label": "17.1 Environmental Planning Environmental Management Plan available Environmental hazards identified Workers aware of environmental requirements",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-environmental-responsibilities-assigned",
+      "category": "csi-17",
+      "label": "Environmental responsibilities assigned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-required-environmental-permits-available-sensiti",
+      "category": "csi-17",
+      "label": "Required environmental permits available Sensitive environmental areas identified 17.2 Spill Prevention & Response",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-spill-kits-available-spill-kits-fully-stocked",
+      "category": "csi-17",
+      "label": "Spill kits available Spill kits fully stocked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-fuel-storage-protected-secondary-containment-pro",
+      "category": "csi-17",
+      "label": "Fuel storage protected Secondary containment provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-drip-trays-used-during-refuelling",
+      "category": "csi-17",
+      "label": "Drip trays used during refuelling",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-refuelling-supervised-spill-response-procedures-",
+      "category": "csi-17",
+      "label": "Refuelling supervised Spill response procedures posted Workers trained in spill response",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-previous-spills-cleaned-properly",
+      "category": "csi-17",
+      "label": "Previous spills cleaned properly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-17-3-waste-management-waste-containers-available",
+      "category": "csi-17",
+      "label": "17.3 Waste Management Waste containers available Waste properly segregated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-recycling-program-implemented",
+      "category": "csi-17",
+      "label": "Recycling program implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-hazardous-waste-identified-hazardous-waste-label",
+      "category": "csi-17",
+      "label": "Hazardous waste identified Hazardous waste labeled",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-waste-removed-regularly-disposal-records-maintai",
+      "category": "csi-17",
+      "label": "Waste removed regularly Disposal records maintained 17.4 Dust Control",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-dust-suppression-implemented",
+      "category": "csi-17",
+      "label": "Dust suppression implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-water-used-where-appropriate",
+      "category": "csi-17",
+      "label": "Water used where appropriate",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-dust-barriers-installed-roads-controlled-for-dus",
+      "category": "csi-17",
+      "label": "Dust barriers installed Roads controlled for dust",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-adjacent-properties-protected-airborne-dust-mini",
+      "category": "csi-17",
+      "label": "Adjacent properties protected Airborne dust minimized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-17-5-erosion-sediment-control",
+      "category": "csi-17",
+      "label": "17.5 Erosion & Sediment Control",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-silt-fences-installed-catch-basins-protected-sed",
+      "category": "csi-17",
+      "label": "Silt fences installed Catch basins protected Sediment controls maintained Soil stockpiles protected Stormwater managed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-runoff-controlled-17-6-water-protection",
+      "category": "csi-17",
+      "label": "Runoff controlled 17.6 Water Protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-no-contaminated-discharge-observed",
+      "category": "csi-17",
+      "label": "No contaminated discharge observed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-wash-water-properly-managed-concrete-washout-pro",
+      "category": "csi-17",
+      "label": "Wash water properly managed Concrete washout provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-washout-area-clearly-marked-dewatering-controlle",
+      "category": "csi-17",
+      "label": "Washout area clearly marked Dewatering controlled Surface water protected 17.7 Noise & Vibration",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-noise-minimized-equipment-mufflers-maintained-ex",
+      "category": "csi-17",
+      "label": "Noise minimized Equipment mufflers maintained Excessive idling prevented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-noise-barriers-used-where-required-community-imp",
+      "category": "csi-17",
+      "label": "Noise barriers used where required Community impacts minimized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-vibration-monitored-where-required",
+      "category": "csi-17",
+      "label": "Vibration monitored (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-site-free-of-litter-materials-stored-neatly",
+      "category": "csi-17",
+      "label": "Site free of litter Materials stored neatly",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-containers-closed-access-roads-clean",
+      "category": "csi-17",
+      "label": "Containers closed Access roads clean",
+      "guidance": ""
+    },
+    {
+      "id": "csi-17-public-areas-protected-wind-blown-debris-control",
+      "category": "csi-17",
+      "label": "Public areas protected Wind-blown debris controlled 17.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-18-1-health-safety-documentation",
+      "category": "csi-18",
+      "label": "18.1 Health & Safety Documentation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-employee-orientations-completed",
+      "category": "csi-18",
+      "label": "Employee orientations completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-site-specific-orientations-completed",
+      "category": "csi-18",
+      "label": "Site-specific orientations completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-worker-certifications-verified",
+      "category": "csi-18",
+      "label": "Worker certifications verified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-trade-qualifications-verified",
+      "category": "csi-18",
+      "label": "Trade qualifications verified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-competency-assessments-completed",
+      "category": "csi-18",
+      "label": "Competency assessments completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-training-records-current-visitors-signed-in-18-3",
+      "category": "csi-18",
+      "label": "Training records current Visitors signed in 18.3 Safety Meetings",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-toolbox-meetings-completed-attendance-documented",
+      "category": "csi-18",
+      "label": "Toolbox meetings completed Attendance documented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-safety-meeting-minutes-available-action-items-as",
+      "category": "csi-18",
+      "label": "Safety meeting minutes available Action items assigned",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-previous-action-items-closed",
+      "category": "csi-18",
+      "label": "Previous action items closed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-18-4-flhas-hazard-assessments",
+      "category": "csi-18",
+      "label": "18.4 FLHAs & Hazard Assessments",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-daily-flha-completed-flha-signed-by-workers",
+      "category": "csi-18",
+      "label": "Daily FLHA completed FLHA signed by workers",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-hazards-specific-to-today-s-work-identified-cont",
+      "category": "csi-18",
+      "label": "Hazards specific to today's work identified Controls identified FLHA reviewed after work changes",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-critical-lifts-documented-18-5-safe-work-procedu",
+      "category": "csi-18",
+      "label": "Critical lifts documented 18.5 Safe Work Procedures",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-required-safe-work-procedures-available-procedur",
+      "category": "csi-18",
+      "label": "Required Safe Work Procedures available Procedures reviewed with workers",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-procedures-followed-procedures-reviewed-annually",
+      "category": "csi-18",
+      "label": "Procedures followed Procedures reviewed annually",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-procedures-updated-after-incidents",
+      "category": "csi-18",
+      "label": "Procedures updated after incidents",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-18-6-equipment-documentation",
+      "category": "csi-18",
+      "label": "18.6 Equipment Documentation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-daily-equipment-inspections-completed",
+      "category": "csi-18",
+      "label": "Daily equipment inspections completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-maintenance-records-available-manufacturer-manua",
+      "category": "csi-18",
+      "label": "Maintenance records available Manufacturer manuals available Inspection logs current",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-equipment-certifications-current",
+      "category": "csi-18",
+      "label": "Equipment certifications current",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-crane-inspection-records-available-annual-crane-",
+      "category": "csi-18",
+      "label": "Crane inspection records available Annual crane certification current",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-operator-certificate-verified",
+      "category": "csi-18",
+      "label": "Operator certificate verified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-rigger-qualifications-verified",
+      "category": "csi-18",
+      "label": "Rigger qualifications verified",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-lift-plans-available-where-required",
+      "category": "csi-18",
+      "label": "Lift plans available (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-rigging-inspection-records-available-personnel-p",
+      "category": "csi-18",
+      "label": "Rigging inspection records available Personnel platform documentation available (if applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-18-8-incident-documentation-incident-reports-com",
+      "category": "csi-18",
+      "label": "18.8 Incident Documentation Incident reports completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-investigation-reports-completed",
+      "category": "csi-18",
+      "label": "Investigation reports completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-corrective-actions-documented",
+      "category": "csi-18",
+      "label": "Corrective actions documented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-corrective-actions-completed",
+      "category": "csi-18",
+      "label": "Corrective actions completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-near-misses-documented-lessons-learned-communica",
+      "category": "csi-18",
+      "label": "Near misses documented Lessons learned communicated",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-18-9-cor-audit-documentation",
+      "category": "csi-18",
+      "label": "18.9 COR & Audit Documentation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-internal-inspections-completed",
+      "category": "csi-18",
+      "label": "Internal inspections completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-previous-deficiencies-corrected",
+      "category": "csi-18",
+      "label": "Previous deficiencies corrected",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-audit-action-items-completed",
+      "category": "csi-18",
+      "label": "Audit action items completed",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-corrective-action-tracking-current",
+      "category": "csi-18",
+      "label": "Corrective action tracking current",
+      "guidance": ""
+    },
+    {
+      "id": "csi-18-records-retained-18-10-general-observations",
+      "category": "csi-18",
+      "label": "Records retained 18.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-19-1-site-security-site-perimeter-secured-fencin",
+      "category": "csi-19",
+      "label": "19.1 Site Security Site perimeter secured Fencing complete and maintained Gates operational",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-gates-locked-after-hours-unauthorized-access-pre",
+      "category": "csi-19",
+      "label": "Gates locked after hours Unauthorized access prevented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-security-patrols-provided-where-required",
+      "category": "csi-19",
+      "label": "Security patrols provided (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-security-cameras-operational-where-applicable",
+      "category": "csi-19",
+      "label": "Security cameras operational (where applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-site-lighting-adequate-19-2-site-access-control",
+      "category": "csi-19",
+      "label": "Site lighting adequate 19.2 Site Access Control",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-controlled-site-entrance-visitor-sign-in-process",
+      "category": "csi-19",
+      "label": "Controlled site entrance Visitor sign-in process",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-visitors-escorted-visitors-receive-orientation",
+      "category": "csi-19",
+      "label": "Visitors escorted Visitors receive orientation",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-public-separated-from-work-areas",
+      "category": "csi-19",
+      "label": "Public separated from work areas",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-sidewalk-protection-installed-covered-walkways-p",
+      "category": "csi-19",
+      "label": "Sidewalk protection installed Covered walkways provided (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-barricades-maintained-openings-protected-falling",
+      "category": "csi-19",
+      "label": "Barricades maintained Openings protected Falling object protection installed Public warning signage provided",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-19-5-traffic-control-traffic-control-plan-implem",
+      "category": "csi-19",
+      "label": "19.5 Traffic Control Traffic control plan implemented",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-certified-traffic-control-persons-available-vehi",
+      "category": "csi-19",
+      "label": "Certified traffic control persons available Vehicle routes clearly marked",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-pedestrian-routes-separated-speed-limits-posted-",
+      "category": "csi-19",
+      "label": "Pedestrian routes separated Speed limits posted Delivery areas controlled Reversing vehicles controlled Spotters used where required 19.6 Material Storage",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-materials-stored-safely-materials-secured-from-w",
+      "category": "csi-19",
+      "label": "Materials stored safely Materials secured from wind",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-storage-areas-organized-access-routes-maintained",
+      "category": "csi-19",
+      "label": "Storage areas organized Access routes maintained Laydown areas controlled Hazardous materials secured 19.7 Adjacent Property Protection",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-adjacent-buildings-protected-utilities-protected",
+      "category": "csi-19",
+      "label": "Adjacent buildings protected Utilities protected Public roads protected Dust affecting neighbours minimized",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-noise-impacts-controlled-vibrations-monitored-wh",
+      "category": "csi-19",
+      "label": "Noise impacts controlled Vibrations monitored (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-19-8-after-hours-security-equipment-secured-keys",
+      "category": "csi-19",
+      "label": "19.8 After-Hours Security Equipment secured Keys removed Fuel secured Temporary power secured Cranes secured for weather",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-site-checked-before-shutdown",
+      "category": "csi-19",
+      "label": "Site checked before shutdown",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-19-9-general-housekeeping-walkways-clear-stairwa",
+      "category": "csi-19",
+      "label": "19.9 General Housekeeping Walkways clear Stairways clean",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-trip-hazards-removed-garbage-removed-materials-s",
+      "category": "csi-19",
+      "label": "Trip hazards removed Garbage removed Materials stacked safely",
+      "guidance": ""
+    },
+    {
+      "id": "csi-19-overall-site-organized-19-10-general-observation",
+      "category": "csi-19",
+      "label": "Overall site organized 19.10 General Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-corrective-actions-sign-off",
+      "category": "csi-20",
+      "label": "Corrective Actions & Sign-Off",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-objective-summarize-the-inspection-identify-defi",
+      "category": "csi-20",
+      "label": "Objective: Summarize the inspection, identify deficiencies, assign corrective actions, document due diligence, and verify completion.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-1-inspection-information-project-name",
+      "category": "csi-20",
+      "label": "20.1 Inspection Information Project Name: ______________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-project-number",
+      "category": "csi-20",
+      "label": "Project Number: ____________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-project-address",
+      "category": "csi-20",
+      "label": "Project Address: ____________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-prime-contractor",
+      "category": "csi-20",
+      "label": "Prime Contractor: ___________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-employer",
+      "category": "csi-20",
+      "label": "Employer: _________________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-inspection-date",
+      "category": "csi-20",
+      "label": "Inspection Date: ____________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-inspection-time",
+      "category": "csi-20",
+      "label": "Inspection Time: ____________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-weather-conditions",
+      "category": "csi-20",
+      "label": "Weather Conditions: _________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-inspector-s",
+      "category": "csi-20",
+      "label": "Inspector(s): ______________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-company-representative",
+      "category": "csi-20",
+      "label": "Company Representative: ____________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-workers-present",
+      "category": "csi-20",
+      "label": "Workers Present: ___________________________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-2-inspection-summary-item-number",
+      "category": "csi-20",
+      "label": "20.2 Inspection Summary Item Number",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-total-sections-inspected",
+      "category": "csi-20",
+      "label": "Total Sections Inspected ______",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-total-inspection-items-reviewed",
+      "category": "csi-20",
+      "label": "Total Inspection Items Reviewed ______",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-positive-observations",
+      "category": "csi-20",
+      "label": "Positive Observations ______",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-stop-work-orders-issued",
+      "category": "csi-20",
+      "label": "Stop Work Orders Issued ______",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-immediate-corrections-completed",
+      "category": "csi-20",
+      "label": "Immediate Corrections Completed ______",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-corrective-actions-outstanding",
+      "category": "csi-20",
+      "label": "Corrective Actions Outstanding ______",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-3-overall-site-rating-excellent",
+      "category": "csi-20",
+      "label": "20.3 Overall Site Rating Excellent",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-satisfactory-needs-improvement",
+      "category": "csi-20",
+      "label": "Satisfactory Needs Improvement",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-unsatisfactory-20-4-positive-safety-observations",
+      "category": "csi-20",
+      "label": "Unsatisfactory 20.4 Positive Safety Observations",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-action-deficiency-risk-level-responsible",
+      "category": "csi-20",
+      "label": "Action # Deficiency Risk Level Responsible",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-person-due-date-closed-1-low-med-high",
+      "category": "csi-20",
+      "label": "Person Due Date Closed 1 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-2-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 2 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-3-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 3 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-4-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 4 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-5-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 5 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-6-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 6 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-7-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 7 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-8-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 8 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-9-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 9 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-10-low-med-high",
+      "category": "csi-20",
+      "label": "Critical 10 Low / Med / High /",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-critical-20-6-critical-hazards",
+      "category": "csi-20",
+      "label": "Critical 20.6 Critical Hazards",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-describe-any-hazard-that-required-immediate-corr",
+      "category": "csi-20",
+      "label": "Describe any hazard that required immediate corrective action or work stoppage.",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-7-immediate-corrective-actions",
+      "category": "csi-20",
+      "label": "20.7 Immediate Corrective Actions",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-completed-20-8-follow-up-requirements",
+      "category": "csi-20",
+      "label": "Completed 20.8 Follow-Up Requirements",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-no-follow-up-required-follow-up-inspection-requi",
+      "category": "csi-20",
+      "label": "No follow-up required Follow-up inspection required Follow-Up Date: __________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-assigned-to",
+      "category": "csi-20",
+      "label": "Assigned To: _____________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-9-photos-attachments-no-photos-taken",
+      "category": "csi-20",
+      "label": "20.9 Photos & Attachments No photos taken",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-photos-attached-number-of-photos",
+      "category": "csi-20",
+      "label": "Photos attached Number of Photos: _______",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-additional-documents-attached",
+      "category": "csi-20",
+      "label": "Additional Documents Attached:",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-flha-toolbox-talk-lift-plan-incident-report",
+      "category": "csi-20",
+      "label": "FLHA Toolbox Talk Lift Plan Incident Report",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-equipment-inspection-training-record",
+      "category": "csi-20",
+      "label": "Equipment Inspection Training Record",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-other",
+      "category": "csi-20",
+      "label": "Other: ________________________",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-10-regulatory-notification",
+      "category": "csi-20",
+      "label": "20.10 Regulatory Notification",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-was-a-worksafebc-notification-required",
+      "category": "csi-20",
+      "label": "Was a WorkSafeBC notification required?",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-if-yes-reference-number-other-agencies-notified",
+      "category": "csi-20",
+      "label": "If yes, reference number: Other agencies notified:",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-11-inspector-s-comments-20-12-supervisor-site",
+      "category": "csi-20",
+      "label": "20.11 Inspector's Comments 20.12 Supervisor / Site Representative",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-20-13-lessons-learned-20-14-sign-off",
+      "category": "csi-20",
+      "label": "20.13 Lessons Learned 20.14 Sign-Off",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-inspector-name-signature-date",
+      "category": "csi-20",
+      "label": "Inspector Name: Signature: Date:",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-supervisor-name-signature-date",
+      "category": "csi-20",
+      "label": "Supervisor Name: Signature: Date:",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-site-representative-name-signature",
+      "category": "csi-20",
+      "label": "Site Representative Name: Signature:",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-date-corrective-actions-verified-by",
+      "category": "csi-20",
+      "label": "Date: Corrective Actions Verified By",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-name-signature-verification-date",
+      "category": "csi-20",
+      "label": "Name: Signature: Verification Date:",
+      "guidance": ""
+    },
+    {
+      "id": "csi-20-inspection-complete",
+      "category": "csi-20",
+      "label": "Inspection Complete",
+      "guidance": ""
+    }
+  ]
+}

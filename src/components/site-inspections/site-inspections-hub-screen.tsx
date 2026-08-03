@@ -306,88 +306,55 @@ export function SiteInspectionsHubScreen() {
               Crane &amp; rigging logs
             </Link>
             <Link
-              href="/dashboard"
+              href="/forms/cor"
               className="rounded-xl bg-white/70 px-3 py-2.5 text-center text-sm font-semibold text-sky-950 dark:bg-black/20 dark:text-sky-100"
             >
-              Safety Hub
+              COR digital forms
             </Link>
           </div>
-          <a
-            href="/cor-pdfs/internal-cor-site-inspection-checklist.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-xl bg-white/70 px-3 py-3 dark:bg-black/20"
-          >
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-sky-500/20 text-sky-900 dark:text-sky-100">
-              <FileText className="size-4" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-sky-950 dark:text-sky-100">
-                Internal COR Site Inspection Checklist
-              </p>
-              <p className="text-[11px] text-sky-900/70 dark:text-sky-200/70">
-                Auditor field checklist · 12 pages
-              </p>
-            </div>
-            <ExternalLink className="size-3.5 shrink-0 text-sky-800/60 dark:text-sky-200/60" />
-          </a>
-          <a
-            href="/cor-pdfs/daily-site-safety-checklist.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-xl bg-white/70 px-3 py-3 dark:bg-black/20"
-          >
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-sky-500/20 text-sky-900 dark:text-sky-100">
-              <FileText className="size-4" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-sky-950 dark:text-sky-100">
-                Daily Site Safety Checklist
-              </p>
-              <p className="text-[11px] text-sky-900/70 dark:text-sky-200/70">
-                Crane &amp; formwork · 6 pages
-              </p>
-            </div>
-            <ExternalLink className="size-3.5 shrink-0 text-sky-800/60 dark:text-sky-200/60" />
-          </a>
-          <a
-            href="/cor-pdfs/daily-site-inspection.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-xl bg-white/70 px-3 py-3 dark:bg-black/20"
-          >
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-sky-500/20 text-sky-900 dark:text-sky-100">
-              <FileText className="size-4" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-sky-950 dark:text-sky-100">
-                Daily Site Inspection
-              </p>
-              <p className="text-[11px] text-sky-900/70 dark:text-sky-200/70">
-                Reference PDF · 23 pages
-              </p>
-            </div>
-            <ExternalLink className="size-3.5 shrink-0 text-sky-800/60 dark:text-sky-200/60" />
-          </a>
-          <a
-            href="/cor-pdfs/comprehensive-construction-site-inspection.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-xl bg-white/70 px-3 py-3 dark:bg-black/20"
-          >
-            <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-sky-500/20 text-sky-900 dark:text-sky-100">
-              <FileText className="size-4" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-sky-950 dark:text-sky-100">
-                Comprehensive Construction Site Inspection
-              </p>
-              <p className="text-[11px] text-sky-900/70 dark:text-sky-200/70">
-                Reference PDF · 101 pages
-              </p>
-            </div>
-            <ExternalLink className="size-3.5 shrink-0 text-sky-800/60 dark:text-sky-200/60" />
-          </a>
+          {(
+            [
+              [
+                "/forms/cor/internal-cor-site-inspection",
+                "Internal COR Site Inspection",
+                "Digital checklist · 12 pg source",
+              ],
+              [
+                "/forms/cor/daily-site-safety-checklist",
+                "Daily Site Safety Checklist",
+                "Digital checklist · crane & formwork",
+              ],
+              [
+                "/forms/cor/daily-site-inspection",
+                "Daily Site Inspection",
+                "Digital checklist · 23 pg source",
+              ],
+              [
+                "/forms/cor/comprehensive-site-inspection",
+                "Comprehensive Site Inspection",
+                "Digital checklist · 101 pg source",
+              ],
+            ] as const
+          ).map(([href, title, sub]) => (
+            <Link
+              key={href}
+              href={href}
+              className="flex items-center gap-3 rounded-xl bg-white/70 px-3 py-3 dark:bg-black/20"
+            >
+              <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-sky-500/20 text-sky-900 dark:text-sky-100">
+                <FileText className="size-4" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-sm font-semibold text-sky-950 dark:text-sky-100">
+                  {title}
+                </p>
+                <p className="text-[11px] text-sky-900/70 dark:text-sky-200/70">
+                  {sub}
+                </p>
+              </div>
+              <ExternalLink className="size-3.5 shrink-0 text-sky-800/60 dark:text-sky-200/60" />
+            </Link>
+          ))}
         </div>
 
         <div className="grid grid-cols-3 gap-3">

@@ -1,0 +1,987 @@
+{
+  "id": "internal-cor-site-inspection",
+  "title": "Internal COR Site Inspection Checklist",
+  "subtitle": "Auditor field checklist across COR elements",
+  "kind": "checklist",
+  "sourcePdf": "/cor-pdfs/internal-cor-site-inspection-checklist.pdf",
+  "pages": 12,
+  "corDocId": "doc-cor-site-inspection",
+  "elements": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    11
+  ],
+  "disclaimer": "Use during internal COR audits. Verify documentation, interviews, and workplace observations for each item.",
+  "metaFields": [
+    {
+      "id": "project",
+      "label": "Project name",
+      "type": "text"
+    },
+    {
+      "id": "site",
+      "label": "Site address",
+      "type": "text"
+    },
+    {
+      "id": "auditor",
+      "label": "Auditor",
+      "type": "text"
+    },
+    {
+      "id": "superintendent",
+      "label": "Superintendent",
+      "type": "text"
+    },
+    {
+      "id": "foreman",
+      "label": "Foreman",
+      "type": "text"
+    },
+    {
+      "id": "weather",
+      "label": "Weather",
+      "type": "text"
+    },
+    {
+      "id": "workers",
+      "label": "Number of workers",
+      "type": "text"
+    },
+    {
+      "id": "activities",
+      "label": "Work activities observed",
+      "type": "textarea"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cori-1",
+      "label": "Management Commitment",
+      "icon": "check"
+    },
+    {
+      "id": "cori-2",
+      "label": "Hazard Identification & Assessment",
+      "icon": "check"
+    },
+    {
+      "id": "cori-3",
+      "label": "Safe Work Practices & Procedures",
+      "icon": "check"
+    },
+    {
+      "id": "cori-4",
+      "label": "Company Rules",
+      "icon": "check"
+    },
+    {
+      "id": "cori-5",
+      "label": "Personal Protective Equipment",
+      "icon": "check"
+    },
+    {
+      "id": "cori-6",
+      "label": "Preventive Maintenance",
+      "icon": "check"
+    },
+    {
+      "id": "cori-7",
+      "label": "Orientation & Training",
+      "icon": "check"
+    },
+    {
+      "id": "cori-8",
+      "label": "Communication",
+      "icon": "check"
+    },
+    {
+      "id": "cori-9",
+      "label": "Inspections",
+      "icon": "check"
+    },
+    {
+      "id": "cori-10",
+      "label": "Incident Reporting & Investigation",
+      "icon": "check"
+    },
+    {
+      "id": "cori-11",
+      "label": "Emergency Preparedness",
+      "icon": "check"
+    },
+    {
+      "id": "cori-12",
+      "label": "Records & Documentation",
+      "icon": "check"
+    },
+    {
+      "id": "cori-13",
+      "label": "Legislative Compliance",
+      "icon": "check"
+    },
+    {
+      "id": "cori-14",
+      "label": "Worker Participation",
+      "icon": "check"
+    },
+    {
+      "id": "cori-tower-crane-rigging-",
+      "label": "Tower Crane & Rigging Verification",
+      "icon": "check"
+    },
+    {
+      "id": "cori-formwork",
+      "label": "Formwork",
+      "icon": "check"
+    },
+    {
+      "id": "cori-internal-auditor-ver",
+      "label": "Internal Auditor Verification",
+      "icon": "check"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "cori-1-supervisor-present-on-site",
+      "category": "cori-1",
+      "label": "Supervisor present on site",
+      "guidance": ""
+    },
+    {
+      "id": "cori-1-supervisor-actively-monitoring-work",
+      "category": "cori-1",
+      "label": "Supervisor actively monitoring work",
+      "guidance": ""
+    },
+    {
+      "id": "cori-1-supervisor-correcting-unsafe-behaviours",
+      "category": "cori-1",
+      "label": "Supervisor correcting unsafe behaviours",
+      "guidance": ""
+    },
+    {
+      "id": "cori-1-safety-information-posted",
+      "category": "cori-1",
+      "label": "Safety information posted",
+      "guidance": ""
+    },
+    {
+      "id": "cori-1-workers-know-who-their-supervisor-is",
+      "category": "cori-1",
+      "label": "Workers know who their supervisor is",
+      "guidance": ""
+    },
+    {
+      "id": "cori-1-workers-comfortable-reporting-concerns",
+      "category": "cori-1",
+      "label": "Workers comfortable reporting concerns",
+      "guidance": ""
+    },
+    {
+      "id": "cori-2-today-s-flha-completed-before-work",
+      "category": "cori-2",
+      "label": "Today's FLHA completed before work",
+      "guidance": ""
+    },
+    {
+      "id": "cori-2-flha-reflects-today-s-work-activities",
+      "category": "cori-2",
+      "label": "FLHA reflects today's work activities",
+      "guidance": ""
+    },
+    {
+      "id": "cori-2-new-hazards-identified-as-work-changes",
+      "category": "cori-2",
+      "label": "New hazards identified as work changes",
+      "guidance": ""
+    },
+    {
+      "id": "cori-2-controls-documented",
+      "category": "cori-2",
+      "label": "Controls documented",
+      "guidance": ""
+    },
+    {
+      "id": "cori-2-workers-understand-hazards",
+      "category": "cori-2",
+      "label": "Workers understand hazards",
+      "guidance": ""
+    },
+    {
+      "id": "cori-2-workers-participated-in-flha",
+      "category": "cori-2",
+      "label": "Workers participated in FLHA",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-workers-following-safe-work-practices",
+      "category": "cori-3",
+      "label": "Workers following Safe Work Practices",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-workers-following-safe-job-procedures",
+      "category": "cori-3",
+      "label": "Workers following Safe Job Procedures",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-procedures-available-if-required",
+      "category": "cori-3",
+      "label": "Procedures available if required",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-high-risk-work-follows-written-procedures",
+      "category": "cori-3",
+      "label": "High-risk work follows written procedures",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-crane-operations",
+      "category": "cori-3",
+      "label": "Crane operations",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-fall-protection",
+      "category": "cori-3",
+      "label": "Fall protection",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-lockout",
+      "category": "cori-3",
+      "label": "Lockout",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-silica-control",
+      "category": "cori-3",
+      "label": "Silica control",
+      "guidance": ""
+    },
+    {
+      "id": "cori-3-traffic-control",
+      "category": "cori-3",
+      "label": "Traffic control",
+      "guidance": ""
+    },
+    {
+      "id": "cori-4-ppe-requirements-followed",
+      "category": "cori-4",
+      "label": "PPE requirements followed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-4-housekeeping-acceptable",
+      "category": "cori-4",
+      "label": "Housekeeping acceptable",
+      "guidance": ""
+    },
+    {
+      "id": "cori-4-smoking-policy-followed",
+      "category": "cori-4",
+      "label": "Smoking policy followed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-4-cell-phone-policy-followed",
+      "category": "cori-4",
+      "label": "Cell phone policy followed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-4-seat-belts-being-used",
+      "category": "cori-4",
+      "label": "Seat belts being used",
+      "guidance": ""
+    },
+    {
+      "id": "cori-4-no-horseplay-observed",
+      "category": "cori-4",
+      "label": "No horseplay observed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-hard-hats",
+      "category": "cori-5",
+      "label": "Hard hats",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-safety-boots",
+      "category": "cori-5",
+      "label": "Safety boots",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-high-visibility-clothing",
+      "category": "cori-5",
+      "label": "High visibility clothing",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-safety-glasses",
+      "category": "cori-5",
+      "label": "Safety glasses",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-gloves",
+      "category": "cori-5",
+      "label": "Gloves",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-hearing-protection",
+      "category": "cori-5",
+      "label": "Hearing protection",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-respiratory-protection",
+      "category": "cori-5",
+      "label": "Respiratory protection",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-fall-protection",
+      "category": "cori-5",
+      "label": "Fall protection",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-face-shields-where-required",
+      "category": "cori-5",
+      "label": "Face shields where required",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-ppe-in-good-condition",
+      "category": "cori-5",
+      "label": "PPE in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-proper-fit",
+      "category": "cori-5",
+      "label": "Proper fit",
+      "guidance": ""
+    },
+    {
+      "id": "cori-5-damaged-ppe-removed-from-service",
+      "category": "cori-5",
+      "label": "Damaged PPE removed from service",
+      "guidance": ""
+    },
+    {
+      "id": "cori-6-daily-equipment-inspections-completed",
+      "category": "cori-6",
+      "label": "Daily equipment inspections completed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-6-equipment-in-good-condition",
+      "category": "cori-6",
+      "label": "Equipment in good condition",
+      "guidance": ""
+    },
+    {
+      "id": "cori-6-defective-equipment-tagged-out",
+      "category": "cori-6",
+      "label": "Defective equipment tagged out",
+      "guidance": ""
+    },
+    {
+      "id": "cori-6-maintenance-records-available",
+      "category": "cori-6",
+      "label": "Maintenance records available",
+      "guidance": ""
+    },
+    {
+      "id": "cori-6-fire-extinguishers-inspected",
+      "category": "cori-6",
+      "label": "Fire extinguishers inspected",
+      "guidance": ""
+    },
+    {
+      "id": "cori-6-ladders-inspected",
+      "category": "cori-6",
+      "label": "Ladders inspected",
+      "guidance": ""
+    },
+    {
+      "id": "cori-6-power-tools-inspected",
+      "category": "cori-6",
+      "label": "Power tools inspected",
+      "guidance": ""
+    },
+    {
+      "id": "cori-7-new-workers-received-orientation",
+      "category": "cori-7",
+      "label": "New workers received orientation",
+      "guidance": ""
+    },
+    {
+      "id": "cori-7-required-certifications-available",
+      "category": "cori-7",
+      "label": "Required certifications available",
+      "guidance": ""
+    },
+    {
+      "id": "cori-7-operators-competent",
+      "category": "cori-7",
+      "label": "Operators competent",
+      "guidance": ""
+    },
+    {
+      "id": "cori-7-workers-trained-for-assigned-tasks",
+      "category": "cori-7",
+      "label": "Workers trained for assigned tasks",
+      "guidance": ""
+    },
+    {
+      "id": "cori-7-visitors-oriented",
+      "category": "cori-7",
+      "label": "Visitors oriented",
+      "guidance": ""
+    },
+    {
+      "id": "cori-8-toolbox-talk-completed",
+      "category": "cori-8",
+      "label": "Toolbox talk completed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-8-workers-aware-of-current-hazards",
+      "category": "cori-8",
+      "label": "Workers aware of current hazards",
+      "guidance": ""
+    },
+    {
+      "id": "cori-8-safety-bulletins-posted",
+      "category": "cori-8",
+      "label": "Safety bulletins posted",
+      "guidance": ""
+    },
+    {
+      "id": "cori-8-workers-aware-of-recent-incidents",
+      "category": "cori-8",
+      "label": "Workers aware of recent incidents",
+      "guidance": ""
+    },
+    {
+      "id": "cori-8-two-way-communication-observed",
+      "category": "cori-8",
+      "label": "Two-way communication observed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-9-supervisor-inspections-completed",
+      "category": "cori-9",
+      "label": "Supervisor inspections completed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-9-previous-deficiencies-corrected",
+      "category": "cori-9",
+      "label": "Previous deficiencies corrected",
+      "guidance": ""
+    },
+    {
+      "id": "cori-9-inspection-forms-completed-properly",
+      "category": "cori-9",
+      "label": "Inspection forms completed properly",
+      "guidance": ""
+    },
+    {
+      "id": "cori-9-deficiencies-documented",
+      "category": "cori-9",
+      "label": "Deficiencies documented",
+      "guidance": ""
+    },
+    {
+      "id": "cori-9-corrective-actions-implemented",
+      "category": "cori-9",
+      "label": "Corrective actions implemented",
+      "guidance": ""
+    },
+    {
+      "id": "cori-10-workers-know-how-to-report-incidents",
+      "category": "cori-10",
+      "label": "Workers know how to report incidents",
+      "guidance": ""
+    },
+    {
+      "id": "cori-10-near-misses-reported",
+      "category": "cori-10",
+      "label": "Near misses reported",
+      "guidance": ""
+    },
+    {
+      "id": "cori-10-investigations-completed",
+      "category": "cori-10",
+      "label": "Investigations completed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-10-corrective-actions-implemented",
+      "category": "cori-10",
+      "label": "Corrective actions implemented",
+      "guidance": ""
+    },
+    {
+      "id": "cori-10-lessons-learned-communicated",
+      "category": "cori-10",
+      "label": "Lessons learned communicated",
+      "guidance": ""
+    },
+    {
+      "id": "cori-11-emergency-phone-numbers-posted",
+      "category": "cori-11",
+      "label": "Emergency phone numbers posted",
+      "guidance": ""
+    },
+    {
+      "id": "cori-11-muster-point-identified",
+      "category": "cori-11",
+      "label": "Muster point identified",
+      "guidance": ""
+    },
+    {
+      "id": "cori-11-first-aid-station-available",
+      "category": "cori-11",
+      "label": "First aid station available",
+      "guidance": ""
+    },
+    {
+      "id": "cori-11-first-aid-attendants-identified",
+      "category": "cori-11",
+      "label": "First aid attendants identified",
+      "guidance": ""
+    },
+    {
+      "id": "cori-11-fire-extinguishers-accessible",
+      "category": "cori-11",
+      "label": "Fire extinguishers accessible",
+      "guidance": ""
+    },
+    {
+      "id": "cori-11-spill-kits-available",
+      "category": "cori-11",
+      "label": "Spill kits available",
+      "guidance": ""
+    },
+    {
+      "id": "cori-11-emergency-access-maintained",
+      "category": "cori-11",
+      "label": "Emergency access maintained",
+      "guidance": ""
+    },
+    {
+      "id": "cori-12-flhas-current",
+      "category": "cori-12",
+      "label": "FLHAs current",
+      "guidance": ""
+    },
+    {
+      "id": "cori-12-toolbox-talks-current",
+      "category": "cori-12",
+      "label": "Toolbox talks current",
+      "guidance": ""
+    },
+    {
+      "id": "cori-12-inspection-records-current",
+      "category": "cori-12",
+      "label": "Inspection records current",
+      "guidance": ""
+    },
+    {
+      "id": "cori-12-equipment-inspections-current",
+      "category": "cori-12",
+      "label": "Equipment inspections current",
+      "guidance": ""
+    },
+    {
+      "id": "cori-12-training-records-current",
+      "category": "cori-12",
+      "label": "Training records current",
+      "guidance": ""
+    },
+    {
+      "id": "cori-12-corrective-actions-closed",
+      "category": "cori-12",
+      "label": "Corrective actions closed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-12-required-documents-available-on-site",
+      "category": "cori-12",
+      "label": "Required documents available on site",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-fall-protection",
+      "category": "cori-13",
+      "label": "Fall Protection",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-crane-operations",
+      "category": "cori-13",
+      "label": "Crane Operations",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-excavations",
+      "category": "cori-13",
+      "label": "Excavations",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-whmis",
+      "category": "cori-13",
+      "label": "WHMIS",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-equipment-guarding",
+      "category": "cori-13",
+      "label": "Equipment Guarding",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-traffic-control",
+      "category": "cori-13",
+      "label": "Traffic Control",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-mobile-equipment",
+      "category": "cori-13",
+      "label": "Mobile Equipment",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-housekeeping",
+      "category": "cori-13",
+      "label": "Housekeeping",
+      "guidance": ""
+    },
+    {
+      "id": "cori-13-electrical-safety",
+      "category": "cori-13",
+      "label": "Electrical Safety",
+      "guidance": ""
+    },
+    {
+      "id": "cori-14-workers-involved-in-safety",
+      "category": "cori-14",
+      "label": "Workers involved in safety",
+      "guidance": ""
+    },
+    {
+      "id": "cori-14-concerns-addressed",
+      "category": "cori-14",
+      "label": "Concerns addressed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-14-safety-suggestions-encouraged",
+      "category": "cori-14",
+      "label": "Safety suggestions encouraged",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--daily-inspection-completed",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Daily inspection completed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--operator-certified",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Operator certified",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--crane-log-current",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Crane log current",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--wind-monitoring-in-use",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Wind monitoring in use",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--anti-collision-functioning-if-applicable",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Anti-collision functioning (if applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--load-chart-available",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Load chart available",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--exclusion-zone-maintained",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Exclusion zone maintained",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--no-workers-beneath-suspended-loads",
+      "category": "cori-tower-crane-rigging-",
+      "label": "No workers beneath suspended loads",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--communication-effective",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Communication effective",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--lift-director-assigned-where-required",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Lift Director assigned (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--rigging-inspected",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Rigging inspected",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--identification-tags-legible",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Identification tags legible",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--shackles-acceptable",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Shackles acceptable",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--hooks-acceptable",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Hooks acceptable",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--safety-latches-installed",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Safety latches installed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--synthetic-slings-undamaged",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Synthetic slings undamaged",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--wire-rope-acceptable",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Wire rope acceptable",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--correct-hitch-used",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Correct hitch used",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--load-balanced",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Load balanced",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--proper-edge-protection",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Proper edge protection",
+      "guidance": ""
+    },
+    {
+      "id": "cori-tower-crane-rigging--rigging-stored-properly",
+      "category": "cori-tower-crane-rigging-",
+      "label": "Rigging stored properly",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-access-safe",
+      "category": "cori-formwork",
+      "label": "Access safe",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-guardrails-installed",
+      "category": "cori-formwork",
+      "label": "Guardrails installed",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-floor-openings-protected",
+      "category": "cori-formwork",
+      "label": "Floor openings protected",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-housekeeping-acceptable",
+      "category": "cori-formwork",
+      "label": "Housekeeping acceptable",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-formwork-braced",
+      "category": "cori-formwork",
+      "label": "Formwork braced",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-temporary-stairs-secure",
+      "category": "cori-formwork",
+      "label": "Temporary stairs secure",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-fall-protection-used",
+      "category": "cori-formwork",
+      "label": "Fall protection used",
+      "guidance": ""
+    },
+    {
+      "id": "cori-formwork-materials-stored-safely",
+      "category": "cori-formwork",
+      "label": "Materials stored safely",
+      "guidance": ""
+    },
+    {
+      "id": "cori-internal-auditor-ver-is-it-documented",
+      "category": "cori-internal-auditor-ver",
+      "label": "Is it documented?",
+      "guidance": "Auditor verification prompt"
+    },
+    {
+      "id": "cori-internal-auditor-ver-is-it-being-followed",
+      "category": "cori-internal-auditor-ver",
+      "label": "Is it being followed?",
+      "guidance": "Auditor verification prompt"
+    },
+    {
+      "id": "cori-internal-auditor-ver-do-workers-understand-it",
+      "category": "cori-internal-auditor-ver",
+      "label": "Do workers understand it?",
+      "guidance": "Auditor verification prompt"
+    },
+    {
+      "id": "cori-internal-auditor-ver-can-supervisors-explain-it",
+      "category": "cori-internal-auditor-ver",
+      "label": "Can supervisors explain it?",
+      "guidance": "Auditor verification prompt"
+    },
+    {
+      "id": "cori-internal-auditor-ver-is-there-objective-evidence",
+      "category": "cori-internal-auditor-ver",
+      "label": "Is there objective evidence?",
+      "guidance": "Auditor verification prompt"
+    },
+    {
+      "id": "cori-internal-auditor-ver-have-deficiencies-been-corrected",
+      "category": "cori-internal-auditor-ver",
+      "label": "Have deficiencies been corrected?",
+      "guidance": "Auditor verification prompt"
+    },
+    {
+      "id": "cori-internal-auditor-ver-is-there-evidence-of-continuous-improvement",
+      "category": "cori-internal-auditor-ver",
+      "label": "Is there evidence of continuous improvement?",
+      "guidance": "Auditor verification prompt"
+    }
+  ],
+  "workerPrompts": [
+    {
+      "id": "cori-2-ask-what-hazards-are-you-exposed-to-today",
+      "category": "cori-2",
+      "prompt": "What hazards are you exposed to today?"
+    },
+    {
+      "id": "cori-2-ask-what-controls-are-in-place",
+      "category": "cori-2",
+      "prompt": "What controls are in place?"
+    },
+    {
+      "id": "cori-2-ask-has-anything-changed-today",
+      "category": "cori-2",
+      "prompt": "Has anything changed today?"
+    },
+    {
+      "id": "cori-7-ask-when-did-you-receive-orientation",
+      "category": "cori-7",
+      "prompt": "When did you receive orientation?"
+    },
+    {
+      "id": "cori-7-ask-have-you-been-trained-for-today-s-work",
+      "category": "cori-7",
+      "prompt": "Have you been trained for today's work?"
+    },
+    {
+      "id": "cori-8-ask-what-was-discussed-at-the-last-toolbox-meeting",
+      "category": "cori-8",
+      "prompt": "What was discussed at the last toolbox meeting?"
+    },
+    {
+      "id": "cori-10-ask-what-would-you-do-if-you-had-a-near-miss",
+      "category": "cori-10",
+      "prompt": "What would you do if you had a near miss?"
+    },
+    {
+      "id": "cori-11-ask-where-is-the-muster-point",
+      "category": "cori-11",
+      "prompt": "Where is the muster point?"
+    },
+    {
+      "id": "cori-11-ask-who-is-the-first-aid-attendant",
+      "category": "cori-11",
+      "prompt": "Who is the first aid attendant?"
+    },
+    {
+      "id": "cori-14-ask-who-is-your-worker-representative",
+      "category": "cori-14",
+      "prompt": "Who is your Worker Representative?"
+    },
+    {
+      "id": "cori-14-ask-how-do-you-report-a-hazard",
+      "category": "cori-14",
+      "prompt": "How do you report a hazard?"
+    },
+    {
+      "id": "cori-14-ask-do-you-stop-unsafe-work",
+      "category": "cori-14",
+      "prompt": "Do you stop unsafe work?"
+    },
+    {
+      "id": "cori-14-ask-have-you-raised-safety-concerns-recently",
+      "category": "cori-14",
+      "prompt": "Have you raised safety concerns recently?"
+    }
+  ]
+}

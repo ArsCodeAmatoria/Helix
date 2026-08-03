@@ -22,6 +22,7 @@ import {
   computeCorReadiness,
   type CoverageLevel,
 } from "@/lib/cor-stats";
+import { pdfToDigitalFormId } from "@/lib/digital-forms";
 import { computeWorkerCompliance } from "@/lib/cor-worker";
 import {
   computeWorkerActivity,
@@ -752,45 +753,54 @@ export function CorStatsScreen() {
                   : "text-sky-700 dark:text-sky-400";
               return (
                 <div className="space-y-2">
-                  <p className="text-sm font-bold">Audit reference PDFs</p>
-                  {auditPdfs.map((doc) => (
-                    <a
-                      key={doc.id}
-                      href={doc.file}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="helix-card flex items-start gap-3 p-4 transition-shadow hover:shadow-md"
-                    >
-                      <div
-                        className={cn(
-                          "flex size-10 shrink-0 items-center justify-center rounded-xl",
-                          accent(doc.id)
-                        )}
+                  <p className="text-sm font-bold">Audit digital forms</p>
+                  {auditPdfs.map((doc) => {
+                    const digitalId =
+                      (doc.id && pdfToDigitalFormId[doc.id]) ||
+                      (doc.file ? pdfToDigitalFormId[doc.file] : undefined);
+                    const href = digitalId
+                      ? `/forms/cor/${digitalId}`
+                      : doc.file!;
+                    return (
+                      <a
+                        key={doc.id}
+                        href={href}
+                        {...(digitalId
+                          ? {}
+                          : { target: "_blank", rel: "noopener noreferrer" })}
+                        className="helix-card flex items-start gap-3 p-4 transition-shadow hover:shadow-md"
                       >
-                        <FileText className="size-5" />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-2">
-                          <p className="text-sm font-bold leading-snug">
-                            {doc.title}
-                          </p>
-                          <ExternalLink className="size-3.5 shrink-0 text-muted-foreground" />
-                        </div>
-                        <p className="mt-1 text-[12px] leading-relaxed text-muted-foreground">
-                          {doc.description ?? doc.category}
-                        </p>
-                        <p
+                        <div
                           className={cn(
-                            "mt-2 text-[11px] font-medium",
-                            openAccent(doc.id)
+                            "flex size-10 shrink-0 items-center justify-center rounded-xl",
+                            accent(doc.id)
                           )}
                         >
-                          Open PDF
-                          {doc.pages ? ` · ${doc.pages} pages` : ""}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
+                          <FileText className="size-5" />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-2">
+                            <p className="text-sm font-bold leading-snug">
+                              {doc.title}
+                            </p>
+                            <ExternalLink className="size-3.5 shrink-0 text-muted-foreground" />
+                          </div>
+                          <p className="mt-1 text-[12px] leading-relaxed text-muted-foreground">
+                            {doc.description ?? doc.category}
+                          </p>
+                          <p
+                            className={cn(
+                              "mt-2 text-[11px] font-medium",
+                              openAccent(doc.id)
+                            )}
+                          >
+                            {digitalId ? "Open digital form" : "Open PDF"}
+                            {doc.pages ? ` · ${doc.pages} pages` : ""}
+                          </p>
+                        </div>
+                      </a>
+                    );
+                  })}
                 </div>
               );
             })()}
@@ -894,18 +904,25 @@ export function CorStatsScreen() {
                   <div className="helix-card space-y-2 p-4">
                     <p className="text-sm font-bold">Linked documentation</p>
                     {selected.docs.map((d) => {
+                      const digitalId =
+                        pdfToDigitalFormId[d.id] ||
+                        (d.file ? pdfToDigitalFormId[d.file] : undefined);
+                      const href = digitalId
+                        ? `/forms/cor/${digitalId}`
+                        : d.file;
                       const inner = (
                         <>
                           <div className="min-w-0">
                             <p className="text-sm font-semibold leading-snug">
                               {d.title}
-                              {d.file ? (
+                              {href ? (
                                 <ExternalLink className="ml-1.5 inline size-3 align-[-1px] text-muted-foreground" />
                               ) : null}
                             </p>
                             <p className="text-[11px] text-muted-foreground">
                               {d.category} · {d.owner} · Reviewed{" "}
                               {d.lastReviewed}
+                              {digitalId ? " · Digital form" : ""}
                             </p>
                           </div>
                           <Badge
@@ -920,13 +937,17 @@ export function CorStatsScreen() {
                           </Badge>
                         </>
                       );
-                      if (d.file) {
+                      if (href) {
                         return (
                           <a
                             key={d.id}
-                            href={d.file}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={href}
+                            {...(digitalId
+                              ? {}
+                              : {
+                                  target: "_blank",
+                                  rel: "noopener noreferrer",
+                                })}
                             className="flex items-start justify-between gap-2 rounded-xl bg-muted/50 px-3 py-2.5 transition-colors hover:bg-muted"
                           >
                             {inner}

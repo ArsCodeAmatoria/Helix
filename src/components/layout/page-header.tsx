@@ -10,6 +10,7 @@ interface PageHeaderProps {
   title: string;
   subtitle?: string;
   backHref?: string;
+  onBack?: () => void;
   action?: React.ReactNode;
   className?: string;
   showTheme?: boolean;
@@ -19,6 +20,7 @@ export function PageHeader({
   title,
   subtitle,
   backHref,
+  onBack,
   action,
   className,
   showTheme = true,
@@ -31,13 +33,23 @@ export function PageHeader({
       )}
     >
       <div className="flex items-center gap-2">
-        {backHref && (
+        {onBack ? (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-11 shrink-0"
+            onClick={onBack}
+            aria-label="Back"
+          >
+            <ArrowLeft className="size-5" />
+          </Button>
+        ) : backHref ? (
           <Button variant="ghost" size="icon" className="size-11 shrink-0" asChild>
             <Link href={backHref} aria-label="Back">
               <ArrowLeft className="size-5" />
             </Link>
           </Button>
-        )}
+        ) : null}
         <div className="min-w-0 flex-1">
           <h1 className="truncate text-[22px] font-bold tracking-tight">{title}</h1>
           {subtitle && (

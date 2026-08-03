@@ -1,0 +1,52 @@
+{
+  "forms": [
+    {
+      "id": "bccsa-cor-audit-workbook",
+      "title": "BCCSA COR Internal Audit Workbook",
+      "kind": "audit-plan",
+      "file": "bccsa-cor-audit-workbook.json",
+      "sourcePdf": "/cor-pdfs/bccsa-cor-internal-audit-workbook.pdf",
+      "pages": 111
+    },
+    {
+      "id": "oms-worker-interview",
+      "title": "OMS & Worker Interview Guide",
+      "kind": "interview",
+      "file": "oms-worker-interview.json",
+      "sourcePdf": "/cor-pdfs/oms-worker-interview-guide.pdf",
+      "pages": 88
+    },
+    {
+      "id": "internal-cor-site-inspection",
+      "title": "Internal COR Site Inspection Checklist",
+      "kind": "checklist",
+      "file": "internal-cor-site-inspection.json",
+      "sourcePdf": "/cor-pdfs/internal-cor-site-inspection-checklist.pdf",
+      "pages": 12
+    },
+    {
+      "id": "comprehensive-site-inspection",
+      "title": "Comprehensive Construction Site Inspection",
+      "kind": "checklist",
+      "file": "comprehensive-site-inspection.json",
+      "sourcePdf": "/cor-pdfs/comprehensive-construction-site-inspection.pdf",
+      "pages": 101
+    },
+    {
+      "id": "daily-site-inspection",
+      "title": "Daily Site Inspection",
+      "kind": "checklist",
+      "file": "daily-site-inspection.json",
+      "sourcePdf": "/cor-pdfs/daily-site-inspection.pdf",
+      "pages": 23
+    },
+    {
+      "id": "daily-site-safety-checklist",
+      "title": "Daily Site Safety Checklist",
+      "kind": "checklist",
+      "file": "daily-site-safety-checklist.json",
+      "sourcePdf": "/cor-pdfs/daily-site-safety-checklist.pdf",
+      "pages": 6
+    }
+  ]
+}

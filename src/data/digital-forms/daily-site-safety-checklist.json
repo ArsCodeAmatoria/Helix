@@ -1,0 +1,440 @@
+{
+  "id": "daily-site-safety-checklist",
+  "title": "Daily Site Safety Checklist",
+  "subtitle": "Crane & concrete formwork operations",
+  "kind": "checklist",
+  "sourcePdf": "/cor-pdfs/daily-site-safety-checklist.pdf",
+  "pages": 6,
+  "corDocId": "doc-daily-safety-checklist",
+  "elements": [
+    9,
+    2,
+    3,
+    4,
+    7
+  ],
+  "disclaimer": "Complete before high-risk crane and formwork activities. Failures require corrective action before work continues.",
+  "metaFields": [
+    {
+      "id": "project",
+      "label": "Project",
+      "type": "text"
+    },
+    {
+      "id": "site",
+      "label": "Site",
+      "type": "text"
+    },
+    {
+      "id": "inspector",
+      "label": "Inspector",
+      "type": "text"
+    },
+    {
+      "id": "supervisor",
+      "label": "Supervisor",
+      "type": "text"
+    },
+    {
+      "id": "weather",
+      "label": "Weather",
+      "type": "text"
+    }
+  ],
+  "categories": [
+    {
+      "id": "dssc-1",
+      "label": "General Site Conditions",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-2",
+      "label": "Daily Planning",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-3",
+      "label": "Crane Operations",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-4",
+      "label": "Rigging",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-5",
+      "label": "Concrete Formwork",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-6",
+      "label": "Fall Protection",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-7",
+      "label": "Equipment",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-8",
+      "label": "PPE",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-9",
+      "label": "Environmental & Housekeeping",
+      "icon": "check"
+    },
+    {
+      "id": "dssc-10",
+      "label": "Immediate Hazards",
+      "icon": "alert"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "dssc-1-housekeeping-acceptable",
+      "category": "dssc-1",
+      "label": "Housekeeping acceptable",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-1-walkways-clear",
+      "category": "dssc-1",
+      "label": "Walkways clear",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-1-access-and-egress-maintained",
+      "category": "dssc-1",
+      "label": "Access and egress maintained",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-1-lighting-adequate",
+      "category": "dssc-1",
+      "label": "Lighting adequate",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-1-emergency-access-maintained",
+      "category": "dssc-1",
+      "label": "Emergency access maintained",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-2-daily-flha-completed",
+      "category": "dssc-2",
+      "label": "Daily FLHA completed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-2-toolbox-meeting-completed",
+      "category": "dssc-2",
+      "label": "Toolbox meeting completed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-2-work-scope-reviewed",
+      "category": "dssc-2",
+      "label": "Work scope reviewed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-2-new-hazards-discussed",
+      "category": "dssc-2",
+      "label": "New hazards discussed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-2-weather-conditions-assessed",
+      "category": "dssc-2",
+      "label": "Weather conditions assessed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-crane-inspection-completed",
+      "category": "dssc-3",
+      "label": "Crane inspection completed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-operator-certified",
+      "category": "dssc-3",
+      "label": "Operator certified",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-load-charts-available",
+      "category": "dssc-3",
+      "label": "Load charts available",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-communication-system-working",
+      "category": "dssc-3",
+      "label": "Communication system working",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-swing-radius-protected",
+      "category": "dssc-3",
+      "label": "Swing radius protected",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-overhead-hazards-identified",
+      "category": "dssc-3",
+      "label": "Overhead hazards identified",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-lift-plan-available-if-required",
+      "category": "dssc-3",
+      "label": "Lift plan available (if required)",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-3-crane-area-barricaded",
+      "category": "dssc-3",
+      "label": "Crane area barricaded",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-4-rigging-inspected-before-use",
+      "category": "dssc-4",
+      "label": "Rigging inspected before use",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-4-slings-free-from-damage",
+      "category": "dssc-4",
+      "label": "Slings free from damage",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-4-shackles-inspected",
+      "category": "dssc-4",
+      "label": "Shackles inspected",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-4-hooks-equipped-with-safety-latches",
+      "category": "dssc-4",
+      "label": "Hooks equipped with safety latches",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-4-tag-lines-used-where-required",
+      "category": "dssc-4",
+      "label": "Tag lines used where required",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-4-qualified-rigger-directing-lifts",
+      "category": "dssc-4",
+      "label": "Qualified rigger directing lifts",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-4-exclusion-zone-maintained",
+      "category": "dssc-4",
+      "label": "Exclusion zone maintained",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-5-formwork-erected-correctly",
+      "category": "dssc-5",
+      "label": "Formwork erected correctly",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-5-bracing-complete",
+      "category": "dssc-5",
+      "label": "Bracing complete",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-5-working-platforms-safe",
+      "category": "dssc-5",
+      "label": "Working platforms safe",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-5-guardrails-installed",
+      "category": "dssc-5",
+      "label": "Guardrails installed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-5-material-stacked-safely",
+      "category": "dssc-5",
+      "label": "Material stacked safely",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-5-formwork-inspected-before-loading",
+      "category": "dssc-5",
+      "label": "Formwork inspected before loading",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-5-concrete-pour-hazards-reviewed",
+      "category": "dssc-5",
+      "label": "Concrete pour hazards reviewed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-6-fall-hazards-controlled",
+      "category": "dssc-6",
+      "label": "Fall hazards controlled",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-6-guardrails-complete",
+      "category": "dssc-6",
+      "label": "Guardrails complete",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-6-openings-protected",
+      "category": "dssc-6",
+      "label": "Openings protected",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-6-harnesses-inspected",
+      "category": "dssc-6",
+      "label": "Harnesses inspected",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-6-workers-tied-off-correctly",
+      "category": "dssc-6",
+      "label": "Workers tied off correctly",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-6-rescue-plan-available",
+      "category": "dssc-6",
+      "label": "Rescue plan available",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-7-mobile-equipment-inspected",
+      "category": "dssc-7",
+      "label": "Mobile equipment inspected",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-7-operators-authorized",
+      "category": "dssc-7",
+      "label": "Operators authorized",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-7-backup-alarms-functioning",
+      "category": "dssc-7",
+      "label": "Backup alarms functioning",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-7-spotters-used-where-required",
+      "category": "dssc-7",
+      "label": "Spotters used where required",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-7-equipment-separated-from-workers",
+      "category": "dssc-7",
+      "label": "Equipment separated from workers",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-8-hard-hats-worn",
+      "category": "dssc-8",
+      "label": "Hard hats worn",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-8-high-visibility-clothing-worn",
+      "category": "dssc-8",
+      "label": "High-visibility clothing worn",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-8-safety-boots-worn",
+      "category": "dssc-8",
+      "label": "Safety boots worn",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-8-eye-protection-worn",
+      "category": "dssc-8",
+      "label": "Eye protection worn",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-8-gloves-appropriate",
+      "category": "dssc-8",
+      "label": "Gloves appropriate",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-8-hearing-protection-used",
+      "category": "dssc-8",
+      "label": "Hearing protection used",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-9-garbage-removed",
+      "category": "dssc-9",
+      "label": "Garbage removed",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-9-spill-kit-available",
+      "category": "dssc-9",
+      "label": "Spill kit available",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-9-dust-controlled",
+      "category": "dssc-9",
+      "label": "Dust controlled",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-9-materials-organized",
+      "category": "dssc-9",
+      "label": "Materials organized",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-9-access-routes-clear",
+      "category": "dssc-9",
+      "label": "Access routes clear",
+      "guidance": ""
+    },
+    {
+      "id": "dssc-10-no-hazards-identified",
+      "category": "dssc-10",
+      "label": "No hazards identified",
+      "guidance": "Immediate hazard disposition"
+    },
+    {
+      "id": "dssc-10-hazard-corrected-immediately",
+      "category": "dssc-10",
+      "label": "Hazard corrected immediately",
+      "guidance": "Immediate hazard disposition"
+    },
+    {
+      "id": "dssc-10-work-stopped",
+      "category": "dssc-10",
+      "label": "Work stopped",
+      "guidance": "Immediate hazard disposition"
+    }
+  ]
+}

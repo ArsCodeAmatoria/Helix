@@ -1,12 +1,12 @@
 # COR audit PDFs
 
-Official / auditor reference documents linked from COR Stats and related forms.
+Source PDFs for COR audit / inspection documents. Each has a matching **digital form** under `/forms/cor`.
 
-| File | Description |
-|------|-------------|
-| `bccsa-cor-internal-audit-workbook.pdf` | BCCSA COR Internal Audit Workbook / OMS & Worker Interview Questions (111 pp) — same content as “Owner Manager Supervisor (OMS) Interview Questions.pdf” |
-| `oms-worker-interview-guide.pdf` | Owner / Manager / Supervisor (OMS) & Worker Interview Guide (88 pp) |
-| `comprehensive-construction-site-inspection.pdf` | Comprehensive Construction Site Inspection workbook (101 pp) |
-| `daily-site-inspection.pdf` | Daily Site Inspection — crew, scope, and field checklist (23 pp) |
-| `daily-site-safety-checklist.pdf` | Daily Site Safety Checklist — crane & formwork (6 pp) |
-| `internal-cor-site-inspection-checklist.pdf` | Internal COR Site Inspection Checklist — auditor field checklist (12 pp) |
+| File | Digital form route |
+|------|-------------------|
+| `bccsa-cor-internal-audit-workbook.pdf` | `/forms/cor/bccsa-cor-audit-workbook` |
+| `oms-worker-interview-guide.pdf` | `/forms/cor/oms-worker-interview` |
+| `comprehensive-construction-site-inspection.pdf` | `/forms/cor/comprehensive-site-inspection` |
+| `daily-site-inspection.pdf` | `/forms/cor/daily-site-inspection` |
+| `daily-site-safety-checklist.pdf` | `/forms/cor/daily-site-safety-checklist` |
+| `internal-cor-site-inspection-checklist.pdf` | `/forms/cor/internal-cor-site-inspection` |

@@ -1,0 +1,636 @@
+{
+  "id": "daily-site-inspection",
+  "title": "Daily Site Inspection",
+  "subtitle": "Crew scope, morning readiness, crane/formwork, closeout",
+  "kind": "checklist",
+  "sourcePdf": "/cor-pdfs/daily-site-inspection.pdf",
+  "pages": 23,
+  "corDocId": "doc-daily-site-inspection",
+  "elements": [
+    9,
+    2,
+    6
+  ],
+  "disclaimer": "Complete at start of shift and update for high-risk changes. Close findings before related work continues.",
+  "metaFields": [
+    {
+      "id": "project",
+      "label": "Project",
+      "type": "text"
+    },
+    {
+      "id": "projectNumber",
+      "label": "Project number",
+      "type": "text"
+    },
+    {
+      "id": "prime",
+      "label": "Prime contractor",
+      "type": "text"
+    },
+    {
+      "id": "location",
+      "label": "Location",
+      "type": "text"
+    },
+    {
+      "id": "inspector",
+      "label": "Inspector",
+      "type": "text"
+    },
+    {
+      "id": "supervisor",
+      "label": "Supervisor / Foreman",
+      "type": "text"
+    },
+    {
+      "id": "weather",
+      "label": "Weather",
+      "type": "text"
+    },
+    {
+      "id": "workerCount",
+      "label": "Number of workers",
+      "type": "text"
+    },
+    {
+      "id": "activities",
+      "label": "Today's work activities",
+      "type": "multiselect",
+      "options": [
+        "Tower Crane Operations",
+        "Mobile Crane Operations",
+        "Rigging",
+        "Formwork",
+        "Decking",
+        "Concrete Pour",
+        "Climbing System",
+        "Jump Form",
+        "Stripping Forms",
+        "Material Handling",
+        "Personnel Platform",
+        "Hoisting",
+        "Welding",
+        "Cutting / Grinding",
+        "Excavation"
+      ]
+    },
+    {
+      "id": "highRisk",
+      "label": "High-risk activities today",
+      "type": "multiselect",
+      "options": [
+        "Critical Lift",
+        "Blind Lift",
+        "Tandem Lift",
+        "Work Near Power Lines",
+        "Suspended Personnel Platform",
+        "Fall Hazard (>3 m / 10 ft)",
+        "Concrete Pour",
+        "Heavy Equipment Interaction",
+        "Public Exposure",
+        "Confined Space",
+        "Hot Work",
+        "High Winds"
+      ]
+    },
+    {
+      "id": "scopeNotes",
+      "label": "Overall work scope notes",
+      "type": "textarea"
+    }
+  ],
+  "categories": [
+    {
+      "id": "dsi-1",
+      "label": "Part 1 \u2014 Crew & Work Scope",
+      "icon": "check"
+    },
+    {
+      "id": "dsi-2",
+      "label": "Part 2 \u2014 Morning Readiness",
+      "icon": "check"
+    },
+    {
+      "id": "dsi-3",
+      "label": "Part 3 \u2014 Crane & Rigging Readiness",
+      "icon": "check"
+    },
+    {
+      "id": "dsi-4",
+      "label": "Part 4 \u2014 Formwork & Concrete Operations",
+      "icon": "check"
+    },
+    {
+      "id": "dsi-6",
+      "label": "Part 6 \u2014 End-of-Day / Shift Closeout",
+      "icon": "check"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "dsi-2-daily-flha-completed-before-work",
+      "category": "dsi-2",
+      "label": "Daily FLHA completed before work",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-flha-reviewed-with-all-crew-members",
+      "category": "dsi-2",
+      "label": "FLHA reviewed with all crew members",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-new-hazards-identified-hazard-controls-understoo",
+      "category": "dsi-2",
+      "label": "New hazards identified Hazard controls understood",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-workers-signed-the-flha",
+      "category": "dsi-2",
+      "label": "Workers signed the FLHA",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-toolbox-meeting-completed-attendance-recorded",
+      "category": "dsi-2",
+      "label": "Toolbox meeting completed Attendance recorded",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-incidents-or-lessons-learned-discussed",
+      "category": "dsi-2",
+      "label": "Incidents or lessons learned discussed",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-emergency-procedures-reviewed-if-required",
+      "category": "dsi-2",
+      "label": "Emergency procedures reviewed (if required)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-all-workers-fit-for-duty",
+      "category": "dsi-2",
+      "label": "All workers fit for duty",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-new-workers-oriented",
+      "category": "dsi-2",
+      "label": "New workers oriented",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-required-certifications-verified",
+      "category": "dsi-2",
+      "label": "Required certifications verified",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-workers-competent-for-assigned-tasks",
+      "category": "dsi-2",
+      "label": "Workers competent for assigned tasks",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-required-ppe-available-and-inspected",
+      "category": "dsi-2",
+      "label": "Required PPE available and inspected",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-safe-work-procedures-available-lift-plan-availab",
+      "category": "dsi-2",
+      "label": "Safe Work Procedures available Lift Plan available (if required)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-engineered-drawings-available-manufacturer-instr",
+      "category": "dsi-2",
+      "label": "Engineered drawings available Manufacturer instructions available Required permits in place",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-2-work-area-inspected-access-routes-clear-emergenc",
+      "category": "dsi-2",
+      "label": "Work area inspected Access routes clear Emergency access maintained Housekeeping acceptable Lighting adequate work",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-daily-crane-inspection-completed-crane-safe-for-",
+      "category": "dsi-3",
+      "label": "Daily crane inspection completed Crane safe for operation",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-operator-certificate-verified",
+      "category": "dsi-3",
+      "label": "Operator certificate verified",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-operator-fit-for-duty",
+      "category": "dsi-3",
+      "label": "Operator fit for duty",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-wind-speed-within-limits",
+      "category": "dsi-3",
+      "label": "Wind speed within limits",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-anti-collision-zoning-operational-if-applicable",
+      "category": "dsi-3",
+      "label": "Anti-collision / zoning operational (if applicable)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-crane-logbook-current-no-outstanding-crane-defic",
+      "category": "dsi-3",
+      "label": "Crane logbook current No outstanding crane deficiencies",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-slings-inspected-before-use",
+      "category": "dsi-3",
+      "label": "Slings inspected before use",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-shackles-inspected-hooks-inspected-lifting-beams",
+      "category": "dsi-3",
+      "label": "Shackles inspected Hooks inspected Lifting beams inspected (if used)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-rigging-free-of-damage",
+      "category": "dsi-3",
+      "label": "Rigging free of damage",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-defective-rigging-removed-from-service",
+      "category": "dsi-3",
+      "label": "Defective rigging removed from service",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-rigging-suitable-for-planned-lifts",
+      "category": "dsi-3",
+      "label": "Rigging suitable for planned lifts",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-load-weight-verified",
+      "category": "dsi-3",
+      "label": "Load weight verified",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-centre-of-gravity-identified-rigging-method-revi",
+      "category": "dsi-3",
+      "label": "Centre of gravity identified Rigging method reviewed Landing area prepared",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-lift-path-clear-blind-lifts-planned",
+      "category": "dsi-3",
+      "label": "Lift path clear Blind lifts planned",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-critical-lift-plan-completed-if-required",
+      "category": "dsi-3",
+      "label": "Critical lift plan completed (if required)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-designated-signal-person-assigned",
+      "category": "dsi-3",
+      "label": "Designated signal person assigned",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-radio-communication-tested",
+      "category": "dsi-3",
+      "label": "Radio communication tested",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-standard-signals-understood",
+      "category": "dsi-3",
+      "label": "Standard signals understood",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-backup-communication-established",
+      "category": "dsi-3",
+      "label": "Backup communication established",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-all-workers-understand-lift-sequence",
+      "category": "dsi-3",
+      "label": "All workers understand lift sequence",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-exclusion-zone-established",
+      "category": "dsi-3",
+      "label": "Exclusion zone established",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-3-barricades-installed-workers-clear-of-suspended-",
+      "category": "dsi-3",
+      "label": "Barricades installed Workers clear of suspended loads",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-engineered-drawings-available-on-site",
+      "category": "dsi-4",
+      "label": "Engineered drawings available on site",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-formwork-erected-per-drawings",
+      "category": "dsi-4",
+      "label": "Formwork erected per drawings",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-bracing-complete",
+      "category": "dsi-4",
+      "label": "Bracing complete",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-connections-secure",
+      "category": "dsi-4",
+      "label": "Connections secure",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-formwork-inspected-before-use",
+      "category": "dsi-4",
+      "label": "Formwork inspected before use",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-no-damaged-components-observed",
+      "category": "dsi-4",
+      "label": "No damaged components observed",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-falsework-installed-correctly",
+      "category": "dsi-4",
+      "label": "Falsework installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-base-plates-properly-supported",
+      "category": "dsi-4",
+      "label": "Base plates properly supported",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-shores-plumb-and-secure",
+      "category": "dsi-4",
+      "label": "Shores plumb and secure",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-reshoring-installed-where-required-components-fr",
+      "category": "dsi-4",
+      "label": "Reshoring installed where required Components free from damage",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-unauthorized-modifications-not-observed",
+      "category": "dsi-4",
+      "label": "Unauthorized modifications not observed",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-access-ladders-installed-work-platforms-stable",
+      "category": "dsi-4",
+      "label": "Access ladders installed Work platforms stable",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-material-staging-areas-organized",
+      "category": "dsi-4",
+      "label": "Material staging areas organized",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-pour-sequence-reviewed-formwork-inspected-prior-",
+      "category": "dsi-4",
+      "label": "Pour sequence reviewed Formwork inspected prior to pour",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-bracing-verified",
+      "category": "dsi-4",
+      "label": "Bracing verified",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-vibrators-inspected-procedures",
+      "category": "dsi-4",
+      "label": "Vibrators inspected procedures",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-climbing-plan-reviewed-climbing-equipment-inspec",
+      "category": "dsi-4",
+      "label": "Climbing plan reviewed Climbing equipment inspected Anchors installed correctly",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-climbing-brackets-secure",
+      "category": "dsi-4",
+      "label": "Climbing brackets secure",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-working-platforms-complete",
+      "category": "dsi-4",
+      "label": "Working platforms complete",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-fall-protection-in-place",
+      "category": "dsi-4",
+      "label": "Fall protection in place",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-exclusion-zone-established",
+      "category": "dsi-4",
+      "label": "Exclusion zone established",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-gang-forms-stored-safely",
+      "category": "dsi-4",
+      "label": "Gang forms stored safely",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-form-panels-secured-rebar-bundles-stable",
+      "category": "dsi-4",
+      "label": "Form panels secured Rebar bundles stable",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-materials-stacked-safely",
+      "category": "dsi-4",
+      "label": "Materials stacked safely",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-crane-picks-planned",
+      "category": "dsi-4",
+      "label": "Crane picks planned",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-4-landing-areas-clear",
+      "category": "dsi-4",
+      "label": "Landing areas clear",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-planned-work-completed-safely",
+      "category": "dsi-6",
+      "label": "Planned work completed safely",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-work-area-inspected-before-leaving",
+      "category": "dsi-6",
+      "label": "Work area inspected before leaving",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-no-new-hazards-created",
+      "category": "dsi-6",
+      "label": "No new hazards created",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-temporary-hazards-identified-and-controlled-outs",
+      "category": "dsi-6",
+      "label": "Temporary hazards identified and controlled Outstanding work communicated",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-crane-parked-in-approved-position",
+      "category": "dsi-6",
+      "label": "Crane parked in approved position",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-hook-raised-and-secured-crane-placed-in-weather-",
+      "category": "dsi-6",
+      "label": "Hook raised and secured Crane placed in weather vane (tower crane)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-cab-secured-power-isolated-where-required",
+      "category": "dsi-6",
+      "label": "Cab secured Power isolated (where required)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-daily-crane-deficiencies-reported",
+      "category": "dsi-6",
+      "label": "Daily crane deficiencies reported",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-rigging-inspected-after-use",
+      "category": "dsi-6",
+      "label": "Rigging inspected after use",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-damaged-equipment-removed-from-service",
+      "category": "dsi-6",
+      "label": "Damaged equipment removed from service",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-rigging-stored-properly",
+      "category": "dsi-6",
+      "label": "Rigging stored properly",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-shackles-and-hardware-accounted-for-specialty-li",
+      "category": "dsi-6",
+      "label": "Shackles and hardware accounted for Specialty lifting devices secured",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-formwork-left-stable",
+      "category": "dsi-6",
+      "label": "Formwork left stable",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-temporary-bracing-maintained-guardrails-restored",
+      "category": "dsi-6",
+      "label": "Temporary bracing maintained Guardrails restored",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-openings-protected-materials-secured-climbing-sy",
+      "category": "dsi-6",
+      "label": "Openings protected Materials secured Climbing systems secured",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-garbage-removed-walkways-clear-trip-hazards-remo",
+      "category": "dsi-6",
+      "label": "Garbage removed Walkways clear Trip hazards removed Materials stacked safely",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-tools-stored-properly",
+      "category": "dsi-6",
+      "label": "Tools stored properly",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-spill-hazards-cleaned",
+      "category": "dsi-6",
+      "label": "Spill hazards cleaned",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-deficiencies-documented-required",
+      "category": "dsi-6",
+      "label": "Deficiencies documented required)",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-corrective-actions-assigned",
+      "category": "dsi-6",
+      "label": "Corrective actions assigned",
+      "guidance": ""
+    },
+    {
+      "id": "dsi-6-critical-hazards-eliminated",
+      "category": "dsi-6",
+      "label": "Critical hazards eliminated",
+      "guidance": ""
+    }
+  ]
+}
